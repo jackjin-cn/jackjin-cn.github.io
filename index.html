@@ -74,13 +74,14 @@
         </header>
         <div><h2>git 本地删除后的问题</h2>
 <p>在用pelican生成网页的时假，如果不小心用<code>make clean</code>的话，会把<strong>.git</strong>删除，就会产生配对问题，需要重新配对。</p>
-<p>对于网页不需要保留远程文件，所以就如下操作
-    git init
-    git add .
-    git commit -m 'update'
-    git remote rm origin
-    git push --force origin master  强制推送
-    git push -u origin master 重新远程与本地对应</p></div>
+<p>对于网页不需要保留远程文件，所以就如下操作</p>
+<div class="highlight"><pre>git init
+git add .
+git commit -m &#39;update&#39;
+git remote rm origin
+git push --force origin master  强制推送
+git push -u origin master 重新远程与本地对应
+</pre></div></div>
         <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html"><strong>➟ Read more</strong></a></div>
       </article>
       <hr/>
