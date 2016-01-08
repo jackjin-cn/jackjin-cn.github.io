@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><atom:link href="http://jackjin-cn.github.io/feed.xml" rel="self"></atom:link><lastBuildDate>Fri, 08 Jan 2016 15:07:00 +0800</lastBuildDate><item><title>vim中的find命令，打开文件很方便</title><link>http://jackjin-cn.github.io/2016/2016-01-08_15-07_vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian.html</link><description>&lt;p&gt;这几天看《Vim实用技巧》,其中介绍了 &lt;strong&gt;:find&lt;/strong&gt; 命令的使用&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><atom:link href="http://jackjin-cn.github.io/feed.xml" rel="self"></atom:link><lastBuildDate>Fri, 08 Jan 2016 23:09:00 +0800</lastBuildDate><item><title>git 本地删除后的问题</title><link>http://jackjin-cn.github.io/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html</link><description>&lt;h2&gt;git 本地删除后的问题&lt;/h2&gt;
+&lt;p&gt;在用pelican生成网页的时假，如果不小心用&lt;code&gt;make clean&lt;/code&gt;的话，会把&lt;strong&gt;.git&lt;/strong&gt;删除，就会产生配对问题，需要重新配对。&lt;/p&gt;
+&lt;p&gt;对于网页不需要保留远程文件，所以就如下操作
+    git init
+    git add .
+    git commit -m 'update'
+    git remote rm origin
+    git push --force origin master  强制推送
+    git push -u origin master 重新远程与本地对应&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Fri, 08 Jan 2016 23:09:00 +0800</pubDate><guid>tag:jackjin-cn.github.io,2016-01-08:2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html</guid><category>git</category></item><item><title>vim中的find命令，打开文件很方便</title><link>http://jackjin-cn.github.io/2016/2016-01-08_15-07_vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian.html</link><description>&lt;p&gt;这几天看《Vim实用技巧》,其中介绍了 &lt;strong&gt;:find&lt;/strong&gt; 命令的使用&lt;/p&gt;
 &lt;p&gt;在vim的配件文件&lt;code&gt;.vimrc or _vimrc&lt;/code&gt;进行如下设置&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;set path+=yourdir1/**,youdir2/**
 &lt;/pre&gt;&lt;/div&gt;
