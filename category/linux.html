@@ -1,82 +1,173 @@
 <!DOCTYPE html>
 <html lang="zh">
-<head>
-        <title>Jackjin's Home</title>
-        <meta charset="utf-8" />
-        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home Full RSS Feed" />
-</head>
+  <head>
+    <meta charset="utf-8"/>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="http://jackjin-cn.github.io/">Jackjin's Home <strong></strong></a></h1>
-        </header><!-- /#banner -->
-        <nav id="menu"><ul>
-            <li><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
-            <li><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
-            <li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
-        </ul></nav><!-- /#menu -->
-<section id="content">
-<h2>Articles in the linux category</h2>
+    <title>  linux
+ | Jackjin's Home</title>
 
-<ol id="post-list">
-        <li><article class="hentry">
-                <header> <h2 class="entry-title"><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html" rel="bookmark" title="Permalink to 在linux下把cp936转成utf-8">在linux下把cp936转成utf-8</a></h2> </header>
-                <footer class="post-info">
-                    <abbr class="published" title="2016-01-06T19:43:00+08:00"> 2016-01-06 星期三 19:43 </abbr>
-                    <address class="vcard author">By
-                        <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>
-                    </address>
-                </footer><!-- /.post-info -->
-                <div class="entry-content"> <h2>在linux下把cp936转成utf-8</h2>
-<p>今天需要把原来写的文字用博客的形式发布，用pelican转换的第一个问题就是文件的内码格式不到，原来是 <strong>cp936</strong> (中文ASCII)的形式，需要转成<strong>utf-8</strong>。</p>
-<p>网上找了一下，可以用<code>iconv</code> 这个工具，不过不支持批量转换，于是又搜了一下，用bash写了一个，在此记录一下。
-另外说明一下，<strong>iconv</strong> 不支持自动识别文件编码，要手动指定</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span class="c">#!/bin/bash</span>
-<span class="k">for</span> file in *.txt 
-    <span class="k">do</span> iconv -c -f gb18030 -t utf8 <span class="nv">$file</span> -o <span class="nv">$file</span>.uu
-<span class="k">done</span>
-</pre></div>
-</td></tr></table> </div><!-- /.entry-content -->
-        </article></li>
-        <li><article class="hentry">
-                <header> <h2 class="entry-title"><a href="http://jackjin-cn.github.io/2016/2016-01-02_20-56_wine-qq-79ban-de-an-zhuang.html" rel="bookmark" title="Permalink to Wine QQ 7.9版的安装">Wine QQ 7.9版的安装</a></h2> </header>
-                <footer class="post-info">
-                    <abbr class="published" title="2016-01-02T20:56:00+08:00"> 2016-01-02 星期六 20:56 </abbr>
-                    <address class="vcard author">By
-                        <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>
-                    </address>
-                </footer><!-- /.post-info -->
-                <div class="entry-content"> <h1>Wine QQ 7.9版的安装</h1>
-<blockquote>
-<ol>
-<li>
-<p>安装最新的wine，安装QQ7.9.exe</p>
-</li>
-<li>
-<p>根据网上的教程增加字体，修改注册表</p>
-</li>
-<li>
-<p>winecfg配置成win8.1</p>
-</li>
-<li>
-<p>几个动态库,mfc4.2,riched20,wininet，gdiplus,iphlapi,urlmon设置成原装先于内建，这几个dll文件可以从windows系统复制过来，基本都在windows\systme32里面。</p>
-</li>
-</ol>
-<blockquote>
-<p><img alt="wineqq" src="http://jackjin-cn.github.io/images/wine-qq.png" title="wine-qq设置" /></p>
-</blockquote>
-</blockquote> </div><!-- /.entry-content -->
-        </article></li>
-</ol><!-- /#posts-list -->
-</section><!-- /#content -->
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-        </footer><!-- /#contentinfo -->
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content=""/>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/2.3.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/2.3.2/css/bootstrap-responsive.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/fontawesome/4.0.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css"/>
+    <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/jquery.mglass.css"/>
+    <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/pygment-solarized-dark.css"/>
+    <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/style.css"/>
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+    <link href='//fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'/>
+    <link href='//fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'/>
+
+
+    <link rel="icon" href="http://jackjin-cn.github.io/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://jackjin-cn.github.io/favicon.ico" type="image/x-icon">
+
+    <!-- Feeds -->
+      <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin&#39;s Home Full RSS Feed"/>
+
+
+  </head>
+
+  <body>
+    <div class="container">
+
+      <header>
+        <div class="page-header">
+          <h1><a href="http://jackjin-cn.github.io">Jackjin's Home</a> <small></small></h1>
+        </div>
+
+        <div class="navbar">
+          <div class="navbar-inner">
+            <a class="brand" href="http://jackjin-cn.github.io" title="">Jackjin's Home</a>
+            <ul class="nav">
+<li ><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
+<li ><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
+<li ><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <section>
+
+        <div class="row">
+          <div class=" span12  ">
+  <h1>
+    <a  href="http://jackjin-cn.github.io/category/linux.html" rel="bookmark" title="Permalink to linux articles">linux articles</a>
+  </h1>
+          </div>
+        </div>
+
+        <div class="row">
+
+
+          <div class=" span12 " id="content" role="main">
+  <dl class="dl-horizontal">
+      <dt><abbr class="published" title="2016-01-06T19:43:00+08:00">2016-01-06 星期三 19:43</abbr></dt>
+      <dd><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html">在linux下把cp936转成utf-8</a></dd>
+      <dt><abbr class="published" title="2016-01-02T20:56:00+08:00">2016-01-02 星期六 20:56</abbr></dt>
+      <dd><a href="http://jackjin-cn.github.io/2016/2016-01-02_20-56_wine-qq-79ban-de-an-zhuang.html">Wine QQ 7.9版的安装</a></dd>
+  </dl>
+          </div>
+
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- TODO: make footer sticky -->
+    <footer class="container-fluid">
+      <div class="container">
+        <div class="row">
+
+            <div class="span2">
+                <h5>Social</h5>
+                <ul class="unstyled">
+                  <li>  <a href="#">
+    aaa
+  </a></li>
+                  <li>  <a href="#">
+    Another social link
+  </a></li>
+                </ul>
+            </div>
+            <div class="span2">
+                <h5>Links</h5>
+                <ul class="unstyled">
+                  <li>  <a href="http://getpelican.com/">
+    Pelican
+  </a></li>
+                  <li>  <a href="http://python.org/">
+    Python.org
+  </a></li>
+                  <li>  <a href="http://jinja.pocoo.org/">
+    Jinja2
+  </a></li>
+                  <li>  <a href="http://kevinyoung.gitcafe.io">
+    煎挠橙的blog
+  </a></li>
+                </ul>
+            </div>
+
+          <div class="span2">
+            <h5>Browse content by</h5>
+            <ul class="fa-ul">
+                <li><a href="http://jackjin-cn.github.io/archives.html"><i class="fa-li fa fa-calendar"></i> Dates</a></li>
+                <li><a href="http://jackjin-cn.github.io/tags.html"><i class="fa-li fa fa-tag"></i> Tags</a></li>
+
+                <li><a href="http://jackjin-cn.github.io/feed.xml"><i class="fa-li fa fa-rss"></i> Feed</a></li>
+            </ul>
+          </div>
+
+          <div class="span2 muted">
+            <h5>Copyright notice</h5>
+            <p>© Copyright 2016 天地一沙鸥.</p>
+          </div>
+
+          <div class="span2 muted">
+            <h5>Disclaimer</h5>
+              <p>All opinions expressed in this site are my own personal opinions and are not endorsed by, nor do they represent the opinions of my previous, current and future employers or any of its affiliates, partners or customers.</p>
+          </div>
+
+          <div class="span2">
+            <h5 class="pull-right"><a href="#" class="fa fa-arrow-up"> Back to top</a></h5>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row span12 muted text-center">
+          Site generated by <a href="http://getpelican.com"> Pelican</a>.<br/>
+          <a href="https://github.com/kdeldycke/plumage"> Plumage</a> theme by <a href="http://kevin.deldycke.com">Kevin Deldycke</a>.
+        </div>
+      </div>
+
+    </footer>
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72007782-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
+    <script src="http://jackjin-cn.github.io/theme/js/jquery.mglass.js"></script>
+    <script src="http://jackjin-cn.github.io/theme/js/application.js"></script>
+
+  </body>
 </html>

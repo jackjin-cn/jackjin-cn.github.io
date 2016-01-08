@@ -1,53 +1,267 @@
 <!DOCTYPE html>
 <html lang="zh">
-<head>
-        <title>Jackjin's Home</title>
-        <meta charset="utf-8" />
-        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home Full RSS Feed" />
-</head>
+  <head>
+    <meta charset="utf-8"/>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="http://jackjin-cn.github.io/">Jackjin's Home <strong></strong></a></h1>
-        </header><!-- /#banner -->
-        <nav id="menu"><ul>
-            <li><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
-            <li><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
-            <li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
-        </ul></nav><!-- /#menu -->
-<h1>Archives for Jackjin's Home</h1>
+    <title>  Archives
+ | Jackjin's Home</title>
 
-<dl>
-    <dt>2016-01-08 星期五 15:07</dt>
-    <dd><a href="http://jackjin-cn.github.io/2016/2016-01-08_15-07_vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian.html">vim中的find命令，打开文件很方便</a></dd>
-    <dt>2016-01-06 星期三 19:58</dt>
-    <dd><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html">修改pelican所支持的内容文件的扩展名</a></dd>
-    <dt>2016-01-06 星期三 19:43</dt>
-    <dd><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html">在linux下把cp936转成utf-8</a></dd>
-    <dt>2016-01-05 星期二 17:37</dt>
-    <dd><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html">在vim中用pandoc进行预览</a></dd>
-    <dt>2016-01-05 星期二 17:28</dt>
-    <dd><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html">pandoc的用法（1）</a></dd>
-    <dt>2016-01-05 星期二 15:02</dt>
-    <dd><a href="http://jackjin-cn.github.io/2016/2016-01-05_15-02_vimde-findming-ling.html">vim的find命令</a></dd>
-    <dt>2016-01-03 星期日 16:44</dt>
-    <dd><a href="http://jackjin-cn.github.io/2016/2016-01-03_16-44_xin-wen-zu-de-mei-luo.html">新闻组的没落</a></dd>
-    <dt>2016-01-02 星期六 20:56</dt>
-    <dd><a href="http://jackjin-cn.github.io/2016/2016-01-02_20-56_wine-qq-79ban-de-an-zhuang.html">Wine QQ 7.9版的安装</a></dd>
-    <dt>2016-01-02 星期六 20:08</dt>
-    <dd><a href="http://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html">转pelican的用法</a></dd>
-    <dt>2016-01-02 星期六 19:46</dt>
-    <dd><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html">关于在pelican的date中使用中文的问题</a></dd>
-    <dt>2016-01-02 星期六 19:36</dt>
-    <dd><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-36_strftimede-yi-dian-yong-fa.html">strftime的一点用法</a></dd>
-    <dt>2015-12-31 星期四 21:24</dt>
-    <dd><a href="http://jackjin-cn.github.io/2015/2015-12-31_21-24_2015nian-sui-wei.html">2015年岁未</a></dd>
-</dl>
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-        </footer><!-- /#contentinfo -->
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content=""/>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/2.3.2/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/bootstrap/2.3.2/css/bootstrap-responsive.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/fontawesome/4.0.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css"/>
+    <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/jquery.mglass.css"/>
+    <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/pygment-solarized-dark.css"/>
+    <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/style.css"/>
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
+    <link href='//fonts.googleapis.com/css?family=Istok+Web' rel='stylesheet' type='text/css'/>
+    <link href='//fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'/>
+
+
+    <link rel="icon" href="http://jackjin-cn.github.io/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://jackjin-cn.github.io/favicon.ico" type="image/x-icon">
+
+    <!-- Feeds -->
+      <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin&#39;s Home Full RSS Feed"/>
+
+
+  </head>
+
+  <body>
+    <div class="container">
+
+      <header>
+        <div class="page-header">
+          <h1><a href="http://jackjin-cn.github.io">Jackjin's Home</a> <small></small></h1>
+        </div>
+
+        <div class="navbar">
+          <div class="navbar-inner">
+            <a class="brand" href="http://jackjin-cn.github.io" title="">Jackjin's Home</a>
+            <ul class="nav">
+<li ><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
+<li ><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
+<li ><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <section>
+
+        <div class="row">
+          <div class=" span12  ">
+  <h1>
+    <a href="http://jackjin-cn.github.io/archives.html" rel="bookmark" title="Permalink to archives">Archives</a>
+  </h1>
+          </div>
+        </div>
+
+        <div class="row">
+
+
+          <div class=" span12 " id="content" role="main">
+
+
+  <div class="tabbable tabs-left">
+
+    <ul class="nav nav-tabs">
+        <li  class="active" ><a href="#2016" data-toggle="tab">2016</a></li>
+        <li ><a href="#2015" data-toggle="tab">2015</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane  active " id="2016">
+
+
+
+                <dl class="dl-horizontal">
+
+              <dt><abbr class="published" title="2016-01-08T15:07:00+08:00">1月. 08</abbr></dt>
+              <dd><a href="http://jackjin-cn.github.io/2016/2016-01-08_15-07_vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian.html">vim中的find命令，打开文件很方便</a></dd>
+
+
+
+
+              <dt><abbr class="published" title="2016-01-06T19:58:00+08:00">1月. 06</abbr></dt>
+              <dd><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html">修改pelican所支持的内容文件的扩展名</a></dd>
+
+
+
+
+              <dt><abbr class="published" title="2016-01-06T19:43:00+08:00">1月. 06</abbr></dt>
+              <dd><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html">在linux下把cp936转成utf-8</a></dd>
+
+
+
+
+              <dt><abbr class="published" title="2016-01-05T17:37:00+08:00">1月. 05</abbr></dt>
+              <dd><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html">在vim中用pandoc进行预览</a></dd>
+
+
+
+
+              <dt><abbr class="published" title="2016-01-05T17:28:00+08:00">1月. 05</abbr></dt>
+              <dd><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html">pandoc的用法（1）</a></dd>
+
+
+
+
+              <dt><abbr class="published" title="2016-01-05T15:02:00+08:00">1月. 05</abbr></dt>
+              <dd><a href="http://jackjin-cn.github.io/2016/2016-01-05_15-02_vimde-findming-ling.html">vim的find命令</a></dd>
+
+
+
+
+              <dt><abbr class="published" title="2016-01-03T16:44:00+08:00">1月. 03</abbr></dt>
+              <dd><a href="http://jackjin-cn.github.io/2016/2016-01-03_16-44_xin-wen-zu-de-mei-luo.html">新闻组的没落</a></dd>
+
+
+
+
+              <dt><abbr class="published" title="2016-01-02T20:56:00+08:00">1月. 02</abbr></dt>
+              <dd><a href="http://jackjin-cn.github.io/2016/2016-01-02_20-56_wine-qq-79ban-de-an-zhuang.html">Wine QQ 7.9版的安装</a></dd>
+
+
+
+
+              <dt><abbr class="published" title="2016-01-02T20:08:00+08:00">1月. 02</abbr></dt>
+              <dd><a href="http://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html">转pelican的用法</a></dd>
+
+
+
+
+              <dt><abbr class="published" title="2016-01-02T19:46:00+08:00">1月. 02</abbr></dt>
+              <dd><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html">关于在pelican的date中使用中文的问题</a></dd>
+
+
+
+
+              <dt><abbr class="published" title="2016-01-02T19:36:00+08:00">1月. 02</abbr></dt>
+              <dd><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-36_strftimede-yi-dian-yong-fa.html">strftime的一点用法</a></dd>
+
+
+
+        </div>
+        <div class="tab-pane " id="2015">
+
+
+
+                  </dl>
+                <dl class="dl-horizontal">
+
+              <dt><abbr class="published" title="2015-12-31T21:24:00+08:00">12月. 31</abbr></dt>
+              <dd><a href="http://jackjin-cn.github.io/2015/2015-12-31_21-24_2015nian-sui-wei.html">2015年岁未</a></dd>
+
+                </dl>
+
+
+        </div>
+    </div>
+
+  </div>
+
+          </div>
+
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- TODO: make footer sticky -->
+    <footer class="container-fluid">
+      <div class="container">
+        <div class="row">
+
+            <div class="span2">
+                <h5>Social</h5>
+                <ul class="unstyled">
+                  <li>  <a href="#">
+    aaa
+  </a></li>
+                  <li>  <a href="#">
+    Another social link
+  </a></li>
+                </ul>
+            </div>
+            <div class="span2">
+                <h5>Links</h5>
+                <ul class="unstyled">
+                  <li>  <a href="http://getpelican.com/">
+    Pelican
+  </a></li>
+                  <li>  <a href="http://python.org/">
+    Python.org
+  </a></li>
+                  <li>  <a href="http://jinja.pocoo.org/">
+    Jinja2
+  </a></li>
+                  <li>  <a href="http://kevinyoung.gitcafe.io">
+    煎挠橙的blog
+  </a></li>
+                </ul>
+            </div>
+
+          <div class="span2">
+            <h5>Browse content by</h5>
+            <ul class="fa-ul">
+                <li><a href="http://jackjin-cn.github.io/archives.html"><i class="fa-li fa fa-calendar"></i> Dates</a></li>
+                <li><a href="http://jackjin-cn.github.io/tags.html"><i class="fa-li fa fa-tag"></i> Tags</a></li>
+
+                <li><a href="http://jackjin-cn.github.io/feed.xml"><i class="fa-li fa fa-rss"></i> Feed</a></li>
+            </ul>
+          </div>
+
+          <div class="span2 muted">
+            <h5>Copyright notice</h5>
+            <p>© Copyright 2015-2016 天地一沙鸥.</p>
+          </div>
+
+          <div class="span2 muted">
+            <h5>Disclaimer</h5>
+              <p>All opinions expressed in this site are my own personal opinions and are not endorsed by, nor do they represent the opinions of my previous, current and future employers or any of its affiliates, partners or customers.</p>
+          </div>
+
+          <div class="span2">
+            <h5 class="pull-right"><a href="#" class="fa fa-arrow-up"> Back to top</a></h5>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row span12 muted text-center">
+          Site generated by <a href="http://getpelican.com"> Pelican</a>.<br/>
+          <a href="https://github.com/kdeldycke/plumage"> Plumage</a> theme by <a href="http://kevin.deldycke.com">Kevin Deldycke</a>.
+        </div>
+      </div>
+
+    </footer>
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72007782-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>
+    <script src="http://jackjin-cn.github.io/theme/js/jquery.mglass.js"></script>
+    <script src="http://jackjin-cn.github.io/theme/js/application.js"></script>
+
+  </body>
 </html>
