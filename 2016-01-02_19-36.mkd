@@ -1,0 +1,16 @@
+Title:strftime的一点用法
+Date:2016-01-02 19:36
+Category: vim
+Tags:vim,time 
+Author: 天地一沙鸥
+
+# strftime的一点用法 
+
+最近想写，用**Vim**进行编辑，想设置加入时间的快捷方式
+
+    map <LEADER>bt A<C-R>=strftime("%Y-%m-%d %A %H:%M")<CR>
+
+效果如下:
+
+    2016-01-02 星期六 19:39
+

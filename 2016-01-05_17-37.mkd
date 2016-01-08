@@ -1,0 +1,14 @@
+Title:在vim中用pandoc进行预览
+Date: 2016-01-05 17:37
+Category:vim 
+Tags:软件,vim,pandoc,html 
+Author: 天地一沙鸥
+
+## 在vim中用pandoc进行预览
+
+	"----------生成打包图片的单一html文件
+	map <LEADER>mh <ESC>:w<CR><ESC>:silent !pandoc  -s --self-contained % -c paht/to/style.css -o %:r.html<CR>
+
+[参见《pandoc的用法（1）》]({filename}2016-01-05_17-28.mkd)
+
+

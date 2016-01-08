@@ -1,0 +1,290 @@
+Title:转pelican的用法
+Date: 2016-01-02 20:08
+Category: 软件使用
+Tags: pelican,转载
+Author: 天地一沙鸥
+
+转自[煎挠橙的博客](http://kevinyoung.gitcafe.io/articles/blog/build_your_blog.html)
+
+> 思路
+
+一般而言，搭建一个独立博客需要三样东西：
+
+    博客软件
+    托管服务器
+    独立的域名
+
+博客软件用来生成你的博客页面，而生成好的页面则需要放到托管的服务器上才能被别人看到。
+博客软件
+
+我选择Pleican作为博客软件主要是出于以下的考虑：
+
+    基于Python，简单易上手
+    生成静态页面，不需要数据库，访问速度快，易于维护
+    支持markdown标记语言
+
+和著名的wordpress相比，pelican搭建起来的博客功能和界面会相对单薄一些，但对于我来说绝对够用，况且写博客的初衷也是想把注意力放在内容上，工具越简单越好。
+托管服务器
+
+这里选择github的原因也很简单：
+
+    免费
+    省事
+    可以直接用git进行版本管理
+
+磨刀
+
+这份教程中提到的方法虽然简单，但仍旧需要你有一些基础，主要有
+1.python基础
+
+你至少应该能够配置python的环境，能够顺利的安装python的插件,了解一些简单的python语法。
+2.了解Markdown
+
+没听说过不要紧，推荐阅读我的文章你为什么应该用markdown写文章。
+
+另外这里有一份简短的介绍，详细的语法说明则可以在这里找到。
+3.对git/github有所了解
+
+如果不了解也同样没有关系，这个一站式的教程可以帮到你。
+
+这里多说一点。git本身就是追踪文本的系统，虽然设定上是给程序做版本管理的，但未尝不能拿来管理文章。甚至，我相信git+markdown等轻量级标记语言代表了一种写作的未来。
+动手
+
+这里提一下，我的配置环境是ubuntu14.04。windows则需要多一些折腾，请自行google。
+安装Pelican
+
+这里假设你已经安装好了python2.x的环境，并装好了pip。可以直接用下面的命令安装pelican
+
+pip install pelican
+
+要使用markdown，还需要一个markdown的支持
+
+pip install markdown
+
+首次配置
+
+选定一个目录存放你的博客文件，我的叫blog
+
+mkdir blog
+cd blog
+
+在你的blog目录下使用命令
+
+pelican-quickstart
+
+接下来会询问你一系列问题，除了名字等必须要填的，其他建议使用默认值，随后还可以通过配置pelicanconf.py文件进行修改。
+
+运行结束之后会生成的目录结构
+
+blog/
+├── content
+│   └── (pages)
+├── output
+├── develop_server.sh
+├── Makefile
+├── pelicanconf.py     
+└── publishconf.py
+
+pelican的工作逻辑是，把用markdown写好的纯文本文档放进content这个目录下面，运行程序，就可以将你的整个博客页面生成到output中去了。
+
+至此，文件系统部分已经配置完成了，接下来可以试着写一篇文档了
+第一篇博文
+
+创建一个叫first.md的文档放到content目录下。Pelican对内容的格式有些要求，每一篇博文的开头都应该是这样的：
+
+Title: 第一篇博客
+Date: 2013-12-12 10:16
+Category: 测试
+Tags: 心情
+Author: 煎挠橙
+
+这里开始可以书写正文了
+blabla....
+
+所以你应该看明白了，必须要通过每篇博文开头的部分来告诉pelican这篇文章的标题、标签、分类等信息以便最终呈现在博客页面上。其中，标题、时间是必填的，如果缺失该文章会被pelican忽略掉。
+生成网页
+
+写完你的第一篇博文后，你应该还在content目录下，先回到blog根目录下
+
+cd ..
+
+使用下面的命令pelican系统会将你放在content目录下的.md文档转换成网页文件
+
+make html
+
+当然，你也可以让pelican在每次检测到文件变化的时候都重新生成一次网页，使用下面的命令
+
+make regenerate
+
+这时如果你去output目录下就会看到生成的页面已经躺在那里了，但为了方便本地调试，你可以用下面的命令开启一个本地的服务器
+
+make serve
+
+这样，通过访问 http://127.0.0.1:8000 就能看到你的博客页面了！
+
+不过这样光是调试就得开两个终端，稍麻烦，pelican实际上还提供了一个命令，可以代替上面两个
+
+make devserver
+
+调试完毕后你应该关闭之前开启的服务器
+
+./develop_server.sh stop
+
+至此，尽管丑了些，但你已经完成了自己博客的创建，随后只需要把你的文章放进content目录下面并运行以上命令就可以轻松生成博客了。如果需要备份，也只需要将content目录下的文件备份好就行，非常省心。
+
+当然此时别人还无法访问到你的页面，下面就教你如何把你的博客放到网上去。
+在github上创建个人页面
+
+首先你要有个github账号。github为每个账号提供一个子域名以供存放个人页面，使用的方法是创建一个新的版本库，命名为
+
+username.github.io
+
+其中username必须为你的github用户名，否则将无法启动页面。
+
+这时你新创建的版本库是空的，你会获得一个地址
+
+https://github.com/username/username.github.io.git
+
+先记下来。
+
+接下来要做的是将你本地output目录下的所有内容都推送到你刚刚建立的远程版本库中。在本地，进到output目录下面
+
+cd output
+
+在这里新建一个本地的版本库
+
+git init
+
+建议按照github的惯例添加一个新的readme文档
+
+touch README.md
+
+接下来可以将目录下面所有的文件都添加进缓存区
+
+git add .
+
+可以提交了
+
+git commit -m 'First commit'
+
+下面将你的本地仓库和远程仓库关联起来，还记的之前获得的一个地址吧，用在这里
+
+git remote add origin https://github.com/username/username.github.io.git
+
+最后将本地仓库推送到github上就好，由于是第一次，用上-u字段
+
+git push -u origin master
+
+待推送成功，稍等片刻，登陆
+
+username.github.io
+
+应该就能看到你的博客了，没错，它已经正式上线了。此后每次变更博客内容或设置，只需事后将output目录下的内容推送到github就可以了，听上去和做上去都很简单。
+
+这样，如果你不在意域名的问题，你的博客就算搭建成功了，而且没有花费一分钱！
+锦上添花
+使用主题
+
+pelican目前提供了数款主题可供选择。先到pelican这个项目的github页面上把主题的版本库clone到本地，在你选定的本地目录下面
+
+git clone https://github.com/getpelican/pelican-themes.git
+
+进pelican-themes目录
+
+cd pelican-themes
+
+你可以浏览该目录下的文件，每个子目录存放了一个主题，并有截图供你预览。比如我看中了bootstrap这一款，使用命令
+
+pelican-themes -i bootstrap
+
+安装该主题。再使用命令
+
+pelican-themes -l
+
+查看已安装主题，应该就能看到刚刚安装的bootstrap主题了。这还不够，你还需要在pelicanconf.py文档中加上一句
+
+THEME = 'bootstrap'
+
+这样你在生成博客页面时新主题就被应用上了。
+添加静态的页面
+
+pelican提供了一种不同于一般博客文章的'页面'方便你存放一些需要置顶的信息，比如about页面和contact页面。
+
+创建方法也很简单，只需要在content目录下再新建一个名为pages的目录，将你想要展示的内容放进去就行，格式和普通的博客文章相同。
+安装评论系统
+
+由于pelican生成的是静态页面，没有数据库的支持所以本身无法实现评论的功能，不过我们还有第三方的服务可以选择。
+
+这里推荐disqus，功能齐备，免费。
+
+到官方页面上注册一个账号。找到'Add Disqus to your site'选项，在跳转后的页面上填写的网站名字，你填写的名字也将是你的'shortname'，记好了。
+
+接下来在你的pelicanconf.py文档中添加以下字段
+
+DISQUS_SITENAME = shortname
+
+用你自己的'shortname'替换进去，剩下的交给pelican。
+自动化
+
+熟练之后会发觉整个工作流程实际上只有一下几步：
+
+    进入装了pelican的python虚拟环境
+    打开pelican的本地调试功能
+    打开博客的本地页面
+    cd到存放博客的content目录下面
+    用vim编辑文章，调试
+    使用git将生成的网站推送到服务器上
+
+虽然不多，但是用过一段时间后还是觉得繁琐，恰巧我是在ubuntu下面维护这个博客的，不搞搞自动化怎么过瘾，折腾了一下差不多可以了，下面是步骤。
+期望
+
+最终的实现效果大致是这样的：在终端中输入“blog”字段，自动完成上面提到的1-4步，编辑文章自然要手动，这个没的说，最后的推送部分最好也手动完成，commits还是要认真写的。
+实现
+1.
+
+一开始先写了一个bash的脚本完成1,2两步，为什么要这样随后说，内容如下
+
+#!/bin/bash
+
+. ~/virtualenvs/pelican/bin/activate #打开虚拟环境
+cd /media/kevin/MainDisk/1/blog/ #cd到我的博客目录下面
+bash develop_server.sh restart #打开pelican的自动监测-更新-本地端口功能
+read answer #防止新打开的窗口被关闭
+
+第一行主要是把python虚拟环境的配置脚本source一下，关于虚拟环境更多的信息可以参考这一篇。如果你没有在用虚拟环境则不需要这一行。
+
+第二行进入到我的blog目录下面，因为相应的Makefile和bash脚本都在这里放着。
+
+第三行的作用则和前面提到的make devserver一样，实际上如果你去查看Makefile的话，会发现输入make devserver执行的就是这一条命令，我不想绕弯就直接写成这样了。
+
+第四行则作用则有点像你在windows下面编译c程序，因为跳出来的窗口在程序运行完之后就自动关闭，便往往在最后留一个等待输入的命令让程序先待命。
+
+接着将该脚本保存为runpelicanserver.sh，更改其权限以便能够直接运行
+
+$ chmod u+x runpelicanserver.sh
+
+并将其放在PATH环境变量中包括的路径下面，这样随时随地都可以调用。
+
+2.
+
+剩下的工作我选择在.bashrc文件中编写function来完成，添加以下字段：
+
+blog(){
+    xfce4-terminal -e runpelicanserver.sh &
+    xfce4-terminal --working-directory=/media/kevin/MainDisk/1/blog/content/
+    google-chrome 127.0.0.1:8000 &
+}
+
+因为我使用的是xubuntu发行版，默认的终端是xfce4-terminal，你在使用这套东西之前应该先确认一下自己的系统配置。
+
+这个func叫blog，每次我在终端中键入blog字段时，大括号里面的命令会被依次执行。
+
+第一行表示重新打开一个终端窗口，-e字段表示执行后面的命令，也即runpelicanserver.sh脚本，最后的&表示后台运行，因为新打开 的窗口是原来窗口的子进程，如果不后台运行的话关闭原来的窗口也会影响到新窗口的行为。要注意runpelicanserver.sh一定要放在环境变量下，不然就要加上完整的路径名。
+
+第二行则表示重新打开一个终端窗口，其工作路径为我的博客路径，方便稍后编辑文章。
+
+最后一行则表示使用chrome打开本地调试页面。
+
+整个工作完成之后就可以达到预期的目的了。不过我遇到的一个问题是在运行runpelicanserver.sh时常常无法顺利打开pelican的本地调试端口，导致本地的页面打不开，原因不明，所以不得不重新跑一下脚本，这也是为什么把它独立出来的缘故。
+
+

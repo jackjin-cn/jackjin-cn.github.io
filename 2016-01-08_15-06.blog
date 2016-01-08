@@ -1,0 +1,18 @@
+Title:vim中的find命令，打开文件很方便
+Date: 2016-01-08 15:07
+Category: vim
+Tags:vim,文件,find,path 
+Author: 天地一沙鸥
+
+这几天看《Vim实用技巧》,其中介绍了 **:find** 命令的使用
+
+在vim的配件文件`.vimrc or _vimrc `进行如下设置
+
+	set path+=yourdir1/**,youdir2/**
+
+就可以在vim中方便的打开设置好的目录下的文件， ** 《Vim实用技巧》  ** 还有更多的技巧，可以值得去看看。
+
+另外，在网上无意中发现《Vim实用技巧》的作者的博客[易水博客](http://easwy.com/blog/),值得一看。
+
+
+

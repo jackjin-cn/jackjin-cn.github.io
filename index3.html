@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+        <title>Jackjin's Home</title>
+        <meta charset="utf-8" />
+        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home Full RSS Feed" />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://jackjin-cn.github.io/">Jackjin's Home <strong></strong></a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+            <li><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
+            <li><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
+            <li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
+        </ul></nav><!-- /#menu -->
+<section id="content">
+<h2>All articles</h2>
+
+<ol id="post-list">
+        <li><article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html" rel="bookmark" title="Permalink to 转pelican的用法">转pelican的用法</a></h2> </header>
+                <footer class="post-info">
+                    <abbr class="published" title="2016-01-02T20:08:00+08:00"> 2016-01-02 星期六 20:08 </abbr>
+                    <address class="vcard author">By
+                        <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>
+                    </address>
+                </footer><!-- /.post-info -->
+                <div class="entry-content"> <p>转自<a href="http://kevinyoung.gitcafe.io/articles/blog/build_your_blog.html">煎挠橙的博客</a></p>
+<blockquote>
+<p>思路</p>
+</blockquote>
+<p>一般而言，搭建一个独立博客需要三样东西：</p>
+<div class="highlight"><pre>博客软件
+托管服务器
+独立的域名
+</pre></div>
+
+
+<p>博客软件用来生成你的博客页面，而生成好的页面则需要放到托管的服务器上才能被别人看到。
+博客软件</p>
+<p>我选择Pleican作为博客软件主要是出于以下的考虑：</p>
+<div class="highlight"><pre>基于Python，简单易上手
+生成静态页面，不需要数据库，访问速度快，易于维护
+支持markdown标记语言
+</pre></div>
+
+
+<p>和著名的wordpress相比，pelican搭建起来的博客功能和界面会相对单薄一些，但对于我来说绝对够用，况且写博客的初衷也是想把注意力放在内容上，工具越简单越好。
+托管服务器</p>
+<p>这里选择github的原因也很简单：</p>
+<div class="highlight"><pre>免费
+省事
+可以直接用git进行版本管理
+</pre></div>
+
+
+<p>磨刀</p>
+<p>这份教程中提到的方法虽然简单，但仍旧需要你有一些基础，主要有
+1.python基础</p>
+<p>你至少应该能够配置python的环境，能够顺利的安装python的插件,了解一些简单的python语法。
+2.了解Markdown</p>
+<p>没听说过不要紧，推荐阅读我的文章你为什么应该用markdown写文章。</p>
+<p>另外这里有一份简短的介绍，详细的语法说明则可以在这里找到。
+3.对git/github有所了解</p>
+<p>如果不了解也同样没有关系，这个一站式的教程可以帮到你。</p>
+<p>这里多说一点 ...</p> </div><!-- /.entry-content -->
+        </article></li>
+        <li><article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html" rel="bookmark" title="Permalink to 关于在pelican的date中使用中文的问题">关于在pelican的date中使用中文的问题</a></h2> </header>
+                <footer class="post-info">
+                    <abbr class="published" title="2016-01-02T19:46:00+08:00"> 2016-01-02 星期六 19:46 </abbr>
+                    <address class="vcard author">By
+                        <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>
+                    </address>
+                </footer><!-- /.post-info -->
+                <div class="entry-content"> <h1>关于在pelican的date中使用中文的问题</h1>
+<p>想在pelican的date中应用如下格式</p>
+<blockquote>
+<p>2016-01-02 星期六 19:31</p>
+</blockquote>
+<p>结果在'make html'时出现如下错误：</p>
+<div class="highlight"><pre><span class="n">ValueError</span><span class="o">:</span> <span class="n">u</span><span class="s1">&#39;2016-01-02 \u661f\u671f\u516d 19:36&#39;</span> <span class="k">is</span> <span class="n">not</span> <span class="n">a</span> <span class="n">valid</span> <span class="n">date</span>
+</pre></div>
+
+
+<p>应该是python2的utf-8中文支持的老问题了</p>
+<p>不过，我发现，想要上面的日期格式，只需要在 <strong>pelicanconf.py</strong>中如下设置:</p>
+<div class="highlight"><pre>DEFAULT_DATE_FORMAT = u&#39;%Y-%m-%d %A %H:%M&#39;
+</pre></div>
+
+
+<p>pelican会在时间里加上星期几了</p>
+<p>这个软件做得还是很人性化的了。</p> </div><!-- /.entry-content -->
+        </article></li>
+        <li><article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-36_strftimede-yi-dian-yong-fa.html" rel="bookmark" title="Permalink to strftime的一点用法">strftime的一点用法</a></h2> </header>
+                <footer class="post-info">
+                    <abbr class="published" title="2016-01-02T19:36:00+08:00"> 2016-01-02 星期六 19:36 </abbr>
+                    <address class="vcard author">By
+                        <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>
+                    </address>
+                </footer><!-- /.post-info -->
+                <div class="entry-content"> <h1>strftime的一点用法</h1>
+<p>最近想写，用<strong>Vim</strong>进行编辑，想设置加入时间的快捷方式</p>
+<div class="highlight"><pre>map &lt;LEADER&gt;bt A&lt;C-R&gt;=strftime(&quot;%Y-%m-%d %A %H:%M&quot;)&lt;CR&gt;
+</pre></div>
+
+
+<p>效果如下:</p>
+<div class="highlight"><pre>2016-01-02 星期六 19:39
+</pre></div> </div><!-- /.entry-content -->
+        </article></li>
+        <li><article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jackjin-cn.github.io/2015/2015-12-31_21-24_2015nian-sui-wei.html" rel="bookmark" title="Permalink to 2015年岁未">2015年岁未</a></h2> </header>
+                <footer class="post-info">
+                    <abbr class="published" title="2015-12-31T21:24:00+08:00"> 2015-12-31 星期四 21:24 </abbr>
+                    <address class="vcard author">By
+                        <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>
+                    </address>
+                </footer><!-- /.post-info -->
+                <div class="entry-content"> <h1>今天是特别的一天</h1>
+<p><strong>我还是属于技术宅</strong></p> </div><!-- /.entry-content -->
+        </article></li>
+</ol><!-- /#posts-list -->
+<p class="paginator">
+        <a href="http://jackjin-cn.github.io/index2.html">&laquo;</a>
+    Page 3 / 3
+</p>
+</section><!-- /#content -->
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
+</body>
+</html>

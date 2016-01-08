@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+        <title>Jackjin's Home - Articles by 天地一沙鸥</title>
+        <meta charset="utf-8" />
+        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home Full RSS Feed" />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://jackjin-cn.github.io/">Jackjin's Home <strong></strong></a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+            <li><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
+            <li><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
+            <li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
+        </ul></nav><!-- /#menu -->
+<section id="content">
+<h2>Articles by 天地一沙鸥</h2>
+
+<ol id="post-list">
+        <li><article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jackjin-cn.github.io/2016/2016-01-08_15-07_vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian.html" rel="bookmark" title="Permalink to vim中的find命令，打开文件很方便">vim中的find命令，打开文件很方便</a></h2> </header>
+                <footer class="post-info">
+                    <abbr class="published" title="2016-01-08T15:07:00+08:00"> 2016-01-08 星期五 15:07 </abbr>
+                    <address class="vcard author">By
+                        <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>
+                    </address>
+                </footer><!-- /.post-info -->
+                <div class="entry-content"> <p>这几天看《Vim实用技巧》,其中介绍了 <strong>:find</strong> 命令的使用</p>
+<p>在vim的配件文件<code>.vimrc or _vimrc</code>进行如下设置</p>
+<div class="highlight"><pre>set path+=yourdir1/**,youdir2/**
+</pre></div>
+
+
+<p>就可以在vim中方便的打开设置好的目录下的文件， <strong> 《Vim实用技巧》  </strong> 还有更多的技巧，可以值得去看看。</p>
+<p>另外，在网上无意中发现《Vim实用技巧》的作者的博客<a href="http://easwy.com/blog/">易水博客</a>,值得一看。</p> </div><!-- /.entry-content -->
+        </article></li>
+        <li><article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html" rel="bookmark" title="Permalink to 修改pelican所支持的内容文件的扩展名">修改pelican所支持的内容文件的扩展名</a></h2> </header>
+                <footer class="post-info">
+                    <abbr class="published" title="2016-01-06T19:58:00+08:00"> 2016-01-06 星期三 19:58 </abbr>
+                    <address class="vcard author">By
+                        <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>
+                    </address>
+                </footer><!-- /.post-info -->
+                <div class="entry-content"> <h2>修改pelican所支持的内容文件的扩展名</h2>
+<p>pelican的内容文本文件只支持常见markdown的扩展名<code>markdown,md,mkd</code>等，我比较喜欢用vim制作自己的文件模板，这样就需要自己取文件扩展名，比如*.blog，前几天没想到办法，今天找到办法了。</p>
+<p>用grep 在 <strong>/usr/local/lib/python2.7/dist-packages/pelican</strong> 找了下<strong>md</strong></p>
+<div class="highlight"><pre>$/usr/local/lib/python2.7/dist-packages/pelican$ grep &#39;md&#39; *.py
+结果如下：
+readers.py:    file_extensions = [&#39;md&#39;, &#39;markdown&#39;, &#39;mkd&#39;, &#39;mdown&#39;]
+</pre></div>
+
+
+<p>于是只是修改<code>readers.py</code>，加入自己想要的扩展名就可以了。</p>
+<p>我没有找到其它办法，不过这个方法还算方便吧。</p> </div><!-- /.entry-content -->
+        </article></li>
+        <li><article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html" rel="bookmark" title="Permalink to 在linux下把cp936转成utf-8">在linux下把cp936转成utf-8</a></h2> </header>
+                <footer class="post-info">
+                    <abbr class="published" title="2016-01-06T19:43:00+08:00"> 2016-01-06 星期三 19:43 </abbr>
+                    <address class="vcard author">By
+                        <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>
+                    </address>
+                </footer><!-- /.post-info -->
+                <div class="entry-content"> <h2>在linux下把cp936转成utf-8</h2>
+<p>今天需要把原来写的文字用博客的形式发布，用pelican转换的第一个问题就是文件的内码格式不到，原来是 <strong>cp936</strong> (中文ASCII)的形式，需要转成<strong>utf-8</strong>。</p>
+<p>网上找了一下，可以用<code>iconv</code> 这个工具，不过不支持批量转换，于是又搜了一下，用bash写了一个，在此记录一下。
+另外说明一下，<strong>iconv</strong> 不支持自动识别文件编码，要手动指定</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span class="c">#!/bin/bash</span>
+<span class="k">for</span> file in *.txt 
+    <span class="k">do</span> iconv -c -f gb18030 -t utf8 <span class="nv">$file</span> -o <span class="nv">$file</span>.uu
+<span class="k">done</span>
+</pre></div>
+</td></tr></table> </div><!-- /.entry-content -->
+        </article></li>
+        <li><article class="hentry">
+                <header> <h2 class="entry-title"><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html" rel="bookmark" title="Permalink to 在vim中用pandoc进行预览">在vim中用pandoc进行预览</a></h2> </header>
+                <footer class="post-info">
+                    <abbr class="published" title="2016-01-05T17:37:00+08:00"> 2016-01-05 星期二 17:37 </abbr>
+                    <address class="vcard author">By
+                        <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>
+                    </address>
+                </footer><!-- /.post-info -->
+                <div class="entry-content"> <h2>在vim中用pandoc进行预览</h2>
+<div class="highlight"><pre>&quot;----------生成打包图片的单一html文件
+map &lt;LEADER&gt;mh &lt;ESC&gt;:w&lt;CR&gt;&lt;ESC&gt;:silent !pandoc  -s --self-contained % -c paht/to/style.css -o %:r.html&lt;CR&gt;
+</pre></div>
+
+
+<p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html">参见《pandoc的用法（1）》</a></p> </div><!-- /.entry-content -->
+        </article></li>
+</ol><!-- /#posts-list -->
+<p class="paginator">
+    Page 1 / 3
+        <a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou2.html">&raquo;</a>
+</p>
+</section><!-- /#content -->
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+          <title>Jackjin's Home</title>
+        <meta charset="utf-8" />
+        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home Full RSS Feed" />
+
+
+
+    <meta name="tags" content="pandoc" />
+    <meta name="tags" content="vim" />
+    <meta name="tags" content="html" />
+    <meta name="tags" content="css" />
+
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://jackjin-cn.github.io/">Jackjin's Home <strong></strong></a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+            <li><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
+            <li><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
+            <li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
+        </ul></nav><!-- /#menu -->
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html" rel="bookmark"
+         title="Permalink to pandoc的用法（1）">pandoc的用法（1）</a></h2>
+ 
+  </header>
+  <footer class="post-info">
+    <abbr class="published" title="2016-01-05T17:28:00+08:00">
+      2016-01-05 星期二 17:28
+    </abbr>
+    <address class="vcard author">
+      By           <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>
+    </address>
+  </footer><!-- /.post-info -->
+  <div class="entry-content">
+    <h2>pandoc的用法（1）</h2>
+<p>用vim写markdown，自己在.vimrc里也写快捷命令进行预览，感觉还是很方便的。</p>
+<blockquote>
+<p>pandoc在生成html文件的时候，可以支持css，还可以生成单独的文件，包含在图片里面。</p>
+</blockquote>
+<div class="highlight"><pre>pandoc -c style.css  #包含css样式（可以包括路径,但html和css是分离）
+pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含在一个html文件中,生成docx文件也可以用这个参数，图片被包含在docx文件中）
+</pre></div>
+
+
+<p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html">参见我在vim中用pandoc进行预览</a></p>
+  </div><!-- /.entry-content -->
+</section>
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
+</body>
+</html>

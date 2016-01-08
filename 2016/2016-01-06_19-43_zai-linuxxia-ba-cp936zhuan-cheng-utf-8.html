@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+          <title>Jackjin's Home</title>
+        <meta charset="utf-8" />
+        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home Full RSS Feed" />
+
+
+
+    <meta name="tags" content="linux" />
+    <meta name="tags" content="bash" />
+    <meta name="tags" content="code" />
+    <meta name="tags" content="中文" />
+
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://jackjin-cn.github.io/">Jackjin's Home <strong></strong></a></h1>
+        </header><!-- /#banner -->
+        <nav id="menu"><ul>
+            <li><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
+            <li><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
+            <li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
+        </ul></nav><!-- /#menu -->
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="http://jackjin-cn.github.io/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html" rel="bookmark"
+         title="Permalink to 在linux下把cp936转成utf-8">在linux下把cp936转成utf-8</a></h2>
+ 
+  </header>
+  <footer class="post-info">
+    <abbr class="published" title="2016-01-06T19:43:00+08:00">
+      2016-01-06 星期三 19:43
+    </abbr>
+    <address class="vcard author">
+      By           <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>
+    </address>
+  </footer><!-- /.post-info -->
+  <div class="entry-content">
+    <h2>在linux下把cp936转成utf-8</h2>
+<p>今天需要把原来写的文字用博客的形式发布，用pelican转换的第一个问题就是文件的内码格式不到，原来是 <strong>cp936</strong> (中文ASCII)的形式，需要转成<strong>utf-8</strong>。</p>
+<p>网上找了一下，可以用<code>iconv</code> 这个工具，不过不支持批量转换，于是又搜了一下，用bash写了一个，在此记录一下。
+另外说明一下，<strong>iconv</strong> 不支持自动识别文件编码，要手动指定</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span class="c">#!/bin/bash</span>
+<span class="k">for</span> file in *.txt 
+    <span class="k">do</span> iconv -c -f gb18030 -t utf8 <span class="nv">$file</span> -o <span class="nv">$file</span>.uu
+<span class="k">done</span>
+</pre></div>
+</td></tr></table>
+  </div><!-- /.entry-content -->
+</section>
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+        </footer><!-- /#contentinfo -->
+</body>
+</html>

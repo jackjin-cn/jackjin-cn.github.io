@@ -1,0 +1,26 @@
+Title:关于在pelican的date中使用中文的问题
+Date: 2016-01-02 19:46
+Category:软件使用 
+Tags:vim,python,pelican,中文 
+Author: 天地一沙鸥
+
+# 关于在pelican的date中使用中文的问题
+
+想在pelican的date中应用如下格式
+
+> 2016-01-02 星期六 19:31
+
+结果在'make html'时出现如下错误：
+
+	ValueError: u'2016-01-02 \u661f\u671f\u516d 19:36' is not a valid date
+
+应该是python2的utf-8中文支持的老问题了
+
+不过，我发现，想要上面的日期格式，只需要在 **pelicanconf.py**中如下设置:
+
+    DEFAULT_DATE_FORMAT = u'%Y-%m-%d %A %H:%M'
+    
+pelican会在时间里加上星期几了
+
+这个软件做得还是很人性化的了。
+
