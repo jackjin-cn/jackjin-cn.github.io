@@ -74,6 +74,31 @@
 
       <article>
         <header>
+          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html" rel="bookmark" title="Permalink to 关于在pelican的date中使用中文的问题">关于在pelican的date中使用中文的问题</a></h2>
+        </header>
+        <div><h1>关于在pelican的date中使用中文的问题</h1>
+<p>想在pelican的date中应用如下格式</p>
+<blockquote>
+<p>2016-01-02 星期六 19:31</p>
+</blockquote>
+<p>结果在'make html'时出现如下错误：</p>
+<div class="highlight"><pre><span class="n">ValueError</span><span class="o">:</span> <span class="n">u</span><span class="s1">&#39;2016-01-02 \u661f\u671f\u516d 19:36&#39;</span> <span class="k">is</span> <span class="n">not</span> <span class="n">a</span> <span class="n">valid</span> <span class="n">date</span>
+</pre></div>
+
+
+<p>应该是python2的utf-8中文支持的老问题了</p>
+<p>不过，我发现，想要上面的日期格式，只需要在 <strong>pelicanconf.py</strong>中如下设置:</p>
+<div class="highlight"><pre>DEFAULT_DATE_FORMAT = u&#39;%Y-%m-%d %A %H:%M&#39;
+</pre></div>
+
+
+<p>pelican会在时间里加上星期几了</p>
+<p>这个软件做得还是很人性化的了。</p></div>
+        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html"><strong>➟ Read more</strong></a></div>
+      </article>
+      <hr/>
+      <article>
+        <header>
           <h2><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-36_strftimede-yi-dian-yong-fa.html" rel="bookmark" title="Permalink to strftime的一点用法">strftime的一点用法</a></h2>
         </header>
         <div><h1>strftime的一点用法</h1>

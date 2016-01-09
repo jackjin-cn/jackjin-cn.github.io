@@ -74,6 +74,24 @@
 
       <article>
         <header>
+          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html" rel="bookmark" title="Permalink to 修改pelican所支持的内容文件的扩展名">修改pelican所支持的内容文件的扩展名</a></h2>
+        </header>
+        <div><h2>修改pelican所支持的内容文件的扩展名</h2>
+<p>pelican的内容文本文件只支持常见markdown的扩展名<code>markdown,md,mkd</code>等，我比较喜欢用vim制作自己的文件模板，这样就需要自己取文件扩展名，比如*.blog，前几天没想到办法，今天找到办法了。</p>
+<p>用grep 在 <strong>/usr/local/lib/python2.7/dist-packages/pelican</strong> 找了下<strong>md</strong></p>
+<div class="highlight"><pre>$/usr/local/lib/python2.7/dist-packages/pelican$ grep &#39;md&#39; *.py
+结果如下：
+readers.py:    file_extensions = [&#39;md&#39;, &#39;markdown&#39;, &#39;mkd&#39;, &#39;mdown&#39;]
+</pre></div>
+
+
+<p>于是只是修改<code>readers.py</code>，加入自己想要的扩展名就可以了。</p>
+<p>我没有找到其它办法，不过这个方法还算方便吧。</p></div>
+        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html"><strong>➟ Read more</strong></a></div>
+      </article>
+      <hr/>
+      <article>
+        <header>
           <h2><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html" rel="bookmark" title="Permalink to 在linux下把cp936转成utf-8">在linux下把cp936转成utf-8</a></h2>
         </header>
         <div><h2>在linux下把cp936转成utf-8</h2>
@@ -122,21 +140,6 @@ pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含
 
 <p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html">参见我在vim中用pandoc进行预览</a></p></div>
         <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html"><strong>➟ Read more</strong></a></div>
-      </article>
-      <hr/>
-      <article>
-        <header>
-          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-05_15-02_vimde-findming-ling.html" rel="bookmark" title="Permalink to vim的find命令">vim的find命令</a></h2>
-        </header>
-        <div><h2>vim的find命令</h2>
-<p><strong>:find</strong> 命令可以用来打开文件，不需要输入完成路径。不过，需要设置'path'选项:</p>
-<div class="highlight"><pre>:set path+=app/\*\*
-</pre></div>
-
-
-<p>然后可以用<tab>进行补全了，这个在一个项目中有多个目录时，打开文件特别实用。而且有同名文件也可以进行识别。</p>
-<p>摘自《Vim实用技巧》</p></div>
-        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-05_15-02_vimde-findming-ling.html"><strong>➟ Read more</strong></a></div>
       </article>
       <hr/>
 
