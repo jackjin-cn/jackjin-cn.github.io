@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
 
-    <title>  bash中for的文件通配符的问题
+    <title>  autocmd
  | Jackjin's Home</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -56,9 +56,9 @@
       <section>
 
         <div class="row">
-          <div class=" span9  ">
+          <div class=" span12  ">
   <h1>
-    <a href="http://jackjin-cn.github.io/2016/2016-01-09_16-08_bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti.html" rel="bookmark" title="Permalink to bash中for的文件通配符的问题">bash中for的文件通配符的问题</a>
+    <a  href="http://jackjin-cn.github.io/tag/autocmd.html" rel="bookmark" title="Permalink to autocmd articles">autocmd articles</a>
   </h1>
           </div>
         </div>
@@ -66,82 +66,13 @@
         <div class="row">
 
 
-          <div class=" span9 " id="content" role="main">
-  
-
-  <div>
-    <p>最近在整理自己的文档，还学了一点awk的操作，awk对文本的处理真是蛮强大的。</p>
-<p>我需要经常用脚本来对一批文件处理。比如</p>
-<div class="highlight"><pre><span class="x">aa</span><span class="p">$</span><span class="x">&gt; for file in *.txt;do echo </span><span class="p">$</span><span class="nv">file</span><span class="x">;done</span><span class="err">#</span><span class="x">结果可以正常显示</span>
-</pre></div>
-
-
-<p>因为经常要用<strong>for</strong>命令的这种形式，于是写了一个脚本(allfiles)：</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span class="c">#!/bin/bash</span>
-<span class="c">#$1是一个进行处理文件的命令或者脚本</span>
-<span class="k">for</span> files in <span class="nv">$2</span><span class="p">;</span>
-<span class="k">do</span>
-    <span class="nv">$1</span> <span class="nv">$files</span>
-<span class="k">done</span><span class="p">;</span>
-</pre></div>
-</td></tr></table>
-
-<p>然后在shell里输入:</p>
-<div class="highlight"><pre>aa@@@$: allfiles *.txt
-</pre></div>
-
-
-<p>结果确不正常，只有第一个文件被匹配，改来改去，发现原因：shell在处理命令行时已经自动把<strong><em>.txt</em>* 替换成符合条件的列表了，所以产生问题。后来发现的办法是在文件上加中 </strong> '' <strong> 或者 </strong>""**把文件名包含起来。</p>
-<div class="highlight"><pre>aa@aa$:allfiles &#39;*.txt&#39;
-</pre></div>
-  </div>
-
-
-    <div class="comments">
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-        var disqus_shortname = 'jackjin';
-        var disqus_identifier = "2016/2016-01-09_16-08_bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti.html";
-        var disqus_title = "bash中for的文件通配符的问题";
-        var disqus_url = "http://jackjin-cn.github.io/2016/2016-01-09_16-08_bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti.html";
-        (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus</a>.</noscript>
-    </div>
-
+          <div class=" span12 " id="content" role="main">
+  <dl class="dl-horizontal">
+      <dt><abbr class="published" title="2016-01-19T08:58:00+08:00">2016-01-19 星期二 08:58</abbr></dt>
+      <dd><a href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html">vim中的autocmd</a></dd>
+  </dl>
           </div>
 
-            <div class="span3">
-  <div class="well">
-
-    <p><abbr class="fa fa-calendar" title="2016-01-09T16:08:00+08:00"> 2016-01-09 星期六 16:08</abbr></p>
-
-      <p><address class="fa fa-user"> By <a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html" rel="author">天地一沙鸥</a></address></p>
-
-    <hr/>
-
-      <p>
-              <a href="http://jackjin-cn.github.io/category/shell.html" rel="tag tooltip" class="label label-info" data-placement="right" data-original-title="1 article in this category">shell</a>
-            <a href="/tag/bash.html" rel="tooltip" class="label" data-placement="right" data-original-title="4 articles with this tag">bash</a>
-            <a href="/tag/for.html" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">for</a>
-            <a href="/tag/wen-jian-cao-zuo.html" rel="tooltip" class="label" data-placement="right" data-original-title="1 article with this tag">文件操作</a>
-      </p>
-      <hr/>
-
-
-
-  </div>
-              
-            </div>
 
         </div>
       </section>
@@ -194,7 +125,7 @@
 
           <div class="span2 muted">
             <h5>Copyright notice</h5>
-            <p>© Copyright 2015-2016 天地一沙鸥.</p>
+            <p>© Copyright 2016 天地一沙鸥.</p>
           </div>
 
           <div class="span2 muted">

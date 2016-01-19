@@ -74,6 +74,38 @@
 
       <article>
         <header>
+          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html" rel="bookmark" title="Permalink to 在vim中用pandoc进行预览">在vim中用pandoc进行预览</a></h2>
+        </header>
+        <div><h2>在vim中用pandoc进行预览</h2>
+<div class="highlight"><pre>&quot;----------生成打包图片的单一html文件
+map &lt;LEADER&gt;mh &lt;ESC&gt;:w&lt;CR&gt;&lt;ESC&gt;:silent !pandoc  -s --self-contained % -c paht/to/style.css -o %:r.html&lt;CR&gt;
+</pre></div>
+
+
+<p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html">参见《pandoc的用法（1）》</a></p></div>
+        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html"><strong>➟ Read more</strong></a></div>
+      </article>
+      <hr/>
+      <article>
+        <header>
+          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html" rel="bookmark" title="Permalink to pandoc的用法（1）">pandoc的用法（1）</a></h2>
+        </header>
+        <div><h2>pandoc的用法（1）</h2>
+<p>用vim写markdown，自己在.vimrc里也写快捷命令进行预览，感觉还是很方便的。</p>
+<blockquote>
+<p>pandoc在生成html文件的时候，可以支持css，还可以生成单独的文件，包含在图片里面。</p>
+</blockquote>
+<div class="highlight"><pre>pandoc -c style.css  #包含css样式（可以包括路径,但html和css是分离）
+pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含在一个html文件中,生成docx文件也可以用这个参数，图片被包含在docx文件中）
+</pre></div>
+
+
+<p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html">参见我在vim中用pandoc进行预览</a></p></div>
+        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html"><strong>➟ Read more</strong></a></div>
+      </article>
+      <hr/>
+      <article>
+        <header>
           <h2><a href="http://jackjin-cn.github.io/2016/2016-01-05_15-02_vimde-findming-ling.html" rel="bookmark" title="Permalink to vim的find命令">vim的find命令</a></h2>
         </header>
         <div><h2>vim的find命令</h2>
@@ -115,79 +147,6 @@
         <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-03_16-44_xin-wen-zu-de-mei-luo.html"><strong>➟ Read more</strong></a></div>
       </article>
       <hr/>
-      <article>
-        <header>
-          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-02_20-56_wine-qq-79ban-de-an-zhuang.html" rel="bookmark" title="Permalink to Wine QQ 7.9版的安装">Wine QQ 7.9版的安装</a></h2>
-        </header>
-        <div><h1>Wine QQ 7.9版的安装</h1>
-<blockquote>
-<ol>
-<li>
-<p>安装最新的wine，安装QQ7.9.exe</p>
-</li>
-<li>
-<p>根据网上的教程增加字体，修改注册表</p>
-</li>
-<li>
-<p>winecfg配置成win8.1</p>
-</li>
-<li>
-<p>几个动态库,mfc4.2,riched20,wininet，gdiplus,iphlapi,urlmon设置成原装先于内建，这几个dll文件可以从windows系统复制过来，基本都在windows\systme32里面。</p>
-</li>
-</ol>
-<blockquote>
-<p><img alt="wineqq" src="http://jackjin-cn.github.io/images/wine-qq.png" title="wine-qq设置" /></p>
-</blockquote>
-</blockquote></div>
-        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-02_20-56_wine-qq-79ban-de-an-zhuang.html"><strong>➟ Read more</strong></a></div>
-      </article>
-      <hr/>
-      <article>
-        <header>
-          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html" rel="bookmark" title="Permalink to 转pelican的用法">转pelican的用法</a></h2>
-        </header>
-        <div><p>转自<a href="http://kevinyoung.gitcafe.io/articles/blog/build_your_blog.html">煎挠橙的博客</a></p>
-<blockquote>
-<p>思路</p>
-</blockquote>
-<p>一般而言，搭建一个独立博客需要三样东西：</p>
-<div class="highlight"><pre>博客软件
-托管服务器
-独立的域名
-</pre></div>
-
-
-<p>博客软件用来生成你的博客页面，而生成好的页面则需要放到托管的服务器上才能被别人看到。
-博客软件</p>
-<p>我选择Pleican作为博客软件主要是出于以下的考虑：</p>
-<div class="highlight"><pre>基于Python，简单易上手
-生成静态页面，不需要数据库，访问速度快，易于维护
-支持markdown标记语言
-</pre></div>
-
-
-<p>和著名的wordpress相比，pelican搭建起来的博客功能和界面会相对单薄一些，但对于我来说绝对够用，况且写博客的初衷也是想把注意力放在内容上，工具越简单越好。
-托管服务器</p>
-<p>这里选择github的原因也很简单：</p>
-<div class="highlight"><pre>免费
-省事
-可以直接用git进行版本管理
-</pre></div>
-
-
-<p>磨刀</p>
-<p>这份教程中提到的方法虽然简单，但仍旧需要你有一些基础，主要有
-1.python基础</p>
-<p>你至少应该能够配置python的环境，能够顺利的安装python的插件,了解一些简单的python语法。
-2.了解Markdown</p>
-<p>没听说过不要紧，推荐阅读我的文章你为什么应该用markdown写文章。</p>
-<p>另外这里有一份简短的介绍，详细的语法说明则可以在这里找到。
-3.对git/github有所了解</p>
-<p>如果不了解也同样没有关系，这个一站式的教程可以帮到你。</p>
-<p>这里多说一点 ...</p></div>
-        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html"><strong>➟ Read more</strong></a></div>
-      </article>
-      <hr/>
 
   <div class="pagination">
     <ul>
@@ -197,6 +156,7 @@
           <li class=""><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou2.html">2</a></li>
           <li class="active"><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou3.html">3</a></li>
           <li class=""><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou4.html">4</a></li>
+          <li class=""><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou5.html">5</a></li>
 
         <li class="next"><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou4.html" rel="next">Next &rarr;</a></li>
     </ul>

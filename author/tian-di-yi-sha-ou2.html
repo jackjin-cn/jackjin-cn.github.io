@@ -74,6 +74,38 @@
 
       <article>
         <header>
+          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html" rel="bookmark" title="Permalink to git 本地删除后的问题">git 本地删除后的问题</a></h2>
+        </header>
+        <div><h2>git 本地删除后的问题</h2>
+<p>在用pelican生成网页的时假，如果不小心用<code>make clean</code>的话，会把<strong>.git</strong>删除，就会产生配对问题，需要重新配对。</p>
+<p>对于网页不需要保留远程文件，所以就如下操作</p>
+<div class="highlight"><pre>git init
+git add .
+git commit -m &#39;update&#39;
+git remote rm origin
+git push --force origin master  强制推送
+git push -u origin master 重新远程与本地对应
+</pre></div></div>
+        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html"><strong>➟ Read more</strong></a></div>
+      </article>
+      <hr/>
+      <article>
+        <header>
+          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-08_15-07_vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian.html" rel="bookmark" title="Permalink to vim中的find命令，打开文件很方便">vim中的find命令，打开文件很方便</a></h2>
+        </header>
+        <div><p>这几天看《Vim实用技巧》,其中介绍了 <strong>:find</strong> 命令的使用</p>
+<p>在vim的配件文件<code>.vimrc or _vimrc</code>进行如下设置</p>
+<div class="highlight"><pre>set path+=yourdir1/**,youdir2/**
+</pre></div>
+
+
+<p>就可以在vim中方便的打开设置好的目录下的文件， <strong> 《Vim实用技巧》  </strong> 还有更多的技巧，可以值得去看看。</p>
+<p>另外，在网上无意中发现《Vim实用技巧》的作者的博客<a href="http://easwy.com/blog/">易水博客</a>,值得一看。</p></div>
+        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-08_15-07_vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian.html"><strong>➟ Read more</strong></a></div>
+      </article>
+      <hr/>
+      <article>
+        <header>
           <h2><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html" rel="bookmark" title="Permalink to 修改pelican所支持的内容文件的扩展名">修改pelican所支持的内容文件的扩展名</a></h2>
         </header>
         <div><h2>修改pelican所支持的内容文件的扩展名</h2>
@@ -110,38 +142,6 @@ readers.py:    file_extensions = [&#39;md&#39;, &#39;markdown&#39;, &#39;mkd&#39
         <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html"><strong>➟ Read more</strong></a></div>
       </article>
       <hr/>
-      <article>
-        <header>
-          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html" rel="bookmark" title="Permalink to 在vim中用pandoc进行预览">在vim中用pandoc进行预览</a></h2>
-        </header>
-        <div><h2>在vim中用pandoc进行预览</h2>
-<div class="highlight"><pre>&quot;----------生成打包图片的单一html文件
-map &lt;LEADER&gt;mh &lt;ESC&gt;:w&lt;CR&gt;&lt;ESC&gt;:silent !pandoc  -s --self-contained % -c paht/to/style.css -o %:r.html&lt;CR&gt;
-</pre></div>
-
-
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html">参见《pandoc的用法（1）》</a></p></div>
-        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html"><strong>➟ Read more</strong></a></div>
-      </article>
-      <hr/>
-      <article>
-        <header>
-          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html" rel="bookmark" title="Permalink to pandoc的用法（1）">pandoc的用法（1）</a></h2>
-        </header>
-        <div><h2>pandoc的用法（1）</h2>
-<p>用vim写markdown，自己在.vimrc里也写快捷命令进行预览，感觉还是很方便的。</p>
-<blockquote>
-<p>pandoc在生成html文件的时候，可以支持css，还可以生成单独的文件，包含在图片里面。</p>
-</blockquote>
-<div class="highlight"><pre>pandoc -c style.css  #包含css样式（可以包括路径,但html和css是分离）
-pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含在一个html文件中,生成docx文件也可以用这个参数，图片被包含在docx文件中）
-</pre></div>
-
-
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html">参见我在vim中用pandoc进行预览</a></p></div>
-        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html"><strong>➟ Read more</strong></a></div>
-      </article>
-      <hr/>
 
   <div class="pagination">
     <ul>
@@ -151,6 +151,7 @@ pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含
           <li class="active"><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou2.html">2</a></li>
           <li class=""><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou3.html">3</a></li>
           <li class=""><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou4.html">4</a></li>
+          <li class=""><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou5.html">5</a></li>
 
         <li class="next"><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou3.html" rel="next">Next &rarr;</a></li>
     </ul>
