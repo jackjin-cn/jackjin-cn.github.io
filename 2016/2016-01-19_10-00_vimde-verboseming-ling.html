@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8"/>
 
-    <title>Home | Jackjin's Home</title>
+    <title>  vim的verbose命令
+ | Jackjin's Home</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content=""/>
@@ -55,89 +56,67 @@
       <section>
 
         <div class="row">
-          <div class=" span12  ">
+          <div class=" span9  ">
+  <h1>
+    <a href="http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html" rel="bookmark" title="Permalink to vim的verbose命令">vim的verbose命令</a>
+  </h1>
           </div>
         </div>
 
         <div class="row">
 
 
-          <div class=" span12 " id="content" role="main">
+          <div class=" span9 " id="content" role="main">
+  
 
-  <section>
-
-      <h2>Articles</h2>
-
-      <article>
-        <header>
-          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html" rel="bookmark" title="Permalink to thinkpad L440 的wifi debian 网卡驱动">thinkpad L440 的wifi debian 网卡驱动</a></h2>
-        </header>
-        <div><h2>thinkpad L400 的wifi debian 网卡驱动</h2>
-<p>今天又弄起了<strong>thinkpad l440</strong>,无线网卡驱动有问题，连上后马上会断线，网上搜了半天，方案很多，好像不太成功。无线网卡的型号是 realtak 8192ee.</p>
-<p>今天偶然发现，几个命令</p>
-<div class="highlight"><pre>lsmod |grep rtl
-发现胡乱加载好几个网卡驱动
-便用 modprobe -r rtlwifi 这样的命令删除多余的驱动。
-最后发现管用的好像是下载的 realtek_new 管用，具体驱动名是 8192ee.
-modprobe 8192ee
-</pre></div></div>
-        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html"><strong>➟ Read more</strong></a></div>
-      </article>
-      <hr/>
-      <article>
-        <header>
-          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html" rel="bookmark" title="Permalink to vim的verbose命令">vim的verbose命令</a></h2>
-        </header>
-        <div><p>在鼓捣autocmd的时候，看到vim的audocmd的帮助</p>
+  <div>
+    <p>在鼓捣autocmd的时候，看到vim的audocmd的帮助</p>
 <div class="highlight"><pre>set verbose=9
 </pre></div>
 
 
-<p>发现有很多额外的显示，值得一看，也能发现很多非常有意思的东西！</p></div>
-        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html"><strong>➟ Read more</strong></a></div>
-      </article>
-      <hr/>
-      <article>
-        <header>
-          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html" rel="bookmark" title="Permalink to vim中的autocmd">vim中的autocmd</a></h2>
-        </header>
-        <div><p>原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保存后才能高亮，也试过autocmd的其它形式，也是不行，不过，昨天在尝试autocmd的时候，无意中发发现了解决办法。</p>
-<div class="highlight"><pre>autocmd BufReadpre *.mytext set syn=mytext
-mytext是指代自己定义的文件格式和语法文件
-</pre></div></div>
-        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html"><strong>➟ Read more</strong></a></div>
-      </article>
-      <hr/>
-      <article>
-        <header>
-          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-11_22-11_cygwin.html" rel="bookmark" title="Permalink to cygwin">cygwin</a></h2>
-        </header>
-        <div><h1>cygiwn的路径</h1>
-<p>windows下的C：在cygwin中表示为<code>/cygwin/c/</code></p>
-<p>cygwin会导入windows中的path,当然也可以在cygwin中的path中加入windows的path，不过，写法上要向上面一样。</p>
-<p>另外，如果遇到到<strong>permision denied</strong>，请用<strong>管理员身份</strong>运行cygwin.bat</p></div>
-        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-11_22-11_cygwin.html"><strong>➟ Read more</strong></a></div>
-      </article>
-      <hr/>
-
-  <div class="pagination">
-    <ul>
-        <li class="prev disabled"><a rel="prev">&larr; Previous</a></li>
-
-          <li class="active"><a href="http://jackjin-cn.github.io/index.html">1</a></li>
-          <li class=""><a href="http://jackjin-cn.github.io/index2.html">2</a></li>
-            <li class="disabled"><a>…</a></li>
-          <li class=""><a href="http://jackjin-cn.github.io/index4.html">4</a></li>
-          <li class=""><a href="http://jackjin-cn.github.io/index5.html">5</a></li>
-
-        <li class="next"><a href="http://jackjin-cn.github.io/index2.html" rel="next">Next &rarr;</a></li>
-    </ul>
+<p>发现有很多额外的显示，值得一看，也能发现很多非常有意思的东西！</p>
   </div>
 
-  </section>
+
+    <div class="comments">
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_shortname = 'jackjin';
+        var disqus_identifier = "2016/2016-01-19_10-00_vimde-verboseming-ling.html";
+        var disqus_title = "vim的verbose命令";
+        var disqus_url = "http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html";
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus</a>.</noscript>
+    </div>
 
           </div>
 
+            <div class="span3">
+  <div class="well">
+
+    <p><abbr class="fa fa-calendar" title="2016-01-19T10:00:00+08:00"> 2016-01-19 星期二 10:00</abbr></p>
+
+      <p><address class="fa fa-user"> By <a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html" rel="author">天地一沙鸥</a></address></p>
+
+    <hr/>
+
+      <p>
+              <a href="http://jackjin-cn.github.io/category/vim.html" rel="tag tooltip" class="label label-info" data-placement="right" data-original-title="6 articles in this category">vim</a>
+            <a href="/tag/vim.html" rel="tooltip" class="label" data-placement="right" data-original-title="7 articles with this tag">vim</a>
+      </p>
+      <hr/>
+
+
+
+  </div>
+              
+            </div>
 
         </div>
       </section>

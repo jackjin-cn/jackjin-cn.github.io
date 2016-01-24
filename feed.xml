@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><atom:link href="http://jackjin-cn.github.io/feed.xml" rel="self"></atom:link><lastBuildDate>Tue, 19 Jan 2016 08:58:00 +0800</lastBuildDate><item><title>vim中的autocmd</title><link>http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html</link><description>&lt;p&gt;原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保存后才能高亮，也试过autocmd的其它形式，也是不行，不过，昨天在尝试autocmd的时候，无意中发发现了解决办法。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><atom:link href="http://jackjin-cn.github.io/feed.xml" rel="self"></atom:link><lastBuildDate>Sun, 24 Jan 2016 18:41:00 +0800</lastBuildDate><item><title>thinkpad L440 的wifi debian 网卡驱动</title><link>http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html</link><description>&lt;h2&gt;thinkpad L400 的wifi debian 网卡驱动&lt;/h2&gt;
+&lt;p&gt;今天又弄起了&lt;strong&gt;thinkpad l440&lt;/strong&gt;,无线网卡驱动有问题，连上后马上会断线，网上搜了半天，方案很多，好像不太成功。无线网卡的型号是 realtak 8192ee.&lt;/p&gt;
+&lt;p&gt;今天偶然发现，几个命令&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;lsmod |grep rtl
+发现胡乱加载好几个网卡驱动
+便用 modprobe -r rtlwifi 这样的命令删除多余的驱动。
+最后发现管用的好像是下载的 realtek_new 管用，具体驱动名是 8192ee.
+modprobe 8192ee
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sun, 24 Jan 2016 18:41:00 +0800</pubDate><guid>tag:jackjin-cn.github.io,2016-01-24:2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html</guid><category>debian</category><category>linux</category><category>wifi</category><category>驱动</category><category>realtek</category></item><item><title>vim的verbose命令</title><link>http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html</link><description>&lt;p&gt;在鼓捣autocmd的时候，看到vim的audocmd的帮助&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;set verbose=9
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;发现有很多额外的显示，值得一看，也能发现很多非常有意思的东西！&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 19 Jan 2016 10:00:00 +0800</pubDate><guid>tag:jackjin-cn.github.io,2016-01-19:2016/2016-01-19_10-00_vimde-verboseming-ling.html</guid><category>vim</category></item><item><title>vim中的autocmd</title><link>http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html</link><description>&lt;p&gt;原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保存后才能高亮，也试过autocmd的其它形式，也是不行，不过，昨天在尝试autocmd的时候，无意中发发现了解决办法。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;autocmd BufReadpre *.mytext set syn=mytext
 mytext是指代自己定义的文件格式和语法文件
 &lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 19 Jan 2016 08:58:00 +0800</pubDate><guid>tag:jackjin-cn.github.io,2016-01-19:2016/2016-01-19_08-58_vimzhong-de-autocmd.html</guid><category>autocmd</category><category>vim</category></item><item><title>cygwin</title><link>http://jackjin-cn.github.io/2016/2016-01-11_22-11_cygwin.html</link><description>&lt;h1&gt;cygiwn的路径&lt;/h1&gt;

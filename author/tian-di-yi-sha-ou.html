@@ -74,6 +74,35 @@
 
       <article>
         <header>
+          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html" rel="bookmark" title="Permalink to thinkpad L440 的wifi debian 网卡驱动">thinkpad L440 的wifi debian 网卡驱动</a></h2>
+        </header>
+        <div><h2>thinkpad L400 的wifi debian 网卡驱动</h2>
+<p>今天又弄起了<strong>thinkpad l440</strong>,无线网卡驱动有问题，连上后马上会断线，网上搜了半天，方案很多，好像不太成功。无线网卡的型号是 realtak 8192ee.</p>
+<p>今天偶然发现，几个命令</p>
+<div class="highlight"><pre>lsmod |grep rtl
+发现胡乱加载好几个网卡驱动
+便用 modprobe -r rtlwifi 这样的命令删除多余的驱动。
+最后发现管用的好像是下载的 realtek_new 管用，具体驱动名是 8192ee.
+modprobe 8192ee
+</pre></div></div>
+        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html"><strong>➟ Read more</strong></a></div>
+      </article>
+      <hr/>
+      <article>
+        <header>
+          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html" rel="bookmark" title="Permalink to vim的verbose命令">vim的verbose命令</a></h2>
+        </header>
+        <div><p>在鼓捣autocmd的时候，看到vim的audocmd的帮助</p>
+<div class="highlight"><pre>set verbose=9
+</pre></div>
+
+
+<p>发现有很多额外的显示，值得一看，也能发现很多非常有意思的东西！</p></div>
+        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html"><strong>➟ Read more</strong></a></div>
+      </article>
+      <hr/>
+      <article>
+        <header>
           <h2><a href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html" rel="bookmark" title="Permalink to vim中的autocmd">vim中的autocmd</a></h2>
         </header>
         <div><p>原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保存后才能高亮，也试过autocmd的其它形式，也是不行，不过，昨天在尝试autocmd的时候，无意中发发现了解决办法。</p>
@@ -92,58 +121,6 @@ mytext是指代自己定义的文件格式和语法文件
 <p>cygwin会导入windows中的path,当然也可以在cygwin中的path中加入windows的path，不过，写法上要向上面一样。</p>
 <p>另外，如果遇到到<strong>permision denied</strong>，请用<strong>管理员身份</strong>运行cygwin.bat</p></div>
         <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-11_22-11_cygwin.html"><strong>➟ Read more</strong></a></div>
-      </article>
-      <hr/>
-      <article>
-        <header>
-          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-09_16-08_bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti.html" rel="bookmark" title="Permalink to bash中for的文件通配符的问题">bash中for的文件通配符的问题</a></h2>
-        </header>
-        <div><p>最近在整理自己的文档，还学了一点awk的操作，awk对文本的处理真是蛮强大的。</p>
-<p>我需要经常用脚本来对一批文件处理。比如</p>
-<div class="highlight"><pre><span class="x">aa</span><span class="p">$</span><span class="x">&gt; for file in *.txt;do echo </span><span class="p">$</span><span class="nv">file</span><span class="x">;done</span><span class="err">#</span><span class="x">结果可以正常显示</span>
-</pre></div>
-
-
-<p>因为经常要用<strong>for</strong>命令的这种形式，于是写了一个脚本(allfiles)：</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span class="c">#!/bin/bash</span>
-<span class="c">#$1是一个进行处理文件的命令或者脚本</span>
-<span class="k">for</span> files in <span class="nv">$2</span><span class="p">;</span>
-<span class="k">do</span>
-    <span class="nv">$1</span> <span class="nv">$files</span>
-<span class="k">done</span><span class="p">;</span>
-</pre></div>
-</td></tr></table>
-
-<p>然后在shell里输入:</p>
-<div class="highlight"><pre>aa@@@$: allfiles *.txt
-</pre></div>
-
-
-<p>结果确不正常，只有第一个文件被匹配，改来改去，发现原因：shell在处理命令行时已经自动把<strong><em>.txt</em>* 替换成符合条件的列表了，所以产生问题。后来发现的办法是在文件上加中 ...</strong></p></div>
-        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-09_16-08_bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti.html"><strong>➟ Read more</strong></a></div>
-      </article>
-      <hr/>
-      <article>
-        <header>
-          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html" rel="bookmark" title="Permalink to awk文本工具的学习">awk文本工具的学习</a></h2>
-        </header>
-        <div><p><a href="http://coolshell.cn/articles/9070.html">转自：酷 壳 AWK 简明教程</a></p>
-<p><a href="http://www.runoob.com/linux/linux-comm-awk.html">转自：Linux awk 命令</a></p>
-<p>自己尝试了一下,感觉很强大。</p>
-<p>特别是模式匹配和过滤功能。</p>
-<p>输出包含：的行，并加上行号。/模式/,NR是等号</p>
-<div class="highlight"><pre>awk   &#39;/^#/{print NR,$0 }&#39; ~/diary/2015/09/2015-09-08.cal
-</pre></div>
-
-
-<p>后来下载了windows版的awk，是3.1.6版</p>
-<p>用法上和linux版的没有区别，不过，有一点要注意是要把<strong><code>单引号'</code>换成<code>双引号"</code></strong></p></div>
-        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html"><strong>➟ Read more</strong></a></div>
       </article>
       <hr/>
 
