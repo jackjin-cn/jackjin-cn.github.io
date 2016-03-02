@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8"/>
 
-    <title>Home | Jackjin's Home</title>
+    <title>  美化
+ | Jackjin's Home</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content=""/>
@@ -56,6 +57,9 @@
 
         <div class="row">
           <div class=" span12  ">
+  <h1>
+    <a  href="http://jackjin-cn.github.io/tag/mei-hua.html" rel="bookmark" title="Permalink to 美化 articles">美化 articles</a>
+  </h1>
           </div>
         </div>
 
@@ -63,78 +67,10 @@
 
 
           <div class=" span12 " id="content" role="main">
-
-  <section>
-
-      <h2>Articles</h2>
-
-      <article>
-        <header>
-          <h2><a href="http://jackjin-cn.github.io/2016/2016-03-02_09-01_debianzhong-geng-huan-shu-biao-zhu-ti.html" rel="bookmark" title="Permalink to Debian中更换鼠标主题">Debian中更换鼠标主题</a></h2>
-        </header>
-        <div><p>出于某种原因，要左手使用鼠标，系统默认的是<strong>右手</strong>主题，还是换成左手的主题，毕竟对这个系统不熟悉，网上转了一圈，说还是要靠<strong>新立得</strong>管理器，</p>
-<p>搜了一下，<strong>cursor</strong> <strong>lefthand</strong>，果然能找到不少，安装上。
-可是怎么用呢，抱着试试看的心态，打开系统的<strong>优化</strong>工具，在<strong>外观-&gt;光标</strong>中就发现上面安装好的光标主题了。真是很方便。</p></div>
-        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-03-02_09-01_debianzhong-geng-huan-shu-biao-zhu-ti.html"><strong>➟ Read more</strong></a></div>
-      </article>
-      <hr/>
-      <article>
-        <header>
-          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html" rel="bookmark" title="Permalink to thinkpad L440 的wifi debian 网卡驱动">thinkpad L440 的wifi debian 网卡驱动</a></h2>
-        </header>
-        <div><h2>thinkpad L400 的wifi debian 网卡驱动</h2>
-<p>今天又弄起了<strong>thinkpad l440</strong>,无线网卡驱动有问题，连上后马上会断线，网上搜了半天，方案很多，好像不太成功。无线网卡的型号是 realtak 8192ee.</p>
-<p>今天偶然发现，几个命令</p>
-<div class="highlight"><pre>lsmod |grep rtl
-发现胡乱加载好几个网卡驱动
-便用 modprobe -r rtlwifi 这样的命令删除多余的驱动。
-最后发现管用的好像是下载的 realtek_new 管用，具体驱动名是 8192ee.
-modprobe 8192ee
-</pre></div></div>
-        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html"><strong>➟ Read more</strong></a></div>
-      </article>
-      <hr/>
-      <article>
-        <header>
-          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html" rel="bookmark" title="Permalink to vim的verbose命令">vim的verbose命令</a></h2>
-        </header>
-        <div><p>在鼓捣autocmd的时候，看到vim的audocmd的帮助</p>
-<div class="highlight"><pre>set verbose=9
-</pre></div>
-
-
-<p>发现有很多额外的显示，值得一看，也能发现很多非常有意思的东西！</p></div>
-        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html"><strong>➟ Read more</strong></a></div>
-      </article>
-      <hr/>
-      <article>
-        <header>
-          <h2><a href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html" rel="bookmark" title="Permalink to vim中的autocmd">vim中的autocmd</a></h2>
-        </header>
-        <div><p>原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保存后才能高亮，也试过autocmd的其它形式，也是不行，不过，昨天在尝试autocmd的时候，无意中发发现了解决办法。</p>
-<div class="highlight"><pre>autocmd BufReadpre *.mytext set syn=mytext
-mytext是指代自己定义的文件格式和语法文件
-</pre></div></div>
-        <div><a class="btn btn-primary" href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html"><strong>➟ Read more</strong></a></div>
-      </article>
-      <hr/>
-
-  <div class="pagination">
-    <ul>
-        <li class="prev disabled"><a rel="prev">&larr; Previous</a></li>
-
-          <li class="active"><a href="http://jackjin-cn.github.io/index.html">1</a></li>
-          <li class=""><a href="http://jackjin-cn.github.io/index2.html">2</a></li>
-            <li class="disabled"><a>…</a></li>
-          <li class=""><a href="http://jackjin-cn.github.io/index4.html">4</a></li>
-          <li class=""><a href="http://jackjin-cn.github.io/index5.html">5</a></li>
-
-        <li class="next"><a href="http://jackjin-cn.github.io/index2.html" rel="next">Next &rarr;</a></li>
-    </ul>
-  </div>
-
-  </section>
-
+  <dl class="dl-horizontal">
+      <dt><abbr class="published" title="2016-03-02T09:01:00+08:00">2016-03-02 星期三 09:01</abbr></dt>
+      <dd><a href="http://jackjin-cn.github.io/2016/2016-03-02_09-01_debianzhong-geng-huan-shu-biao-zhu-ti.html">Debian中更换鼠标主题</a></dd>
+  </dl>
           </div>
 
 
@@ -189,7 +125,7 @@ mytext是指代自己定义的文件格式和语法文件
 
           <div class="span2 muted">
             <h5>Copyright notice</h5>
-            <p>© Copyright 2015-2016 天地一沙鸥.</p>
+            <p>© Copyright 2016 天地一沙鸥.</p>
           </div>
 
           <div class="span2 muted">
