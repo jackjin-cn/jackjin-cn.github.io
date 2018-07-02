@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-        <title>Jackjin's Home</title>
         <meta charset="utf-8" />
-        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home Full RSS Feed" />
+        <title>Jackjin's Home</title>
+        <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/main.css" />
+        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home RSS Feed" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="http://jackjin-cn.github.io/">Jackjin's Home <strong></strong></a></h1>
+                <h1><a href="http://jackjin-cn.github.io/">Jackjin's Home </a></h1>
+                <nav><ul>
+                    <li><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
+                    <li><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
+                    <li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/linux.html">linux</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/python.html">python</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/shell.html">shell</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/vim.html">vim</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/za-gan.html">杂感</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/za-lei.html">杂类</a></li>
+                </ul>
+                </nav>
         </header><!-- /#banner -->
-        <nav id="menu"><ul>
-            <li><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
-            <li><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
-            <li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
-        </ul></nav><!-- /#menu -->
-<section id="content">
-<h2>All articles</h2>
 
-<ol id="post-list">
-        <li><article class="hentry">
-                <header> <h2 class="entry-title"><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html" rel="bookmark" title="Permalink to 在linux下把cp936转成utf-8">在linux下把cp936转成utf-8</a></h2> </header>
-                <footer class="post-info">
-                    <time class="published" datetime="2016-01-06T19:43:00+08:00"> 2016-01-06 星期三 19:43 </time>
-                    <address class="vcard author">By
-                        <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>
-                    </address>
-                </footer><!-- /.post-info -->
-                <div class="entry-content"> <h2>在linux下把cp936转成utf-8</h2>
+                <section id="content" class="body">
+                    <ol id="posts-list" class="hfeed" start="3">
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html" rel="bookmark"
+                           title="Permalink to 在linux下把cp936转成utf-8">在linux下把cp936转成utf-8</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <span>2016-01-06 星期三 19:43</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/linux.html">linux</a><a href="http://jackjin-cn.github.io/tag/bash.html">bash</a><a href="http://jackjin-cn.github.io/tag/code.html">code</a><a href="http://jackjin-cn.github.io/tag/zhong-wen.html">中文</a></span>
+</footer><!-- /.post-info -->                <h2>在linux下把cp936转成utf-8</h2>
 <p>今天需要把原来写的文字用博客的形式发布，用pelican转换的第一个问题就是文件的内码格式不到，原来是 <strong>cp936</strong> (中文ASCII)的形式，需要转成<strong>utf-8</strong>。</p>
 <p>网上找了一下，可以用<code>iconv</code> 这个工具，不过不支持批量转换，于是又搜了一下，用bash写了一个，在此记录一下。
 另外说明一下，<strong>iconv</strong> 不支持自动识别文件编码，要手动指定</p>
@@ -39,33 +54,43 @@
     <span class="k">do</span> iconv -c -f gb18030 -t utf8 <span class="nv">$file</span> -o <span class="nv">$file</span>.uu
 <span class="k">done</span>
 </pre></div>
-</td></tr></table> </div><!-- /.entry-content -->
-        </article></li>
-        <li><article class="hentry">
-                <header> <h2 class="entry-title"><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html" rel="bookmark" title="Permalink to 在vim中用pandoc进行预览">在vim中用pandoc进行预览</a></h2> </header>
-                <footer class="post-info">
-                    <time class="published" datetime="2016-01-05T17:37:00+08:00"> 2016-01-05 星期二 17:37 </time>
-                    <address class="vcard author">By
-                        <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>
-                    </address>
-                </footer><!-- /.post-info -->
-                <div class="entry-content"> <h2>在vim中用pandoc进行预览</h2>
+</td></tr></table>
+                <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html">read more</a>
+<p><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html" rel="bookmark"
+                           title="Permalink to 在vim中用pandoc进行预览">在vim中用pandoc进行预览</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <span>2016-01-05 星期二 17:37</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/ruan-jian.html">软件</a><a href="http://jackjin-cn.github.io/tag/vim.html">vim</a><a href="http://jackjin-cn.github.io/tag/pandoc.html">pandoc</a><a href="http://jackjin-cn.github.io/tag/html.html">html</a></span>
+</footer><!-- /.post-info -->                <h2>在vim中用pandoc进行预览</h2>
 <div class="highlight"><pre><span></span>&quot;----------生成打包图片的单一html文件
 map &lt;LEADER&gt;mh &lt;ESC&gt;:w&lt;CR&gt;&lt;ESC&gt;:silent !pandoc  -s --self-contained % -c paht/to/style.css -o %:r.html&lt;CR&gt;
 </pre></div>
 
 
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html">参见《pandoc的用法（1）》</a></p> </div><!-- /.entry-content -->
-        </article></li>
-        <li><article class="hentry">
-                <header> <h2 class="entry-title"><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html" rel="bookmark" title="Permalink to pandoc的用法（1）">pandoc的用法（1）</a></h2> </header>
-                <footer class="post-info">
-                    <time class="published" datetime="2016-01-05T17:28:00+08:00"> 2016-01-05 星期二 17:28 </time>
-                    <address class="vcard author">By
-                        <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>
-                    </address>
-                </footer><!-- /.post-info -->
-                <div class="entry-content"> <h2>pandoc的用法（1）</h2>
+<p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html">参见《pandoc的用法（1）》</a></p>
+                <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html">read more</a>
+<p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html" rel="bookmark"
+                           title="Permalink to pandoc的用法（1）">pandoc的用法（1）</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <span>2016-01-05 星期二 17:28</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/pandoc.html">pandoc</a><a href="http://jackjin-cn.github.io/tag/vim.html">vim</a><a href="http://jackjin-cn.github.io/tag/html.html">html</a><a href="http://jackjin-cn.github.io/tag/css.html">css</a></span>
+</footer><!-- /.post-info -->                <h2>pandoc的用法（1）</h2>
 <p>用vim写markdown，自己在.vimrc里也写快捷命令进行预览，感觉还是很方便的。</p>
 <blockquote>
 <p>pandoc在生成html文件的时候，可以支持css，还可以生成单独的文件，包含在图片里面。</p>
@@ -75,37 +100,82 @@ pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含
 </pre></div>
 
 
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html">参见我在vim中用pandoc进行预览</a></p> </div><!-- /.entry-content -->
-        </article></li>
-        <li><article class="hentry">
-                <header> <h2 class="entry-title"><a href="http://jackjin-cn.github.io/2016/2016-01-05_15-02_vimde-findming-ling.html" rel="bookmark" title="Permalink to vim的find命令">vim的find命令</a></h2> </header>
-                <footer class="post-info">
-                    <time class="published" datetime="2016-01-05T15:02:00+08:00"> 2016-01-05 星期二 15:02 </time>
-                    <address class="vcard author">By
-                        <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>
-                    </address>
-                </footer><!-- /.post-info -->
-                <div class="entry-content"> <h2>vim的find命令</h2>
+<p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html">参见我在vim中用pandoc进行预览</a></p>
+                <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html">read more</a>
+<p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-05_15-02_vimde-findming-ling.html" rel="bookmark"
+                           title="Permalink to vim的find命令">vim的find命令</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <span>2016-01-05 星期二 15:02</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/ruan-jian.html">软件</a><a href="http://jackjin-cn.github.io/tag/xue-xi.html">学习</a></span>
+</footer><!-- /.post-info -->                <h2>vim的find命令</h2>
 <p><strong>:find</strong> 命令可以用来打开文件，不需要输入完成路径。不过，需要设置'path'选项:</p>
 <div class="highlight"><pre><span></span>:set path+=app/\*\*
 </pre></div>
 
 
 <p>然后可以用<tab>进行补全了，这个在一个项目中有多个目录时，打开文件特别实用。而且有同名文件也可以进行识别。</p>
-<p>摘自《Vim实用技巧》</p> </div><!-- /.entry-content -->
-        </article></li>
-</ol><!-- /#posts-list -->
+<p>摘自《Vim实用技巧》</p>
+                <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-05_15-02_vimde-findming-ling.html">read more</a>
+<p><a href="http://jackjin-cn.github.io/2016/2016-01-05_15-02_vimde-findming-ling.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
+            </ol><!-- /#posts-list -->
 <p class="paginator">
         <a href="http://jackjin-cn.github.io/index3.html">&laquo;</a>
     Page 4 / 6
         <a href="http://jackjin-cn.github.io/index5.html">&raquo;</a>
 </p>
-</section><!-- /#content -->
+            </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="http://kevinyoung.gitcafe.io">煎挠橙的blog</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
+
+                            <li><a href="#">aiwanke</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
         <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
         </footer><!-- /#contentinfo -->
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72007782-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+<script type="text/javascript">
+    var disqus_shortname = 'jackjin';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
 </body>
 </html>

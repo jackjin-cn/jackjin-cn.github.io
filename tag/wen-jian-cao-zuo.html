@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+        <meta charset="utf-8" />
+        <title>Jackjin's Home - 文件操作</title>
+        <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/main.css" />
+        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home RSS Feed" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://jackjin-cn.github.io/">Jackjin's Home </a></h1>
+                <nav><ul>
+                    <li><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
+                    <li><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
+                    <li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/linux.html">linux</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/python.html">python</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/shell.html">shell</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/vim.html">vim</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/za-gan.html">杂感</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/za-lei.html">杂类</a></li>
+                </ul>
+                </nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="http://jackjin-cn.github.io/2016/2016-01-09_16-08_bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti.html">bash中for的文件通配符的问题</a></h1>
+<footer class="post-info">
+        <span>2016-01-09 星期六 16:08</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a><a href="http://jackjin-cn.github.io/tag/for.html">for</a><a href="http://jackjin-cn.github.io/tag/wen-jian-cao-zuo.html">文件操作</a></span>
+</footer><!-- /.post-info --><p>最近在整理自己的文档，还学了一点awk的操作，awk对文本的处理真是蛮强大的。</p>
+<p>我需要经常用脚本来对一批文件处理。比如</p>
+<div class="highlight"><pre><span></span>aa$&gt; for file in *.txt;do echo $file;done#结果可以正常显示
+</pre></div>
+
+
+<p>因为经常要用<strong>for</strong>命令的这种形式，于是写了一个脚本(allfiles)：</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#$1是一个进行处理文件的命令或者脚本</span>
+<span class="k">for</span> files in <span class="nv">$2</span><span class="p">;</span>
+<span class="k">do</span>
+    <span class="nv">$1</span> <span class="nv">$files</span>
+<span class="k">done</span><span class="p">;</span>
+</pre></div>
+</td></tr></table>
+
+<p>然后在shell里输入:</p>
+<div class="highlight"><pre><span></span>aa@@@$: allfiles *.txt
+</pre></div>
+
+
+<p>结果确不正常，只有第一个文件被匹配，改来改去，发现原因：shell在处理命令行时已经自动把<strong><em>.txt</em>* 替换成符合条件的列表了，所以产生问题。后来发现的办法是在文件上加中 </strong> '' <strong> 或者 </strong>""**把文件名包含起来。</p>
+<div class="highlight"><pre><span></span>aa@aa$:allfiles &#39;*.txt&#39;
+</pre></div><p><a href="http://jackjin-cn.github.io/2016/2016-01-09_16-08_bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti.html#disqus_thread">comments</a></p>                </article>
+<p class="paginator">
+    Page 1 / 1
+</p>
+            </aside><!-- /#featured -->
+            </ol><!-- /#posts-list -->
+            </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="http://kevinyoung.gitcafe.io">煎挠橙的blog</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
+
+                            <li><a href="#">aiwanke</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
+        </footer><!-- /#contentinfo -->
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72007782-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+<script type="text/javascript">
+    var disqus_shortname = 'jackjin';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>

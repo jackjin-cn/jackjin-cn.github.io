@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+        <meta charset="utf-8" />
+        <title>Jackjin's Home - debian</title>
+        <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/main.css" />
+        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home RSS Feed" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://jackjin-cn.github.io/">Jackjin's Home </a></h1>
+                <nav><ul>
+                    <li><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
+                    <li><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
+                    <li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/linux.html">linux</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/python.html">python</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/shell.html">shell</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/vim.html">vim</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/za-gan.html">杂感</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/za-lei.html">杂类</a></li>
+                </ul>
+                </nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html">thinkpad L440 的wifi debian 网卡驱动</a></h1>
+<footer class="post-info">
+        <span>2016-01-24 星期日 18:41</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/debian.html">debian</a><a href="http://jackjin-cn.github.io/tag/linux.html">linux</a><a href="http://jackjin-cn.github.io/tag/wifi.html">wifi</a><a href="http://jackjin-cn.github.io/tag/qu-dong.html">驱动</a><a href="http://jackjin-cn.github.io/tag/realtek.html">realtek</a></span>
+</footer><!-- /.post-info --><h2>thinkpad L400 的wifi debian 网卡驱动</h2>
+<p>今天又弄起了<strong>thinkpad l440</strong>,无线网卡驱动有问题，连上后马上会断线，网上搜了半天，方案很多，好像不太成功。无线网卡的型号是 realtak 8192ee.</p>
+<p>今天偶然发现，几个命令</p>
+<div class="highlight"><pre><span></span>lsmod |grep rtl
+发现胡乱加载好几个网卡驱动
+便用 modprobe -r rtlwifi 这样的命令删除多余的驱动。
+最后发现管用的好像是下载的 realtek_new 管用，具体驱动名是 8192ee.
+modprobe 8192ee
+</pre></div><p><a href="http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html#disqus_thread">comments</a></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-02_20-56_wine-qq-79ban-de-an-zhuang.html" rel="bookmark"
+                           title="Permalink to Wine QQ 7.9版的安装">Wine QQ 7.9版的安装</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <span>2016-01-02 星期六 20:56</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/wine.html">wine</a><a href="http://jackjin-cn.github.io/tag/qq.html">qq</a><a href="http://jackjin-cn.github.io/tag/debian.html">debian</a><a href="http://jackjin-cn.github.io/tag/linux.html">linux</a></span>
+</footer><!-- /.post-info -->                <h1>Wine QQ 7.9版的安装</h1>
+<blockquote>
+<ol>
+<li>
+<p>安装最新的wine，安装QQ7.9.exe</p>
+</li>
+<li>
+<p>根据网上的教程增加字体，修改注册表</p>
+</li>
+<li>
+<p>winecfg配置成win8.1</p>
+</li>
+<li>
+<p>几个动态库,mfc4.2,riched20,wininet，gdiplus,iphlapi,urlmon设置成原装先于内建，这几个dll文件可以从windows系统复制过来，基本都在windows\systme32里面。</p>
+</li>
+</ol>
+<blockquote>
+<p><img alt="wineqq" src="http://jackjin-cn.github.io/images/wine-qq.png" title="wine-qq设置"></p>
+</blockquote>
+</blockquote>
+                <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-02_20-56_wine-qq-79ban-de-an-zhuang.html">read more</a>
+<p><a href="http://jackjin-cn.github.io/2016/2016-01-02_20-56_wine-qq-79ban-de-an-zhuang.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
+            </ol><!-- /#posts-list -->
+<p class="paginator">
+    Page 1 / 1
+</p>
+            </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="http://kevinyoung.gitcafe.io">煎挠橙的blog</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
+
+                            <li><a href="#">aiwanke</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
+        </footer><!-- /#contentinfo -->
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72007782-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+<script type="text/javascript">
+    var disqus_shortname = 'jackjin';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>
