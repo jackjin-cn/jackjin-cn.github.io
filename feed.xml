@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Mon, 02 Jul 2018 12:42:00 +0800</lastBuildDate><item><title>Vim 中插入日期</title><link>http://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html</link><description>&lt;h1&gt;Vim 中插入日期&lt;/h1&gt;
+<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Mon, 02 Jul 2018 22:18:57 +0800</lastBuildDate><item><title>Pelican 上传到github</title><link>http://jackjin-cn.github.io/2018/2018-07-02_22-07_pelican-shang-chuan-dao-github.html</link><description>&lt;h1&gt;Pelican 上传到github&lt;/h1&gt;
+&lt;p&gt;折腾了半天，应该可以在几台电脑上上传博客内容了吧。&lt;/p&gt;
+&lt;h3&gt;初始部分&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git init
+git add .
+git commit
+git remote add origin https://github.com/jackjin-cn/jackjin-cn.github.io.git
+
+#先取回云端内容
+git pull origin master
+git commit
+git push origin master #可以加参数 -f
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;我的上传博客到githubio的脚本&lt;/h2&gt;
+&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
+2
+3
+4
+5
+6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; ~/pelicanoutput/blog
+makeriji
+git …&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Mon, 02 Jul 2018 22:07:45 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2018-07-02:/2018/2018-07-02_22-07_pelican-shang-chuan-dao-github.html</guid><category>pelican</category><category>github</category><category>vim</category><category>python</category></item><item><title>Vim 中插入日期</title><link>http://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html</link><description>&lt;h1&gt;Vim 中插入日期&lt;/h1&gt;
 &lt;h2&gt;1. 写blog的时候要前几行插入固定的内容，时间找到以下的脚本&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;function! TitleInsert()
 call setline(1,&amp;quot;Title:&amp;quot;)
@@ -247,21 +271,4 @@ pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含
 &lt;p&gt;另外这里有一份简短的介绍，详细的语法说明则可以在这里找到。
 3.对git/github有所了解&lt;/p&gt;
 &lt;p&gt;如果不了解也同样没有关系，这个一站式的教程可以帮到你。&lt;/p&gt;
-&lt;p&gt;这里多说一点 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sat, 02 Jan 2016 20:08:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-02:/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html</guid><category>pelican</category><category>转载</category></item><item><title>关于在pelican的date中使用中文的问题</title><link>http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html</link><description>&lt;h1&gt;关于在pelican的date中使用中文的问题&lt;/h1&gt;
-&lt;p&gt;想在pelican的date中应用如下格式&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;2016-01-02 星期六 19:31&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;结果在'make html'时出现如下错误：&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;ValueError&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;2016-01-02 \u661f\u671f\u516d 19:36&amp;#39;&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="n"&gt;valid&lt;/span&gt; &lt;span class="n"&gt;date&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;应该是python2的utf-8中文支持的老问题了&lt;/p&gt;
-&lt;p&gt;不过，我发现，想要上面的日期格式，只需要在 &lt;strong&gt;pelicanconf.py&lt;/strong&gt;中如下设置:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;DEFAULT_DATE_FORMAT = u&amp;#39;%Y-%m-%d %A %H:%M&amp;#39;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;pelican会在时间里加上星期几了&lt;/p&gt;
-&lt;p&gt;这个软件做得还是很人性化的了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sat, 02 Jan 2016 19:46:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-02:/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html</guid><category>vim</category><category>python</category><category>pelican</category><category>中文</category></item></channel></rss>
+&lt;p&gt;这里多说一点 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sat, 02 Jan 2016 20:08:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-02:/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html</guid><category>pelican</category><category>转载</category></item></channel></rss>

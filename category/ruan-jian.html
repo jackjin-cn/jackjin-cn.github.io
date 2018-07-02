@@ -32,11 +32,55 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html">Vim 中插入日期</a></h1>
+                    <h1 class="entry-title"><a href="http://jackjin-cn.github.io/2018/2018-07-02_22-07_pelican-shang-chuan-dao-github.html">Pelican 上传到github</a></h1>
+<footer class="post-info">
+        <span>2018-07-02 星期一 22:07</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a><a href="http://jackjin-cn.github.io/tag/github.html">github</a><a href="http://jackjin-cn.github.io/tag/vim.html">vim</a><a href="http://jackjin-cn.github.io/tag/python.html">python</a></span>
+</footer><!-- /.post-info --><h1>Pelican 上传到github</h1>
+<p>折腾了半天，应该可以在几台电脑上上传博客内容了吧。</p>
+<h3>初始部分</h3>
+<div class="highlight"><pre><span></span>git init
+git add .
+git commit
+git remote add origin https://github.com/jackjin-cn/jackjin-cn.github.io.git
+
+#先取回云端内容
+git pull origin master
+git commit
+git push origin master #可以加参数 -f
+</pre></div>
+
+
+<h2>我的上传博客到githubio的脚本</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">cd</span> ~/pelicanoutput/blog
+makeriji
+git add .
+git commit -m <span class="s1">&#39;update&#39;</span>
+git push origin master  <span class="c1">#可以加参数 -f</span>
+</pre></div>
+</td></tr></table><p><a href="http://jackjin-cn.github.io/2018/2018-07-02_22-07_pelican-shang-chuan-dao-github.html#disqus_thread">comments</a></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html" rel="bookmark"
+                           title="Permalink to Vim 中插入日期">Vim 中插入日期</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <span>2018-07-02 星期一 12:34</span>
 <span>| tags: <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a><a href="http://jackjin-cn.github.io/tag/script.html">script</a><a href="http://jackjin-cn.github.io/tag/tips.html">tips</a></span>
-</footer><!-- /.post-info --><h1>Vim 中插入日期</h1>
+</footer><!-- /.post-info -->                <h1>Vim 中插入日期</h1>
 <h2>1. 写blog的时候要前几行插入固定的内容，时间找到以下的脚本</h2>
 <div class="highlight"><pre><span></span>function! TitleInsert()
 call setline(1,&quot;Title:&quot;)
@@ -45,25 +89,10 @@ call setline(3,&quot;Modified: &quot;)
 &quot;call setline(3,&quot;Modified: &quot;. strftime(&quot;%Y-%m-%d %H:%M:%S&quot;))
 call setline(4,&quot;Category:  &quot;)
 call setline(5,&quot;Tags: &quot;)
-call setline(6,&quot;Author:天地一沙鸥&quot;)
-endfunction
-
-&quot;call append(4,&quot;Category&quot;)
-&quot;setline 是直接设置指定行的内容
-&quot;append 是在插入行
-function! TitleModify()
-&quot;保存时间改变
-call setline(3,&quot;Modified: &quot;. strftime(&quot;%Y-%m-%d %H:%M:%S&quot;))
-
-endfunction
-
-autocmd BufNewFile *.blog,*.cal ks|call TitleInsert()|&#39;s
-autocmd FileWritePost,BufWrite *.blog,*.cal ks|call TitleModify()|&#39;s
-</pre></div><p><a href="http://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html#disqus_thread">comments</a></p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <ol id="posts-list" class="hfeed">
+call setline(6,&quot;Author:天地一沙鸥 …</pre></div>
+                <a class="readmore" href="http://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html">read more</a>
+<p><a href="http://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -105,31 +134,6 @@ git push -u origin master 重新远程与本地对应
 </pre></div>
                 <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html">read more</a>
 <p><a href="http://jackjin-cn.github.io/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html" rel="bookmark"
-                           title="Permalink to 修改pelican所支持的内容文件的扩展名">修改pelican所支持的内容文件的扩展名</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>2016-01-06 星期三 19:58</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a><a href="http://jackjin-cn.github.io/tag/wen-jian-ming.html">文件名</a><a href="http://jackjin-cn.github.io/tag/markdown.html">markdown</a><a href="http://jackjin-cn.github.io/tag/bash.html">bash</a></span>
-</footer><!-- /.post-info -->                <h2>修改pelican所支持的内容文件的扩展名</h2>
-<p>pelican的内容文本文件只支持常见markdown的扩展名<code>markdown,md,mkd</code>等，我比较喜欢用vim制作自己的文件模板，这样就需要自己取文件扩展名，比如*.blog，前几天没想到办法，今天找到办法了。</p>
-<p>用grep 在 <strong>/usr/local/lib/python2.7/dist-packages/pelican</strong> 找了下<strong>md</strong></p>
-<div class="highlight"><pre><span></span>$/usr/local/lib/python2.7/dist-packages/pelican$ grep &#39;md&#39; *.py
-结果如下：
-readers.py:    file_extensions = [&#39;md&#39;, &#39;markdown&#39;, &#39;mkd&#39;, &#39;mdown&#39;]
-</pre></div>
-
-
-<p>于是只是修改<code>readers.py</code>，加入自己想要的扩展名就可以了。</p>
-<p>我没有找到其它办法，不过这个方法还算方便吧。</p>
-                <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html">read more</a>
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
             </article></li>
             </ol><!-- /#posts-list -->
 <p class="paginator">

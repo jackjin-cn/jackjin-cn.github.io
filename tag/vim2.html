@@ -34,6 +34,24 @@
                     <ol id="posts-list" class="hfeed" start="3">
             <li><article class="hentry">
                 <header>
+                    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html" rel="bookmark"
+                           title="Permalink to vim中的autocmd">vim中的autocmd</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <span>2016-01-19 星期二 08:58</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/autocmd.html">autocmd</a><a href="http://jackjin-cn.github.io/tag/vim.html">vim</a></span>
+</footer><!-- /.post-info -->                <p>原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保存后才能高亮，也试过autocmd的其它形式，也是不行，不过，昨天在尝试autocmd的时候，无意中发发现了解决办法。</p>
+<div class="highlight"><pre><span></span>autocmd BufReadpre *.mytext set syn=mytext
+mytext是指代自己定义的文件格式和语法文件
+</pre></div>
+                <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html">read more</a>
+<p><a href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
                     <h1><a href="http://jackjin-cn.github.io/2016/2016-01-08_15-07_vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian.html" rel="bookmark"
                            title="Permalink to vim中的find命令，打开文件很方便">vim中的find命令，打开文件很方便</a></h1>
                 </header>
@@ -98,38 +116,6 @@ pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含
 <p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html">参见我在vim中用pandoc进行预览</a></p>
                 <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html">read more</a>
 <p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html" rel="bookmark"
-                           title="Permalink to 关于在pelican的date中使用中文的问题">关于在pelican的date中使用中文的问题</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>2016-01-02 星期六 19:46</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a><a href="http://jackjin-cn.github.io/tag/python.html">python</a><a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a><a href="http://jackjin-cn.github.io/tag/zhong-wen.html">中文</a></span>
-</footer><!-- /.post-info -->                <h1>关于在pelican的date中使用中文的问题</h1>
-<p>想在pelican的date中应用如下格式</p>
-<blockquote>
-<p>2016-01-02 星期六 19:31</p>
-</blockquote>
-<p>结果在'make html'时出现如下错误：</p>
-<div class="highlight"><pre><span></span><span class="n">ValueError</span><span class="o">:</span> <span class="n">u</span><span class="s1">&#39;2016-01-02 \u661f\u671f\u516d 19:36&#39;</span> <span class="k">is</span> <span class="n">not</span> <span class="n">a</span> <span class="n">valid</span> <span class="n">date</span>
-</pre></div>
-
-
-<p>应该是python2的utf-8中文支持的老问题了</p>
-<p>不过，我发现，想要上面的日期格式，只需要在 <strong>pelicanconf.py</strong>中如下设置:</p>
-<div class="highlight"><pre><span></span>DEFAULT_DATE_FORMAT = u&#39;%Y-%m-%d %A %H:%M&#39;
-</pre></div>
-
-
-<p>pelican会在时间里加上星期几了</p>
-<p>这个软件做得还是很人性化的了。</p>
-                <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html">read more</a>
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
             </article></li>
             </ol><!-- /#posts-list -->
 <p class="paginator">

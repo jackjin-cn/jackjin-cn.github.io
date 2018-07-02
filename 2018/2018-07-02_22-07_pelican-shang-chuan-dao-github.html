@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
         <meta charset="utf-8" />
-        <title>Jackjin's Home - vim</title>
+        <title>Pelican 上传到github</title>
         <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/main.css" />
         <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home RSS Feed" />
 
@@ -20,7 +20,7 @@
                     <li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
                     <li><a href="http://jackjin-cn.github.io/category/linux.html">linux</a></li>
                     <li><a href="http://jackjin-cn.github.io/category/python.html">python</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
+                    <li class="active"><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
                     <li><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a></li>
                     <li><a href="http://jackjin-cn.github.io/category/shell.html">shell</a></li>
                     <li><a href="http://jackjin-cn.github.io/category/vim.html">vim</a></li>
@@ -29,69 +29,64 @@
                 </ul>
                 </nav>
         </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="http://jackjin-cn.github.io/2018/2018-07-02_22-07_pelican-shang-chuan-dao-github.html" rel="bookmark"
+           title="Permalink to Pelican 上传到github">Pelican 上传到github</a></h1>
+    </header>
 
-                <section id="content" class="body">
-                    <ol id="posts-list" class="hfeed" start="3">
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html" rel="bookmark"
-                           title="Permalink to 关于在pelican的date中使用中文的问题">关于在pelican的date中使用中文的问题</a></h1>
-                </header>
-
-                <div class="entry-content">
+    <div class="entry-content">
 <footer class="post-info">
-        <span>2016-01-02 星期六 19:46</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a><a href="http://jackjin-cn.github.io/tag/python.html">python</a><a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a><a href="http://jackjin-cn.github.io/tag/zhong-wen.html">中文</a></span>
-</footer><!-- /.post-info -->                <h1>关于在pelican的date中使用中文的问题</h1>
-<p>想在pelican的date中应用如下格式</p>
-<blockquote>
-<p>2016-01-02 星期六 19:31</p>
-</blockquote>
-<p>结果在'make html'时出现如下错误：</p>
-<div class="highlight"><pre><span></span><span class="n">ValueError</span><span class="o">:</span> <span class="n">u</span><span class="s1">&#39;2016-01-02 \u661f\u671f\u516d 19:36&#39;</span> <span class="k">is</span> <span class="n">not</span> <span class="n">a</span> <span class="n">valid</span> <span class="n">date</span>
+        <span>2018-07-02 星期一 22:07</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a><a href="http://jackjin-cn.github.io/tag/github.html">github</a><a href="http://jackjin-cn.github.io/tag/vim.html">vim</a><a href="http://jackjin-cn.github.io/tag/python.html">python</a></span>
+</footer><!-- /.post-info -->      <h1>Pelican 上传到github</h1>
+<p>折腾了半天，应该可以在几台电脑上上传博客内容了吧。</p>
+<h3>初始部分</h3>
+<div class="highlight"><pre><span></span>git init
+git add .
+git commit
+git remote add origin https://github.com/jackjin-cn/jackjin-cn.github.io.git
+
+#先取回云端内容
+git pull origin master
+git commit
+git push origin master #可以加参数 -f
 </pre></div>
 
 
-<p>应该是python2的utf-8中文支持的老问题了</p>
-<p>不过，我发现，想要上面的日期格式，只需要在 <strong>pelicanconf.py</strong>中如下设置:</p>
-<div class="highlight"><pre><span></span>DEFAULT_DATE_FORMAT = u&#39;%Y-%m-%d %A %H:%M&#39;
+<h2>我的上传博客到githubio的脚本</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">cd</span> ~/pelicanoutput/blog
+makeriji
+git add .
+git commit -m <span class="s1">&#39;update&#39;</span>
+git push origin master  <span class="c1">#可以加参数 -f</span>
 </pre></div>
+</td></tr></table>
+    </div><!-- /.entry-content -->
+    <div class="comments">
+      <h2>Comments !</h2>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_identifier = "2018/2018-07-02_22-07_pelican-shang-chuan-dao-github.html";
+        var disqus_url = "http://jackjin-cn.github.io/2018/2018-07-02_22-07_pelican-shang-chuan-dao-github.html";
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//jackjin.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+    </div>
 
-
-<p>pelican会在时间里加上星期几了</p>
-<p>这个软件做得还是很人性化的了。</p>
-                <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html">read more</a>
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-36_strftimede-yi-dian-yong-fa.html" rel="bookmark"
-                           title="Permalink to strftime的一点用法">strftime的一点用法</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>2016-01-02 星期六 19:36</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a><a href="http://jackjin-cn.github.io/tag/time.html">time</a></span>
-</footer><!-- /.post-info -->                <h1>strftime的一点用法</h1>
-<p>最近想写，用<strong>Vim</strong>进行编辑，想设置加入时间的快捷方式</p>
-<div class="highlight"><pre><span></span>map &lt;LEADER&gt;bt A&lt;C-R&gt;=strftime(&quot;%Y-%m-%d %A %H:%M&quot;)&lt;CR&gt;
-</pre></div>
-
-
-<p>效果如下:</p>
-<div class="highlight"><pre><span></span>2016-01-02 星期六 19:39
-</pre></div>
-                <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-02_19-36_strftimede-yi-dian-yong-fa.html">read more</a>
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-36_strftimede-yi-dian-yong-fa.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
-            </article></li>
-            </ol><!-- /#posts-list -->
-<p class="paginator">
-        <a href="http://jackjin-cn.github.io/tag/vim2.html">&laquo;</a>
-    Page 3 / 3
-</p>
-            </section><!-- /#content -->
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>

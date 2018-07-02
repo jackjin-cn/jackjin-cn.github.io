@@ -32,11 +32,55 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html">再次配置pelican写博客</a></h1>
+                    <h1 class="entry-title"><a href="http://jackjin-cn.github.io/2018/2018-07-02_22-07_pelican-shang-chuan-dao-github.html">Pelican 上传到github</a></h1>
+<footer class="post-info">
+        <span>2018-07-02 星期一 22:07</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a><a href="http://jackjin-cn.github.io/tag/github.html">github</a><a href="http://jackjin-cn.github.io/tag/vim.html">vim</a><a href="http://jackjin-cn.github.io/tag/python.html">python</a></span>
+</footer><!-- /.post-info --><h1>Pelican 上传到github</h1>
+<p>折腾了半天，应该可以在几台电脑上上传博客内容了吧。</p>
+<h3>初始部分</h3>
+<div class="highlight"><pre><span></span>git init
+git add .
+git commit
+git remote add origin https://github.com/jackjin-cn/jackjin-cn.github.io.git
+
+#先取回云端内容
+git pull origin master
+git commit
+git push origin master #可以加参数 -f
+</pre></div>
+
+
+<h2>我的上传博客到githubio的脚本</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">cd</span> ~/pelicanoutput/blog
+makeriji
+git add .
+git commit -m <span class="s1">&#39;update&#39;</span>
+git push origin master  <span class="c1">#可以加参数 -f</span>
+</pre></div>
+</td></tr></table><p><a href="http://jackjin-cn.github.io/2018/2018-07-02_22-07_pelican-shang-chuan-dao-github.html#disqus_thread">comments</a></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html" rel="bookmark"
+                           title="Permalink to 再次配置pelican写博客">再次配置pelican写博客</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <span>2018-07-01 星期日 20:13</span>
 <span>| tags: <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a><a href="http://jackjin-cn.github.io/tag/zhe-teng.html">折腾</a></span>
-</footer><!-- /.post-info --><h1>今天再次折腾一下，争取在三个机器上可以使用。</h1>
+</footer><!-- /.post-info -->                <h1>今天再次折腾一下，争取在三个机器上可以使用。</h1>
 <p>在～目前建立下面的目录了</p>
 <blockquote>
 <p>Pelicanoutput</p>
@@ -52,11 +96,10 @@
 <p>blog-pelicanconf.py</p>
 </blockquote>
 </blockquote>
-<h2>另外，还改到了 python 库中的 <em>pelican</em> 中 <strong>reader.py</strong> 中内容 增加了 'cal' ,'blog' 的文件的扩展名，前面有写过的。</h2><p><a href="http://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html#disqus_thread">comments</a></p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <ol id="posts-list" class="hfeed">
+<h2>另外，还改到了 python 库中的 <em>pelican</em> 中 <strong>reader.py</strong> 中内容 增加了 'cal' ,'blog' 的文件的扩展名，前面有写过的。</h2>
+                <a class="readmore" href="http://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html">read more</a>
+<p><a href="http://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -135,41 +178,10 @@ readers.py:    file_extensions = [&#39;md&#39;, &#39;markdown&#39;, &#39;mkd&#39
                 <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html">read more</a>
 <p><a href="http://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
             </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html" rel="bookmark"
-                           title="Permalink to 关于在pelican的date中使用中文的问题">关于在pelican的date中使用中文的问题</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>2016-01-02 星期六 19:46</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a><a href="http://jackjin-cn.github.io/tag/python.html">python</a><a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a><a href="http://jackjin-cn.github.io/tag/zhong-wen.html">中文</a></span>
-</footer><!-- /.post-info -->                <h1>关于在pelican的date中使用中文的问题</h1>
-<p>想在pelican的date中应用如下格式</p>
-<blockquote>
-<p>2016-01-02 星期六 19:31</p>
-</blockquote>
-<p>结果在'make html'时出现如下错误：</p>
-<div class="highlight"><pre><span></span><span class="n">ValueError</span><span class="o">:</span> <span class="n">u</span><span class="s1">&#39;2016-01-02 \u661f\u671f\u516d 19:36&#39;</span> <span class="k">is</span> <span class="n">not</span> <span class="n">a</span> <span class="n">valid</span> <span class="n">date</span>
-</pre></div>
-
-
-<p>应该是python2的utf-8中文支持的老问题了</p>
-<p>不过，我发现，想要上面的日期格式，只需要在 <strong>pelicanconf.py</strong>中如下设置:</p>
-<div class="highlight"><pre><span></span>DEFAULT_DATE_FORMAT = u&#39;%Y-%m-%d %A %H:%M&#39;
-</pre></div>
-
-
-<p>pelican会在时间里加上星期几了</p>
-<p>这个软件做得还是很人性化的了。</p>
-                <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html">read more</a>
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
-            </article></li>
             </ol><!-- /#posts-list -->
 <p class="paginator">
-    Page 1 / 1
+    Page 1 / 2
+        <a href="http://jackjin-cn.github.io/tag/pelican2.html">&raquo;</a>
 </p>
             </section><!-- /#content -->
         <section id="extras" class="body">
