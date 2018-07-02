@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Jackjin's Home</title><link>/Users/apple/pelicanoutput/blog/</link><description></description><lastBuildDate>Mon, 02 Jul 2018 12:42:00 +0800</lastBuildDate><item><title>Vim 中插入日期</title><link>/Users/apple/pelicanoutput/blog/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html</link><description>&lt;h1&gt;Vim 中插入日期&lt;/h1&gt;
+<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Mon, 02 Jul 2018 12:42:00 +0800</lastBuildDate><item><title>Vim 中插入日期</title><link>http://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html</link><description>&lt;h1&gt;Vim 中插入日期&lt;/h1&gt;
 &lt;h2&gt;1. 写blog的时候要前几行插入固定的内容，时间找到以下的脚本&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;function! TitleInsert()
 call setline(1,&amp;quot;Title:&amp;quot;)
@@ -8,7 +8,7 @@ call setline(3,&amp;quot;Modified: &amp;quot;)
 &amp;quot;call setline(3,&amp;quot;Modified: &amp;quot;. strftime(&amp;quot;%Y-%m-%d %H:%M:%S&amp;quot;))
 call setline(4,&amp;quot;Category:  &amp;quot;)
 call setline(5,&amp;quot;Tags: &amp;quot;)
-call setline(6,&amp;quot;Author:天地一沙鸥 …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Mon, 02 Jul 2018 12:34:37 +0800</pubDate><guid isPermaLink="false">tag:None,2018-07-02:/Users/apple/pelicanoutput/blog/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html</guid><category>vim</category><category>script</category><category>tips</category></item><item><title>批量cp936toutf8</title><link>/Users/apple/pelicanoutput/blog/2018/2018-07-01_22-42_pi-liang-cp936toutf8.html</link><description>&lt;h2&gt;今天在用pelican转网页的时候，原来在&lt;strong&gt;windows&lt;/strong&gt;下写的文件，代码是&lt;strong&gt;cp936&lt;/strong&gt;，识别不了，要转成&lt;strong&gt;utf8&lt;/strong&gt;格式。&lt;/h2&gt;
+call setline(6,&amp;quot;Author:天地一沙鸥 …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Mon, 02 Jul 2018 12:34:37 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2018-07-02:/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html</guid><category>vim</category><category>script</category><category>tips</category></item><item><title>批量cp936toutf8</title><link>http://jackjin-cn.github.io/2018/2018-07-01_22-42_pi-liang-cp936toutf8.html</link><description>&lt;h2&gt;今天在用pelican转网页的时候，原来在&lt;strong&gt;windows&lt;/strong&gt;下写的文件，代码是&lt;strong&gt;cp936&lt;/strong&gt;，识别不了，要转成&lt;strong&gt;utf8&lt;/strong&gt;格式。&lt;/h2&gt;
 &lt;p&gt;通过搜索找到了以下代码&lt;/p&gt;
 &lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
 2
@@ -38,7 +38,7 @@ call setline(6,&amp;quot;Author:天地一沙鸥 …&lt;/pre&gt;&lt;/div&gt;</des
 &lt;li&gt;保存写入&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;另外也学习了  &lt;strong&gt;find&lt;/strong&gt; 的用法&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;find . -name …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sun, 01 Jul 2018 22:42:00 +0800</pubDate><guid isPermaLink="false">tag:None,2018-07-01:/Users/apple/pelicanoutput/blog/2018/2018-07-01_22-42_pi-liang-cp936toutf8.html</guid><category>unicode</category><category>vim</category><category>encoding</category></item><item><title>再次配置pelican写博客</title><link>/Users/apple/pelicanoutput/blog/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html</link><description>&lt;h1&gt;今天再次折腾一下，争取在三个机器上可以使用。&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;find . -name …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sun, 01 Jul 2018 22:42:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2018-07-01:/2018/2018-07-01_22-42_pi-liang-cp936toutf8.html</guid><category>unicode</category><category>vim</category><category>encoding</category></item><item><title>再次配置pelican写博客</title><link>http://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html</link><description>&lt;h1&gt;今天再次折腾一下，争取在三个机器上可以使用。&lt;/h1&gt;
 &lt;p&gt;在～目前建立下面的目录了&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Pelicanoutput&lt;/p&gt;
@@ -54,7 +54,7 @@ call setline(6,&amp;quot;Author:天地一沙鸥 …&lt;/pre&gt;&lt;/div&gt;</des
 &lt;p&gt;blog-pelicanconf.py&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
-&lt;h2&gt;另外，还改到了 python 库中的 &lt;em&gt;pelican&lt;/em&gt; 中 &lt;strong&gt;reader.py&lt;/strong&gt; 中内容 增加了 'cal' ,'blog' 的文件的扩展名，前面有写过的。&lt;/h2&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sun, 01 Jul 2018 20:13:00 +0800</pubDate><guid isPermaLink="false">tag:None,2018-07-01:/Users/apple/pelicanoutput/blog/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html</guid><category>pelican</category><category>折腾</category></item><item><title>thinkpad L440 的wifi debian 网卡驱动</title><link>/Users/apple/pelicanoutput/blog/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html</link><description>&lt;h2&gt;thinkpad L400 的wifi debian 网卡驱动&lt;/h2&gt;
+&lt;h2&gt;另外，还改到了 python 库中的 &lt;em&gt;pelican&lt;/em&gt; 中 &lt;strong&gt;reader.py&lt;/strong&gt; 中内容 增加了 'cal' ,'blog' 的文件的扩展名，前面有写过的。&lt;/h2&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sun, 01 Jul 2018 20:13:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2018-07-01:/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html</guid><category>pelican</category><category>折腾</category></item><item><title>thinkpad L440 的wifi debian 网卡驱动</title><link>http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html</link><description>&lt;h2&gt;thinkpad L400 的wifi debian 网卡驱动&lt;/h2&gt;
 &lt;p&gt;今天又弄起了&lt;strong&gt;thinkpad l440&lt;/strong&gt;,无线网卡驱动有问题，连上后马上会断线，网上搜了半天，方案很多，好像不太成功。无线网卡的型号是 realtak 8192ee.&lt;/p&gt;
 &lt;p&gt;今天偶然发现，几个命令&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;lsmod |grep rtl
@@ -62,18 +62,18 @@ call setline(6,&amp;quot;Author:天地一沙鸥 …&lt;/pre&gt;&lt;/div&gt;</des
 便用 modprobe -r rtlwifi 这样的命令删除多余的驱动。
 最后发现管用的好像是下载的 realtek_new 管用，具体驱动名是 8192ee.
 modprobe 8192ee
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sun, 24 Jan 2016 18:41:00 +0800</pubDate><guid isPermaLink="false">tag:None,2016-01-24:/Users/apple/pelicanoutput/blog/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html</guid><category>debian</category><category>linux</category><category>wifi</category><category>驱动</category><category>realtek</category></item><item><title>vim的verbose命令</title><link>/Users/apple/pelicanoutput/blog/2016/2016-01-19_10-00_vimde-verboseming-ling.html</link><description>&lt;p&gt;在鼓捣autocmd的时候，看到vim的audocmd的帮助&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sun, 24 Jan 2016 18:41:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-24:/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html</guid><category>debian</category><category>linux</category><category>wifi</category><category>驱动</category><category>realtek</category></item><item><title>vim的verbose命令</title><link>http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html</link><description>&lt;p&gt;在鼓捣autocmd的时候，看到vim的audocmd的帮助&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;set verbose=9
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;发现有很多额外的显示，值得一看，也能发现很多非常有意思的东西！&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 19 Jan 2016 10:00:00 +0800</pubDate><guid isPermaLink="false">tag:None,2016-01-19:/Users/apple/pelicanoutput/blog/2016/2016-01-19_10-00_vimde-verboseming-ling.html</guid><category>vim</category></item><item><title>vim中的autocmd</title><link>/Users/apple/pelicanoutput/blog/2016/2016-01-19_08-58_vimzhong-de-autocmd.html</link><description>&lt;p&gt;原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保存后才能高亮，也试过autocmd的其它形式，也是不行，不过，昨天在尝试autocmd的时候，无意中发发现了解决办法。&lt;/p&gt;
+&lt;p&gt;发现有很多额外的显示，值得一看，也能发现很多非常有意思的东西！&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 19 Jan 2016 10:00:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-19:/2016/2016-01-19_10-00_vimde-verboseming-ling.html</guid><category>vim</category></item><item><title>vim中的autocmd</title><link>http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html</link><description>&lt;p&gt;原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保存后才能高亮，也试过autocmd的其它形式，也是不行，不过，昨天在尝试autocmd的时候，无意中发发现了解决办法。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;autocmd BufReadpre *.mytext set syn=mytext
 mytext是指代自己定义的文件格式和语法文件
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 19 Jan 2016 08:58:00 +0800</pubDate><guid isPermaLink="false">tag:None,2016-01-19:/Users/apple/pelicanoutput/blog/2016/2016-01-19_08-58_vimzhong-de-autocmd.html</guid><category>autocmd</category><category>vim</category></item><item><title>cygwin</title><link>/Users/apple/pelicanoutput/blog/2016/2016-01-11_22-11_cygwin.html</link><description>&lt;h1&gt;cygiwn的路径&lt;/h1&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 19 Jan 2016 08:58:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-19:/2016/2016-01-19_08-58_vimzhong-de-autocmd.html</guid><category>autocmd</category><category>vim</category></item><item><title>cygwin</title><link>http://jackjin-cn.github.io/2016/2016-01-11_22-11_cygwin.html</link><description>&lt;h1&gt;cygiwn的路径&lt;/h1&gt;
 &lt;p&gt;windows下的C：在cygwin中表示为&lt;code&gt;/cygwin/c/&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;cygwin会导入windows中的path,当然也可以在cygwin中的path中加入windows的path，不过，写法上要向上面一样。&lt;/p&gt;
-&lt;p&gt;另外，如果遇到到&lt;strong&gt;permision denied&lt;/strong&gt;，请用&lt;strong&gt;管理员身份&lt;/strong&gt;运行cygwin.bat&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Mon, 11 Jan 2016 22:11:00 +0800</pubDate><guid isPermaLink="false">tag:None,2016-01-11:/Users/apple/pelicanoutput/blog/2016/2016-01-11_22-11_cygwin.html</guid><category>bash</category><category>cygwin</category></item><item><title>bash中for的文件通配符的问题</title><link>/Users/apple/pelicanoutput/blog/2016/2016-01-09_16-08_bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti.html</link><description>&lt;p&gt;最近在整理自己的文档，还学了一点awk的操作，awk对文本的处理真是蛮强大的。&lt;/p&gt;
+&lt;p&gt;另外，如果遇到到&lt;strong&gt;permision denied&lt;/strong&gt;，请用&lt;strong&gt;管理员身份&lt;/strong&gt;运行cygwin.bat&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Mon, 11 Jan 2016 22:11:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-11:/2016/2016-01-11_22-11_cygwin.html</guid><category>bash</category><category>cygwin</category></item><item><title>bash中for的文件通配符的问题</title><link>http://jackjin-cn.github.io/2016/2016-01-09_16-08_bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti.html</link><description>&lt;p&gt;最近在整理自己的文档，还学了一点awk的操作，awk对文本的处理真是蛮强大的。&lt;/p&gt;
 &lt;p&gt;我需要经常用脚本来对一批文件处理。比如&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;aa$&amp;gt; for file in *.txt;do echo $file;done#结果可以正常显示
 &lt;/pre&gt;&lt;/div&gt;
@@ -99,7 +99,7 @@ mytext是指代自己定义的文件格式和语法文件
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;结果确不正常，只有第一个文件被匹配，改来改去，发现原因：shell在处理命令行时已经自动把&lt;strong&gt;&lt;em&gt;.txt&lt;/em&gt;* 替换成符合条件的列表了，所以产生问题。后来发现的办法是在文件上加中 …&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sat, 09 Jan 2016 16:08:00 +0800</pubDate><guid isPermaLink="false">tag:None,2016-01-09:/Users/apple/pelicanoutput/blog/2016/2016-01-09_16-08_bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti.html</guid><category>bash</category><category>for</category><category>文件操作</category></item><item><title>awk文本工具的学习</title><link>/Users/apple/pelicanoutput/blog/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html</link><description>&lt;p&gt;&lt;a href="http://coolshell.cn/articles/9070.html"&gt;转自：酷 壳 AWK 简明教程&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;结果确不正常，只有第一个文件被匹配，改来改去，发现原因：shell在处理命令行时已经自动把&lt;strong&gt;&lt;em&gt;.txt&lt;/em&gt;* 替换成符合条件的列表了，所以产生问题。后来发现的办法是在文件上加中 …&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sat, 09 Jan 2016 16:08:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-09:/2016/2016-01-09_16-08_bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti.html</guid><category>bash</category><category>for</category><category>文件操作</category></item><item><title>awk文本工具的学习</title><link>http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html</link><description>&lt;p&gt;&lt;a href="http://coolshell.cn/articles/9070.html"&gt;转自：酷 壳 AWK 简明教程&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://www.runoob.com/linux/linux-comm-awk.html"&gt;转自：Linux awk 命令&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;自己尝试了一下,感觉很强大。&lt;/p&gt;
 &lt;p&gt;特别是模式匹配和过滤功能。&lt;/p&gt;
@@ -109,7 +109,7 @@ mytext是指代自己定义的文件格式和语法文件
 
 
 &lt;p&gt;后来下载了windows版的awk，是3.1.6版&lt;/p&gt;
-&lt;p&gt;用法上和linux版的没有区别，不过，有一点要注意是要把&lt;strong&gt;&lt;code&gt;单引号'&lt;/code&gt;换成&lt;code&gt;双引号"&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sat, 09 Jan 2016 09:59:00 +0800</pubDate><guid isPermaLink="false">tag:None,2016-01-09:/Users/apple/pelicanoutput/blog/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html</guid><category>awk</category><category>linux</category><category>本文</category><category>shell</category><category>windows</category></item><item><title>git 本地删除后的问题</title><link>/Users/apple/pelicanoutput/blog/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html</link><description>&lt;h2&gt;git 本地删除后的问题&lt;/h2&gt;
+&lt;p&gt;用法上和linux版的没有区别，不过，有一点要注意是要把&lt;strong&gt;&lt;code&gt;单引号'&lt;/code&gt;换成&lt;code&gt;双引号"&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sat, 09 Jan 2016 09:59:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-09:/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html</guid><category>awk</category><category>linux</category><category>本文</category><category>shell</category><category>windows</category></item><item><title>git 本地删除后的问题</title><link>http://jackjin-cn.github.io/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html</link><description>&lt;h2&gt;git 本地删除后的问题&lt;/h2&gt;
 &lt;p&gt;在用pelican生成网页的时假，如果不小心用&lt;code&gt;make clean&lt;/code&gt;的话，会把&lt;strong&gt;.git&lt;/strong&gt;删除，就会产生配对问题，需要重新配对。&lt;/p&gt;
 &lt;p&gt;对于网页不需要保留远程文件，所以就如下操作&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git init
@@ -118,14 +118,14 @@ git commit -m &amp;#39;update&amp;#39;
 git remote rm origin
 git push --force origin master  强制推送
 git push -u origin master 重新远程与本地对应
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Fri, 08 Jan 2016 23:09:00 +0800</pubDate><guid isPermaLink="false">tag:None,2016-01-08:/Users/apple/pelicanoutput/blog/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html</guid><category>git</category></item><item><title>vim中的find命令，打开文件很方便</title><link>/Users/apple/pelicanoutput/blog/2016/2016-01-08_15-07_vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian.html</link><description>&lt;p&gt;这几天看《Vim实用技巧》,其中介绍了 &lt;strong&gt;:find&lt;/strong&gt; 命令的使用&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Fri, 08 Jan 2016 23:09:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-08:/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html</guid><category>git</category></item><item><title>vim中的find命令，打开文件很方便</title><link>http://jackjin-cn.github.io/2016/2016-01-08_15-07_vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian.html</link><description>&lt;p&gt;这几天看《Vim实用技巧》,其中介绍了 &lt;strong&gt;:find&lt;/strong&gt; 命令的使用&lt;/p&gt;
 &lt;p&gt;在vim的配件文件&lt;code&gt;.vimrc or _vimrc&lt;/code&gt;进行如下设置&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;set path+=yourdir1/**,youdir2/**
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;就可以在vim中方便的打开设置好的目录下的文件， &lt;strong&gt; 《Vim实用技巧》  &lt;/strong&gt; 还有更多的技巧，可以值得去看看。&lt;/p&gt;
-&lt;p&gt;另外，在网上无意中发现《Vim实用技巧》的作者的博客&lt;a href="http://easwy.com/blog/"&gt;易水博客&lt;/a&gt;,值得一看。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Fri, 08 Jan 2016 15:07:00 +0800</pubDate><guid isPermaLink="false">tag:None,2016-01-08:/Users/apple/pelicanoutput/blog/2016/2016-01-08_15-07_vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian.html</guid><category>vim</category><category>文件</category><category>find</category><category>path</category></item><item><title>修改pelican所支持的内容文件的扩展名</title><link>/Users/apple/pelicanoutput/blog/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html</link><description>&lt;h2&gt;修改pelican所支持的内容文件的扩展名&lt;/h2&gt;
+&lt;p&gt;另外，在网上无意中发现《Vim实用技巧》的作者的博客&lt;a href="http://easwy.com/blog/"&gt;易水博客&lt;/a&gt;,值得一看。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Fri, 08 Jan 2016 15:07:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-08:/2016/2016-01-08_15-07_vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian.html</guid><category>vim</category><category>文件</category><category>find</category><category>path</category></item><item><title>修改pelican所支持的内容文件的扩展名</title><link>http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html</link><description>&lt;h2&gt;修改pelican所支持的内容文件的扩展名&lt;/h2&gt;
 &lt;p&gt;pelican的内容文本文件只支持常见markdown的扩展名&lt;code&gt;markdown,md,mkd&lt;/code&gt;等，我比较喜欢用vim制作自己的文件模板，这样就需要自己取文件扩展名，比如*.blog，前几天没想到办法，今天找到办法了。&lt;/p&gt;
 &lt;p&gt;用grep 在 &lt;strong&gt;/usr/local/lib/python2.7/dist-packages/pelican&lt;/strong&gt; 找了下&lt;strong&gt;md&lt;/strong&gt;&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$/usr/local/lib/python2.7/dist-packages/pelican$ grep &amp;#39;md&amp;#39; *.py
@@ -135,7 +135,7 @@ readers.py:    file_extensions = [&amp;#39;md&amp;#39;, &amp;#39;markdown&amp;#3
 
 
 &lt;p&gt;于是只是修改&lt;code&gt;readers.py&lt;/code&gt;，加入自己想要的扩展名就可以了。&lt;/p&gt;
-&lt;p&gt;我没有找到其它办法，不过这个方法还算方便吧。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Wed, 06 Jan 2016 19:58:00 +0800</pubDate><guid isPermaLink="false">tag:None,2016-01-06:/Users/apple/pelicanoutput/blog/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html</guid><category>pelican</category><category>文件名</category><category>markdown</category><category>bash</category></item><item><title>在linux下把cp936转成utf-8</title><link>/Users/apple/pelicanoutput/blog/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html</link><description>&lt;h2&gt;在linux下把cp936转成utf-8&lt;/h2&gt;
+&lt;p&gt;我没有找到其它办法，不过这个方法还算方便吧。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Wed, 06 Jan 2016 19:58:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-06:/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html</guid><category>pelican</category><category>文件名</category><category>markdown</category><category>bash</category></item><item><title>在linux下把cp936转成utf-8</title><link>http://jackjin-cn.github.io/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html</link><description>&lt;h2&gt;在linux下把cp936转成utf-8&lt;/h2&gt;
 &lt;p&gt;今天需要把原来写的文字用博客的形式发布，用pelican转换的第一个问题就是文件的内码格式不到，原来是 &lt;strong&gt;cp936&lt;/strong&gt; (中文ASCII)的形式，需要转成&lt;strong&gt;utf-8&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;网上找了一下，可以用&lt;code&gt;iconv&lt;/code&gt; 这个工具，不过不支持批量转换，于是又搜了一下，用bash写了一个，在此记录一下。
 另外说明一下，&lt;strong&gt;iconv&lt;/strong&gt; 不支持自动识别文件编码，要手动指定&lt;/p&gt;
@@ -147,13 +147,13 @@ readers.py:    file_extensions = [&amp;#39;md&amp;#39;, &amp;#39;markdown&amp;#3
     &lt;span class="k"&gt;do&lt;/span&gt; iconv -c -f gb18030 -t utf8 &lt;span class="nv"&gt;$file&lt;/span&gt; -o &lt;span class="nv"&gt;$file&lt;/span&gt;.uu
 &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Wed, 06 Jan 2016 19:43:00 +0800</pubDate><guid isPermaLink="false">tag:None,2016-01-06:/Users/apple/pelicanoutput/blog/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html</guid><category>linux</category><category>bash</category><category>code</category><category>中文</category></item><item><title>在vim中用pandoc进行预览</title><link>/Users/apple/pelicanoutput/blog/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html</link><description>&lt;h2&gt;在vim中用pandoc进行预览&lt;/h2&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Wed, 06 Jan 2016 19:43:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-06:/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html</guid><category>linux</category><category>bash</category><category>code</category><category>中文</category></item><item><title>在vim中用pandoc进行预览</title><link>http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html</link><description>&lt;h2&gt;在vim中用pandoc进行预览&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;quot;----------生成打包图片的单一html文件
 map &amp;lt;LEADER&amp;gt;mh &amp;lt;ESC&amp;gt;:w&amp;lt;CR&amp;gt;&amp;lt;ESC&amp;gt;:silent !pandoc  -s --self-contained % -c paht/to/style.css -o %:r.html&amp;lt;CR&amp;gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;a href="/Users/apple/pelicanoutput/blog/2016/2016-01-05_17-28_pandocde-yong-fa-1.html"&gt;参见《pandoc的用法（1）》&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 05 Jan 2016 17:37:00 +0800</pubDate><guid isPermaLink="false">tag:None,2016-01-05:/Users/apple/pelicanoutput/blog/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html</guid><category>软件</category><category>vim</category><category>pandoc</category><category>html</category></item><item><title>pandoc的用法（1）</title><link>/Users/apple/pelicanoutput/blog/2016/2016-01-05_17-28_pandocde-yong-fa-1.html</link><description>&lt;h2&gt;pandoc的用法（1）&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html"&gt;参见《pandoc的用法（1）》&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 05 Jan 2016 17:37:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-05:/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html</guid><category>软件</category><category>vim</category><category>pandoc</category><category>html</category></item><item><title>pandoc的用法（1）</title><link>http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html</link><description>&lt;h2&gt;pandoc的用法（1）&lt;/h2&gt;
 &lt;p&gt;用vim写markdown，自己在.vimrc里也写快捷命令进行预览，感觉还是很方便的。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;pandoc在生成html文件的时候，可以支持css，还可以生成单独的文件，包含在图片里面。&lt;/p&gt;
@@ -163,14 +163,14 @@ pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;a href="/Users/apple/pelicanoutput/blog/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html"&gt;参见我在vim中用pandoc进行预览&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 05 Jan 2016 17:28:00 +0800</pubDate><guid isPermaLink="false">tag:None,2016-01-05:/Users/apple/pelicanoutput/blog/2016/2016-01-05_17-28_pandocde-yong-fa-1.html</guid><category>pandoc</category><category>vim</category><category>html</category><category>css</category></item><item><title>vim的find命令</title><link>/Users/apple/pelicanoutput/blog/2016/2016-01-05_15-02_vimde-findming-ling.html</link><description>&lt;h2&gt;vim的find命令&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html"&gt;参见我在vim中用pandoc进行预览&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 05 Jan 2016 17:28:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-05:/2016/2016-01-05_17-28_pandocde-yong-fa-1.html</guid><category>pandoc</category><category>vim</category><category>html</category><category>css</category></item><item><title>vim的find命令</title><link>http://jackjin-cn.github.io/2016/2016-01-05_15-02_vimde-findming-ling.html</link><description>&lt;h2&gt;vim的find命令&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;:find&lt;/strong&gt; 命令可以用来打开文件，不需要输入完成路径。不过，需要设置'path'选项:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;:set path+=app/\*\*
 &lt;/pre&gt;&lt;/div&gt;
 
 
 &lt;p&gt;然后可以用&lt;tab&gt;进行补全了，这个在一个项目中有多个目录时，打开文件特别实用。而且有同名文件也可以进行识别。&lt;/p&gt;
-&lt;p&gt;摘自《Vim实用技巧》&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 05 Jan 2016 15:02:00 +0800</pubDate><guid isPermaLink="false">tag:None,2016-01-05:/Users/apple/pelicanoutput/blog/2016/2016-01-05_15-02_vimde-findming-ling.html</guid><category>软件</category><category>学习</category></item><item><title>新闻组的没落</title><link>/Users/apple/pelicanoutput/blog/2016/2016-01-03_16-44_xin-wen-zu-de-mei-luo.html</link><description>&lt;h2&gt;新闻组的没落&lt;/h2&gt;
+&lt;p&gt;摘自《Vim实用技巧》&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 05 Jan 2016 15:02:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-05:/2016/2016-01-05_15-02_vimde-findming-ling.html</guid><category>软件</category><category>学习</category></item><item><title>新闻组的没落</title><link>http://jackjin-cn.github.io/2016/2016-01-03_16-44_xin-wen-zu-de-mei-luo.html</link><description>&lt;h2&gt;新闻组的没落&lt;/h2&gt;
 &lt;p&gt;最近几天在折腾debian，安装了thunderbird，设置了邮件帐户，在设置的时候看到还可以进行新闻组的设置，不经想出N年组用 &lt;em&gt;outlookpress&lt;/em&gt; 看新闻组的光景，当时还是拔号上网，为省钱，都是先同步下载好离线看的，内容还是蛮多，有关网站还能上。&lt;/p&gt;
 &lt;p&gt;今天在网上找一下，中文可用的新闻组很少了，能上的也基本没有什么内容或者更新了，感叹时间变化太快了，技术发展了更迭不断，当年火的不得了东西，不管是软件还是硬件，到了现在都发生了很大的变化，我所喜欢的东东，很多都淘汰了。&lt;/p&gt;
 &lt;ul&gt;
@@ -190,7 +190,7 @@ pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含
 &lt;p&gt;黑莓手机  9930&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;看来，玩数码，是要亏很多钱的，也没有什么实质的收获，至少对生活无太大帮助。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sun, 03 Jan 2016 16:44:00 +0800</pubDate><guid isPermaLink="false">tag:None,2016-01-03:/Users/apple/pelicanoutput/blog/2016/2016-01-03_16-44_xin-wen-zu-de-mei-luo.html</guid><category>软件</category><category>感想</category></item><item><title>Wine QQ 7.9版的安装</title><link>/Users/apple/pelicanoutput/blog/2016/2016-01-02_20-56_wine-qq-79ban-de-an-zhuang.html</link><description>&lt;h1&gt;Wine QQ 7.9版的安装&lt;/h1&gt;
+&lt;p&gt;看来，玩数码，是要亏很多钱的，也没有什么实质的收获，至少对生活无太大帮助。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sun, 03 Jan 2016 16:44:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-03:/2016/2016-01-03_16-44_xin-wen-zu-de-mei-luo.html</guid><category>软件</category><category>感想</category></item><item><title>Wine QQ 7.9版的安装</title><link>http://jackjin-cn.github.io/2016/2016-01-02_20-56_wine-qq-79ban-de-an-zhuang.html</link><description>&lt;h1&gt;Wine QQ 7.9版的安装&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -207,9 +207,9 @@ pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;img alt="wineqq" src="/Users/apple/pelicanoutput/blog/images/wine-qq.png" title="wine-qq设置"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="wineqq" src="http://jackjin-cn.github.io/images/wine-qq.png" title="wine-qq设置"&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sat, 02 Jan 2016 20:56:00 +0800</pubDate><guid isPermaLink="false">tag:None,2016-01-02:/Users/apple/pelicanoutput/blog/2016/2016-01-02_20-56_wine-qq-79ban-de-an-zhuang.html</guid><category>wine</category><category>qq</category><category>debian</category><category>linux</category></item><item><title>转pelican的用法</title><link>/Users/apple/pelicanoutput/blog/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html</link><description>&lt;p&gt;转自&lt;a href="http://kevinyoung.gitcafe.io/articles/blog/build_your_blog.html"&gt;煎挠橙的博客&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sat, 02 Jan 2016 20:56:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-02:/2016/2016-01-02_20-56_wine-qq-79ban-de-an-zhuang.html</guid><category>wine</category><category>qq</category><category>debian</category><category>linux</category></item><item><title>转pelican的用法</title><link>http://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html</link><description>&lt;p&gt;转自&lt;a href="http://kevinyoung.gitcafe.io/articles/blog/build_your_blog.html"&gt;煎挠橙的博客&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;思路&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -247,7 +247,7 @@ pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含
 &lt;p&gt;另外这里有一份简短的介绍，详细的语法说明则可以在这里找到。
 3.对git/github有所了解&lt;/p&gt;
 &lt;p&gt;如果不了解也同样没有关系，这个一站式的教程可以帮到你。&lt;/p&gt;
-&lt;p&gt;这里多说一点 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sat, 02 Jan 2016 20:08:00 +0800</pubDate><guid isPermaLink="false">tag:None,2016-01-02:/Users/apple/pelicanoutput/blog/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html</guid><category>pelican</category><category>转载</category></item><item><title>关于在pelican的date中使用中文的问题</title><link>/Users/apple/pelicanoutput/blog/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html</link><description>&lt;h1&gt;关于在pelican的date中使用中文的问题&lt;/h1&gt;
+&lt;p&gt;这里多说一点 …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sat, 02 Jan 2016 20:08:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-02:/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html</guid><category>pelican</category><category>转载</category></item><item><title>关于在pelican的date中使用中文的问题</title><link>http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html</link><description>&lt;h1&gt;关于在pelican的date中使用中文的问题&lt;/h1&gt;
 &lt;p&gt;想在pelican的date中应用如下格式&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;2016-01-02 星期六 19:31&lt;/p&gt;
@@ -264,4 +264,4 @@ pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含
 
 
 &lt;p&gt;pelican会在时间里加上星期几了&lt;/p&gt;
-&lt;p&gt;这个软件做得还是很人性化的了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sat, 02 Jan 2016 19:46:00 +0800</pubDate><guid isPermaLink="false">tag:None,2016-01-02:/Users/apple/pelicanoutput/blog/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html</guid><category>vim</category><category>python</category><category>pelican</category><category>中文</category></item></channel></rss>
+&lt;p&gt;这个软件做得还是很人性化的了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sat, 02 Jan 2016 19:46:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-02:/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html</guid><category>vim</category><category>python</category><category>pelican</category><category>中文</category></item></channel></rss>
