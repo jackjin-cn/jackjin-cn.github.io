@@ -1,92 +1,157 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-	<meta charset="utf-8">
-	<title>Jackjin's Home</title>
-	<meta name="description" content="">
-	<meta name="author" content="天地一沙鸥">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
 
-	<!-- HTML5 shim, for IE6-8 support of HTML elements -->
-	<!--[if lt IE 9]>
-		<script src="http://jackjin-cn.github.io/theme/html5.js"></script>
-	<![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
-	<!-- Styles -->
-	<link href="http://jackjin-cn.github.io/theme/bootstrap.min.css" rel="stylesheet">
-	<link href="http://jackjin-cn.github.io/theme/local.css" rel="stylesheet">
-	<link href="http://jackjin-cn.github.io/theme/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/stylesheet/style.min.css">
 
-	<!-- Feeds -->
+  <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/font-awesome/css/font-awesome.min.css">
 
 
-	<link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home RSS Feed" />
+
+    <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home RSS">
 
 
-<script>var _gaq=[['_setAccount','UA-72007782-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72007782-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+    <meta name="author" content="天地一沙鸥" />
+    <meta name="description" content="" />
+<meta property="og:site_name" content="Jackjin's Home"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="Jackjin's Home"/>
+<meta property="og:description" content=""/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://jackjin-cn.github.io"/>
+
+  <title>Jackjin's Home &ndash;     Tag bash
+</title>
+
 </head>
 <body>
-	<div class="topbar">
-	  <div class="topbar-inner">
-		<div class="container-fluid">
-		  <a class="brand" href="http://jackjin-cn.github.io/">Jackjin's Home</a>
-			<ul class="nav">
-					<li><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
-					<li><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
-					<li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
-					<li ><a href="http://jackjin-cn.github.io/category/linux.html">linux</a></li>
-					<li ><a href="http://jackjin-cn.github.io/category/python.html">python</a></li>
-					<li ><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
-					<li ><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a></li>
-					<li ><a href="http://jackjin-cn.github.io/category/shell.html">shell</a></li>
-					<li ><a href="http://jackjin-cn.github.io/category/vim.html">vim</a></li>
-					<li ><a href="http://jackjin-cn.github.io/category/za-gan.html">杂感</a></li>
-					<li ><a href="http://jackjin-cn.github.io/category/za-lei.html">杂类</a></li>
-			</ul>
-			<p class="pull-right"><a href="http://jackjin-cn.github.io/archives.html">[archives]</a> <a href="http://jackjin-cn.github.io/tags.html">[tags]</a></p>
-		</div>
-	  </div>
-	</div>
+  <aside>
+    <div>
+      <a href="http://jackjin-cn.github.io">
+        <img src="http://jackjin-cn.github.io/theme/img/profile.png" alt="" title="">
+      </a>
+      <h1><a href="http://jackjin-cn.github.io"></a></h1>
 
-	<div class="container-fluid">
-	  <div class="sidebar">
-		<div class="well">
-			<h3>Blogroll</h3>
-			<ul>
-				<li><a href="http://getpelican.com/">Pelican</a></li>
-				<li><a href="http://python.org/">Python.org</a></li>
-				<li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-				<li><a href="http://kevinyoung.gitcafe.io">煎挠橙的blog</a></li>
-			</ul>
-			<div class="social">
-			<h3>Social</h3>
-			<ul>
-				<li><a href="#">aaa</a></li>
-				<li><a href="#">Another social link</a></li>
-			</ul>
-			</div>
-		</div>
-	  </div>
-	  <div class="content">
-<div class="page-header"><h1>Jackjin's Home <small>bash</small></h1></div>
-<div class='article'>
-	<h2>cygwin</h2>
-	<div class="well small">Permalink: <a class="more" href="http://jackjin-cn.github.io/2016/2016-01-11_22-11_cygwin.html">2016-01-11 22:11:00+08:00</a>
-by <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥 </a>
- in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
-tags: <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a> <a href="http://jackjin-cn.github.io/tag/cygwin.html">cygwin</a> </div>
-	<div class="summary"><h1>cygiwn的路径</h1>
+
+      <nav>
+        <ul class="list">
+
+          <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li><a href="http://kevinyoung.gitcafe.io" target="_blank">煎挠橙的blog</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-aaa" href="#" target="_blank"><i class="fa fa-aaa"></i></a></li>
+        <li><a class="sc-Another social link" href="#" target="_blank"><i class="fa fa-Another social link"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+
+
+<article>
+  <header>
+    <h2><a href="http://jackjin-cn.github.io/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html#yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian">一行代码搞定改名&copy文件</a></h2>
+    <p>
+          Posted on 2018-07-04 星期三 19:12 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a>,              <a href="http://jackjin-cn.github.io/tag/shell.html">shell</a>
+    </p>
+  </header>
+  <div>
+      <h1>一行代码搞定改名&amp;copy文件</h1>
+<h2>1. 分段探索的过程</h2>
+<blockquote>
+<p>[jjb@ ~/pelicanoutput/pelican/pelican-themes #6]$for i in <code>find . -name screenshot.png</code> ;do echo ${i} ;done;</p>
+</blockquote>
+<div class="highlight"><pre><span></span>./bricks/screenshot.png
+./monospace/screenshot.png
+./foundation-default-colours/screenshot.png
+````
+
+---------
+
+## 2. 分段探索的过程
+&gt; [jjb@ ~/pelicanoutput/pelican/pelican-themes #8]$for i in `find . -name screenshot.png` ;do echo  `dirname $i`;done;
+</pre></div>
+
+
+<p>./bricks
+./monospace …</p>
+      <br>
+      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html#yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-11_22-11_cygwin.html#cygwin">cygwin</a></h2>
+    <p>
+          Posted on 2016-01-11 星期一 22:11 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a>,              <a href="http://jackjin-cn.github.io/tag/cygwin.html">cygwin</a>
+    </p>
+  </header>
+  <div>
+      <h1>cygiwn的路径</h1>
 <p>windows下的C：在cygwin中表示为<code>/cygwin/c/</code></p>
 <p>cygwin会导入windows中的path,当然也可以在cygwin中的path中加入windows的path，不过，写法上要向上面一样。</p>
-<p>另外，如果遇到到<strong>permision denied</strong>，请用<strong>管理员身份</strong>运行cygwin.bat</p> <a class="btn primary xsmall" href="http://jackjin-cn.github.io/2016/2016-01-11_22-11_cygwin.html">more…</a>
-	</div>
-</div>	
-<div class='article'>
-	<h2>bash中for的文件通配符的问题</h2>
-	<div class="well small">Permalink: <a class="more" href="http://jackjin-cn.github.io/2016/2016-01-09_16-08_bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti.html">2016-01-09 16:08:00+08:00</a>
-by <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥 </a>
- in <a href="http://jackjin-cn.github.io/category/shell.html">shell</a>
-tags: <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a> <a href="http://jackjin-cn.github.io/tag/for.html">for</a> <a href="http://jackjin-cn.github.io/tag/wen-jian-cao-zuo.html">文件操作</a> </div>
-	<div class="summary"><p>最近在整理自己的文档，还学了一点awk的操作，awk对文本的处理真是蛮强大的。</p>
+<p>另外，如果遇到到<strong>permision denied</strong>，请用<strong>管理员身份</strong>运行cygwin.bat</p>
+      <br>
+      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-11_22-11_cygwin.html#cygwin">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-09_16-08_bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti.html#bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti">bash中for的文件通配符的问题</a></h2>
+    <p>
+          Posted on 2016-01-09 星期六 16:08 in <a href="http://jackjin-cn.github.io/category/shell.html">shell</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a>,              <a href="http://jackjin-cn.github.io/tag/for.html">for</a>,              <a href="http://jackjin-cn.github.io/tag/wen-jian-cao-zuo.html">文件操作</a>
+    </p>
+  </header>
+  <div>
+      <p>最近在整理自己的文档，还学了一点awk的操作，awk对文本的处理真是蛮强大的。</p>
 <p>我需要经常用脚本来对一批文件处理。比如</p>
 <div class="highlight"><pre><span></span>aa$&gt; for file in *.txt;do echo $file;done#结果可以正常显示
 </pre></div>
@@ -112,16 +177,27 @@ tags: <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a> <a href="http
 </pre></div>
 
 
-<p>结果确不正常，只有第一个文件被匹配，改来改去，发现原因：shell在处理命令行时已经自动把<strong><em>.txt</em>* 替换成符合条件的列表了，所以产生问题。后来发现的办法是在文件上加中 …</strong></p> <a class="btn primary xsmall" href="http://jackjin-cn.github.io/2016/2016-01-09_16-08_bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti.html">more…</a>
-	</div>
-</div>	
-<div class='article'>
-	<h2>修改pelican所支持的内容文件的扩展名</h2>
-	<div class="well small">Permalink: <a class="more" href="http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html">2016-01-06 19:58:00+08:00</a>
-by <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥 </a>
- in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
-tags: <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a> <a href="http://jackjin-cn.github.io/tag/wen-jian-ming.html">文件名</a> <a href="http://jackjin-cn.github.io/tag/markdown.html">markdown</a> <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a> </div>
-	<div class="summary"><h2>修改pelican所支持的内容文件的扩展名</h2>
+<p>结果确不正常，只有第一个文件被匹配，改来改去，发现原因：shell在处理命令行时已经自动把<strong><em>.txt</em>* 替换成符合条件的列表了，所以产生问题。后来发现的办法是在文件上加中 …</strong></p>
+      <br>
+      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-09_16-08_bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti.html#bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html#xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming">修改pelican所支持的内容文件的扩展名</a></h2>
+    <p>
+          Posted on 2016-01-06 星期三 19:58 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a>,              <a href="http://jackjin-cn.github.io/tag/wen-jian-ming.html">文件名</a>,              <a href="http://jackjin-cn.github.io/tag/markdown.html">markdown</a>,              <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a>
+    </p>
+  </header>
+  <div>
+      <h2>修改pelican所支持的内容文件的扩展名</h2>
 <p>pelican的内容文本文件只支持常见markdown的扩展名<code>markdown,md,mkd</code>等，我比较喜欢用vim制作自己的文件模板，这样就需要自己取文件扩展名，比如*.blog，前几天没想到办法，今天找到办法了。</p>
 <p>用grep 在 <strong>/usr/local/lib/python2.7/dist-packages/pelican</strong> 找了下<strong>md</strong></p>
 <div class="highlight"><pre><span></span>$/usr/local/lib/python2.7/dist-packages/pelican$ grep &#39;md&#39; *.py
@@ -131,38 +207,42 @@ readers.py:    file_extensions = [&#39;md&#39;, &#39;markdown&#39;, &#39;mkd&#39
 
 
 <p>于是只是修改<code>readers.py</code>，加入自己想要的扩展名就可以了。</p>
-<p>我没有找到其它办法，不过这个方法还算方便吧。</p> <a class="btn primary xsmall" href="http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html">more…</a>
-	</div>
-</div>	
-<div class='article'>
-	<h2>在linux下把cp936转成utf-8</h2>
-	<div class="well small">Permalink: <a class="more" href="http://jackjin-cn.github.io/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html">2016-01-06 19:43:00+08:00</a>
-by <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥 </a>
- in <a href="http://jackjin-cn.github.io/category/linux.html">linux</a>
-tags: <a href="http://jackjin-cn.github.io/tag/linux.html">linux</a> <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a> <a href="http://jackjin-cn.github.io/tag/code.html">code</a> <a href="http://jackjin-cn.github.io/tag/zhong-wen.html">中文</a> </div>
-	<div class="summary"><h2>在linux下把cp936转成utf-8</h2>
-<p>今天需要把原来写的文字用博客的形式发布，用pelican转换的第一个问题就是文件的内码格式不到，原来是 <strong>cp936</strong> (中文ASCII)的形式，需要转成<strong>utf-8</strong>。</p>
-<p>网上找了一下，可以用<code>iconv</code> 这个工具，不过不支持批量转换，于是又搜了一下，用bash写了一个，在此记录一下。
-另外说明一下，<strong>iconv</strong> 不支持自动识别文件编码，要手动指定</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="k">for</span> file in *.txt 
-    <span class="k">do</span> iconv -c -f gb18030 -t utf8 <span class="nv">$file</span> -o <span class="nv">$file</span>.uu
-<span class="k">done</span>
-</pre></div>
-</td></tr></table> <a class="btn primary xsmall" href="http://jackjin-cn.github.io/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html">more…</a>
-	</div>
-</div>	
+<p>我没有找到其它办法，不过这个方法还算方便吧。</p>
+      <br>
+      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html#xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming">    Continue reading
+</a>
+  </div>
+</article>
+
+  <div class="pagination">
+    <a class="btn float-left" href="http://jackjin-cn.github.io/tag/bash2.html">
+      <i class="fa fa-angle-left"></i>     Older Posts
+
+    </a>
+  </div>
 
 
-		<footer>
-		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
-		  <p>&copy; 天地一沙鸥</p>
-		</footer>
-	  </div>
 
-	</div>
+
+    <footer>
+<p>&copy;  </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Jackjin's Home ",
+  "url" : "http://jackjin-cn.github.io",
+  "image": "",
+  "description": ""
+}
+</script>
+
 </body>
 </html>
