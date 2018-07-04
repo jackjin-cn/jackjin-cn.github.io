@@ -1,71 +1,104 @@
-<!doctype html>
-<html class="no-js" lang="zh">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Jackjin's Home - Articles by 天地一沙鸥</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=9" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Serif+Pro:400,700">
-    <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/css/main.css">
-</head>
-<body itemscope itemtype="http://schema.org/Blog">
-<header class="site-header">
-    <a href="http://jackjin-cn.github.io">
-    </a>
-    <h1 itemprop="name"><a href="http://jackjin-cn.github.io"></a></h1>
-</header>
-    <section class="main-content">
-    <article>
-        <header>
-            <h2>
-                <a href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html#vimzhong-de-autocmd">vim中的autocmd</a>
-            </h2>
-            <p>
-                <meta itemprop="datePublished" content="2016-01-19T08:58:00+08:00">
-                <meta itemprop="dateModified" content="2016-01-19T08:58:00+08:00">
-                Posted on 19 一月 2016 in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
-            </p>
-        </header>
+	<meta charset="utf-8">
+	<title>Jackjin's Home</title>
+	<meta name="description" content="">
+	<meta name="author" content="天地一沙鸥">
 
-            <p>原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保存后才能高亮，也试过autocmd的其它形式，也是不行，不过，昨天在尝试autocmd的时候，无意中发发现了解决办法。</p>
+	<!-- HTML5 shim, for IE6-8 support of HTML elements -->
+	<!--[if lt IE 9]>
+		<script src="http://jackjin-cn.github.io/theme/html5.js"></script>
+	<![endif]-->
+
+	<!-- Styles -->
+	<link href="http://jackjin-cn.github.io/theme/bootstrap.min.css" rel="stylesheet">
+	<link href="http://jackjin-cn.github.io/theme/local.css" rel="stylesheet">
+	<link href="http://jackjin-cn.github.io/theme/pygments.css" rel="stylesheet">
+
+	<!-- Feeds -->
+
+
+	<link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home RSS Feed" />
+
+
+<script>var _gaq=[['_setAccount','UA-72007782-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
+</head>
+<body>
+	<div class="topbar">
+	  <div class="topbar-inner">
+		<div class="container-fluid">
+		  <a class="brand" href="http://jackjin-cn.github.io/">Jackjin's Home</a>
+			<ul class="nav">
+					<li><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
+					<li><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
+					<li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
+					<li ><a href="http://jackjin-cn.github.io/category/linux.html">linux</a></li>
+					<li ><a href="http://jackjin-cn.github.io/category/python.html">python</a></li>
+					<li ><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
+					<li ><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a></li>
+					<li ><a href="http://jackjin-cn.github.io/category/shell.html">shell</a></li>
+					<li ><a href="http://jackjin-cn.github.io/category/vim.html">vim</a></li>
+					<li ><a href="http://jackjin-cn.github.io/category/za-gan.html">杂感</a></li>
+					<li ><a href="http://jackjin-cn.github.io/category/za-lei.html">杂类</a></li>
+			</ul>
+			<p class="pull-right"><a href="http://jackjin-cn.github.io/archives.html">[archives]</a> <a href="http://jackjin-cn.github.io/tags.html">[tags]</a></p>
+		</div>
+	  </div>
+	</div>
+
+	<div class="container-fluid">
+	  <div class="sidebar">
+		<div class="well">
+			<h3>Blogroll</h3>
+			<ul>
+				<li><a href="http://getpelican.com/">Pelican</a></li>
+				<li><a href="http://python.org/">Python.org</a></li>
+				<li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+				<li><a href="http://kevinyoung.gitcafe.io">煎挠橙的blog</a></li>
+			</ul>
+			<div class="social">
+			<h3>Social</h3>
+			<ul>
+				<li><a href="#">aaa</a></li>
+				<li><a href="#">Another social link</a></li>
+			</ul>
+			</div>
+		</div>
+	  </div>
+	  <div class="content">
+<div class="page-header"><h1>Jackjin's Home <small>天地一沙鸥</small></h1></div>
+<div class='article'>
+	<h2>vim中的autocmd</h2>
+	<div class="well small">Permalink: <a class="more" href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html">2016-01-19 08:58:00+08:00</a>
+by <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥 </a>
+ in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
+tags: <a href="http://jackjin-cn.github.io/tag/autocmd.html">autocmd</a> <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a> </div>
+	<div class="summary"><p>原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保存后才能高亮，也试过autocmd的其它形式，也是不行，不过，昨天在尝试autocmd的时候，无意中发发现了解决办法。</p>
 <div class="highlight"><pre><span></span>autocmd BufReadpre *.mytext set syn=mytext
 mytext是指代自己定义的文件格式和语法文件
-</pre></div>
-            <a class="button" href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html#vimzhong-de-autocmd">Continue reading</a>
-    </article>
-    <article>
-        <header>
-            <h2>
-                <a href="http://jackjin-cn.github.io/2016/2016-01-11_22-11_cygwin.html#cygwin">cygwin</a>
-            </h2>
-            <p>
-                <meta itemprop="datePublished" content="2016-01-11T22:11:00+08:00">
-                <meta itemprop="dateModified" content="2016-01-11T22:11:00+08:00">
-                Posted on 11 一月 2016 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
-            </p>
-        </header>
-
-            <h1>cygiwn的路径</h1>
+</pre></div> <a class="btn primary xsmall" href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html">more…</a>
+	</div>
+</div>	
+<div class='article'>
+	<h2>cygwin</h2>
+	<div class="well small">Permalink: <a class="more" href="http://jackjin-cn.github.io/2016/2016-01-11_22-11_cygwin.html">2016-01-11 22:11:00+08:00</a>
+by <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥 </a>
+ in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
+tags: <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a> <a href="http://jackjin-cn.github.io/tag/cygwin.html">cygwin</a> </div>
+	<div class="summary"><h1>cygiwn的路径</h1>
 <p>windows下的C：在cygwin中表示为<code>/cygwin/c/</code></p>
 <p>cygwin会导入windows中的path,当然也可以在cygwin中的path中加入windows的path，不过，写法上要向上面一样。</p>
-<p>另外，如果遇到到<strong>permision denied</strong>，请用<strong>管理员身份</strong>运行cygwin.bat</p>
-            <a class="button" href="http://jackjin-cn.github.io/2016/2016-01-11_22-11_cygwin.html#cygwin">Continue reading</a>
-    </article>
-    <article>
-        <header>
-            <h2>
-                <a href="http://jackjin-cn.github.io/2016/2016-01-09_16-08_bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti.html#bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti">bash中for的文件通配符的问题</a>
-            </h2>
-            <p>
-                <meta itemprop="datePublished" content="2016-01-09T16:08:00+08:00">
-                <meta itemprop="dateModified" content="2016-01-09T16:08:00+08:00">
-                Posted on 09 一月 2016 in <a href="http://jackjin-cn.github.io/category/shell.html">shell</a>
-            </p>
-        </header>
-
-            <p>最近在整理自己的文档，还学了一点awk的操作，awk对文本的处理真是蛮强大的。</p>
+<p>另外，如果遇到到<strong>permision denied</strong>，请用<strong>管理员身份</strong>运行cygwin.bat</p> <a class="btn primary xsmall" href="http://jackjin-cn.github.io/2016/2016-01-11_22-11_cygwin.html">more…</a>
+	</div>
+</div>	
+<div class='article'>
+	<h2>bash中for的文件通配符的问题</h2>
+	<div class="well small">Permalink: <a class="more" href="http://jackjin-cn.github.io/2016/2016-01-09_16-08_bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti.html">2016-01-09 16:08:00+08:00</a>
+by <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥 </a>
+ in <a href="http://jackjin-cn.github.io/category/shell.html">shell</a>
+tags: <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a> <a href="http://jackjin-cn.github.io/tag/for.html">for</a> <a href="http://jackjin-cn.github.io/tag/wen-jian-cao-zuo.html">文件操作</a> </div>
+	<div class="summary"><p>最近在整理自己的文档，还学了一点awk的操作，awk对文本的处理真是蛮强大的。</p>
 <p>我需要经常用脚本来对一批文件处理。比如</p>
 <div class="highlight"><pre><span></span>aa$&gt; for file in *.txt;do echo $file;done#结果可以正常显示
 </pre></div>
@@ -91,22 +124,16 @@ mytext是指代自己定义的文件格式和语法文件
 </pre></div>
 
 
-<p>结果确不正常，只有第一个文件被匹配，改来改去，发现原因：shell在处理命令行时已经自动把<strong><em>.txt</em>* 替换成符合条件的列表了，所以产生问题。后来发现的办法是在文件上加中 …</strong></p>
-            <a class="button" href="http://jackjin-cn.github.io/2016/2016-01-09_16-08_bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti.html#bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti">Continue reading</a>
-    </article>
-    <article>
-        <header>
-            <h2>
-                <a href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html#awkwen-ben-gong-ju-de-xue-xi">awk文本工具的学习</a>
-            </h2>
-            <p>
-                <meta itemprop="datePublished" content="2016-01-09T09:59:00+08:00">
-                <meta itemprop="dateModified" content="2016-01-09T09:59:00+08:00">
-                Posted on 09 一月 2016 in <a href="http://jackjin-cn.github.io/category/linux.html">linux</a>
-            </p>
-        </header>
-
-            <p><a href="http://coolshell.cn/articles/9070.html">转自：酷 壳 AWK 简明教程</a></p>
+<p>结果确不正常，只有第一个文件被匹配，改来改去，发现原因：shell在处理命令行时已经自动把<strong><em>.txt</em>* 替换成符合条件的列表了，所以产生问题。后来发现的办法是在文件上加中 …</strong></p> <a class="btn primary xsmall" href="http://jackjin-cn.github.io/2016/2016-01-09_16-08_bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti.html">more…</a>
+	</div>
+</div>	
+<div class='article'>
+	<h2>awk文本工具的学习</h2>
+	<div class="well small">Permalink: <a class="more" href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html">2016-01-09 09:59:00+08:00</a>
+by <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥 </a>
+ in <a href="http://jackjin-cn.github.io/category/linux.html">linux</a>
+tags: <a href="http://jackjin-cn.github.io/tag/awk.html">awk</a> <a href="http://jackjin-cn.github.io/tag/linux.html">linux</a> <a href="http://jackjin-cn.github.io/tag/ben-wen.html">本文</a> <a href="http://jackjin-cn.github.io/tag/shell.html">shell</a> <a href="http://jackjin-cn.github.io/tag/windows.html">windows</a> </div>
+	<div class="summary"><p><a href="http://coolshell.cn/articles/9070.html">转自：酷 壳 AWK 简明教程</a></p>
 <p><a href="http://www.runoob.com/linux/linux-comm-awk.html">转自：Linux awk 命令</a></p>
 <p>自己尝试了一下,感觉很强大。</p>
 <p>特别是模式匹配和过滤功能。</p>
@@ -116,12 +143,30 @@ mytext是指代自己定义的文件格式和语法文件
 
 
 <p>后来下载了windows版的awk，是3.1.6版</p>
-<p>用法上和linux版的没有区别，不过，有一点要注意是要把<strong><code>单引号'</code>换成<code>双引号"</code></strong></p>
-            <a class="button" href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html#awkwen-ben-gong-ju-de-xue-xi">Continue reading</a>
-    </article>
-    </section>
+<p>用法上和linux版的没有区别，不过，有一点要注意是要把<strong><code>单引号'</code>换成<code>双引号"</code></strong></p> <a class="btn primary xsmall" href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html">more…</a>
+	</div>
+</div>	
 
-<footer class="site-footer">
-    <p>&copy; 天地一沙鸥 </p>
-</footer></body>
+<div class="pagination">
+<ul>
+		<li class="prev"><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou2.html">&larr; Previous</a></li>
+		<li class=""><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">1</a></li>
+		<li class=""><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou2.html">2</a></li>
+		<li class="active"><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou3.html">3</a></li>
+		<li class=""><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou4.html">4</a></li>
+		<li class=""><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou5.html">5</a></li>
+		<li class=""><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou6.html">6</a></li>
+		<li class=""><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou7.html">7</a></li>
+		<li class="next"><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou4.html">Next &rarr;</a></li>
+</ul>
+</div>
+
+		<footer>
+		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
+		  <p>&copy; 天地一沙鸥</p>
+		</footer>
+	  </div>
+
+	</div>
+</body>
 </html>
