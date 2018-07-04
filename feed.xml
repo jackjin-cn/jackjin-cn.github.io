@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Wed, 04 Jul 2018 12:33:39 +0800</lastBuildDate><item><title>brew 中切换软件版本</title><link>http://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html</link><description>&lt;h1&gt;brew 中切换软件版本&lt;/h1&gt;
+<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Wed, 04 Jul 2018 19:38:50 +0800</lastBuildDate><item><title>一行代码搞定改名&amp;copy文件</title><link>http://jackjin-cn.github.io/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html</link><description>&lt;h1&gt;一行代码搞定改名&amp;amp;copy文件&lt;/h1&gt;
+&lt;h2&gt;1. 分段探索的过程&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[jjb@ ~/pelicanoutput/pelican/pelican-themes #6]$for i in &lt;code&gt;find . -name screenshot.png&lt;/code&gt; ;do echo ${i} ;done;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;./bricks/screenshot.png
+./monospace/screenshot.png
+./foundation-default-colours/screenshot.png
+````
+
+---------
+
+## 2. 分段探索的过程
+&amp;gt; [jjb@ ~/pelicanoutput/pelican/pelican-themes #8]$for i in `find . -name screenshot.png` ;do echo  `dirname $i`;done;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;./bricks
+./monospace …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Wed, 04 Jul 2018 19:12:53 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2018-07-04:/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html</guid><category>bash</category><category>shell</category></item><item><title>brew 中切换软件版本</title><link>http://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html</link><description>&lt;h1&gt;brew 中切换软件版本&lt;/h1&gt;
 &lt;p&gt;我有更新软件的习惯，习惯性的每天更新一下。比如brew ,pip3等。&lt;/p&gt;
 &lt;p&gt;这不，前天把brew 就把python 3.6.5 升级到了python 3.7了，这个是大升级，结果python库都没有了，当然可以另行安装，也很方便，反正有写了批量更新的脚本，但没有到还有兼容性的问题。&lt;/p&gt;
 &lt;p&gt;网上找一堆办法，有的命令已经过期了 &lt;em&gt;brew versions&lt;/em&gt;,有的太复杂，看不明白。
@@ -225,24 +243,4 @@ pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含
 
 
 &lt;p&gt;然后可以用&lt;tab&gt;进行补全了，这个在一个项目中有多个目录时，打开文件特别实用。而且有同名文件也可以进行识别。&lt;/p&gt;
-&lt;p&gt;摘自《Vim实用技巧》&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 05 Jan 2016 15:02:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-05:/2016/2016-01-05_15-02_vimde-findming-ling.html</guid><category>软件</category><category>学习</category></item><item><title>新闻组的没落</title><link>http://jackjin-cn.github.io/2016/2016-01-03_16-44_xin-wen-zu-de-mei-luo.html</link><description>&lt;h2&gt;新闻组的没落&lt;/h2&gt;
-&lt;p&gt;最近几天在折腾debian，安装了thunderbird，设置了邮件帐户，在设置的时候看到还可以进行新闻组的设置，不经想出N年组用 &lt;em&gt;outlookpress&lt;/em&gt; 看新闻组的光景，当时还是拔号上网，为省钱，都是先同步下载好离线看的，内容还是蛮多，有关网站还能上。&lt;/p&gt;
-&lt;p&gt;今天在网上找一下，中文可用的新闻组很少了，能上的也基本没有什么内容或者更新了，感叹时间变化太快了，技术发展了更迭不断，当年火的不得了东西，不管是软件还是硬件，到了现在都发生了很大的变化，我所喜欢的东东，很多都淘汰了。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;ti-92plus 图形计算器&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;掌上通黑白手持电脑（windows系统）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;windows mobile 手机（彩色，e850,hkc）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;nokia 手机（s60）N72,N8&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;黑莓手机  9930&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;看来，玩数码，是要亏很多钱的，也没有什么实质的收获，至少对生活无太大帮助。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sun, 03 Jan 2016 16:44:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-03:/2016/2016-01-03_16-44_xin-wen-zu-de-mei-luo.html</guid><category>软件</category><category>感想</category></item></channel></rss>
+&lt;p&gt;摘自《Vim实用技巧》&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 05 Jan 2016 15:02:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-05:/2016/2016-01-05_15-02_vimde-findming-ling.html</guid><category>软件</category><category>学习</category></item></channel></rss>
