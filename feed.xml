@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Tue, 03 Jul 2018 15:02:59 +0800</lastBuildDate><item><title>sed的一点用处</title><link>http://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html</link><description>&lt;h1&gt;sed的一点用处&lt;/h1&gt;
+<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Wed, 04 Jul 2018 12:30:34 +0800</lastBuildDate><item><title>brew 中切换软件版本</title><link>http://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html</link><description>&lt;h1&gt;brew 中切换软件版本&lt;/h1&gt;
+&lt;p&gt;我有更新软件的习惯，习惯性的每天更新一下。比如brew ,pip3等。&lt;/p&gt;
+&lt;p&gt;这不，前天把brew 就把python 3.6.5 升级到了python 3.7了，这个是大升级，结果python库都没有了，当然可以另行安装，也很方便，反正有写了批量更新的脚本，但没有到还有兼容性的问题。&lt;/p&gt;
+&lt;p&gt;网上找一堆办法，有的命令已经过期了 &lt;em&gt;brew versions&lt;/em&gt;,有的太复杂，看不明白。
+后来还是找到了一个办法，提前是老版本python没有删除。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;brew info python3&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;{% codeblock start:1 linenos:true %}
+python: stable 3.7.0 (bottled), HEAD
+Interpreted, interactive, object-oriented programming language
+https …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Wed, 04 Jul 2018 12:14:13 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2018-07-04:/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html</guid><category>brew</category><category>python</category></item><item><title>sed的一点用处</title><link>http://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html</link><description>&lt;h1&gt;sed的一点用处&lt;/h1&gt;
 &lt;p&gt;最近在弄pelican 与 github的博客，下载很不要模板，更换很不方便，想能不能用命令修改，google一下，还是真有办法的。&lt;/p&gt;
 &lt;h2&gt;提醒不要用mac osx 自带的sed&lt;/h2&gt;
 &lt;h2&gt;我用brew 安装了gnu-sed&lt;/h2&gt;
@@ -234,23 +245,4 @@ pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含
 &lt;p&gt;黑莓手机  9930&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;看来，玩数码，是要亏很多钱的，也没有什么实质的收获，至少对生活无太大帮助。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sun, 03 Jan 2016 16:44:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-03:/2016/2016-01-03_16-44_xin-wen-zu-de-mei-luo.html</guid><category>软件</category><category>感想</category></item><item><title>Wine QQ 7.9版的安装</title><link>http://jackjin-cn.github.io/2016/2016-01-02_20-56_wine-qq-79ban-de-an-zhuang.html</link><description>&lt;h1&gt;Wine QQ 7.9版的安装&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;安装最新的wine，安装QQ7.9.exe&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;根据网上的教程增加字体，修改注册表&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;winecfg配置成win8.1&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;几个动态库,mfc4.2,riched20,wininet，gdiplus,iphlapi,urlmon设置成原装先于内建，这几个dll文件可以从windows系统复制过来，基本都在windows\systme32里面。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;img alt="wineqq" src="http://jackjin-cn.github.io/images/wine-qq.png" title="wine-qq设置"&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sat, 02 Jan 2016 20:56:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-02:/2016/2016-01-02_20-56_wine-qq-79ban-de-an-zhuang.html</guid><category>wine</category><category>qq</category><category>debian</category><category>linux</category></item></channel></rss>
+&lt;p&gt;看来，玩数码，是要亏很多钱的，也没有什么实质的收获，至少对生活无太大帮助。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sun, 03 Jan 2016 16:44:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-03:/2016/2016-01-03_16-44_xin-wen-zu-de-mei-luo.html</guid><category>软件</category><category>感想</category></item></channel></rss>

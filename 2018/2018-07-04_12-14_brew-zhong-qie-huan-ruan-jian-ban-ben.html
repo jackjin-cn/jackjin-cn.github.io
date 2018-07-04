@@ -62,22 +62,52 @@
 		</nav>
 	</div>
 </div>		<div class="content container">
-<h1>Archives for 2018</h1>
-
-<dl>
-    <dt>2018-07-04 星期三 12:14</dt>
-    <dd><a href="http://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html">brew 中切换软件版本</a></dd>
-    <dt>2018-07-03 星期二 14:32</dt>
-    <dd><a href="http://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html">sed的一点用处</a></dd>
-    <dt>2018-07-02 星期一 22:07</dt>
-    <dd><a href="http://jackjin-cn.github.io/2018/2018-07-02_22-07_pelican-shang-chuan-dao-github.html">Pelican 上传到github</a></dd>
-    <dt>2018-07-02 星期一 12:34</dt>
-    <dd><a href="http://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html">Vim 中插入日期</a></dd>
-    <dt>2018-07-01 星期日 22:42</dt>
-    <dd><a href="http://jackjin-cn.github.io/2018/2018-07-01_22-42_pi-liang-cp936toutf8.html">批量cp936toutf8</a></dd>
-    <dt>2018-07-01 星期日 20:13</dt>
-    <dd><a href="http://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html">再次配置pelican写博客</a></dd>
-</dl>
+<div class="post">
+	<h1 class="post-title">brew 中切换软件版本</h1>
+	<span class="post-date">2018-07-04 星期三 12:14</span>
+	<h1>brew 中切换软件版本</h1>
+<p>我有更新软件的习惯，习惯性的每天更新一下。比如brew ,pip3等。</p>
+<p>这不，前天把brew 就把python 3.6.5 升级到了python 3.7了，这个是大升级，结果python库都没有了，当然可以另行安装，也很方便，反正有写了批量更新的脚本，但没有到还有兼容性的问题。</p>
+<p>网上找一堆办法，有的命令已经过期了 <em>brew versions</em>,有的太复杂，看不明白。
+后来还是找到了一个办法，提前是老版本python没有删除。</p>
+<blockquote>
+<p>brew info python3</p>
+</blockquote>
+<p>{% codeblock start:1 linenos:true %}
+python: stable 3.7.0 (bottled), HEAD
+Interpreted, interactive, object-oriented programming language
+https://www.python.org/
+/usr/local/Cellar/python/3.6.5 (4,900 files, 102.3MB)
+  Poured from bottle on 2018-04-03 at 09:54:11
+/usr/local/Cellar/python/3.6.5_1 (4,869 files, 101.5MB) *
+  Poured from bottle on 2018-06-25 at 09:02:25
+/usr/local/Cellar/python/3.7.0 (4,976 files, 104.2MB)
+  Poured from bottle on 2018-07-02 at 08:50:46
+From: https://github.com/Homebrew/homebrew-core/blob/master/Formula/python.rb</p>
+<p>{% endcodeblock %}
+上面显示了brew系统已经安装的pytho3的版本，有3个版本，其它有两个3.6.5,我也不知道原因。</p>
+<blockquote>
+<p>brew swithc python 3.6.5_1
+```
+$brew switch python3 3.6.5_1
+Cleaning /usr/local/Cellar/python/3.6.5
+Cleaning /usr/local/Cellar/python/3.6.5_1
+Cleaning /usr/local/Cellar/python/3.7.0
+25 links created for /usr/local/Cellar/python/3.6.5_1
+````</p>
+</blockquote>
+<h3>再试试，就可以用回3.6.5 了</h3>
+	<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_shortname = 'jackjin';
+			(function() {
+	 			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	 			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	 			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	 		})();
+		</script>
+	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>
 		</div>
 	</body>
 </html>

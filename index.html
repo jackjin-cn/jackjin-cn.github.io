@@ -64,6 +64,27 @@
 </div>		<div class="content container">
 	<div class="posts">
 			<div class="post">
+				<h1 class="post-title" href="http://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html#brew-zhong-qie-huan-ruan-jian-ban-ben">
+					<a href="http://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html#brew-zhong-qie-huan-ruan-jian-ban-ben">brew 中切换软件版本</a>
+				</h1>
+				<span class="post-date">2018-07-04 星期三 12:14</span>
+				<p>
+					<h1>brew 中切换软件版本</h1>
+<p>我有更新软件的习惯，习惯性的每天更新一下。比如brew ,pip3等。</p>
+<p>这不，前天把brew 就把python 3.6.5 升级到了python 3.7了，这个是大升级，结果python库都没有了，当然可以另行安装，也很方便，反正有写了批量更新的脚本，但没有到还有兼容性的问题。</p>
+<p>网上找一堆办法，有的命令已经过期了 <em>brew versions</em>,有的太复杂，看不明白。
+后来还是找到了一个办法，提前是老版本python没有删除。</p>
+<blockquote>
+<p>brew info python3</p>
+</blockquote>
+<p>{% codeblock start:1 linenos:true %}
+python: stable 3.7.0 (bottled), HEAD
+Interpreted, interactive, object-oriented programming language
+https …</p>
+				</p>
+				<a class="read-more" href="2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html">Continue reading »</a>
+			</div>
+			<div class="post">
 				<h1 class="post-title" href="http://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html#sedde-yi-dian-yong-chu">
 					<a href="http://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html#sedde-yi-dian-yong-chu">sed的一点用处</a>
 				</h1>
@@ -145,46 +166,6 @@ call setline(5,&quot;Tags: &quot;)
 call setline(6,&quot;Author:天地一沙鸥 …</pre></div>
 				</p>
 				<a class="read-more" href="2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html">Continue reading »</a>
-			</div>
-			<div class="post">
-				<h1 class="post-title" href="http://jackjin-cn.github.io/2018/2018-07-01_22-42_pi-liang-cp936toutf8.html#pi-liang-cp936toutf8">
-					<a href="http://jackjin-cn.github.io/2018/2018-07-01_22-42_pi-liang-cp936toutf8.html#pi-liang-cp936toutf8">批量cp936toutf8</a>
-				</h1>
-				<span class="post-date">2018-07-01 星期日 22:42</span>
-				<p>
-					<h2>今天在用pelican转网页的时候，原来在<strong>windows</strong>下写的文件，代码是<strong>cp936</strong>，识别不了，要转成<strong>utf8</strong>格式。</h2>
-<p>通过搜索找到了以下代码</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="k">for</span> i in <span class="sb">`</span>find . -name <span class="s2">&quot;*.cal&quot;</span><span class="sb">`</span>
-<span class="k">do</span>
-    vim -s ~/bin/cp936-utf8.vi <span class="nv">$i</span>
-<span class="k">done</span>
-
-用写一段vim用的vi命令就可以了
-</pre></div>
-</td></tr></table>
-
-<div class="highlight"><pre><span></span>&quot;cp936-utf8.vi&quot;
-:set fileencoding=utf8
-:wq!
-</pre></div>
-
-
-<p>懂vim的看的懂，这两句做了两件事</p>
-<ul>
-<li>设置文件编码</li>
-<li>保存写入</li>
-</ul>
-<h3>另外也学习了  <strong>find</strong> 的用法</h3>
-<div class="highlight"><pre><span></span>find . -name …</pre></div>
-				</p>
-				<a class="read-more" href="2018/2018-07-01_22-42_pi-liang-cp936toutf8.html">Continue reading »</a>
 			</div>
 	</div>
 	<div class="pagination">
