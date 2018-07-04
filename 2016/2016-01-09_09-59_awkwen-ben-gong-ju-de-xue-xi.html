@@ -1,145 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="zh">
 <head>
-        <title>awk文本工具的学习</title>
-        <meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" href="http://jackjin-cn.github.io/theme/images/favicon.ico"/>
-        <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/main.css" type="text/css" />
-        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home RSS Feed" />
-
-        <!--[if IE]>
-                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
-        <!--[if lte IE 7]>
-                <link rel="stylesheet" type="text/css" media="all" href="http://jackjin-cn.github.io/css/ie.css"/>
-                <script src="http://jackjin-cn.github.io/js/IE8.js" type="text/javascript"></script><![endif]-->
-
-        <!--[if lt IE 7]>
-                <link rel="stylesheet" type="text/css" media="all" href="http://jackjin-cn.github.io/css/ie6.css"/><![endif]-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js" type="text/javascript"></script>
-
-
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>awk文本工具的学习</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Serif+Pro:400,700">
+    <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/css/main.css">
 </head>
-
-<body id="index" class="home">
-	
-  <!-- <header id="banner" class="body"> -->
-  <!--               <h1><a href="http://jackjin-cn.github.io/"><img src="http://www.launchyard.com/images/logo.png" /></a></h1> -->
-  <!--       </header> --> 
-
-  <div class="LaunchyardDetail">
-    <!-- <p> -->
-    <!-- <img src="http://jackjin-cn.github.io/theme/images/blue-pin.png" width="100" height="100" alt="Graph icon"> -->
-    <!-- </p> -->
-    <p><a id="sitesubtitle" href="http://jackjin-cn.github.io/"></a></p>
-    <p><a id="aboutlink" href="http://jackjin-cn.github.io/pages/about.html">about</a></p>
-
-    <!-- <ul> -->
-    <!--   <li><a href="http://jackjin-cn.github.io/pages/about.html">about</a></li> -->
-      <!-- <li><a href="http://jackjin-cn.github.io/pages/about.html">articles</a></li> -->
-<!--  -->
-<!--         <br/> -->
-<!--         <br/> -->
-<!--      -->        
-<!--       <li><a href="">brew 中切换软件版本</a></li> -->
-<!--      -->        
-<!--       <li><a href="">sed的一点用处</a></li> -->
-<!--      -->        
-<!--       <li><a href="">Pelican 上传到github</a></li> -->
-<!--      -->        
-<!--       <li><a href="">Vim 中插入日期</a></li> -->
-<!--      -->        
-<!--       <li><a href="">批量cp936toutf8</a></li> -->
-<!--      -->        
-<!--       <li><a href="">再次配置pelican写博客</a></li> -->
-<!--      -->        
-<!--       <li><a href="">thinkpad L440 的wifi debian 网卡驱动</a></li> -->
-<!--      -->        
-<!--       <li><a href="">vim的verbose命令</a></li> -->
-<!--      -->        
-<!--       <li><a href="">vim中的autocmd</a></li> -->
-<!--      -->        
-<!--       <li><a href="">cygwin</a></li> -->
-<!--      -->        
-<!--       <li><a href="">bash中for的文件通配符的问题</a></li> -->
-<!--      -->        
-<!--       <li><a href="">awk文本工具的学习</a></li> -->
-<!--      -->        
-<!--       <li><a href="">git 本地删除后的问题</a></li> -->
-<!--      -->        
-<!--       <li><a href="">vim中的find命令，打开文件很方便</a></li> -->
-<!--      -->        
-<!--       <li><a href="">修改pelican所支持的内容文件的扩展名</a></li> -->
-<!--      -->        
-<!--       <li><a href="">在linux下把cp936转成utf-8</a></li> -->
-<!--      -->        
-<!--       <li><a href="">在vim中用pandoc进行预览</a></li> -->
-<!--      -->        
-<!--       <li><a href="">pandoc的用法（1）</a></li> -->
-<!--      -->        
-<!--       <li><a href="">vim的find命令</a></li> -->
-<!--      -->        
-<!--       <li><a href="">新闻组的没落</a></li> -->
-<!--      -->        
-<!--       <li><a href="">Wine QQ 7.9版的安装</a></li> -->
-<!--      -->        
-<!--       <li><a href="">转pelican的用法</a></li> -->
-<!--      -->        
-<!--       <li><a href="">关于在pelican的date中使用中文的问题</a></li> -->
-<!--      -->        
-<!--       <li><a href="">strftime的一点用法</a></li> -->
-<!--      -->        
-<!--       <li><a href="">2015年岁未</a></li> -->
-<!--      -->
-<!--  -->
-    <!-- </ul> -->
-
-    <!-- This belongs in the about page -->
-      <!--  -->
-      <!-- <a href="#">aaa</a> -->
-      <!-- <br/> -->
-      <!--  -->
-      <!-- <a href="#">Another social link</a> -->
-      <!-- <br/> -->
-      <!--  -->
-
-<!-- <ul>
-	<li><a href="http://jackjin-cn.github.io/category/linux.html">linux</a></li>
-	<li><a href="http://jackjin-cn.github.io/category/python.html">python</a></li>
-	<li><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
-	<li><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a></li>
-	<li><a href="http://jackjin-cn.github.io/category/shell.html">shell</a></li>
-	<li><a href="http://jackjin-cn.github.io/category/vim.html">vim</a></li>
-	<li><a href="http://jackjin-cn.github.io/category/za-gan.html">杂感</a></li>
-	<li><a href="http://jackjin-cn.github.io/category/za-lei.html">杂类</a></li>
-</ul>
- -->
-  </div>
-
-<section id="content" >
-    <div class="body">
-      <article>
-        <header>
-          <h1 class="entry-title">
-            <a href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html" rel="bookmark"
-               title="Permalink to awk文本工具的学习">awk文本工具的学习</a></h1>
-
-        </header>
-
-        <div class="entry-content">
-<div class="post-info">
-	<ul>
-        <li class="vcard author">
-                 by&nbsp;<a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>
-        </li>
-        <li class="published" title="2016-01-09T09:59:00+08:00">
-          on&nbsp;2016-01-09 星期六 09:59
-        </li>
-
-	</ul>
-<p>Category: <a href="http://jackjin-cn.github.io/tag/awk.html">awk</a><a href="http://jackjin-cn.github.io/tag/linux.html">linux</a><a href="http://jackjin-cn.github.io/tag/ben-wen.html">本文</a><a href="http://jackjin-cn.github.io/tag/shell.html">shell</a><a href="http://jackjin-cn.github.io/tag/windows.html">windows</a></p>
-</div><!-- /.post-info -->          <p><a href="http://coolshell.cn/articles/9070.html">转自：酷 壳 AWK 简明教程</a></p>
+<body itemscope itemtype="http://schema.org/Blog">
+<header class="site-header">
+    <a href="http://jackjin-cn.github.io">
+    </a>
+    <h1 itemprop="name"><a href="http://jackjin-cn.github.io"></a></h1>
+</header>
+    <section class="main-content">
+<article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1 itemprop="headline" id="awkwen-ben-gong-ju-de-xue-xi">awk文本工具的学习</h1>
+        <p>
+            <meta itemprop="datePublished" content="2016-01-09T09:59:00+08:00">
+            <meta itemprop="dateModified" content="2016-01-09T09:59:00+08:00">
+            Posted on 09 一月 2016 in <a href="http://jackjin-cn.github.io/category/linux.html">linux</a>
+        </p>
+    </header>
+    <section id="content" itemprop="mainEntityOfPage">
+        <p><a href="http://coolshell.cn/articles/9070.html">转自：酷 壳 AWK 简明教程</a></p>
 <p><a href="http://www.runoob.com/linux/linux-comm-awk.html">转自：Linux awk 命令</a></p>
 <p>自己尝试了一下,感觉很强大。</p>
 <p>特别是模式匹配和过滤功能。</p>
@@ -150,56 +38,25 @@
 
 <p>后来下载了windows版的awk，是3.1.6版</p>
 <p>用法上和linux版的没有区别，不过，有一点要注意是要把<strong><code>单引号'</code>换成<code>双引号"</code></strong></p>
-        </div><!-- /.entry-content -->
-        <div class="comments">
-
-          <div id="disqus_thread"></div>
-          <script type="text/javascript">
-            var disqus_identifier = "2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html";
-            (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = 'https://jackjin.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-          </script>
+    </section>
+    <footer>
+        <div class="tags">
+                <a href="http://jackjin-cn.github.io/tag/awk.html">awk</a>
+                <a href="http://jackjin-cn.github.io/tag/linux.html">linux</a>
+                <a href="http://jackjin-cn.github.io/tag/ben-wen.html">本文</a>
+                <a href="http://jackjin-cn.github.io/tag/shell.html">shell</a>
+                <a href="http://jackjin-cn.github.io/tag/windows.html">windows</a>
         </div>
+<div class="vcard author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">
+        <img class="photo circle" itemprop="image" content="" src=""/>
+        <strong class="fn name" itemprop="name">天地一沙鸥</strong>
+    </a>
+</div>    </footer>
+</article>
+    </section>
 
-      </article>
-    </div>
-</section>
-        <section id="extras" >
-        
-        </section><!-- /#extras -->
-	
-        <footer id="contentinfo" >
-                <address id="about" class="vcard ">
-                Proudly powered by <a href="http://getpelican.com/" target="_blank">Pelican</a>, which takes
-                great advantage of <a href="http://python.org" target="_blank">Python</a>.
-		
-                </address><!-- /#about -->
-		
-
-                
-        </footer><!-- /#contentinfo -->
-
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-72007782-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
-<script type="text/javascript">
-    var disqus_shortname = 'jackjin';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
-</body>
+<footer class="site-footer">
+    <p>&copy; 天地一沙鸥 </p>
+</footer></body>
 </html>
