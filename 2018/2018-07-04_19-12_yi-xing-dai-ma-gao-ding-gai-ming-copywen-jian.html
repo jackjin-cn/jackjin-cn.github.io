@@ -33,12 +33,12 @@
 <!-- End Google Analytics -->
 
 <meta name="author" content="天地一沙鸥" />
-<meta name="description" content="一行代码搞定改名&amp;copy文件 1. 分段探索的过程 [jjb@ ~/pelicanoutput/pelican/pelican-themes #6]$for i in find . -name screenshot.png ;do echo ${i} ;done; ./bricks/screenshot.png ./monospace/screenshot.png ./foundation-default-colours/screenshot.png ```` --------- ## 2. 分段探索的过程 &gt; [jjb@ ~/pelicanoutput/pelican/pelican-themes #8]$for i in `find . -name screenshot.png` ;do echo `dirname $i`;done; ./bricks ./monospace …" />
+<meta name="description" content="一行代码搞定改名&amp;copy文件 1. 分段探索的过程 [jjb@ ~/pelicanoutput/pelican/pelican-themes #6]$for i in find . -name screenshot.png ;do echo ${i} ;done; ./bricks/screenshot.png ./monospace/screenshot.png ./foundation-default-colours/screenshot.png 2. 分段探索的过程 [jjb@ ~/pelicanoutput/pelican/pelican-themes #8]$for i in find . -name screenshot.png ;do echo dirname $i;done; ./bricks ./monospace …" />
 <meta name="keywords" content="bash, shell">
 
 <meta property="og:site_name" content="Jackjin's Home"/>
 <meta property="og:title" content="一行代码搞定改名&amp;copy文件"/>
-<meta property="og:description" content="一行代码搞定改名&amp;copy文件 1. 分段探索的过程 [jjb@ ~/pelicanoutput/pelican/pelican-themes #6]$for i in find . -name screenshot.png ;do echo ${i} ;done; ./bricks/screenshot.png ./monospace/screenshot.png ./foundation-default-colours/screenshot.png ```` --------- ## 2. 分段探索的过程 &gt; [jjb@ ~/pelicanoutput/pelican/pelican-themes #8]$for i in `find . -name screenshot.png` ;do echo `dirname $i`;done; ./bricks ./monospace …"/>
+<meta property="og:description" content="一行代码搞定改名&amp;copy文件 1. 分段探索的过程 [jjb@ ~/pelicanoutput/pelican/pelican-themes #6]$for i in find . -name screenshot.png ;do echo ${i} ;done; ./bricks/screenshot.png ./monospace/screenshot.png ./foundation-default-colours/screenshot.png 2. 分段探索的过程 [jjb@ ~/pelicanoutput/pelican/pelican-themes #8]$for i in find . -name screenshot.png ;do echo dirname $i;done; ./bricks ./monospace …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="http://jackjin-cn.github.io/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html"/>
 <meta property="og:type" content="article"/>
@@ -104,19 +104,20 @@
 <div class="highlight"><pre><span></span>./bricks/screenshot.png
 ./monospace/screenshot.png
 ./foundation-default-colours/screenshot.png
-````
-
----------
-
-## 2. 分段探索的过程
-&gt; [jjb@ ~/pelicanoutput/pelican/pelican-themes #8]$for i in `find . -name screenshot.png` ;do echo  `dirname $i`;done;
 </pre></div>
 
 
-<p>./bricks
+<hr>
+<h2>2. 分段探索的过程</h2>
+<blockquote>
+<p>[jjb@ ~/pelicanoutput/pelican/pelican-themes #8]$for i in <code>find . -name screenshot.png</code> ;do echo  <code>dirname $i</code>;done;</p>
+</blockquote>
+<div class="highlight"><pre><span></span>./bricks
 ./monospace
 ./foundation-default-colours
-```</p>
+</pre></div>
+
+
 <h2>3. 分段探索的过程</h2>
 <blockquote>
 <p>[jjb@ ~/pelicanoutput/pelican/pelican-themes #34]$for i in <code>find . -name screenshot.png</code> ;do c=<code>dirname $i</code>;echo ${c##./};done;</p>
