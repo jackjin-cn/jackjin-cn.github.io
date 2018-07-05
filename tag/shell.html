@@ -32,11 +32,73 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html">awk文本工具的学习</a></h1>
+                    <h1 class="entry-title"><a href="http://jackjin-cn.github.io/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html">一行代码搞定改名&copy文件</a></h1>
+<footer class="post-info">
+        <span>2018-07-04 星期三 19:12</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a><a href="http://jackjin-cn.github.io/tag/shell.html">shell</a></span>
+</footer><!-- /.post-info --><h1>一行代码搞定改名&amp;copy文件</h1>
+<h2>1. 分段探索的过程</h2>
+<blockquote>
+<p>[jjb@ ~/pelicanoutput/pelican/pelican-themes #6]$for i in <code>find . -name screenshot.png</code> ;do echo ${i} ;done;</p>
+</blockquote>
+<div class="highlight"><pre><span></span>./bricks/screenshot.png
+./monospace/screenshot.png
+./foundation-default-colours/screenshot.png
+</pre></div>
+
+
+<hr>
+<h2>2. 分段探索的过程</h2>
+<blockquote>
+<p>[jjb@ ~/pelicanoutput/pelican/pelican-themes #8]$for i in <code>find . -name screenshot.png</code> ;do echo  <code>dirname $i</code>;done;</p>
+</blockquote>
+<div class="highlight"><pre><span></span>./bricks
+./monospace
+./foundation-default-colours
+</pre></div>
+
+
+<h2>3. 分段探索的过程</h2>
+<blockquote>
+<p>[jjb@ ~/pelicanoutput/pelican/pelican-themes #34]$for i in <code>find . -name screenshot.png</code> ;do c=<code>dirname $i</code>;echo ${c##./};done;</p>
+</blockquote>
+<div class="highlight"><pre><span></span>bricks
+monospace
+foundation-default-colours
+</pre></div>
+
+
+<p>拆分一下</p>
+<div class="highlight"><pre><span></span>    for i in `find . -name screenshot.png`  #执行查找文件，反回结果作为列表
+        do 
+        b=`dirname <span class="nv">$i</span>`  #取得返回文件的路径
+        c=<span class="cp">${</span><span class="n">b</span><span class="c1">##*./</span><span class="cp">}</span>     #去掉./ 剩下当前路径
+        cp <span class="nv">$i</span> ~/sp/<span class="cp">${</span><span class="n">c</span><span class="cp">}</span>.png #将文件重新命名后复制到新的文件夹
+        done;
+</pre></div>
+
+
+<ul>
+<li>最后实际运行的命令</li>
+</ul>
+<div class="highlight"><pre><span></span>for i in `find . -name screenshot.png`; do b=`dirname <span class="nv">$i</span>`;c=<span class="cp">${</span><span class="n">b</span><span class="c1">##*./</span><span class="cp">}</span>;cp <span class="nv">$i</span> ~/sp/<span class="cp">${</span><span class="n">c</span><span class="cp">}</span>.png;done;
+</pre></div><p><a href="http://jackjin-cn.github.io/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html#disqus_thread">comments</a></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html" rel="bookmark"
+                           title="Permalink to awk文本工具的学习">awk文本工具的学习</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <span>2016-01-09 星期六 09:59</span>
 <span>| tags: <a href="http://jackjin-cn.github.io/tag/awk.html">awk</a><a href="http://jackjin-cn.github.io/tag/linux.html">linux</a><a href="http://jackjin-cn.github.io/tag/ben-wen.html">本文</a><a href="http://jackjin-cn.github.io/tag/shell.html">shell</a><a href="http://jackjin-cn.github.io/tag/windows.html">windows</a></span>
-</footer><!-- /.post-info --><p><a href="http://coolshell.cn/articles/9070.html">转自：酷 壳 AWK 简明教程</a></p>
+</footer><!-- /.post-info -->                <p><a href="http://coolshell.cn/articles/9070.html">转自：酷 壳 AWK 简明教程</a></p>
 <p><a href="http://www.runoob.com/linux/linux-comm-awk.html">转自：Linux awk 命令</a></p>
 <p>自己尝试了一下,感觉很强大。</p>
 <p>特别是模式匹配和过滤功能。</p>
@@ -46,12 +108,14 @@
 
 
 <p>后来下载了windows版的awk，是3.1.6版</p>
-<p>用法上和linux版的没有区别，不过，有一点要注意是要把<strong><code>单引号'</code>换成<code>双引号"</code></strong></p><p><a href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html#disqus_thread">comments</a></p>                </article>
+<p>用法上和linux版的没有区别，不过，有一点要注意是要把<strong><code>单引号'</code>换成<code>双引号"</code></strong></p>
+                <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html">read more</a>
+<p><a href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
+            </ol><!-- /#posts-list -->
 <p class="paginator">
     Page 1 / 1
 </p>
-            </aside><!-- /#featured -->
-            </ol><!-- /#posts-list -->
             </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="blogroll">

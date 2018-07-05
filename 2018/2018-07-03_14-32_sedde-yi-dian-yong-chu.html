@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
         <meta charset="utf-8" />
-        <title>Jackjin's Home - Authors</title>
+        <title>sed的一点用处</title>
         <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/main.css" />
         <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home RSS Feed" />
 
@@ -20,7 +20,7 @@
                     <li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
                     <li><a href="http://jackjin-cn.github.io/category/linux.html">linux</a></li>
                     <li><a href="http://jackjin-cn.github.io/category/python.html">python</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
+                    <li class="active"><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
                     <li><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a></li>
                     <li><a href="http://jackjin-cn.github.io/category/shell.html">shell</a></li>
                     <li><a href="http://jackjin-cn.github.io/category/vim.html">vim</a></li>
@@ -29,11 +29,60 @@
                 </ul>
                 </nav>
         </header><!-- /#banner -->
-
 <section id="content" class="body">
-    <h1>Authors on Jackjin's Home</h1>        <li><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥</a> (26)</li>
-</section>
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="http://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html" rel="bookmark"
+           title="Permalink to sed的一点用处">sed的一点用处</a></h1>
+    </header>
 
+    <div class="entry-content">
+<footer class="post-info">
+        <span>2018-07-03 星期二 14:32</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/wen-jian-chu-li.html">文件处理</a><a href="http://jackjin-cn.github.io/tag/linux.html">linux</a><a href="http://jackjin-cn.github.io/tag/mac.html">mac</a></span>
+</footer><!-- /.post-info -->      <h1>sed的一点用处</h1>
+<p>最近在弄pelican 与 github的博客，下载很不要模板，更换很不方便，想能不能用命令修改，google一下，还是真有办法的。</p>
+<h2>提醒不要用mac osx 自带的sed</h2>
+<h2>我用brew 安装了gnu-sed</h2>
+<div class="highlight"><pre><span></span>gsed -i 99c\jtheme=&quot;theme_name&quot; pelianconf.py
+
+-i 表示直接修改文件
+99c\jtheme=&quot;theme_name&quot;  表示将99行的内容直接替换(c)成jtheme=&quot;theme_name&quot;  \是起一个分隔的作用。
+有不明白的地方可以看教程，语法有点类似vim
+````
+
+## 下面是我自己用的脚本，在选中的theme的目录下运行
+</pre></div>
+
+
+<h1>!/usr/bin/env python3</h1>
+<h1>-<em>- coding: utf-8 -</em>-</h1>
+<p>import os
+cwd=os.getcwd()
+path=(cwd.split('/'))
+cfname=home+'/pelicanoutput/blog_pelicanconf.py'
+cmd="gsed -i '99c\jtheme=" + '"'+path[-1]+'"'+"' "+cfname
+print(cmd)
+os.system(cmd)</p>
+<p>```</p>
+    </div><!-- /.entry-content -->
+    <div class="comments">
+      <h2>Comments !</h2>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_identifier = "2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html";
+        var disqus_url = "http://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html";
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//jackjin.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+    </div>
+
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>

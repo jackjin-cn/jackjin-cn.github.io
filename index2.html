@@ -34,6 +34,106 @@
                     <ol id="posts-list" class="hfeed" start="3">
             <li><article class="hentry">
                 <header>
+                    <h1><a href="http://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html" rel="bookmark"
+                           title="Permalink to Vim 中插入日期">Vim 中插入日期</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <span>2018-07-02 星期一 12:34</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a><a href="http://jackjin-cn.github.io/tag/script.html">script</a><a href="http://jackjin-cn.github.io/tag/tips.html">tips</a></span>
+</footer><!-- /.post-info -->                <h1>Vim 中插入日期</h1>
+<h2>1. 写blog的时候要前几行插入固定的内容，时间找到以下的脚本</h2>
+<div class="highlight"><pre><span></span>function! TitleInsert()
+call setline(1,&quot;Title:&quot;)
+call setline(2,&quot;Date: &quot;. strftime(&quot;%Y-%m-%d %H:%M:%S&quot;))
+call setline(3,&quot;Modified: &quot;)
+&quot;call setline(3,&quot;Modified: &quot;. strftime(&quot;%Y-%m-%d %H:%M:%S&quot;))
+call setline(4,&quot;Category:  &quot;)
+call setline(5,&quot;Tags: &quot;)
+call setline(6,&quot;Author:天地一沙鸥 …</pre></div>
+                <a class="readmore" href="http://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html">read more</a>
+<p><a href="http://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://jackjin-cn.github.io/2018/2018-07-01_22-42_pi-liang-cp936toutf8.html" rel="bookmark"
+                           title="Permalink to 批量cp936toutf8">批量cp936toutf8</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <span>2018-07-01 星期日 22:42</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/unicode.html">unicode</a><a href="http://jackjin-cn.github.io/tag/vim.html">vim</a><a href="http://jackjin-cn.github.io/tag/encoding.html">encoding</a></span>
+</footer><!-- /.post-info -->                <h2>今天在用pelican转网页的时候，原来在<strong>windows</strong>下写的文件，代码是<strong>cp936</strong>，识别不了，要转成<strong>utf8</strong>格式。</h2>
+<p>通过搜索找到了以下代码</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="k">for</span> i in <span class="sb">`</span>find . -name <span class="s2">&quot;*.cal&quot;</span><span class="sb">`</span>
+<span class="k">do</span>
+    vim -s ~/bin/cp936-utf8.vi <span class="nv">$i</span>
+<span class="k">done</span>
+
+用写一段vim用的vi命令就可以了
+</pre></div>
+</td></tr></table>
+
+<div class="highlight"><pre><span></span>&quot;cp936-utf8.vi&quot;
+:set fileencoding=utf8
+:wq!
+</pre></div>
+
+
+<p>懂vim的看的懂，这两句做了两件事</p>
+<ul>
+<li>设置文件编码</li>
+<li>保存写入</li>
+</ul>
+<h3>另外也学习了  <strong>find</strong> 的用法</h3>
+<div class="highlight"><pre><span></span>find . -name …</pre></div>
+                <a class="readmore" href="http://jackjin-cn.github.io/2018/2018-07-01_22-42_pi-liang-cp936toutf8.html">read more</a>
+<p><a href="http://jackjin-cn.github.io/2018/2018-07-01_22-42_pi-liang-cp936toutf8.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html" rel="bookmark"
+                           title="Permalink to 再次配置pelican写博客">再次配置pelican写博客</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <span>2018-07-01 星期日 20:13</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a><a href="http://jackjin-cn.github.io/tag/zhe-teng.html">折腾</a></span>
+</footer><!-- /.post-info -->                <h1>今天再次折腾一下，争取在三个机器上可以使用。</h1>
+<p>在～目前建立下面的目录了</p>
+<blockquote>
+<p>Pelicanoutput</p>
+<blockquote>
+<p>blog #blog的输出网页</p>
+<p>riji 同上</p>
+<p>pelican</p>
+<blockquote>
+<p>pelican-plugins</p>
+<p>pelican-theme</p>
+</blockquote>
+<p>riji-pelicanconf.py</p>
+<p>blog-pelicanconf.py</p>
+</blockquote>
+</blockquote>
+<h2>另外，还改到了 python 库中的 <em>pelican</em> 中 <strong>reader.py</strong> 中内容 增加了 'cal' ,'blog' 的文件的扩展名，前面有写过的。</h2>
+                <a class="readmore" href="http://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html">read more</a>
+<p><a href="http://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
                     <h1><a href="http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html" rel="bookmark"
                            title="Permalink to thinkpad L440 的wifi debian 网卡驱动">thinkpad L440 的wifi debian 网卡驱动</a></h1>
                 </header>
@@ -54,66 +154,10 @@ modprobe 8192ee
                 <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html">read more</a>
 <p><a href="http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
             </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html" rel="bookmark"
-                           title="Permalink to vim的verbose命令">vim的verbose命令</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>2016-01-19 星期二 10:00</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a></span>
-</footer><!-- /.post-info -->                <p>在鼓捣autocmd的时候，看到vim的audocmd的帮助</p>
-<div class="highlight"><pre><span></span>set verbose=9
-</pre></div>
-
-
-<p>发现有很多额外的显示，值得一看，也能发现很多非常有意思的东西！</p>
-                <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html">read more</a>
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html" rel="bookmark"
-                           title="Permalink to vim中的autocmd">vim中的autocmd</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>2016-01-19 星期二 08:58</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/autocmd.html">autocmd</a><a href="http://jackjin-cn.github.io/tag/vim.html">vim</a></span>
-</footer><!-- /.post-info -->                <p>原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保存后才能高亮，也试过autocmd的其它形式，也是不行，不过，昨天在尝试autocmd的时候，无意中发发现了解决办法。</p>
-<div class="highlight"><pre><span></span>autocmd BufReadpre *.mytext set syn=mytext
-mytext是指代自己定义的文件格式和语法文件
-</pre></div>
-                <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html">read more</a>
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-11_22-11_cygwin.html" rel="bookmark"
-                           title="Permalink to cygwin">cygwin</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>2016-01-11 星期一 22:11</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a><a href="http://jackjin-cn.github.io/tag/cygwin.html">cygwin</a></span>
-</footer><!-- /.post-info -->                <h1>cygiwn的路径</h1>
-<p>windows下的C：在cygwin中表示为<code>/cygwin/c/</code></p>
-<p>cygwin会导入windows中的path,当然也可以在cygwin中的path中加入windows的path，不过，写法上要向上面一样。</p>
-<p>另外，如果遇到到<strong>permision denied</strong>，请用<strong>管理员身份</strong>运行cygwin.bat</p>
-                <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-11_22-11_cygwin.html">read more</a>
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-11_22-11_cygwin.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
-            </article></li>
             </ol><!-- /#posts-list -->
 <p class="paginator">
         <a href="http://jackjin-cn.github.io/index.html">&laquo;</a>
-    Page 2 / 6
+    Page 2 / 7
         <a href="http://jackjin-cn.github.io/index3.html">&raquo;</a>
 </p>
             </section><!-- /#content -->
