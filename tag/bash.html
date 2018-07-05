@@ -184,9 +184,8 @@ foundation-default-colours
 <ul>
 <li>最后实际运行的命令</li>
 </ul>
-<blockquote>
-<p>for i in <code>find . -name screenshot.png</code>; do b=<code>dirname $i</code>;c=${b##*./};cp $i ~/sp/${c}.png;done;</p>
-</blockquote> </div>
+<div class="highlight"><pre><span></span>for i in `find . -name screenshot.png`; do b=`dirname <span class="nv">$i</span>`;c=<span class="cp">${</span><span class="n">b</span><span class="c1">##*./</span><span class="cp">}</span>;cp <span class="nv">$i</span> ~/sp/<span class="cp">${</span><span class="n">c</span><span class="cp">}</span>.png;done;
+</pre></div> </div>
 	    </article>
 
 	    <!--
