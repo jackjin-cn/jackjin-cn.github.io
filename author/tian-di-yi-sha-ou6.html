@@ -1,80 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="zh" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <head>
 	<meta charset="utf-8">
-	<title>Jackjin's Home</title>
+	
 	<meta name="description" content="">
-	<meta name="author" content="天地一沙鸥">
+    <meta name="author" content="天地一沙鸥">
+	<meta name="robots" content="index,follow">
 
-	<!-- HTML5 shim, for IE6-8 support of HTML elements -->
-	<!--[if lt IE 9]>
-		<script src="http://jackjin-cn.github.io/theme/html5.js"></script>
+
+	<!-- OpenGraph -->
+	<meta property="og:property" content="zh">
+	<meta property="og:image" content="/assets/images/favicons/apple-touch-icon-180x180.png">
+
+<meta property="og:title" content="Jackjin's Home">
+
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="">	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jackjin's Home: posts written by 天地一沙鸥</title>
+	<script type="text/javascript" src="http://jackjin-cn.github.io/theme/js/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="http://jackjin-cn.github.io/theme/js/bootstrap.js"></script>
+
+	<!-- Bootstrap CSS  -->
+	<link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/bootstrap.css"/>
+	<link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/responsive.css"/>
+	
+	<!-- Generated favicons markup -->
+	<link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="/assets/images/favicons/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/assets/images/favicons/android-chrome-192x192.png" sizes="192x192">
+	<link rel="icon" type="image/png" href="/assets/images/favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/assets/images/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/assets/images/favicons/manifest.json">
+	<link rel="shortcut icon" href="/assets/images/favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#2b5797">
+	<meta name="msapplication-TileImage" content="/assets/images/favicons/mstile-144x144.png">
+	<meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<!-- LESS generated css for Nuja theme -->
+	<link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/NujaStructure.css"/>
+	<!-- Highlight -->
+	<link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/pygment.css"/>
+
+	<link href="http://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+	<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-	<!-- Styles -->
-	<link href="http://jackjin-cn.github.io/theme/bootstrap.min.css" rel="stylesheet">
-	<link href="http://jackjin-cn.github.io/theme/local.css" rel="stylesheet">
-	<link href="http://jackjin-cn.github.io/theme/pygments.css" rel="stylesheet">
-
-	<!-- Feeds -->
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 
+
+	<!-- setup feeds and third-party services -->
 	<link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home RSS Feed" />
+	<!-- to clean up later for the new theme -->
+	<script>
+	    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+ga('create', 'UA-968141-17', 'auto');
+ga('send', 'pageview');
 
-<script>var _gaq=[['_setAccount','UA-72007782-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
-</head>
-<body>
-	<div class="topbar">
-	  <div class="topbar-inner">
-		<div class="container-fluid">
-		  <a class="brand" href="http://jackjin-cn.github.io/">Jackjin's Home</a>
-			<ul class="nav">
-					<li><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
-					<li><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
-					<li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
-					<li ><a href="http://jackjin-cn.github.io/category/linux.html">linux</a></li>
-					<li ><a href="http://jackjin-cn.github.io/category/python.html">python</a></li>
-					<li ><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
-					<li ><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a></li>
-					<li ><a href="http://jackjin-cn.github.io/category/shell.html">shell</a></li>
-					<li ><a href="http://jackjin-cn.github.io/category/vim.html">vim</a></li>
-					<li ><a href="http://jackjin-cn.github.io/category/za-gan.html">杂感</a></li>
-					<li ><a href="http://jackjin-cn.github.io/category/za-lei.html">杂类</a></li>
+	</script>
+	<meta name="google-site-verification" content="4TETrzpAoVPu2-VrTpOxQJFmmynS9VzPq_boE45VKa8" />
+	<meta name="msvalidate.01" content="E2790C576E7623BE2F59AC965B48361D" />
+    </head>
+    <body>
+
+	<div class="container">
+	    <div class="header-container">
+		<header>
+		    <a href="http://jackjin-cn.github.io/">
+			<h4>Jackjin's Home 		    </a>
+
+		    <nav>
+			<ul>
+			    <li><a href="http://jackjin-cn.github.io/">Home</a></li>
+
+			    <li><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
+			    <li><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
+			    <li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
+
 			</ul>
-			<p class="pull-right"><a href="http://jackjin-cn.github.io/archives.html">[archives]</a> <a href="http://jackjin-cn.github.io/tags.html">[tags]</a></p>
+		    </nav>
+		</header>
+
+
+	    </div>
+	    <div class="clearfix"></div>
+<div class="row">
+    <div class="span12 alpha">
+	<h3>You are now browsing through  posts written by 天地一沙鸥</h3>
+    </div>
+</div>
+<div class="clearfix"></div>
+	    <div class="row">
+		<div class="span9">
+
+		    <div class="span10">
+
+
+<div class="row">
+    <div class="span1 metadata alpha">
+	<aside>
+	    <div class="entry-date">
+		<div class="month-day">
+		    <time pubdate datetime="2016-01-03T16:44:00+08:00" title=" 1 03, 16">
+			 1.<span class="day">03</span>
+			<div class="year">16</div>
+		    </time>
 		</div>
-	  </div>
+
+	    </div>
+
+	</aside> 
+
+    </div>
+    <div class="span7">
+	<div class="entry-container ">
+
+	    <article  class="entry hentry" >
+		<header>
+		    <a href="/2016/2016-01-03_16-44_xin-wen-zu-de-mei-luo.html" rel="bookmark" title="permalink for 新闻组的没落" ><h2 class="entry-title">新闻组的没落</h2></a>
+		    <div class="author-details vcard">
+
+			by <a  class="url fn" href="/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>  file under <a href="/category/za-gan.html">杂感</a> with tags 			<a href="http://jackjin-cn.github.io/tag/ruan-jian.html" title="Browse tag: 软件" rel="tag">软件</a>, 			<a href="http://jackjin-cn.github.io/tag/gan-xiang.html" title="Browse tag: 感想" rel="tag">感想</a>		    </div>
+		</header>
+		<div class="entry-content">
+		<h2>新闻组的没落</h2>
+<p>最近几天在折腾debian，安装了thunderbird，设置了邮件帐户，在设置的时候看到还可以进行新闻组的设置，不经想出N年组用 <em>outlookpress</em> 看新闻组的光景，当时还是拔号上网，为省钱，都是先同步下载好离线看的，内容还是蛮多，有关网站还能上。</p>
+<p>今天在网上找一下，中文可用的新闻组很少了，能上的也基本没有什么内容或者更新了，感叹时间变化太快了，技术发展了更迭不断，当年火的不得了东西，不管是软件还是硬件，到了现在都发生了很大的变化，我所喜欢的东东，很多都淘汰了。</p>
+<ul>
+<li>
+<p>ti-92plus 图形计算器</p>
+</li>
+<li>
+<p>掌上通黑白手持电脑（windows系统）</p>
+</li>
+<li>
+<p>windows mobile 手机（彩色，e850,hkc）</p>
+</li>
+<li>
+<p>nokia 手机（s60）N72,N8</p>
+</li>
+<li>
+<p>黑莓手机  9930</p>
+</li>
+</ul>
+<p>看来，玩数码，是要亏很多钱的，也没有什么实质的收获，至少对生活无太大帮助。</p> </div>
+	    </article>
+
+	    <!--
+	    in case any image breaks the theme
+	    i was going to use :after but it didn't quite work for me, maybe next time-->
+	    <div class="clearfix"></div>
+
+
+
 	</div>
-
-	<div class="container-fluid">
-	  <div class="sidebar">
-		<div class="well">
-			<h3>Blogroll</h3>
-			<ul>
-				<li><a href="http://getpelican.com/">Pelican</a></li>
-				<li><a href="http://python.org/">Python.org</a></li>
-				<li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-				<li><a href="http://kevinyoung.gitcafe.io">煎挠橙的blog</a></li>
-			</ul>
-			<div class="social">
-			<h3>Social</h3>
-			<ul>
-				<li><a href="#">aaa</a></li>
-				<li><a href="#">Another social link</a></li>
-			</ul>
-			</div>
+    </div>
+</div>
+<div class="row">
+    <div class="span1 metadata alpha">
+	<aside>
+	    <div class="entry-date">
+		<div class="month-day">
+		    <time pubdate datetime="2016-01-02T20:56:00+08:00" title=" 1 02, 16">
+			 1.<span class="day">02</span>
+			<div class="year">16</div>
+		    </time>
 		</div>
-	  </div>
-	  <div class="content">
-<div class="page-header"><h1>Jackjin's Home <small>天地一沙鸥</small></h1></div>
-<div class='article'>
-	<h2>Wine QQ 7.9版的安装</h2>
-	<div class="well small">Permalink: <a class="more" href="http://jackjin-cn.github.io/2016/2016-01-02_20-56_wine-qq-79ban-de-an-zhuang.html">2016-01-02 20:56:00+08:00</a>
-by <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥 </a>
- in <a href="http://jackjin-cn.github.io/category/linux.html">linux</a>
-tags: <a href="http://jackjin-cn.github.io/tag/wine.html">wine</a> <a href="http://jackjin-cn.github.io/tag/qq.html">qq</a> <a href="http://jackjin-cn.github.io/tag/debian.html">debian</a> <a href="http://jackjin-cn.github.io/tag/linux.html">linux</a> </div>
-	<div class="summary"><h1>Wine QQ 7.9版的安装</h1>
+
+	    </div>
+
+	</aside> 
+
+    </div>
+    <div class="span7">
+	<div class="entry-container ">
+
+	    <article  class="entry hentry" >
+		<header>
+		    <a href="/2016/2016-01-02_20-56_wine-qq-79ban-de-an-zhuang.html" rel="bookmark" title="permalink for Wine QQ 7.9版的安装" ><h2 class="entry-title">Wine QQ 7.9版的安装</h2></a>
+		    <div class="author-details vcard">
+
+			by <a  class="url fn" href="/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>  file under <a href="/category/linux.html">linux</a> with tags 			<a href="http://jackjin-cn.github.io/tag/wine.html" title="Browse tag: wine" rel="tag">wine</a>, 			<a href="http://jackjin-cn.github.io/tag/qq.html" title="Browse tag: qq" rel="tag">qq</a>, 			<a href="http://jackjin-cn.github.io/tag/debian.html" title="Browse tag: debian" rel="tag">debian</a>, 			<a href="http://jackjin-cn.github.io/tag/linux.html" title="Browse tag: linux" rel="tag">linux</a>		    </div>
+		</header>
+		<div class="entry-content">
+		<h1>Wine QQ 7.9版的安装</h1>
 <blockquote>
 <ol>
 <li>
@@ -93,16 +219,47 @@ tags: <a href="http://jackjin-cn.github.io/tag/wine.html">wine</a> <a href="http
 <blockquote>
 <p><img alt="wineqq" src="http://jackjin-cn.github.io/images/wine-qq.png" title="wine-qq设置"></p>
 </blockquote>
-</blockquote> <a class="btn primary xsmall" href="http://jackjin-cn.github.io/2016/2016-01-02_20-56_wine-qq-79ban-de-an-zhuang.html">more…</a>
+</blockquote> </div>
+	    </article>
+
+	    <!--
+	    in case any image breaks the theme
+	    i was going to use :after but it didn't quite work for me, maybe next time-->
+	    <div class="clearfix"></div>
+
+
+
 	</div>
-</div>	
-<div class='article'>
-	<h2>转pelican的用法</h2>
-	<div class="well small">Permalink: <a class="more" href="http://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html">2016-01-02 20:08:00+08:00</a>
-by <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥 </a>
- in <a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a>
-tags: <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a> <a href="http://jackjin-cn.github.io/tag/zhuan-zai.html">转载</a> </div>
-	<div class="summary"><p>转自<a href="http://kevinyoung.gitcafe.io/articles/blog/build_your_blog.html">煎挠橙的博客</a></p>
+    </div>
+</div>
+<div class="row">
+    <div class="span1 metadata alpha">
+	<aside>
+	    <div class="entry-date">
+		<div class="month-day">
+		    <time pubdate datetime="2016-01-02T20:08:00+08:00" title=" 1 02, 16">
+			 1.<span class="day">02</span>
+			<div class="year">16</div>
+		    </time>
+		</div>
+
+	    </div>
+
+	</aside> 
+
+    </div>
+    <div class="span7">
+	<div class="entry-container ">
+
+	    <article  class="entry hentry" >
+		<header>
+		    <a href="/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html" rel="bookmark" title="permalink for 转pelican的用法" ><h2 class="entry-title">转pelican的用法</h2></a>
+		    <div class="author-details vcard">
+
+			by <a  class="url fn" href="/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>  file under <a href="/category/ruan-jian-shi-yong.html">软件使用</a> with tags 			<a href="http://jackjin-cn.github.io/tag/pelican.html" title="Browse tag: pelican" rel="tag">pelican</a>, 			<a href="http://jackjin-cn.github.io/tag/zhuan-zai.html" title="Browse tag: 转载" rel="tag">转载</a>		    </div>
+		</header>
+		<div class="entry-content">
+		<p>转自<a href="http://kevinyoung.gitcafe.io/articles/blog/build_your_blog.html">煎挠橙的博客</a></p>
 <blockquote>
 <p>思路</p>
 </blockquote>
@@ -140,16 +297,188 @@ tags: <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a> <a href
 <p>另外这里有一份简短的介绍，详细的语法说明则可以在这里找到。
 3.对git/github有所了解</p>
 <p>如果不了解也同样没有关系，这个一站式的教程可以帮到你。</p>
-<p>这里多说一点 …</p> <a class="btn primary xsmall" href="http://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html">more…</a>
+<p>这里多说一点。git本身就是追踪文本的系统，虽然设定上是给程序做版本管理的，但未尝不能拿来管理文章。甚至，我相信git+markdown等轻量级标记语言代表了一种写作的未来。
+动手</p>
+<p>这里提一下，我的配置环境是ubuntu14.04。windows则需要多一些折腾，请自行google。
+安装Pelican</p>
+<p>这里假设你已经安装好了python2.x的环境，并装好了pip。可以直接用下面的命令安装pelican</p>
+<p>pip install pelican</p>
+<p>要使用markdown，还需要一个markdown的支持</p>
+<p>pip install markdown</p>
+<p>首次配置</p>
+<p>选定一个目录存放你的博客文件，我的叫blog</p>
+<p>mkdir blog
+cd blog</p>
+<p>在你的blog目录下使用命令</p>
+<p>pelican-quickstart</p>
+<p>接下来会询问你一系列问题，除了名字等必须要填的，其他建议使用默认值，随后还可以通过配置pelicanconf.py文件进行修改。</p>
+<p>运行结束之后会生成的目录结构</p>
+<p>blog/
+├── content
+│   └── (pages)
+├── output
+├── develop_server.sh
+├── Makefile
+├── pelicanconf.py   <br>
+└── publishconf.py</p>
+<p>pelican的工作逻辑是，把用markdown写好的纯文本文档放进content这个目录下面，运行程序，就可以将你的整个博客页面生成到output中去了。</p>
+<p>至此，文件系统部分已经配置完成了，接下来可以试着写一篇文档了
+第一篇博文</p>
+<p>创建一个叫first.md的文档放到content目录下。Pelican对内容的格式有些要求，每一篇博文的开头都应该是这样的：</p>
+<p>Title: 第一篇博客
+Date: 2013-12-12 10:16
+Category: 测试
+Tags: 心情
+Author: 煎挠橙</p>
+<p>这里开始可以书写正文了
+blabla....</p>
+<p>所以你应该看明白了，必须要通过每篇博文开头的部分来告诉pelican这篇文章的标题、标签、分类等信息以便最终呈现在博客页面上。其中，标题、时间是必填的，如果缺失该文章会被pelican忽略掉。
+生成网页</p>
+<p>写完你的第一篇博文后，你应该还在content目录下，先回到blog根目录下</p>
+<p>cd ..</p>
+<p>使用下面的命令pelican系统会将你放在content目录下的.md文档转换成网页文件</p>
+<p>make html</p>
+<p>当然，你也可以让pelican在每次检测到文件变化的时候都重新生成一次网页，使用下面的命令</p>
+<p>make regenerate</p>
+<p>这时如果你去output目录下就会看到生成的页面已经躺在那里了，但为了方便本地调试，你可以用下面的命令开启一个本地的服务器</p>
+<p>make serve</p>
+<p>这样，通过访问 http://127.0.0.1:8000 就能看到你的博客页面了！</p>
+<p>不过这样光是调试就得开两个终端，稍麻烦，pelican实际上还提供了一个命令，可以代替上面两个</p>
+<p>make devserver</p>
+<p>调试完毕后你应该关闭之前开启的服务器</p>
+<p>./develop_server.sh stop</p>
+<p>至此，尽管丑了些，但你已经完成了自己博客的创建，随后只需要把你的文章放进content目录下面并运行以上命令就可以轻松生成博客了。如果需要备份，也只需要将content目录下的文件备份好就行，非常省心。</p>
+<p>当然此时别人还无法访问到你的页面，下面就教你如何把你的博客放到网上去。
+在github上创建个人页面</p>
+<p>首先你要有个github账号。github为每个账号提供一个子域名以供存放个人页面，使用的方法是创建一个新的版本库，命名为</p>
+<p>username.github.io</p>
+<p>其中username必须为你的github用户名，否则将无法启动页面。</p>
+<p>这时你新创建的版本库是空的，你会获得一个地址</p>
+<p>https://github.com/username/username.github.io.git</p>
+<p>先记下来。</p>
+<p>接下来要做的是将你本地output目录下的所有内容都推送到你刚刚建立的远程版本库中。在本地，进到output目录下面</p>
+<p>cd output</p>
+<p>在这里新建一个本地的版本库</p>
+<p>git init</p>
+<p>建议按照github的惯例添加一个新的readme文档</p>
+<p>touch README.md</p>
+<p>接下来可以将目录下面所有的文件都添加进缓存区</p>
+<p>git add .</p>
+<p>可以提交了</p>
+<p>git commit -m 'First commit'</p>
+<p>下面将你的本地仓库和远程仓库关联起来，还记的之前获得的一个地址吧，用在这里</p>
+<p>git remote add origin https://github.com/username/username.github.io.git</p>
+<p>最后将本地仓库推送到github上就好，由于是第一次，用上-u字段</p>
+<p>git push -u origin master</p>
+<p>待推送成功，稍等片刻，登陆</p>
+<p>username.github.io</p>
+<p>应该就能看到你的博客了，没错，它已经正式上线了。此后每次变更博客内容或设置，只需事后将output目录下的内容推送到github就可以了，听上去和做上去都很简单。</p>
+<p>这样，如果你不在意域名的问题，你的博客就算搭建成功了，而且没有花费一分钱！
+锦上添花
+使用主题</p>
+<p>pelican目前提供了数款主题可供选择。先到pelican这个项目的github页面上把主题的版本库clone到本地，在你选定的本地目录下面</p>
+<p>git clone https://github.com/getpelican/pelican-themes.git</p>
+<p>进pelican-themes目录</p>
+<p>cd pelican-themes</p>
+<p>你可以浏览该目录下的文件，每个子目录存放了一个主题，并有截图供你预览。比如我看中了bootstrap这一款，使用命令</p>
+<p>pelican-themes -i bootstrap</p>
+<p>安装该主题。再使用命令</p>
+<p>pelican-themes -l</p>
+<p>查看已安装主题，应该就能看到刚刚安装的bootstrap主题了。这还不够，你还需要在pelicanconf.py文档中加上一句</p>
+<p>THEME = 'bootstrap'</p>
+<p>这样你在生成博客页面时新主题就被应用上了。
+添加静态的页面</p>
+<p>pelican提供了一种不同于一般博客文章的'页面'方便你存放一些需要置顶的信息，比如about页面和contact页面。</p>
+<p>创建方法也很简单，只需要在content目录下再新建一个名为pages的目录，将你想要展示的内容放进去就行，格式和普通的博客文章相同。
+安装评论系统</p>
+<p>由于pelican生成的是静态页面，没有数据库的支持所以本身无法实现评论的功能，不过我们还有第三方的服务可以选择。</p>
+<p>这里推荐disqus，功能齐备，免费。</p>
+<p>到官方页面上注册一个账号。找到'Add Disqus to your site'选项，在跳转后的页面上填写的网站名字，你填写的名字也将是你的'shortname'，记好了。</p>
+<p>接下来在你的pelicanconf.py文档中添加以下字段</p>
+<p>DISQUS_SITENAME = shortname</p>
+<p>用你自己的'shortname'替换进去，剩下的交给pelican。
+自动化</p>
+<p>熟练之后会发觉整个工作流程实际上只有一下几步：</p>
+<div class="highlight"><pre><span></span>进入装了pelican的python虚拟环境
+打开pelican的本地调试功能
+打开博客的本地页面
+cd到存放博客的content目录下面
+用vim编辑文章，调试
+使用git将生成的网站推送到服务器上
+</pre></div>
+
+
+<p>虽然不多，但是用过一段时间后还是觉得繁琐，恰巧我是在ubuntu下面维护这个博客的，不搞搞自动化怎么过瘾，折腾了一下差不多可以了，下面是步骤。
+期望</p>
+<p>最终的实现效果大致是这样的：在终端中输入“blog”字段，自动完成上面提到的1-4步，编辑文章自然要手动，这个没的说，最后的推送部分最好也手动完成，commits还是要认真写的。
+实现
+1.</p>
+<p>一开始先写了一个bash的脚本完成1,2两步，为什么要这样随后说，内容如下</p>
+<h1>!/bin/bash</h1>
+<p>. ~/virtualenvs/pelican/bin/activate #打开虚拟环境
+cd /media/kevin/MainDisk/1/blog/ #cd到我的博客目录下面
+bash develop_server.sh restart #打开pelican的自动监测-更新-本地端口功能
+read answer #防止新打开的窗口被关闭</p>
+<p>第一行主要是把python虚拟环境的配置脚本source一下，关于虚拟环境更多的信息可以参考这一篇。如果你没有在用虚拟环境则不需要这一行。</p>
+<p>第二行进入到我的blog目录下面，因为相应的Makefile和bash脚本都在这里放着。</p>
+<p>第三行的作用则和前面提到的make devserver一样，实际上如果你去查看Makefile的话，会发现输入make devserver执行的就是这一条命令，我不想绕弯就直接写成这样了。</p>
+<p>第四行则作用则有点像你在windows下面编译c程序，因为跳出来的窗口在程序运行完之后就自动关闭，便往往在最后留一个等待输入的命令让程序先待命。</p>
+<p>接着将该脚本保存为runpelicanserver.sh，更改其权限以便能够直接运行</p>
+<p>$ chmod u+x runpelicanserver.sh</p>
+<p>并将其放在PATH环境变量中包括的路径下面，这样随时随地都可以调用。</p>
+<p>2.</p>
+<p>剩下的工作我选择在.bashrc文件中编写function来完成，添加以下字段：</p>
+<p>blog(){
+    xfce4-terminal -e runpelicanserver.sh &amp;
+    xfce4-terminal --working-directory=/media/kevin/MainDisk/1/blog/content/
+    google-chrome 127.0.0.1:8000 &amp;
+}</p>
+<p>因为我使用的是xubuntu发行版，默认的终端是xfce4-terminal，你在使用这套东西之前应该先确认一下自己的系统配置。</p>
+<p>这个func叫blog，每次我在终端中键入blog字段时，大括号里面的命令会被依次执行。</p>
+<p>第一行表示重新打开一个终端窗口，-e字段表示执行后面的命令，也即runpelicanserver.sh脚本，最后的&amp;表示后台运行，因为新打开 的窗口是原来窗口的子进程，如果不后台运行的话关闭原来的窗口也会影响到新窗口的行为。要注意runpelicanserver.sh一定要放在环境变量下，不然就要加上完整的路径名。</p>
+<p>第二行则表示重新打开一个终端窗口，其工作路径为我的博客路径，方便稍后编辑文章。</p>
+<p>最后一行则表示使用chrome打开本地调试页面。</p>
+<p>整个工作完成之后就可以达到预期的目的了。不过我遇到的一个问题是在运行runpelicanserver.sh时常常无法顺利打开pelican的本地调试端口，导致本地的页面打不开，原因不明，所以不得不重新跑一下脚本，这也是为什么把它独立出来的缘故。</p> </div>
+	    </article>
+
+	    <!--
+	    in case any image breaks the theme
+	    i was going to use :after but it didn't quite work for me, maybe next time-->
+	    <div class="clearfix"></div>
+
+
+
 	</div>
-</div>	
-<div class='article'>
-	<h2>关于在pelican的date中使用中文的问题</h2>
-	<div class="well small">Permalink: <a class="more" href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html">2016-01-02 19:46:00+08:00</a>
-by <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥 </a>
- in <a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a>
-tags: <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a> <a href="http://jackjin-cn.github.io/tag/python.html">python</a> <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a> <a href="http://jackjin-cn.github.io/tag/zhong-wen.html">中文</a> </div>
-	<div class="summary"><h1>关于在pelican的date中使用中文的问题</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="span1 metadata alpha">
+	<aside>
+	    <div class="entry-date">
+		<div class="month-day">
+		    <time pubdate datetime="2016-01-02T19:46:00+08:00" title=" 1 02, 16">
+			 1.<span class="day">02</span>
+			<div class="year">16</div>
+		    </time>
+		</div>
+
+	    </div>
+
+	</aside> 
+
+    </div>
+    <div class="span7">
+	<div class="entry-container ">
+
+	    <article  class="entry hentry" >
+		<header>
+		    <a href="/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html" rel="bookmark" title="permalink for 关于在pelican的date中使用中文的问题" ><h2 class="entry-title">关于在pelican的date中使用中文的问题</h2></a>
+		    <div class="author-details vcard">
+
+			by <a  class="url fn" href="/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>  file under <a href="/category/ruan-jian-shi-yong.html">软件使用</a> with tags 			<a href="http://jackjin-cn.github.io/tag/vim.html" title="Browse tag: vim" rel="tag">vim</a>, 			<a href="http://jackjin-cn.github.io/tag/python.html" title="Browse tag: python" rel="tag">python</a>, 			<a href="http://jackjin-cn.github.io/tag/pelican.html" title="Browse tag: pelican" rel="tag">pelican</a>, 			<a href="http://jackjin-cn.github.io/tag/zhong-wen.html" title="Browse tag: 中文" rel="tag">中文</a>		    </div>
+		</header>
+		<div class="entry-content">
+		<h1>关于在pelican的date中使用中文的问题</h1>
 <p>想在pelican的date中应用如下格式</p>
 <blockquote>
 <p>2016-01-02 星期六 19:31</p>
@@ -166,47 +495,114 @@ tags: <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a> <a href="http:/
 
 
 <p>pelican会在时间里加上星期几了</p>
-<p>这个软件做得还是很人性化的了。</p> <a class="btn primary xsmall" href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html">more…</a>
+<p>这个软件做得还是很人性化的了。</p> </div>
+	    </article>
+
+	    <!--
+	    in case any image breaks the theme
+	    i was going to use :after but it didn't quite work for me, maybe next time-->
+	    <div class="clearfix"></div>
+
+
+
 	</div>
-</div>	
-<div class='article'>
-	<h2>strftime的一点用法</h2>
-	<div class="well small">Permalink: <a class="more" href="http://jackjin-cn.github.io/2016/2016-01-02_19-36_strftimede-yi-dian-yong-fa.html">2016-01-02 19:36:00+08:00</a>
-by <a class="url fn" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">天地一沙鸥 </a>
- in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
-tags: <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a> <a href="http://jackjin-cn.github.io/tag/time.html">time</a> </div>
-	<div class="summary"><h1>strftime的一点用法</h1>
-<p>最近想写，用<strong>Vim</strong>进行编辑，想设置加入时间的快捷方式</p>
-<div class="highlight"><pre><span></span>map &lt;LEADER&gt;bt A&lt;C-R&gt;=strftime(&quot;%Y-%m-%d %A %H:%M&quot;)&lt;CR&gt;
-</pre></div>
-
-
-<p>效果如下:</p>
-<div class="highlight"><pre><span></span>2016-01-02 星期六 19:39
-</pre></div> <a class="btn primary xsmall" href="http://jackjin-cn.github.io/2016/2016-01-02_19-36_strftimede-yi-dian-yong-fa.html">more…</a>
-	</div>
-</div>	
-
-<div class="pagination">
-<ul>
-		<li class="prev"><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou5.html">&larr; Previous</a></li>
-		<li class=""><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">1</a></li>
-		<li class=""><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou2.html">2</a></li>
-		<li class=""><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou3.html">3</a></li>
-		<li class=""><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou4.html">4</a></li>
-		<li class=""><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou5.html">5</a></li>
-		<li class="active"><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou6.html">6</a></li>
-		<li class=""><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou7.html">7</a></li>
-		<li class="next"><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou7.html">Next &rarr;</a></li>
-</ul>
+    </div>
 </div>
 
-		<footer>
-		  <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme based on <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a>.</p>
-		  <p>&copy; 天地一沙鸥</p>
-		</footer>
-	  </div>
+<div class="row">
+    <div class="span1 alpha"></div>
+    <div class="span7">
+	<!-- Pagination -->
+	<div class="entry-container">
+	    <nav class="nuja-pagination">
+		<ul>
+		    <li class="prev"><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou7.html">previous entries</a></li>
 
+<li class="next"><a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou5.html">newer entries</a></li> 
+		</ul>
+	    </nav>
 	</div>
-</body>
+    </div>
+</div>
+
+
+		    </div>
+		</div>
+<!-- Sidebar -->
+<aside class="span3 remove-bs-margin hidden-phone hidden-tablet">
+
+    <div class="widget-external-links widget">
+	<h3 class="widget-header">External Links</h3>
+	<div class="widget-content">
+	    <ul class="widget-list">
+		<li class="widget-list-item"><a href="http://getpelican.com/">Pelican</a></li>		<li class="widget-list-item"><a href="http://python.org/">Python.org</a></li>		<li class="widget-list-item"><a href="http://jinja.pocoo.org/">Jinja2</a></li>		<li class="widget-list-item"><a href="http://kevinyoung.gitcafe.io">煎挠橙的blog</a></li> 	    </ul>
+	</div>
+    </div>
+    <div class="widget-external-links widget">
+        <h3 class="widget-header">Recent Articles</h3>
+	<div class="widget-content">
+	    <ul class="widget-list">
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html" title="Read: 一行代码搞定改名&copy文件">一行代码搞定改名&copy文件</a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html" title="Read: brew 中切换软件版本">brew 中切换软件版本</a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html" title="Read: sed的一点用处">sed的一点用处</a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-02_22-07_pelican-shang-chuan-dao-github.html" title="Read: Pelican 上传到github">Pelican 上传到github</a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html" title="Read: Vim 中插入日期">Vim 中插入日期</a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-01_22-42_pi-liang-cp936toutf8.html" title="Read: 批量cp936toutf8">批量cp936toutf8</a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html" title="Read: 再次配置pelican写博客">再次配置pelican写博客</a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html" title="Read: thinkpad L440 的wifi debian 网卡驱动">thinkpad L440 的wifi debian 网卡驱动</a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html" title="Read: vim的verbose命令">vim的verbose命令</a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html" title="Read: vim中的autocmd">vim中的autocmd</a></li>
+	    </ul>
+	</div>
+    </div>
+    <div class="widget-archive-category widget">
+	<h3 class="widget-header">Category</h3>
+	<div class="widget-content">
+	    <ul class="widget-list">
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/linux.html">linux.<span>4</span></a></li>
+
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/python.html">python.<span>2</span></a></li>
+
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件.<span>9</span></a></li>
+
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用.<span>2</span></a></li>
+
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/shell.html">shell.<span>1</span></a></li>
+
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/vim.html">vim.<span>6</span></a></li>
+
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/za-gan.html">杂感.<span>1</span></a></li>
+
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/za-lei.html">杂类.<span>1</span></a></li>
+
+	    </ul>
+	</div>
+    </div>
+    <div class="widget">
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!-- dgzen he -->
+	<ins class="adsbygoogle"
+	    style="display:inline-block;width:300px;height:600px"
+	    data-ad-client="ca-pub-4442880234515975"
+	    data-ad-slot="1240455063"></ins>
+	<script>
+	    (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+    </script>
+</div>
+		</aside>
+	    </div>
+	    <!--footer-->
+	    <div class="row">
+		<div class="span12">
+		    <footer>
+			<p>Powered by <a href="http://getpelican.org">Pelican</a>.</p>
+			<p><a href="">Nuja theme</a> designed by <a rel="bookmark" href="http://dgzen.pw">DGZen</a>.</p>
+		    </footer>
+		</div>
+	    </div>
+	</div>
+
+
+    </body>
 </html>
