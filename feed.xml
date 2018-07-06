@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Wed, 04 Jul 2018 19:38:50 +0800</lastBuildDate><item><title>一行代码搞定改名&amp;copy文件</title><link>http://jackjin-cn.github.io/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html</link><description>&lt;h1&gt;一行代码搞定改名&amp;amp;copy文件&lt;/h1&gt;
+<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Thu, 05 Jul 2018 12:10:16 +0800</lastBuildDate><item><title>一行代码搞定改名&amp;copy文件</title><link>http://jackjin-cn.github.io/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html</link><description>&lt;h1&gt;一行代码搞定改名&amp;amp;copy文件&lt;/h1&gt;
 &lt;h2&gt;1. 分段探索的过程&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[jjb@ ~/pelicanoutput/pelican/pelican-themes #6]$for i in &lt;code&gt;find . -name screenshot.png&lt;/code&gt; ;do echo ${i} ;done;&lt;/p&gt;

@@ -43,7 +43,7 @@
 <meta property="og:url" content="http://jackjin-cn.github.io/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2018-07-04 19:12:53+08:00"/>
-<meta property="article:modified_time" content="2018-07-04 19:38:50+08:00"/>
+<meta property="article:modified_time" content="2018-07-05 12:10:16+08:00"/>
 <meta property="article:author" content="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">
 <meta property="article:section" content="软件"/>
 <meta property="article:tag" content="bash"/>
@@ -141,9 +141,8 @@ foundation-default-colours
 <ul>
 <li>最后实际运行的命令</li>
 </ul>
-<blockquote>
-<p>for i in <code>find . -name screenshot.png</code>; do b=<code>dirname $i</code>;c=${b##*./};cp $i ~/sp/${c}.png;done;</p>
-</blockquote>
+<div class="highlight"><pre><span></span>for i in `find . -name screenshot.png`; do b=`dirname <span class="nv">$i</span>`;c=<span class="cp">${</span><span class="n">b</span><span class="c1">##*./</span><span class="cp">}</span>;cp <span class="nv">$i</span> ~/sp/<span class="cp">${</span><span class="n">c</span><span class="cp">}</span>.png;done;
+</pre></div>
   </div>
   <div class="tag-cloud">
     <p>
