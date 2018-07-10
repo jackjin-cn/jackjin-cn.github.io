@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Thu, 05 Jul 2018 12:10:16 +0800</lastBuildDate><item><title>一行代码搞定改名&amp;copy文件</title><link>http://jackjin-cn.github.io/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html</link><description>&lt;h1&gt;一行代码搞定改名&amp;amp;copy文件&lt;/h1&gt;
+<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Tue, 10 Jul 2018 22:45:09 +0800</lastBuildDate><item><title>antiword</title><link>http://jackjin-cn.github.io/2018/2018-07-10_22-35_antiword.html</link><description>&lt;h1&gt;Title:antiword&lt;/h1&gt;
+&lt;h2&gt;一直想找一个 在mac下能用的doc to docx的方法&lt;/h2&gt;
+&lt;p&gt;结果找到一个叫&lt;em&gt;antiword&lt;/em&gt;的开源软件,以命令行的方式把doc转成纯文本之类的，比用python方便一点，还可以转成pdf之类的 。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不过，好像还有一个参数，可以转成xml之类的格式 ，docbook，我初步试了一下，找到一个把odcbook 转成 docx的程序，结果行不通，不能把docbook格式转成docx。有点遗憾。&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 10 Jul 2018 22:35:04 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2018-07-10:/2018/2018-07-10_22-35_antiword.html</guid><category>mac</category><category>work</category><category>python</category><category>command line</category></item><item><title>一行代码搞定改名&amp;copy文件</title><link>http://jackjin-cn.github.io/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html</link><description>&lt;h1&gt;一行代码搞定改名&amp;amp;copy文件&lt;/h1&gt;
 &lt;h2&gt;1. 分段探索的过程&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;[jjb@ ~/pelicanoutput/pelican/pelican-themes #6]$for i in &lt;code&gt;find . -name screenshot.png&lt;/code&gt; ;do echo ${i} ;done;&lt;/p&gt;
@@ -235,11 +240,4 @@ pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html"&gt;参见我在vim中用pandoc进行预览&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 05 Jan 2016 17:28:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-05:/2016/2016-01-05_17-28_pandocde-yong-fa-1.html</guid><category>pandoc</category><category>vim</category><category>html</category><category>css</category></item><item><title>vim的find命令</title><link>http://jackjin-cn.github.io/2016/2016-01-05_15-02_vimde-findming-ling.html</link><description>&lt;h2&gt;vim的find命令&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;:find&lt;/strong&gt; 命令可以用来打开文件，不需要输入完成路径。不过，需要设置'path'选项:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;:set path+=app/\*\*
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;然后可以用&lt;tab&gt;进行补全了，这个在一个项目中有多个目录时，打开文件特别实用。而且有同名文件也可以进行识别。&lt;/p&gt;
-&lt;p&gt;摘自《Vim实用技巧》&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 05 Jan 2016 15:02:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-05:/2016/2016-01-05_15-02_vimde-findming-ling.html</guid><category>软件</category><category>学习</category></item></channel></rss>
+&lt;p&gt;&lt;a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html"&gt;参见我在vim中用pandoc进行预览&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 05 Jan 2016 17:28:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-05:/2016/2016-01-05_17-28_pandocde-yong-fa-1.html</guid><category>pandoc</category><category>vim</category><category>html</category><category>css</category></item></channel></rss>
