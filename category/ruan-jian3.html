@@ -116,6 +116,105 @@ ga('send', 'pageview');
 	<aside>
 	    <div class="entry-date">
 		<div class="month-day">
+		    <time pubdate datetime="2016-01-08T23:09:00+08:00" title=" 1 08, 16">
+			 1.<span class="day">08</span>
+			<div class="year">16</div>
+		    </time>
+		</div>
+
+	    </div>
+
+	</aside> 
+
+    </div>
+    <div class="span7">
+	<div class="entry-container ">
+
+	    <article  class="entry hentry" >
+		<header>
+		    <a href="/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html" rel="bookmark" title="permalink for git 本地删除后的问题" ><h2 class="entry-title">git 本地删除后的问题</h2></a>
+		    <div class="author-details vcard">
+
+			by <a  class="url fn" href="/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>  file under <a href="/category/ruan-jian.html">软件</a> with tags 			<a href="http://jackjin-cn.github.io/tag/git.html" title="Browse tag: git" rel="tag">git</a>		    </div>
+		</header>
+		<div class="entry-content">
+		<h2>git 本地删除后的问题</h2>
+<p>在用pelican生成网页的时假，如果不小心用<code>make clean</code>的话，会把<strong>.git</strong>删除，就会产生配对问题，需要重新配对。</p>
+<p>对于网页不需要保留远程文件，所以就如下操作</p>
+<div class="highlight"><pre><span></span>git init
+git add .
+git commit -m &#39;update&#39;
+git remote rm origin
+git push --force origin master  强制推送
+git push -u origin master 重新远程与本地对应
+</pre></div> </div>
+	    </article>
+
+	    <!--
+	    in case any image breaks the theme
+	    i was going to use :after but it didn't quite work for me, maybe next time-->
+	    <div class="clearfix"></div>
+
+
+
+	</div>
+    </div>
+</div>
+<div class="row">
+    <div class="span1 metadata alpha">
+	<aside>
+	    <div class="entry-date">
+		<div class="month-day">
+		    <time pubdate datetime="2016-01-06T19:58:00+08:00" title=" 1 06, 16">
+			 1.<span class="day">06</span>
+			<div class="year">16</div>
+		    </time>
+		</div>
+
+	    </div>
+
+	</aside> 
+
+    </div>
+    <div class="span7">
+	<div class="entry-container ">
+
+	    <article  class="entry hentry" >
+		<header>
+		    <a href="/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html" rel="bookmark" title="permalink for 修改pelican所支持的内容文件的扩展名" ><h2 class="entry-title">修改pelican所支持的内容文件的扩展名</h2></a>
+		    <div class="author-details vcard">
+
+			by <a  class="url fn" href="/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>  file under <a href="/category/ruan-jian.html">软件</a> with tags 			<a href="http://jackjin-cn.github.io/tag/pelican.html" title="Browse tag: pelican" rel="tag">pelican</a>, 			<a href="http://jackjin-cn.github.io/tag/wen-jian-ming.html" title="Browse tag: 文件名" rel="tag">文件名</a>, 			<a href="http://jackjin-cn.github.io/tag/markdown.html" title="Browse tag: markdown" rel="tag">markdown</a>, 			<a href="http://jackjin-cn.github.io/tag/bash.html" title="Browse tag: bash" rel="tag">bash</a>		    </div>
+		</header>
+		<div class="entry-content">
+		<h2>修改pelican所支持的内容文件的扩展名</h2>
+<p>pelican的内容文本文件只支持常见markdown的扩展名<code>markdown,md,mkd</code>等，我比较喜欢用vim制作自己的文件模板，这样就需要自己取文件扩展名，比如*.blog，前几天没想到办法，今天找到办法了。</p>
+<p>用grep 在 <strong>/usr/local/lib/python2.7/dist-packages/pelican</strong> 找了下<strong>md</strong></p>
+<div class="highlight"><pre><span></span>$/usr/local/lib/python2.7/dist-packages/pelican$ grep &#39;md&#39; *.py
+结果如下：
+readers.py:    file_extensions = [&#39;md&#39;, &#39;markdown&#39;, &#39;mkd&#39;, &#39;mdown&#39;]
+</pre></div>
+
+
+<p>于是只是修改<code>readers.py</code>，加入自己想要的扩展名就可以了。</p>
+<p>我没有找到其它办法，不过这个方法还算方便吧。</p> </div>
+	    </article>
+
+	    <!--
+	    in case any image breaks the theme
+	    i was going to use :after but it didn't quite work for me, maybe next time-->
+	    <div class="clearfix"></div>
+
+
+
+	</div>
+    </div>
+</div>
+<div class="row">
+    <div class="span1 metadata alpha">
+	<aside>
+	    <div class="entry-date">
+		<div class="month-day">
 		    <time pubdate datetime="2016-01-05T17:28:00+08:00" title=" 1 05, 16">
 			 1.<span class="day">05</span>
 			<div class="year">16</div>
@@ -194,6 +293,8 @@ pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含
         <h3 class="widget-header">Recent Articles</h3>
 	<div class="widget-content">
 	    <ul class="widget-list">
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-11_09-40_doczhuan-docx.html" title="Read: doc转docx">doc转docx</a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-10_22-35_antiword.html" title="Read: antiword">antiword</a></li>
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html" title="Read: 一行代码搞定改名&copy文件">一行代码搞定改名&copy文件</a></li>
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html" title="Read: brew 中切换软件版本">brew 中切换软件版本</a></li>
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html" title="Read: sed的一点用处">sed的一点用处</a></li>
@@ -202,7 +303,6 @@ pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2016/2016-01-11_22-11_cygwin.html" title="Read: cygwin">cygwin</a></li>
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html" title="Read: git 本地删除后的问题">git 本地删除后的问题</a></li>
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html" title="Read: 修改pelican所支持的内容文件的扩展名">修改pelican所支持的内容文件的扩展名</a></li>
-		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html" title="Read: pandoc的用法（1）">pandoc的用法（1）</a></li>
 	    </ul>
 	</div>
     </div>
@@ -214,11 +314,11 @@ pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含
 
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/python.html">python.<span>2</span></a></li>
 
-		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件.<span>9</span></a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件.<span>11</span></a></li>
 
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用.<span>2</span></a></li>
 
-		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/shell.html">shell.<span>1</span></a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/shell.html">shell.<span>2</span></a></li>
 
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/vim.html">vim.<span>6</span></a></li>
 

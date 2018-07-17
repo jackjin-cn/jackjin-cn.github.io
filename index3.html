@@ -112,6 +112,190 @@ ga('send', 'pageview');
 	<aside>
 	    <div class="entry-date">
 		<div class="month-day">
+		    <time pubdate datetime="2018-07-01T22:42:00+08:00" title=" 7 01, 18">
+			 7.<span class="day">01</span>
+			<div class="year">18</div>
+		    </time>
+		</div>
+
+	    </div>
+
+	</aside> 
+
+    </div>
+    <div class="span7">
+	<div class="entry-container ">
+
+	    <article  class="entry hentry" >
+		<header>
+		    <a href="/2018/2018-07-01_22-42_pi-liang-cp936toutf8.html" rel="bookmark" title="permalink for 批量cp936toutf8" ><h2 class="entry-title">批量cp936toutf8</h2></a>
+		    <div class="author-details vcard">
+
+			by <a  class="url fn" href="/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>  file under <a href="/category/python.html">python</a> with tags 			<a href="http://jackjin-cn.github.io/tag/unicode.html" title="Browse tag: unicode" rel="tag">unicode</a>, 			<a href="http://jackjin-cn.github.io/tag/vim.html" title="Browse tag: vim" rel="tag">vim</a>, 			<a href="http://jackjin-cn.github.io/tag/encoding.html" title="Browse tag: encoding" rel="tag">encoding</a>		    </div>
+		</header>
+		<div class="entry-content">
+		<h2>今天在用pelican转网页的时候，原来在<strong>windows</strong>下写的文件，代码是<strong>cp936</strong>，识别不了，要转成<strong>utf8</strong>格式。</h2>
+<p>通过搜索找到了以下代码</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="k">for</span> i in <span class="sb">`</span>find . -name <span class="s2">&quot;*.cal&quot;</span><span class="sb">`</span>
+<span class="k">do</span>
+    vim -s ~/bin/cp936-utf8.vi <span class="nv">$i</span>
+<span class="k">done</span>
+
+用写一段vim用的vi命令就可以了
+</pre></div>
+</td></tr></table>
+
+<div class="highlight"><pre><span></span>&quot;cp936-utf8.vi&quot;
+:set fileencoding=utf8
+:wq!
+</pre></div>
+
+
+<p>懂vim的看的懂，这两句做了两件事</p>
+<ul>
+<li>设置文件编码</li>
+<li>保存写入</li>
+</ul>
+<h3>另外也学习了  <strong>find</strong> 的用法</h3>
+<div class="highlight"><pre><span></span>find . -name &quot;*.cal&quot;
+</pre></div>
+
+
+<p>意思是在 当前目录下（包括子目录） 查找 文件包含 <em>.cal</em>的所有文件，返回值为包含当前路径的文件名。</p>
+<div class="highlight"><pre><span></span>./11.cal
+./11/11.cal
+</pre></div> </div>
+	    </article>
+
+	    <!--
+	    in case any image breaks the theme
+	    i was going to use :after but it didn't quite work for me, maybe next time-->
+	    <div class="clearfix"></div>
+
+
+
+	</div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span1 metadata alpha">
+	<aside>
+	    <div class="entry-date">
+		<div class="month-day">
+		    <time pubdate datetime="2018-07-01T20:13:00+08:00" title=" 7 01, 18">
+			 7.<span class="day">01</span>
+			<div class="year">18</div>
+		    </time>
+		</div>
+
+	    </div>
+
+	</aside> 
+
+    </div>
+    <div class="span7">
+	<div class="entry-container ">
+
+	    <article  class="entry hentry" >
+		<header>
+		    <a href="/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html" rel="bookmark" title="permalink for 再次配置pelican写博客" ><h2 class="entry-title">再次配置pelican写博客</h2></a>
+		    <div class="author-details vcard">
+
+			by <a  class="url fn" href="/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>  file under <a href="/category/python.html">python</a> with tags 			<a href="http://jackjin-cn.github.io/tag/pelican.html" title="Browse tag: pelican" rel="tag">pelican</a>, 			<a href="http://jackjin-cn.github.io/tag/zhe-teng.html" title="Browse tag: 折腾" rel="tag">折腾</a>		    </div>
+		</header>
+		<div class="entry-content">
+		<h1>今天再次折腾一下，争取在三个机器上可以使用。</h1>
+<p>在～目前建立下面的目录了</p>
+<blockquote>
+<p>Pelicanoutput</p>
+<blockquote>
+<p>blog #blog的输出网页</p>
+<p>riji 同上</p>
+<p>pelican</p>
+<blockquote>
+<p>pelican-plugins</p>
+<p>pelican-theme</p>
+</blockquote>
+<p>riji-pelicanconf.py</p>
+<p>blog-pelicanconf.py</p>
+</blockquote>
+</blockquote>
+<h2>另外，还改到了 python 库中的 <em>pelican</em> 中 <strong>reader.py</strong> 中内容 增加了 'cal' ,'blog' 的文件的扩展名，前面有写过的。</h2> </div>
+	    </article>
+
+	    <!--
+	    in case any image breaks the theme
+	    i was going to use :after but it didn't quite work for me, maybe next time-->
+	    <div class="clearfix"></div>
+
+
+
+	</div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span1 metadata alpha">
+	<aside>
+	    <div class="entry-date">
+		<div class="month-day">
+		    <time pubdate datetime="2016-01-24T18:41:00+08:00" title=" 1 24, 16">
+			 1.<span class="day">24</span>
+			<div class="year">16</div>
+		    </time>
+		</div>
+
+	    </div>
+
+	</aside> 
+
+    </div>
+    <div class="span7">
+	<div class="entry-container ">
+
+	    <article  class="entry hentry" >
+		<header>
+		    <a href="/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html" rel="bookmark" title="permalink for thinkpad L440 的wifi debian 网卡驱动" ><h2 class="entry-title">thinkpad L440 的wifi debian 网卡驱动</h2></a>
+		    <div class="author-details vcard">
+
+			by <a  class="url fn" href="/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>  file under <a href="/category/linux.html">linux</a> with tags 			<a href="http://jackjin-cn.github.io/tag/debian.html" title="Browse tag: debian" rel="tag">debian</a>, 			<a href="http://jackjin-cn.github.io/tag/linux.html" title="Browse tag: linux" rel="tag">linux</a>, 			<a href="http://jackjin-cn.github.io/tag/wifi.html" title="Browse tag: wifi" rel="tag">wifi</a>, 			<a href="http://jackjin-cn.github.io/tag/qu-dong.html" title="Browse tag: 驱动" rel="tag">驱动</a>, 			<a href="http://jackjin-cn.github.io/tag/realtek.html" title="Browse tag: realtek" rel="tag">realtek</a>		    </div>
+		</header>
+		<div class="entry-content">
+		<h2>thinkpad L400 的wifi debian 网卡驱动</h2>
+<p>今天又弄起了<strong>thinkpad l440</strong>,无线网卡驱动有问题，连上后马上会断线，网上搜了半天，方案很多，好像不太成功。无线网卡的型号是 realtak 8192ee.</p>
+<p>今天偶然发现，几个命令</p>
+<div class="highlight"><pre><span></span>lsmod |grep rtl
+发现胡乱加载好几个网卡驱动
+便用 modprobe -r rtlwifi 这样的命令删除多余的驱动。
+最后发现管用的好像是下载的 realtek_new 管用，具体驱动名是 8192ee.
+modprobe 8192ee
+</pre></div> </div>
+	    </article>
+
+	    <!--
+	    in case any image breaks the theme
+	    i was going to use :after but it didn't quite work for me, maybe next time-->
+	    <div class="clearfix"></div>
+
+
+
+	</div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span1 metadata alpha">
+	<aside>
+	    <div class="entry-date">
+		<div class="month-day">
 		    <time pubdate datetime="2016-01-19T10:00:00+08:00" title=" 1 19, 16">
 			 1.<span class="day">19</span>
 			<div class="year">16</div>
@@ -140,163 +324,6 @@ ga('send', 'pageview');
 
 
 <p>发现有很多额外的显示，值得一看，也能发现很多非常有意思的东西！</p> </div>
-	    </article>
-
-	    <!--
-	    in case any image breaks the theme
-	    i was going to use :after but it didn't quite work for me, maybe next time-->
-	    <div class="clearfix"></div>
-
-
-
-	</div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="span1 metadata alpha">
-	<aside>
-	    <div class="entry-date">
-		<div class="month-day">
-		    <time pubdate datetime="2016-01-19T08:58:00+08:00" title=" 1 19, 16">
-			 1.<span class="day">19</span>
-			<div class="year">16</div>
-		    </time>
-		</div>
-
-	    </div>
-
-	</aside> 
-
-    </div>
-    <div class="span7">
-	<div class="entry-container ">
-
-	    <article  class="entry hentry" >
-		<header>
-		    <a href="/2016/2016-01-19_08-58_vimzhong-de-autocmd.html" rel="bookmark" title="permalink for vim中的autocmd" ><h2 class="entry-title">vim中的autocmd</h2></a>
-		    <div class="author-details vcard">
-
-			by <a  class="url fn" href="/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>  file under <a href="/category/vim.html">vim</a> with tags 			<a href="http://jackjin-cn.github.io/tag/autocmd.html" title="Browse tag: autocmd" rel="tag">autocmd</a>, 			<a href="http://jackjin-cn.github.io/tag/vim.html" title="Browse tag: vim" rel="tag">vim</a>		    </div>
-		</header>
-		<div class="entry-content">
-		<p>原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保存后才能高亮，也试过autocmd的其它形式，也是不行，不过，昨天在尝试autocmd的时候，无意中发发现了解决办法。</p>
-<div class="highlight"><pre><span></span>autocmd BufReadpre *.mytext set syn=mytext
-mytext是指代自己定义的文件格式和语法文件
-</pre></div> </div>
-	    </article>
-
-	    <!--
-	    in case any image breaks the theme
-	    i was going to use :after but it didn't quite work for me, maybe next time-->
-	    <div class="clearfix"></div>
-
-
-
-	</div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="span1 metadata alpha">
-	<aside>
-	    <div class="entry-date">
-		<div class="month-day">
-		    <time pubdate datetime="2016-01-11T22:11:00+08:00" title=" 1 11, 16">
-			 1.<span class="day">11</span>
-			<div class="year">16</div>
-		    </time>
-		</div>
-
-	    </div>
-
-	</aside> 
-
-    </div>
-    <div class="span7">
-	<div class="entry-container ">
-
-	    <article  class="entry hentry" >
-		<header>
-		    <a href="/2016/2016-01-11_22-11_cygwin.html" rel="bookmark" title="permalink for cygwin" ><h2 class="entry-title">cygwin</h2></a>
-		    <div class="author-details vcard">
-
-			by <a  class="url fn" href="/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>  file under <a href="/category/ruan-jian.html">软件</a> with tags 			<a href="http://jackjin-cn.github.io/tag/bash.html" title="Browse tag: bash" rel="tag">bash</a>, 			<a href="http://jackjin-cn.github.io/tag/cygwin.html" title="Browse tag: cygwin" rel="tag">cygwin</a>		    </div>
-		</header>
-		<div class="entry-content">
-		<h1>cygiwn的路径</h1>
-<p>windows下的C：在cygwin中表示为<code>/cygwin/c/</code></p>
-<p>cygwin会导入windows中的path,当然也可以在cygwin中的path中加入windows的path，不过，写法上要向上面一样。</p>
-<p>另外，如果遇到到<strong>permision denied</strong>，请用<strong>管理员身份</strong>运行cygwin.bat</p> </div>
-	    </article>
-
-	    <!--
-	    in case any image breaks the theme
-	    i was going to use :after but it didn't quite work for me, maybe next time-->
-	    <div class="clearfix"></div>
-
-
-
-	</div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="span1 metadata alpha">
-	<aside>
-	    <div class="entry-date">
-		<div class="month-day">
-		    <time pubdate datetime="2016-01-09T16:08:00+08:00" title=" 1 09, 16">
-			 1.<span class="day">09</span>
-			<div class="year">16</div>
-		    </time>
-		</div>
-
-	    </div>
-
-	</aside> 
-
-    </div>
-    <div class="span7">
-	<div class="entry-container ">
-
-	    <article  class="entry hentry" >
-		<header>
-		    <a href="/2016/2016-01-09_16-08_bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti.html" rel="bookmark" title="permalink for bash中for的文件通配符的问题" ><h2 class="entry-title">bash中for的文件通配符的问题</h2></a>
-		    <div class="author-details vcard">
-
-			by <a  class="url fn" href="/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>  file under <a href="/category/shell.html">shell</a> with tags 			<a href="http://jackjin-cn.github.io/tag/bash.html" title="Browse tag: bash" rel="tag">bash</a>, 			<a href="http://jackjin-cn.github.io/tag/for.html" title="Browse tag: for" rel="tag">for</a>, 			<a href="http://jackjin-cn.github.io/tag/wen-jian-cao-zuo.html" title="Browse tag: 文件操作" rel="tag">文件操作</a>		    </div>
-		</header>
-		<div class="entry-content">
-		<p>最近在整理自己的文档，还学了一点awk的操作，awk对文本的处理真是蛮强大的。</p>
-<p>我需要经常用脚本来对一批文件处理。比如</p>
-<div class="highlight"><pre><span></span>aa$&gt; for file in *.txt;do echo $file;done#结果可以正常显示
-</pre></div>
-
-
-<p>因为经常要用<strong>for</strong>命令的这种形式，于是写了一个脚本(allfiles)：</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="c1">#$1是一个进行处理文件的命令或者脚本</span>
-<span class="k">for</span> files in <span class="nv">$2</span><span class="p">;</span>
-<span class="k">do</span>
-    <span class="nv">$1</span> <span class="nv">$files</span>
-<span class="k">done</span><span class="p">;</span>
-</pre></div>
-</td></tr></table>
-
-<p>然后在shell里输入:</p>
-<div class="highlight"><pre><span></span>aa@@@$: allfiles *.txt
-</pre></div>
-
-
-<p>结果确不正常，只有第一个文件被匹配，改来改去，发现原因：shell在处理命令行时已经自动把<strong><em>.txt</em>* 替换成符合条件的列表了，所以产生问题。后来发现的办法是在文件上加中 </strong> '' <strong> 或者 </strong>""**把文件名包含起来。</p>
-<div class="highlight"><pre><span></span>aa@aa$:allfiles &#39;*.txt&#39;
-</pre></div> </div>
 	    </article>
 
 	    <!--
@@ -344,6 +371,9 @@ mytext是指代自己定义的文件格式和语法文件
         <h3 class="widget-header">Recent Articles</h3>
 	<div class="widget-content">
 	    <ul class="widget-list">
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-17_12-38_find-cha-zhao-man-zu-duo-ge-tiao-jian-de-wen-jian.html" title="Read: find 查找满足多个条件的文件">find 查找满足多个条件的文件</a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-11_09-40_doczhuan-docx.html" title="Read: doc转docx">doc转docx</a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-10_22-35_antiword.html" title="Read: antiword">antiword</a></li>
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html" title="Read: 一行代码搞定改名&copy文件">一行代码搞定改名&copy文件</a></li>
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html" title="Read: brew 中切换软件版本">brew 中切换软件版本</a></li>
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html" title="Read: sed的一点用处">sed的一点用处</a></li>
@@ -351,9 +381,6 @@ mytext是指代自己定义的文件格式和语法文件
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html" title="Read: Vim 中插入日期">Vim 中插入日期</a></li>
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-01_22-42_pi-liang-cp936toutf8.html" title="Read: 批量cp936toutf8">批量cp936toutf8</a></li>
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html" title="Read: 再次配置pelican写博客">再次配置pelican写博客</a></li>
-		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html" title="Read: thinkpad L440 的wifi debian 网卡驱动">thinkpad L440 的wifi debian 网卡驱动</a></li>
-		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html" title="Read: vim的verbose命令">vim的verbose命令</a></li>
-		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html" title="Read: vim中的autocmd">vim中的autocmd</a></li>
 	    </ul>
 	</div>
     </div>
@@ -365,11 +392,11 @@ mytext是指代自己定义的文件格式和语法文件
 
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/python.html">python.<span>2</span></a></li>
 
-		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件.<span>9</span></a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件.<span>11</span></a></li>
 
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用.<span>2</span></a></li>
 
-		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/shell.html">shell.<span>1</span></a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/shell.html">shell.<span>2</span></a></li>
 
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/vim.html">vim.<span>6</span></a></li>
 

@@ -117,6 +117,58 @@ ga('send', 'pageview');
 	<aside>
 	    <div class="entry-date">
 		<div class="month-day">
+		    <time pubdate datetime="2016-01-06T19:43:00+08:00" title=" 1 06, 16">
+			 1.<span class="day">06</span>
+			<div class="year">16</div>
+		    </time>
+		</div>
+
+	    </div>
+
+	</aside> 
+
+    </div>
+    <div class="span7">
+	<div class="entry-container ">
+
+	    <article  class="entry hentry" >
+		<header>
+		    <a href="/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html" rel="bookmark" title="permalink for 在linux下把cp936转成utf-8" ><h2 class="entry-title">在linux下把cp936转成utf-8</h2></a>
+		    <div class="author-details vcard">
+
+			by <a  class="url fn" href="/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>  file under <a href="/category/linux.html">linux</a> with tags 			<a href="http://jackjin-cn.github.io/tag/linux.html" title="Browse tag: linux" rel="tag">linux</a>, 			<a href="http://jackjin-cn.github.io/tag/bash.html" title="Browse tag: bash" rel="tag">bash</a>, 			<a href="http://jackjin-cn.github.io/tag/code.html" title="Browse tag: code" rel="tag">code</a>, 			<a href="http://jackjin-cn.github.io/tag/zhong-wen.html" title="Browse tag: 中文" rel="tag">中文</a>		    </div>
+		</header>
+		<div class="entry-content">
+		<h2>在linux下把cp936转成utf-8</h2>
+<p>今天需要把原来写的文字用博客的形式发布，用pelican转换的第一个问题就是文件的内码格式不到，原来是 <strong>cp936</strong> (中文ASCII)的形式，需要转成<strong>utf-8</strong>。</p>
+<p>网上找了一下，可以用<code>iconv</code> 这个工具，不过不支持批量转换，于是又搜了一下，用bash写了一个，在此记录一下。
+另外说明一下，<strong>iconv</strong> 不支持自动识别文件编码，要手动指定</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="k">for</span> file in *.txt 
+    <span class="k">do</span> iconv -c -f gb18030 -t utf8 <span class="nv">$file</span> -o <span class="nv">$file</span>.uu
+<span class="k">done</span>
+</pre></div>
+</td></tr></table> </div>
+	    </article>
+
+	    <!--
+	    in case any image breaks the theme
+	    i was going to use :after but it didn't quite work for me, maybe next time-->
+	    <div class="clearfix"></div>
+
+
+
+	</div>
+    </div>
+</div>
+<div class="row">
+    <div class="span1 metadata alpha">
+	<aside>
+	    <div class="entry-date">
+		<div class="month-day">
 		    <time pubdate datetime="2016-01-02T20:56:00+08:00" title=" 1 02, 16">
 			 1.<span class="day">02</span>
 			<div class="year">16</div>
@@ -204,6 +256,7 @@ ga('send', 'pageview');
         <h3 class="widget-header">Recent Articles</h3>
 	<div class="widget-content">
 	    <ul class="widget-list">
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-17_12-38_find-cha-zhao-man-zu-duo-ge-tiao-jian-de-wen-jian.html" title="Read: find 查找满足多个条件的文件">find 查找满足多个条件的文件</a></li>
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html" title="Read: sed的一点用处">sed的一点用处</a></li>
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html" title="Read: thinkpad L440 的wifi debian 网卡驱动">thinkpad L440 的wifi debian 网卡驱动</a></li>
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html" title="Read: awk文本工具的学习">awk文本工具的学习</a></li>
@@ -220,11 +273,11 @@ ga('send', 'pageview');
 
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/python.html">python.<span>2</span></a></li>
 
-		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件.<span>9</span></a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件.<span>11</span></a></li>
 
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用.<span>2</span></a></li>
 
-		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/shell.html">shell.<span>1</span></a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/shell.html">shell.<span>2</span></a></li>
 
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/vim.html">vim.<span>6</span></a></li>
 

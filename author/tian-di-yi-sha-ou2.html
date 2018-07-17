@@ -118,6 +118,210 @@ ga('send', 'pageview');
 	<aside>
 	    <div class="entry-date">
 		<div class="month-day">
+		    <time pubdate datetime="2018-07-04T12:14:13+08:00" title=" 7 04, 18">
+			 7.<span class="day">04</span>
+			<div class="year">18</div>
+		    </time>
+		</div>
+
+	    </div>
+
+	</aside> 
+
+    </div>
+    <div class="span7">
+	<div class="entry-container ">
+
+	    <article  class="entry hentry" >
+		<header>
+		    <a href="/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html" rel="bookmark" title="permalink for brew 中切换软件版本" ><h2 class="entry-title">brew 中切换软件版本</h2></a>
+		    <div class="author-details vcard">
+
+			by <a  class="url fn" href="/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>  file under <a href="/category/ruan-jian.html">软件</a> with tags 			<a href="http://jackjin-cn.github.io/tag/brew.html" title="Browse tag: brew" rel="tag">brew</a>, 			<a href="http://jackjin-cn.github.io/tag/python.html" title="Browse tag: python" rel="tag">python</a>		    </div>
+		</header>
+		<div class="entry-content">
+		<h1>brew 中切换软件版本</h1>
+<p>我有更新软件的习惯，习惯性的每天更新一下。比如brew ,pip3等。</p>
+<p>这不，前天把brew 就把python 3.6.5 升级到了python 3.7了，这个是大升级，结果python库都没有了，当然可以另行安装，也很方便，反正有写了批量更新的脚本，但没有到还有兼容性的问题。</p>
+<p>网上找一堆办法，有的命令已经过期了 <em>brew versions</em>,有的太复杂，看不明白。
+后来还是找到了一个办法，提前是老版本python没有删除。</p>
+<blockquote>
+<p>brew info python3</p>
+</blockquote>
+<div class="highlight"><pre><span></span><span class="n">python</span><span class="o">:</span> <span class="n">stable</span> <span class="mf">3.7</span><span class="o">.</span><span class="mi">0</span> <span class="o">(</span><span class="n">bottled</span><span class="o">),</span> <span class="n">HEAD</span>
+<span class="n">Interpreted</span><span class="o">,</span> <span class="n">interactive</span><span class="o">,</span> <span class="n">object</span><span class="o">-</span><span class="n">oriented</span> <span class="n">programming</span> <span class="n">language</span>
+<span class="n">https</span><span class="o">://</span><span class="n">www</span><span class="o">.</span><span class="na">python</span><span class="o">.</span><span class="na">org</span><span class="o">/</span>
+<span class="sr">/usr/local/Cellar/python/</span><span class="mf">3.6</span><span class="o">.</span><span class="mi">5</span> <span class="o">(</span><span class="mi">4</span><span class="o">,</span><span class="mi">900</span> <span class="n">files</span><span class="o">,</span> <span class="mf">102.3</span><span class="n">MB</span><span class="o">)</span>
+  <span class="n">Poured</span> <span class="n">from</span> <span class="n">bottle</span> <span class="n">on</span> <span class="mi">2018</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">03</span> <span class="n">at</span> <span class="mi">09</span><span class="o">:</span><span class="mi">54</span><span class="o">:</span><span class="mi">11</span>
+<span class="sr">/usr/local/Cellar/python/</span><span class="mf">3.6</span><span class="o">.</span><span class="mi">5</span><span class="n">_1</span> <span class="o">(</span><span class="mi">4</span><span class="o">,</span><span class="mi">869</span> <span class="n">files</span><span class="o">,</span> <span class="mf">101.5</span><span class="n">MB</span><span class="o">)</span> <span class="o">*</span>
+  <span class="n">Poured</span> <span class="n">from</span> <span class="n">bottle</span> <span class="n">on</span> <span class="mi">2018</span><span class="o">-</span><span class="mi">06</span><span class="o">-</span><span class="mi">25</span> <span class="n">at</span> <span class="mi">09</span><span class="o">:</span><span class="mi">02</span><span class="o">:</span><span class="mi">25</span>
+<span class="sr">/usr/local/Cellar/python/</span><span class="mf">3.7</span><span class="o">.</span><span class="mi">0</span> <span class="o">(</span><span class="mi">4</span><span class="o">,</span><span class="mi">976</span> <span class="n">files</span><span class="o">,</span> <span class="mf">104.2</span><span class="n">MB</span><span class="o">)</span>
+  <span class="n">Poured</span> <span class="n">from</span> <span class="n">bottle</span> <span class="n">on</span> <span class="mi">2018</span><span class="o">-</span><span class="mi">07</span><span class="o">-</span><span class="mi">02</span> <span class="n">at</span> <span class="mi">08</span><span class="o">:</span><span class="mi">50</span><span class="o">:</span><span class="mi">46</span>
+<span class="n">From</span><span class="o">:</span> <span class="n">https</span><span class="o">://</span><span class="n">github</span><span class="o">.</span><span class="na">com</span><span class="sr">/Homebrew/homebrew-core/blob/master/Formula/</span><span class="n">python</span><span class="o">.</span><span class="na">rb</span>
+</pre></div>
+
+
+<p>上面显示了brew系统已经安装的pytho3的版本，有3个版本，其它有两个3.6.5,我也不知道原因。</p>
+<blockquote>
+<p>brew swithc python 3.6.5_1
+```
+$brew switch python3 3.6.5_1
+Cleaning /usr/local/Cellar/python/3.6.5
+Cleaning /usr/local/Cellar/python/3.6.5_1
+Cleaning /usr/local/Cellar/python/3.7.0
+25 links created for /usr/local/Cellar/python/3.6.5_1
+````</p>
+</blockquote>
+<h3>再试试，就可以用回3.6.5 了</h3> </div>
+	    </article>
+
+	    <!--
+	    in case any image breaks the theme
+	    i was going to use :after but it didn't quite work for me, maybe next time-->
+	    <div class="clearfix"></div>
+
+
+
+	</div>
+    </div>
+</div>
+<div class="row">
+    <div class="span1 metadata alpha">
+	<aside>
+	    <div class="entry-date">
+		<div class="month-day">
+		    <time pubdate datetime="2018-07-03T14:32:35+08:00" title=" 7 03, 18">
+			 7.<span class="day">03</span>
+			<div class="year">18</div>
+		    </time>
+		</div>
+
+	    </div>
+
+	</aside> 
+
+    </div>
+    <div class="span7">
+	<div class="entry-container ">
+
+	    <article  class="entry hentry" >
+		<header>
+		    <a href="/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html" rel="bookmark" title="permalink for sed的一点用处" ><h2 class="entry-title">sed的一点用处</h2></a>
+		    <div class="author-details vcard">
+
+			by <a  class="url fn" href="/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>  file under <a href="/category/ruan-jian.html">软件</a> with tags 			<a href="http://jackjin-cn.github.io/tag/wen-jian-chu-li.html" title="Browse tag: 文件处理" rel="tag">文件处理</a>, 			<a href="http://jackjin-cn.github.io/tag/linux.html" title="Browse tag: linux" rel="tag">linux</a>, 			<a href="http://jackjin-cn.github.io/tag/mac.html" title="Browse tag: mac" rel="tag">mac</a>		    </div>
+		</header>
+		<div class="entry-content">
+		<h1>sed的一点用处</h1>
+<p>最近在弄pelican 与 github的博客，下载很不要模板，更换很不方便，想能不能用命令修改，google一下，还是真有办法的。</p>
+<h2>提醒不要用mac osx 自带的sed</h2>
+<h2>我用brew 安装了gnu-sed</h2>
+<div class="highlight"><pre><span></span>gsed -i 99c\jtheme=&quot;theme_name&quot; pelianconf.py
+
+-i 表示直接修改文件
+99c\jtheme=&quot;theme_name&quot;  表示将99行的内容直接替换(c)成jtheme=&quot;theme_name&quot;  \是起一个分隔的作用。
+有不明白的地方可以看教程，语法有点类似vim
+````
+
+## 下面是我自己用的脚本，在选中的theme的目录下运行
+</pre></div>
+
+
+<h1>!/usr/bin/env python3</h1>
+<h1>-<em>- coding: utf-8 -</em>-</h1>
+<p>import os
+cwd=os.getcwd()
+path=(cwd.split('/'))
+cfname=home+'/pelicanoutput/blog_pelicanconf.py'
+cmd="gsed -i '99c\jtheme=" + '"'+path[-1]+'"'+"' "+cfname
+print(cmd)
+os.system(cmd)</p>
+<p>```</p> </div>
+	    </article>
+
+	    <!--
+	    in case any image breaks the theme
+	    i was going to use :after but it didn't quite work for me, maybe next time-->
+	    <div class="clearfix"></div>
+
+
+
+	</div>
+    </div>
+</div>
+<div class="row">
+    <div class="span1 metadata alpha">
+	<aside>
+	    <div class="entry-date">
+		<div class="month-day">
+		    <time pubdate datetime="2018-07-02T22:07:45+08:00" title=" 7 02, 18">
+			 7.<span class="day">02</span>
+			<div class="year">18</div>
+		    </time>
+		</div>
+
+	    </div>
+
+	</aside> 
+
+    </div>
+    <div class="span7">
+	<div class="entry-container ">
+
+	    <article  class="entry hentry" >
+		<header>
+		    <a href="/2018/2018-07-02_22-07_pelican-shang-chuan-dao-github.html" rel="bookmark" title="permalink for Pelican 上传到github" ><h2 class="entry-title">Pelican 上传到github</h2></a>
+		    <div class="author-details vcard">
+
+			by <a  class="url fn" href="/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>  file under <a href="/category/ruan-jian.html">软件</a> with tags 			<a href="http://jackjin-cn.github.io/tag/pelican.html" title="Browse tag: pelican" rel="tag">pelican</a>, 			<a href="http://jackjin-cn.github.io/tag/github.html" title="Browse tag: github" rel="tag">github</a>, 			<a href="http://jackjin-cn.github.io/tag/vim.html" title="Browse tag: vim" rel="tag">vim</a>, 			<a href="http://jackjin-cn.github.io/tag/python.html" title="Browse tag: python" rel="tag">python</a>		    </div>
+		</header>
+		<div class="entry-content">
+		<h1>Pelican 上传到github</h1>
+<p>折腾了半天，应该可以在几台电脑上上传博客内容了吧。</p>
+<h3>初始部分</h3>
+<div class="highlight"><pre><span></span>git init
+git add .
+git commit
+git remote add origin https://github.com/jackjin-cn/jackjin-cn.github.io.git
+
+#先取回云端内容
+git pull origin master
+git commit
+git push origin master #可以加参数 -f
+</pre></div>
+
+
+<h2>我的上传博客到githubio的脚本</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">cd</span> ~/pelicanoutput/blog
+makeriji
+git add .
+git commit -m <span class="s1">&#39;update&#39;</span>
+git push origin master  <span class="c1">#可以加参数 -f</span>
+</pre></div>
+</td></tr></table> </div>
+	    </article>
+
+	    <!--
+	    in case any image breaks the theme
+	    i was going to use :after but it didn't quite work for me, maybe next time-->
+	    <div class="clearfix"></div>
+
+
+
+	</div>
+    </div>
+</div>
+<div class="row">
+    <div class="span1 metadata alpha">
+	<aside>
+	    <div class="entry-date">
+		<div class="month-day">
 		    <time pubdate datetime="2018-07-02T12:34:37+08:00" title=" 7 02, 18">
 			 7.<span class="day">02</span>
 			<div class="year">18</div>
@@ -176,187 +380,6 @@ autocmd FileWritePost,BufWrite *.blog,*.cal ks|call TitleModify()|&#39;s
 	</div>
     </div>
 </div>
-<div class="row">
-    <div class="span1 metadata alpha">
-	<aside>
-	    <div class="entry-date">
-		<div class="month-day">
-		    <time pubdate datetime="2018-07-01T22:42:00+08:00" title=" 7 01, 18">
-			 7.<span class="day">01</span>
-			<div class="year">18</div>
-		    </time>
-		</div>
-
-	    </div>
-
-	</aside> 
-
-    </div>
-    <div class="span7">
-	<div class="entry-container ">
-
-	    <article  class="entry hentry" >
-		<header>
-		    <a href="/2018/2018-07-01_22-42_pi-liang-cp936toutf8.html" rel="bookmark" title="permalink for 批量cp936toutf8" ><h2 class="entry-title">批量cp936toutf8</h2></a>
-		    <div class="author-details vcard">
-
-			by <a  class="url fn" href="/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>  file under <a href="/category/python.html">python</a> with tags 			<a href="http://jackjin-cn.github.io/tag/unicode.html" title="Browse tag: unicode" rel="tag">unicode</a>, 			<a href="http://jackjin-cn.github.io/tag/vim.html" title="Browse tag: vim" rel="tag">vim</a>, 			<a href="http://jackjin-cn.github.io/tag/encoding.html" title="Browse tag: encoding" rel="tag">encoding</a>		    </div>
-		</header>
-		<div class="entry-content">
-		<h2>今天在用pelican转网页的时候，原来在<strong>windows</strong>下写的文件，代码是<strong>cp936</strong>，识别不了，要转成<strong>utf8</strong>格式。</h2>
-<p>通过搜索找到了以下代码</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="k">for</span> i in <span class="sb">`</span>find . -name <span class="s2">&quot;*.cal&quot;</span><span class="sb">`</span>
-<span class="k">do</span>
-    vim -s ~/bin/cp936-utf8.vi <span class="nv">$i</span>
-<span class="k">done</span>
-
-用写一段vim用的vi命令就可以了
-</pre></div>
-</td></tr></table>
-
-<div class="highlight"><pre><span></span>&quot;cp936-utf8.vi&quot;
-:set fileencoding=utf8
-:wq!
-</pre></div>
-
-
-<p>懂vim的看的懂，这两句做了两件事</p>
-<ul>
-<li>设置文件编码</li>
-<li>保存写入</li>
-</ul>
-<h3>另外也学习了  <strong>find</strong> 的用法</h3>
-<div class="highlight"><pre><span></span>find . -name &quot;*.cal&quot;
-</pre></div>
-
-
-<p>意思是在 当前目录下（包括子目录） 查找 文件包含 <em>.cal</em>的所有文件，返回值为包含当前路径的文件名。</p>
-<div class="highlight"><pre><span></span>./11.cal
-./11/11.cal
-</pre></div> </div>
-	    </article>
-
-	    <!--
-	    in case any image breaks the theme
-	    i was going to use :after but it didn't quite work for me, maybe next time-->
-	    <div class="clearfix"></div>
-
-
-
-	</div>
-    </div>
-</div>
-<div class="row">
-    <div class="span1 metadata alpha">
-	<aside>
-	    <div class="entry-date">
-		<div class="month-day">
-		    <time pubdate datetime="2018-07-01T20:13:00+08:00" title=" 7 01, 18">
-			 7.<span class="day">01</span>
-			<div class="year">18</div>
-		    </time>
-		</div>
-
-	    </div>
-
-	</aside> 
-
-    </div>
-    <div class="span7">
-	<div class="entry-container ">
-
-	    <article  class="entry hentry" >
-		<header>
-		    <a href="/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html" rel="bookmark" title="permalink for 再次配置pelican写博客" ><h2 class="entry-title">再次配置pelican写博客</h2></a>
-		    <div class="author-details vcard">
-
-			by <a  class="url fn" href="/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>  file under <a href="/category/python.html">python</a> with tags 			<a href="http://jackjin-cn.github.io/tag/pelican.html" title="Browse tag: pelican" rel="tag">pelican</a>, 			<a href="http://jackjin-cn.github.io/tag/zhe-teng.html" title="Browse tag: 折腾" rel="tag">折腾</a>		    </div>
-		</header>
-		<div class="entry-content">
-		<h1>今天再次折腾一下，争取在三个机器上可以使用。</h1>
-<p>在～目前建立下面的目录了</p>
-<blockquote>
-<p>Pelicanoutput</p>
-<blockquote>
-<p>blog #blog的输出网页</p>
-<p>riji 同上</p>
-<p>pelican</p>
-<blockquote>
-<p>pelican-plugins</p>
-<p>pelican-theme</p>
-</blockquote>
-<p>riji-pelicanconf.py</p>
-<p>blog-pelicanconf.py</p>
-</blockquote>
-</blockquote>
-<h2>另外，还改到了 python 库中的 <em>pelican</em> 中 <strong>reader.py</strong> 中内容 增加了 'cal' ,'blog' 的文件的扩展名，前面有写过的。</h2> </div>
-	    </article>
-
-	    <!--
-	    in case any image breaks the theme
-	    i was going to use :after but it didn't quite work for me, maybe next time-->
-	    <div class="clearfix"></div>
-
-
-
-	</div>
-    </div>
-</div>
-<div class="row">
-    <div class="span1 metadata alpha">
-	<aside>
-	    <div class="entry-date">
-		<div class="month-day">
-		    <time pubdate datetime="2016-01-24T18:41:00+08:00" title=" 1 24, 16">
-			 1.<span class="day">24</span>
-			<div class="year">16</div>
-		    </time>
-		</div>
-
-	    </div>
-
-	</aside> 
-
-    </div>
-    <div class="span7">
-	<div class="entry-container ">
-
-	    <article  class="entry hentry" >
-		<header>
-		    <a href="/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html" rel="bookmark" title="permalink for thinkpad L440 的wifi debian 网卡驱动" ><h2 class="entry-title">thinkpad L440 的wifi debian 网卡驱动</h2></a>
-		    <div class="author-details vcard">
-
-			by <a  class="url fn" href="/author/tian-di-yi-sha-ou.html">天地一沙鸥</a>  file under <a href="/category/linux.html">linux</a> with tags 			<a href="http://jackjin-cn.github.io/tag/debian.html" title="Browse tag: debian" rel="tag">debian</a>, 			<a href="http://jackjin-cn.github.io/tag/linux.html" title="Browse tag: linux" rel="tag">linux</a>, 			<a href="http://jackjin-cn.github.io/tag/wifi.html" title="Browse tag: wifi" rel="tag">wifi</a>, 			<a href="http://jackjin-cn.github.io/tag/qu-dong.html" title="Browse tag: 驱动" rel="tag">驱动</a>, 			<a href="http://jackjin-cn.github.io/tag/realtek.html" title="Browse tag: realtek" rel="tag">realtek</a>		    </div>
-		</header>
-		<div class="entry-content">
-		<h2>thinkpad L400 的wifi debian 网卡驱动</h2>
-<p>今天又弄起了<strong>thinkpad l440</strong>,无线网卡驱动有问题，连上后马上会断线，网上搜了半天，方案很多，好像不太成功。无线网卡的型号是 realtak 8192ee.</p>
-<p>今天偶然发现，几个命令</p>
-<div class="highlight"><pre><span></span>lsmod |grep rtl
-发现胡乱加载好几个网卡驱动
-便用 modprobe -r rtlwifi 这样的命令删除多余的驱动。
-最后发现管用的好像是下载的 realtek_new 管用，具体驱动名是 8192ee.
-modprobe 8192ee
-</pre></div> </div>
-	    </article>
-
-	    <!--
-	    in case any image breaks the theme
-	    i was going to use :after but it didn't quite work for me, maybe next time-->
-	    <div class="clearfix"></div>
-
-
-
-	</div>
-    </div>
-</div>
 
 <div class="row">
     <div class="span1 alpha"></div>
@@ -391,6 +414,9 @@ modprobe 8192ee
         <h3 class="widget-header">Recent Articles</h3>
 	<div class="widget-content">
 	    <ul class="widget-list">
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-17_12-38_find-cha-zhao-man-zu-duo-ge-tiao-jian-de-wen-jian.html" title="Read: find 查找满足多个条件的文件">find 查找满足多个条件的文件</a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-11_09-40_doczhuan-docx.html" title="Read: doc转docx">doc转docx</a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-10_22-35_antiword.html" title="Read: antiword">antiword</a></li>
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html" title="Read: 一行代码搞定改名&copy文件">一行代码搞定改名&copy文件</a></li>
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html" title="Read: brew 中切换软件版本">brew 中切换软件版本</a></li>
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html" title="Read: sed的一点用处">sed的一点用处</a></li>
@@ -398,9 +424,6 @@ modprobe 8192ee
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html" title="Read: Vim 中插入日期">Vim 中插入日期</a></li>
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-01_22-42_pi-liang-cp936toutf8.html" title="Read: 批量cp936toutf8">批量cp936toutf8</a></li>
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html" title="Read: 再次配置pelican写博客">再次配置pelican写博客</a></li>
-		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html" title="Read: thinkpad L440 的wifi debian 网卡驱动">thinkpad L440 的wifi debian 网卡驱动</a></li>
-		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html" title="Read: vim的verbose命令">vim的verbose命令</a></li>
-		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html" title="Read: vim中的autocmd">vim中的autocmd</a></li>
 	    </ul>
 	</div>
     </div>
@@ -412,11 +435,11 @@ modprobe 8192ee
 
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/python.html">python.<span>2</span></a></li>
 
-		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件.<span>9</span></a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件.<span>11</span></a></li>
 
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用.<span>2</span></a></li>
 
-		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/shell.html">shell.<span>1</span></a></li>
+		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/shell.html">shell.<span>2</span></a></li>
 
 		<li class="widget-list-item"><a href="http://jackjin-cn.github.io/category/vim.html">vim.<span>6</span></a></li>
 
