@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Tue, 17 Jul 2018 12:43:59 +0800</lastBuildDate><item><title>find 查找满足多个条件的文件</title><link>http://jackjin-cn.github.io/2018/2018-07-17_12-38_find-cha-zhao-man-zu-duo-ge-tiao-jian-de-wen-jian.html</link><description>&lt;h1&gt;用find 查找满足多个条件的文件&lt;/h1&gt;
+<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Sun, 22 Jul 2018 19:52:45 +0800</lastBuildDate><item><title>find 查找满足多个条件的文件</title><link>http://jackjin-cn.github.io/2018/2018-07-17_12-38_find-cha-zhao-man-zu-duo-ge-tiao-jian-de-wen-jian.html</link><description>&lt;h1&gt;用find 查找满足多个条件的文件&lt;/h1&gt;
 &lt;p&gt;网上看了教程，find 可以添加 -o 作为或者条件，我试了一下，-a 表示 and,居然也是可以的&lt;/p&gt;
+&lt;h2&gt;更正，昨天看了一个教程，原来find的条件默认是and这样的关系。&lt;/h2&gt;
 &lt;h2&gt;下面就是找出文件名同时满足三个条件的用法，其它更高级的用法可以自行搜索&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;find . -name '&lt;em&gt;关键词&lt;/em&gt;' -a -name '&lt;em&gt;关键词2&lt;/em&gt;' -a -name '&lt;em&gt;关键词&lt;/em&gt;'&lt;/p&gt;
