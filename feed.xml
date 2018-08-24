@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Sun, 22 Jul 2018 19:52:45 +0800</lastBuildDate><item><title>find 查找满足多个条件的文件</title><link>http://jackjin-cn.github.io/2018/2018-07-17_12-38_find-cha-zhao-man-zu-duo-ge-tiao-jian-de-wen-jian.html</link><description>&lt;h1&gt;用find 查找满足多个条件的文件&lt;/h1&gt;
+<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Fri, 24 Aug 2018 21:55:26 +0800</lastBuildDate><item><title>mac中批量打印文件</title><link>http://jackjin-cn.github.io/2018/2018-08-24_21-51_maczhong-pi-liang-da-yin-wen-jian.html</link><description>&lt;h2&gt;mac中批量打印文件&lt;/h2&gt;
+&lt;p&gt;由于工作关系，要批量打印word文档，在mac下，没有找到特别的办法，用libreoffice打印，文档格式有问题。&lt;/p&gt;
+&lt;p&gt;网上搜索了很多次，无果。结果，看到了一个办法，很简单，也实用。&lt;/p&gt;
+&lt;h2&gt;就是打开打印机，直接把word文档施放进去，也就是生成一个队列，好像就可以了。&lt;/h2&gt;
+&lt;p&gt;用命令行，没有找到好的办法。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;lp&lt;/strong&gt; 命令只能打印pdf和ps文件。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Fri, 24 Aug 2018 21:51:51 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2018-08-24:/2018/2018-08-24_21-51_maczhong-pi-liang-da-yin-wen-jian.html</guid><category>os</category><category>mac</category></item><item><title>黑苹果的修复</title><link>http://jackjin-cn.github.io/2018/2018-08-24_21-39_hei-ping-guo-de-xiu-fu.html</link><description>&lt;h2&gt;黑苹果的修复&lt;/h2&gt;
+&lt;p&gt;前段时间，装了个黑苹果，机器是&lt;strong&gt;nuci5 ryb&lt;/strong&gt;,效果还不错，除了wifi不能用，其它还好，声卡也没有问题，用的见网上现成的配置。&lt;/p&gt;
+&lt;p&gt;前几天，&lt;em&gt;手贱&lt;/em&gt;一下，把clover升级到最新版本（不是配置程序，是启动器），结果不能启动，死机，弄好好几次不行，试着在windows下，把esp分区的文件恢复，也没有。&lt;/p&gt;
+&lt;h3&gt;其实没有特别的原因，估计是 &lt;em&gt;EFI&lt;/em&gt; 分别的启动程序有问题了。弄了好几次，差点放弃了。&lt;/h3&gt;
+&lt;p&gt;今天心血来潮，想着把那块安装macos的分区的硬盘拆下，接到移动硬盘，然后联到MBP上，看到分区内容，还有以前efi文件的多个备份，想想有门啊。先重新安装了clover启动程序，当然是装在这个硬盘的分区上，然后把以前好用的EFI的备份复制过去，然后把硬盘装回去，一切ok，久违的启动画面出现了，太高兴了。&lt;/p&gt;
+&lt;h3&gt;作为有升级强迫症的人，有些重要的东西，稳定就好，不必追新，以后再也不要&lt;em&gt;手贱&lt;/em&gt;了 …&lt;/h3&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Fri, 24 Aug 2018 21:39:29 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2018-08-24:/2018/2018-08-24_21-39_hei-ping-guo-de-xiu-fu.html</guid><category>黑苹果</category><category>折腾</category></item><item><title>find 查找满足多个条件的文件</title><link>http://jackjin-cn.github.io/2018/2018-07-17_12-38_find-cha-zhao-man-zu-duo-ge-tiao-jian-de-wen-jian.html</link><description>&lt;h1&gt;用find 查找满足多个条件的文件&lt;/h1&gt;
 &lt;p&gt;网上看了教程，find 可以添加 -o 作为或者条件，我试了一下，-a 表示 and,居然也是可以的&lt;/p&gt;
 &lt;h2&gt;更正，昨天看了一个教程，原来find的条件默认是and这样的关系。&lt;/h2&gt;
 &lt;h2&gt;下面就是找出文件名同时满足三个条件的用法，其它更高级的用法可以自行搜索&lt;/h2&gt;
@@ -221,26 +231,4 @@ git push -u origin master 重新远程与本地对应
 
 
 &lt;p&gt;就可以在vim中方便的打开设置好的目录下的文件， &lt;strong&gt; 《Vim实用技巧》  &lt;/strong&gt; 还有更多的技巧，可以值得去看看。&lt;/p&gt;
-&lt;p&gt;另外，在网上无意中发现《Vim实用技巧》的作者的博客&lt;a href="http://easwy.com/blog/"&gt;易水博客&lt;/a&gt;,值得一看。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Fri, 08 Jan 2016 15:07:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-08:/2016/2016-01-08_15-07_vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian.html</guid><category>vim</category><category>文件</category><category>find</category><category>path</category></item><item><title>修改pelican所支持的内容文件的扩展名</title><link>http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html</link><description>&lt;h2&gt;修改pelican所支持的内容文件的扩展名&lt;/h2&gt;
-&lt;p&gt;pelican的内容文本文件只支持常见markdown的扩展名&lt;code&gt;markdown,md,mkd&lt;/code&gt;等，我比较喜欢用vim制作自己的文件模板，这样就需要自己取文件扩展名，比如*.blog，前几天没想到办法，今天找到办法了。&lt;/p&gt;
-&lt;p&gt;用grep 在 &lt;strong&gt;/usr/local/lib/python2.7/dist-packages/pelican&lt;/strong&gt; 找了下&lt;strong&gt;md&lt;/strong&gt;&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$/usr/local/lib/python2.7/dist-packages/pelican$ grep &amp;#39;md&amp;#39; *.py
-结果如下：
-readers.py:    file_extensions = [&amp;#39;md&amp;#39;, &amp;#39;markdown&amp;#39;, &amp;#39;mkd&amp;#39;, &amp;#39;mdown&amp;#39;]
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;于是只是修改&lt;code&gt;readers.py&lt;/code&gt;，加入自己想要的扩展名就可以了。&lt;/p&gt;
-&lt;p&gt;我没有找到其它办法，不过这个方法还算方便吧。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Wed, 06 Jan 2016 19:58:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-06:/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html</guid><category>pelican</category><category>文件名</category><category>markdown</category><category>bash</category></item><item><title>在linux下把cp936转成utf-8</title><link>http://jackjin-cn.github.io/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html</link><description>&lt;h2&gt;在linux下把cp936转成utf-8&lt;/h2&gt;
-&lt;p&gt;今天需要把原来写的文字用博客的形式发布，用pelican转换的第一个问题就是文件的内码格式不到，原来是 &lt;strong&gt;cp936&lt;/strong&gt; (中文ASCII)的形式，需要转成&lt;strong&gt;utf-8&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;网上找了一下，可以用&lt;code&gt;iconv&lt;/code&gt; 这个工具，不过不支持批量转换，于是又搜了一下，用bash写了一个，在此记录一下。
-另外说明一下，&lt;strong&gt;iconv&lt;/strong&gt; 不支持自动识别文件编码，要手动指定&lt;/p&gt;
-&lt;table class="highlighttable"&gt;&lt;tr&gt;&lt;td class="linenos"&gt;&lt;div class="linenodiv"&gt;&lt;pre&gt;1
-2
-3
-4&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; file in *.txt 
-    &lt;span class="k"&gt;do&lt;/span&gt; iconv -c -f gb18030 -t utf8 &lt;span class="nv"&gt;$file&lt;/span&gt; -o &lt;span class="nv"&gt;$file&lt;/span&gt;.uu
-&lt;span class="k"&gt;done&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Wed, 06 Jan 2016 19:43:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-06:/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html</guid><category>linux</category><category>bash</category><category>code</category><category>中文</category></item></channel></rss>
+&lt;p&gt;另外，在网上无意中发现《Vim实用技巧》的作者的博客&lt;a href="http://easwy.com/blog/"&gt;易水博客&lt;/a&gt;,值得一看。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Fri, 08 Jan 2016 15:07:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-08:/2016/2016-01-08_15-07_vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian.html</guid><category>vim</category><category>文件</category><category>find</category><category>path</category></item></channel></rss>

@@ -1,132 +1,157 @@
-
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="" />
+        <meta charset="utf-8" />
+        <title>Jackjin's Home - 天地一沙鸥</title>
+        <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/main.css" />
+        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home RSS Feed" />
 
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/stylesheet/style.min.css">
-
-  <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/pygments/github.min.css">
-  <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/font-awesome/css/font-awesome.min.css">
-
-
-
-    <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home RSS">
-
-
-<!-- Google Analytics -->
-<script type="text/javascript">
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-72007782-1', 'auto');
-  ga('send', 'pageview');
-</script>
-<!-- End Google Analytics -->
-
-    <meta name="author" content="天地一沙鸥" />
-    <meta name="description" content="" />
-<meta property="og:site_name" content="Jackjin's Home"/>
-<meta property="og:type" content="blog"/>
-<meta property="og:title" content="Jackjin's Home"/>
-<meta property="og:description" content=""/>
-<meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="http://jackjin-cn.github.io"/>
-
-  <title>Jackjin's Home &ndash;     Posts by 天地一沙鸥
-:</title>
-
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 </head>
-<body>
-  <aside>
-    <div>
-      <a href="http://jackjin-cn.github.io">
-        <img src="http://jackjin-cn.github.io/theme/img/profile.png" alt="" title="">
-      </a>
-      <h1><a href="http://jackjin-cn.github.io"></a></h1>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://jackjin-cn.github.io/">Jackjin's Home </a></h1>
+                <nav><ul>
+                    <li><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
+                    <li><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
+                    <li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/dian-nao.html">电脑</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/linux.html">linux</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/python.html">python</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/shell.html">shell</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/vim.html">vim</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/za-gan.html">杂感</a></li>
+                    <li><a href="http://jackjin-cn.github.io/category/za-lei.html">杂类</a></li>
+                </ul>
+                </nav>
+        </header><!-- /#banner -->
+
+                <section id="content" class="body">
+                    <ol id="posts-list" class="hfeed" start="3">
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html" rel="bookmark"
+                           title="Permalink to 关于在pelican的date中使用中文的问题">关于在pelican的date中使用中文的问题</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <span>2016-01-02 星期六 19:46</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a><a href="http://jackjin-cn.github.io/tag/python.html">python</a><a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a><a href="http://jackjin-cn.github.io/tag/zhong-wen.html">中文</a></span>
+</footer><!-- /.post-info -->                <h1>关于在pelican的date中使用中文的问题</h1>
+<p>想在pelican的date中应用如下格式</p>
+<blockquote>
+<p>2016-01-02 星期六 19:31</p>
+</blockquote>
+<p>结果在'make html'时出现如下错误：</p>
+<div class="highlight"><pre><span></span><span class="n">ValueError</span><span class="o">:</span> <span class="n">u</span><span class="s1">&#39;2016-01-02 \u661f\u671f\u516d 19:36&#39;</span> <span class="k">is</span> <span class="n">not</span> <span class="n">a</span> <span class="n">valid</span> <span class="n">date</span>
+</pre></div>
 
 
-      <nav>
-        <ul class="list">
-
-          <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
-          <li><a href="http://python.org/" target="_blank">Python.org</a></li>
-          <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
-          <li><a href="http://kevinyoung.gitcafe.io" target="_blank">煎挠橙的blog</a></li>
-        </ul>
-      </nav>
-
-      <ul class="social">
-        <li><a class="sc-aaa" href="#" target="_blank"><i class="fa fa-aaa"></i></a></li>
-        <li><a class="sc-Another social link" href="#" target="_blank"><i class="fa fa-Another social link"></i></a></li>
-      </ul>
-    </div>
+<p>应该是python2的utf-8中文支持的老问题了</p>
+<p>不过，我发现，想要上面的日期格式，只需要在 <strong>pelicanconf.py</strong>中如下设置:</p>
+<div class="highlight"><pre><span></span>DEFAULT_DATE_FORMAT = u&#39;%Y-%m-%d %A %H:%M&#39;
+</pre></div>
 
 
-  </aside>
-  <main>
+<p>pelican会在时间里加上星期几了</p>
+<p>这个软件做得还是很人性化的了。</p>
+                <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html">read more</a>
+<p><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-36_strftimede-yi-dian-yong-fa.html" rel="bookmark"
+                           title="Permalink to strftime的一点用法">strftime的一点用法</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <span>2016-01-02 星期六 19:36</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a><a href="http://jackjin-cn.github.io/tag/time.html">time</a></span>
+</footer><!-- /.post-info -->                <h1>strftime的一点用法</h1>
+<p>最近想写，用<strong>Vim</strong>进行编辑，想设置加入时间的快捷方式</p>
+<div class="highlight"><pre><span></span>map &lt;LEADER&gt;bt A&lt;C-R&gt;=strftime(&quot;%Y-%m-%d %A %H:%M&quot;)&lt;CR&gt;
+</pre></div>
 
 
+<p>效果如下:</p>
+<div class="highlight"><pre><span></span>2016-01-02 星期六 19:39
+</pre></div>
+                <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-02_19-36_strftimede-yi-dian-yong-fa.html">read more</a>
+<p><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-36_strftimede-yi-dian-yong-fa.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
 
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://jackjin-cn.github.io/2015/2015-12-31_21-24_2015nian-sui-wei.html" rel="bookmark"
+                           title="Permalink to 2015年岁未">2015年岁未</a></h1>
+                </header>
 
-<article>
-  <header>
-    <h2><a href="http://jackjin-cn.github.io/2015/2015-12-31_21-24_2015nian-sui-wei.html#2015nian-sui-wei">2015年岁未</a></h2>
-    <p>
-          Posted on 2015-12-31 星期四 21:24 in <a href="http://jackjin-cn.github.io/category/za-lei.html">杂类</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://jackjin-cn.github.io/tag/xin-qing.html">心情</a>,              <a href="http://jackjin-cn.github.io/tag/sui-bi.html">随笔</a>
-    </p>
-  </header>
-  <div>
-      <h1>今天是特别的一天</h1>
+                <div class="entry-content">
+<footer class="post-info">
+        <span>2015-12-31 星期四 21:24</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/xin-qing.html">心情</a><a href="http://jackjin-cn.github.io/tag/sui-bi.html">随笔</a></span>
+</footer><!-- /.post-info -->                <h1>今天是特别的一天</h1>
 <p><strong>我还是属于技术宅</strong></p>
-      <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2015/2015-12-31_21-24_2015nian-sui-wei.html#2015nian-sui-wei">    Continue reading
-</a>
-  </div>
-</article>
+                <a class="readmore" href="http://jackjin-cn.github.io/2015/2015-12-31_21-24_2015nian-sui-wei.html">read more</a>
+<p><a href="http://jackjin-cn.github.io/2015/2015-12-31_21-24_2015nian-sui-wei.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
+            </ol><!-- /#posts-list -->
+<p class="paginator">
+        <a href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou7.html">&laquo;</a>
+    Page 8 / 8
+</p>
+            </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="http://kevinyoung.gitcafe.io">煎挠橙的blog</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
 
-  <div class="pagination">
-    <a class="btn float-right" href="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou7.html">
-          Newer Posts
- <i class="fa fa-angle-right"></i>
-    </a>
-  </div>
+                            <li><a href="#">aiwanke</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
 
+        <footer id="contentinfo" class="body">
+                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
+        </footer><!-- /#contentinfo -->
 
-
-
-    <footer>
-<p>&copy;  </p>
-<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
-</p>    </footer>
-  </main>
-
-
-
-
-<script type="application/ld+json">
-{
-  "@context" : "http://schema.org",
-  "@type" : "Blog",
-  "name": " Jackjin's Home ",
-  "url" : "http://jackjin-cn.github.io",
-  "image": "",
-  "description": ""
-}
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72007782-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+<script type="text/javascript">
+    var disqus_shortname = 'jackjin';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
 </script>
-
 </body>
 </html>
