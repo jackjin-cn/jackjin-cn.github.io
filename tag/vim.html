@@ -79,6 +79,79 @@
 
 <article>
   <header>
+    <h2><a href="http://jackjin-cn.github.io/2018/2018-07-02_22-07_pelican-shang-chuan-dao-github.html#pelican-shang-chuan-dao-github">Pelican 上传到github</a></h2>
+    <p>
+          Posted on 2018-07-02 星期一 22:07 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a>,              <a href="http://jackjin-cn.github.io/tag/github.html">github</a>,              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>,              <a href="http://jackjin-cn.github.io/tag/python.html">python</a>
+    </p>
+  </header>
+  <div>
+      <h1>Pelican 上传到github</h1>
+<p>折腾了半天，应该可以在几台电脑上上传博客内容了吧。</p>
+<h3>初始部分</h3>
+<div class="highlight"><pre><span></span>git init
+git add .
+git commit
+git remote add origin https://github.com/jackjin-cn/jackjin-cn.github.io.git
+
+#先取回云端内容
+git pull origin master
+git commit
+git push origin master #可以加参数 -f
+</pre></div>
+
+
+<h2>我的上传博客到githubio的脚本</h2>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">cd</span> ~/pelicanoutput/blog
+makeriji
+git …</pre></div></td></tr></table>
+      <br>
+      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-07-02_22-07_pelican-shang-chuan-dao-github.html#pelican-shang-chuan-dao-github">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html#vim-zhong-cha-ru-ri-qi">Vim 中插入日期</a></h2>
+    <p>
+          Posted on 2018-07-02 星期一 12:34 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>,              <a href="http://jackjin-cn.github.io/tag/script.html">script</a>,              <a href="http://jackjin-cn.github.io/tag/tips.html">tips</a>
+    </p>
+  </header>
+  <div>
+      <h1>Vim 中插入日期</h1>
+<h2>1. 写blog的时候要前几行插入固定的内容，时间找到以下的脚本</h2>
+<div class="highlight"><pre><span></span>function! TitleInsert()
+call setline(1,&quot;Title:&quot;)
+call setline(2,&quot;Date: &quot;. strftime(&quot;%Y-%m-%d %H:%M:%S&quot;))
+call setline(3,&quot;Modified: &quot;)
+&quot;call setline(3,&quot;Modified: &quot;. strftime(&quot;%Y-%m-%d %H:%M:%S&quot;))
+call setline(4,&quot;Category:  &quot;)
+call setline(5,&quot;Tags: &quot;)
+call setline(6,&quot;Author:天地一沙鸥 …</pre></div>
+      <br>
+      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html#vim-zhong-cha-ru-ri-qi">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://jackjin-cn.github.io/2018/2018-07-01_22-42_pi-liang-cp936toutf8.html#pi-liang-cp936toutf8">批量cp936toutf8</a></h2>
     <p>
           Posted on 2018-07-01 星期日 22:42 in <a href="http://jackjin-cn.github.io/category/python.html">python</a>
@@ -129,93 +202,25 @@
 </article>
 <article>
   <header>
-    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html#zai-vimzhong-yong-pandocjin-xing-yu-lan">在vim中用pandoc进行预览</a></h2>
+    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html#vimde-verboseming-ling">vim的verbose命令</a></h2>
     <p>
-          Posted on 2016-01-05 星期二 17:37 in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
+          Posted on 2016-01-19 星期二 10:00 in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
 
 
           &#8226;     Tagged with
 
-              <a href="http://jackjin-cn.github.io/tag/ruan-jian.html">软件</a>,              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>,              <a href="http://jackjin-cn.github.io/tag/pandoc.html">pandoc</a>,              <a href="http://jackjin-cn.github.io/tag/html.html">html</a>
+              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>
     </p>
   </header>
   <div>
-      <h2>在vim中用pandoc进行预览</h2>
-<div class="highlight"><pre><span></span>&quot;----------生成打包图片的单一html文件
-map &amp;lt;LEADER&amp;gt;mh &amp;lt;ESC&amp;gt;:w&amp;lt;CR&amp;gt;&amp;lt;ESC&amp;gt;:silent !pandoc  -s --self-contained % -c paht/to/style.css -o %:r.html&amp;lt;CR&amp;gt;
+      <p>在鼓捣autocmd的时候，看到vim的audocmd的帮助</p>
+<div class="highlight"><pre><span></span>set verbose=9
 </pre></div>
 
 
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html">参见《pandoc的用法（1）》</a></p>
+<p>发现有很多额外的显示，值得一看，也能发现很多非常有意思的东西！</p>
       <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html#zai-vimzhong-yong-pandocjin-xing-yu-lan">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html#pandocde-yong-fa-1">pandoc的用法（1）</a></h2>
-    <p>
-          Posted on 2016-01-05 星期二 17:28 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://jackjin-cn.github.io/tag/pandoc.html">pandoc</a>,              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>,              <a href="http://jackjin-cn.github.io/tag/html.html">html</a>,              <a href="http://jackjin-cn.github.io/tag/css.html">css</a>
-    </p>
-  </header>
-  <div>
-      <h2>pandoc的用法（1）</h2>
-<p>用vim写markdown，自己在.vimrc里也写快捷命令进行预览，感觉还是很方便的。</p>
-<blockquote>
-<p>pandoc在生成html文件的时候，可以支持css，还可以生成单独的文件，包含在图片里面。</p>
-</blockquote>
-<div class="highlight"><pre><span></span>pandoc -c style.css  #包含css样式（可以包括路径,但html和css是分离）
-pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含在一个html文件中,生成docx文件也可以用这个参数，图片被包含在docx文件中）
-</pre></div>
-
-
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html">参见我在vim中用pandoc进行预览</a></p>
-      <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html#pandocde-yong-fa-1">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html#guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti">关于在pelican的date中使用中文的问题</a></h2>
-    <p>
-          Posted on 2016-01-02 星期六 19:46 in <a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>,              <a href="http://jackjin-cn.github.io/tag/python.html">python</a>,              <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a>,              <a href="http://jackjin-cn.github.io/tag/zhong-wen.html">中文</a>
-    </p>
-  </header>
-  <div>
-      <h1>关于在pelican的date中使用中文的问题</h1>
-<p>想在pelican的date中应用如下格式</p>
-<blockquote>
-<p>2016-01-02 星期六 19:31</p>
-</blockquote>
-<p>结果在'make html'时出现如下错误：</p>
-<div class="highlight"><pre><span></span><span class="n">ValueError</span><span class="o">:</span> <span class="n">u</span><span class="s1">&#39;2016-01-02 \u661f\u671f\u516d 19:36&#39;</span> <span class="k">is</span> <span class="n">not</span> <span class="n">a</span> <span class="n">valid</span> <span class="n">date</span>
-</pre></div>
-
-
-<p>应该是python2的utf-8中文支持的老问题了</p>
-<p>不过，我发现，想要上面的日期格式，只需要在 <strong>pelicanconf.py</strong>中如下设置:</p>
-<div class="highlight"><pre><span></span>DEFAULT_DATE_FORMAT = u&#39;%Y-%m-%d %A %H:%M&#39;
-</pre></div>
-
-
-<p>pelican会在时间里加上星期几了</p>
-<p>这个软件做得还是很人性化的了。</p>
-      <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html#guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti">    Continue reading
+      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html#vimde-verboseming-ling">    Continue reading
 </a>
   </div>
 </article>

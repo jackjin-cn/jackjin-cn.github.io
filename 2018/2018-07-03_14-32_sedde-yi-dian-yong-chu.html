@@ -1,48 +1,103 @@
+
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-        <meta charset="utf-8" />
-        <title>sed的一点用处</title>
-        <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/main.css" />
-        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home RSS Feed" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/font-awesome/css/font-awesome.min.css">
+
+
+
+    <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home RSS">
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72007782-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+
+<meta name="author" content="天地一沙鸥" />
+<meta name="description" content="sed的一点用处 最近在弄pelican 与 github的博客，下载很不要模板，更换很不方便，想能不能用命令修改，google一下，还是真有办法的。 提醒不要用mac osx 自带的sed 我用brew 安装了gnu-sed gsed -i 99c\jtheme=&#34;theme_name&#34; pelianconf.py -i 表示直接修改文件 99c\jtheme=&#34;theme_name&#34; 表示将99行的内容直接替换(c)成jtheme=&#34;theme_name&#34; \是起一个分隔的作用。 有不明白的地方可以看教程，语法有点类似vim ```` ## 下面是我自己用的脚本，在选中的theme的目录下运行 !/usr/bin/env python3 -- coding: utf-8 -- import os cwd=os.getcwd() path=(cwd.split(&#39;/&#39;)) cfname …" />
+<meta name="keywords" content="文件处理, linux, mac">
+
+<meta property="og:site_name" content="Jackjin's Home"/>
+<meta property="og:title" content="sed的一点用处"/>
+<meta property="og:description" content="sed的一点用处 最近在弄pelican 与 github的博客，下载很不要模板，更换很不方便，想能不能用命令修改，google一下，还是真有办法的。 提醒不要用mac osx 自带的sed 我用brew 安装了gnu-sed gsed -i 99c\jtheme=&#34;theme_name&#34; pelianconf.py -i 表示直接修改文件 99c\jtheme=&#34;theme_name&#34; 表示将99行的内容直接替换(c)成jtheme=&#34;theme_name&#34; \是起一个分隔的作用。 有不明白的地方可以看教程，语法有点类似vim ```` ## 下面是我自己用的脚本，在选中的theme的目录下运行 !/usr/bin/env python3 -- coding: utf-8 -- import os cwd=os.getcwd() path=(cwd.split(&#39;/&#39;)) cfname …"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-07-03 14:32:35+08:00"/>
+<meta property="article:modified_time" content="2018-07-03 15:02:59+08:00"/>
+<meta property="article:author" content="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">
+<meta property="article:section" content="软件"/>
+<meta property="article:tag" content="文件处理"/>
+<meta property="article:tag" content="linux"/>
+<meta property="article:tag" content="mac"/>
+<meta property="og:image" content="">
+
+  <title>Jackjin's Home &ndash; sed的一点用处</title>
+
 </head>
+<body>
+  <aside>
+    <div>
+      <a href="http://jackjin-cn.github.io">
+        <img src="http://jackjin-cn.github.io/theme/img/profile.png" alt="" title="">
+      </a>
+      <h1><a href="http://jackjin-cn.github.io"></a></h1>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="http://jackjin-cn.github.io/">Jackjin's Home </a></h1>
-                <nav><ul>
-                    <li><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
-                    <li><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
-                    <li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/dian-nao.html">电脑</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/linux.html">linux</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/python.html">python</a></li>
-                    <li class="active"><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/shell.html">shell</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/vim.html">vim</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/za-gan.html">杂感</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/za-lei.html">杂类</a></li>
-                </ul>
-                </nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="http://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html" rel="bookmark"
-           title="Permalink to sed的一点用处">sed的一点用处</a></h1>
-    </header>
 
-    <div class="entry-content">
-<footer class="post-info">
-        <span>2018-07-03 星期二 14:32</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/wen-jian-chu-li.html">文件处理</a><a href="http://jackjin-cn.github.io/tag/linux.html">linux</a><a href="http://jackjin-cn.github.io/tag/mac.html">mac</a></span>
-</footer><!-- /.post-info -->      <h1>sed的一点用处</h1>
+      <nav>
+        <ul class="list">
+
+          <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
+          <li><a href="http://python.org/" target="_blank">Python.org</a></li>
+          <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
+          <li><a href="http://kevinyoung.gitcafe.io" target="_blank">煎挠橙的blog</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-aaa" href="#" target="_blank"><i class="fa fa-aaa"></i></a></li>
+        <li><a class="sc-Another social link" href="#" target="_blank"><i class="fa fa-Another social link"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="sedde-yi-dian-yong-chu">sed的一点用处</h1>
+    <p>
+          Posted on 2018-07-03 星期二 14:32 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <h1>sed的一点用处</h1>
 <p>最近在弄pelican 与 github的博客，下载很不要模板，更换很不方便，想能不能用命令修改，google一下，还是真有办法的。</p>
 <h2>提醒不要用mac osx 自带的sed</h2>
 <h2>我用brew 安装了gnu-sed</h2>
@@ -67,66 +122,55 @@ cmd="gsed -i '99c\jtheme=" + '"'+path[-1]+'"'+"' "+cfname
 print(cmd)
 os.system(cmd)</p>
 <p>```</p>
-    </div><!-- /.entry-content -->
-    <div class="comments">
-      <h2>Comments !</h2>
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-        var disqus_identifier = "2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html";
-        var disqus_url = "http://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html";
-        (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//jackjin.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
-    </div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://jackjin-cn.github.io/tag/wen-jian-chu-li.html">文件处理</a>
+      <a href="http://jackjin-cn.github.io/tag/linux.html">linux</a>
+      <a href="http://jackjin-cn.github.io/tag/mac.html">mac</a>
+    </p>
+  </div>
 
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="http://kevinyoung.gitcafe.io">煎挠橙的blog</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
 
-                            <li><a href="#">aiwanke</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
 
-        <footer id="contentinfo" class="body">
-                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
-        </footer><!-- /#contentinfo -->
 
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-72007782-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
+
+<!-- Disqus -->
+<div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'jackjin';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
 </script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+<!-- End Disqus -->
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " Jackjin's Home ",
+  "url" : "http://jackjin-cn.github.io",
+  "image": "",
+  "description": ""
+}
+</script>
+
 </body>
 </html>

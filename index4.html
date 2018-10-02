@@ -78,26 +78,121 @@
 
 <article>
   <header>
-    <h2><a href="http://jackjin-cn.github.io/2015/2015-12-31_21-24_2015nian-sui-wei.html#2015nian-sui-wei">2015年岁未</a></h2>
+    <h2><a href="http://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html#zai-ci-pei-zhi-pelicanxie-bo-ke">再次配置pelican写博客</a></h2>
     <p>
-          Posted on 2015-12-31 星期四 21:24 in <a href="http://jackjin-cn.github.io/category/za-lei.html">杂类</a>
+          Posted on 2018-07-01 星期日 20:13 in <a href="http://jackjin-cn.github.io/category/python.html">python</a>
 
 
           &#8226;     Tagged with
 
-              <a href="http://jackjin-cn.github.io/tag/xin-qing.html">心情</a>,              <a href="http://jackjin-cn.github.io/tag/sui-bi.html">随笔</a>
+              <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a>,              <a href="http://jackjin-cn.github.io/tag/zhe-teng.html">折腾</a>
     </p>
   </header>
   <div>
-      <h1>今天是特别的一天</h1>
-<p><strong>我还是属于技术宅</strong></p>
+      <h1>今天再次折腾一下，争取在三个机器上可以使用。</h1>
+<p>在～目前建立下面的目录了</p>
+<blockquote>
+<p>Pelicanoutput</p>
+<blockquote>
+<p>blog #blog的输出网页</p>
+<p>riji 同上</p>
+<p>pelican</p>
+<blockquote>
+<p>pelican-plugins</p>
+<p>pelican-theme</p>
+</blockquote>
+<p>riji-pelicanconf.py</p>
+<p>blog-pelicanconf.py</p>
+</blockquote>
+</blockquote>
+<h2>另外，还改到了 python 库中的 <em>pelican</em> 中 <strong>reader.py</strong> 中内容 增加了 'cal' ,'blog' 的文件的扩展名，前面有写过的。</h2>
       <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2015/2015-12-31_21-24_2015nian-sui-wei.html#2015nian-sui-wei">    Continue reading
+      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html#zai-ci-pei-zhi-pelicanxie-bo-ke">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html#thinkpad-l440-de-wifi-debian-wang-qia-qu-dong">thinkpad L440 的wifi debian 网卡驱动</a></h2>
+    <p>
+          Posted on 2016-01-24 星期日 18:41 in <a href="http://jackjin-cn.github.io/category/linux.html">linux</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://jackjin-cn.github.io/tag/debian.html">debian</a>,              <a href="http://jackjin-cn.github.io/tag/linux.html">linux</a>,              <a href="http://jackjin-cn.github.io/tag/wifi.html">wifi</a>,              <a href="http://jackjin-cn.github.io/tag/qu-dong.html">驱动</a>,              <a href="http://jackjin-cn.github.io/tag/realtek.html">realtek</a>
+    </p>
+  </header>
+  <div>
+      <h2>thinkpad L400 的wifi debian 网卡驱动</h2>
+<p>今天又弄起了<strong>thinkpad l440</strong>,无线网卡驱动有问题，连上后马上会断线，网上搜了半天，方案很多，好像不太成功。无线网卡的型号是 realtak 8192ee.</p>
+<p>今天偶然发现，几个命令</p>
+<div class="highlight"><pre><span></span>lsmod |grep rtl
+发现胡乱加载好几个网卡驱动
+便用 modprobe -r rtlwifi 这样的命令删除多余的驱动。
+最后发现管用的好像是下载的 realtek_new 管用，具体驱动名是 8192ee.
+modprobe 8192ee
+</pre></div>
+      <br>
+      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html#thinkpad-l440-de-wifi-debian-wang-qia-qu-dong">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html#vimde-verboseming-ling">vim的verbose命令</a></h2>
+    <p>
+          Posted on 2016-01-19 星期二 10:00 in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>
+    </p>
+  </header>
+  <div>
+      <p>在鼓捣autocmd的时候，看到vim的audocmd的帮助</p>
+<div class="highlight"><pre><span></span>set verbose=9
+</pre></div>
+
+
+<p>发现有很多额外的显示，值得一看，也能发现很多非常有意思的东西！</p>
+      <br>
+      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html#vimde-verboseming-ling">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html#vimzhong-de-autocmd">vim中的autocmd</a></h2>
+    <p>
+          Posted on 2016-01-19 星期二 08:58 in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://jackjin-cn.github.io/tag/autocmd.html">autocmd</a>,              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>
+    </p>
+  </header>
+  <div>
+      <p>原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保存后才能高亮，也试过autocmd的其它形式，也是不行，不过，昨天在尝试autocmd的时候，无意中发发现了解决办法。</p>
+<div class="highlight"><pre><span></span>autocmd BufReadpre *.mytext set syn=mytext
+mytext是指代自己定义的文件格式和语法文件
+</pre></div>
+      <br>
+      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html#vimzhong-de-autocmd">    Continue reading
 </a>
   </div>
 </article>
 
   <div class="pagination">
+    <a class="btn float-left" href="http://jackjin-cn.github.io/index5.html">
+      <i class="fa fa-angle-left"></i>     Older Posts
+
+    </a>
     <a class="btn float-right" href="http://jackjin-cn.github.io/index3.html">
           Newer Posts
  <i class="fa fa-angle-right"></i>

@@ -41,7 +41,7 @@
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="http://jackjin-cn.github.io"/>
 
-  <title>Jackjin's Home &ndash;     Tag find
+  <title>Jackjin's Home &ndash;     Tag pdf
 </title>
 
 </head>
@@ -79,54 +79,56 @@
 
 <article>
   <header>
-    <h2><a href="http://jackjin-cn.github.io/2018/2018-07-17_12-38_find-cha-zhao-man-zu-duo-ge-tiao-jian-de-wen-jian.html#find-cha-zhao-man-zu-duo-ge-tiao-jian-de-wen-jian">find 查找满足多个条件的文件</a></h2>
+    <h2><a href="http://jackjin-cn.github.io/2018/2018-10-02_19-55_pdfzhuan-tu-pian-tu-pian-zhuan-pdftu-pian-ya-suo.html#pdfzhuan-tu-pian-tu-pian-zhuan-pdftu-pian-ya-suo">pdf转图片，图片转pdf，图片压缩</a></h2>
     <p>
-          Posted on 2018-07-17 星期二 12:38 in <a href="http://jackjin-cn.github.io/category/shell.html">shell</a>
+          Posted on 2018-10-02 星期二 19:55 in <a href="http://jackjin-cn.github.io/category/pdf.html">pdf</a>
 
 
           &#8226;     Tagged with
 
-              <a href="http://jackjin-cn.github.io/tag/find.html">find</a>,              <a href="http://jackjin-cn.github.io/tag/wen-jian-cha-zhao.html">文件查找</a>,              <a href="http://jackjin-cn.github.io/tag/linux.html">linux</a>
+              <a href="http://jackjin-cn.github.io/tag/python.html">python</a>,              <a href="http://jackjin-cn.github.io/tag/pdf.html">pdf</a>,              <a href="http://jackjin-cn.github.io/tag/ya-suo.html">压缩</a>
     </p>
   </header>
   <div>
-      <h1>用find 查找满足多个条件的文件</h1>
-<p>网上看了教程，find 可以添加 -o 作为或者条件，我试了一下，-a 表示 and,居然也是可以的</p>
-<h2>更正，昨天看了一个教程，原来find的条件默认是and这样的关系。</h2>
-<h2>下面就是找出文件名同时满足三个条件的用法，其它更高级的用法可以自行搜索</h2>
-<blockquote>
-<p>find . -name '<em>关键词</em>' -a -name '<em>关键词2</em>' -a -name '<em>关键词</em>'</p>
-<p>加*作用是通配符，可以自行尝试。</p>
-</blockquote>
-      <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-07-17_12-38_find-cha-zhao-man-zu-duo-ge-tiao-jian-de-wen-jian.html#find-cha-zhao-man-zu-duo-ge-tiao-jian-de-wen-jian">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-08_15-07_vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian.html#vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian">vim中的find命令，打开文件很方便</a></h2>
-    <p>
-          Posted on 2016-01-08 星期五 15:07 in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>,              <a href="http://jackjin-cn.github.io/tag/wen-jian.html">文件</a>,              <a href="http://jackjin-cn.github.io/tag/find.html">find</a>,              <a href="http://jackjin-cn.github.io/tag/path.html">path</a>
-    </p>
-  </header>
-  <div>
-      <p>这几天看《Vim实用技巧》,其中介绍了 <strong>:find</strong> 命令的使用</p>
-<p>在vim的配件文件<code>.vimrc or _vimrc</code>进行如下设置</p>
-<div class="highlight"><pre><span></span>set path+=yourdir1/**,youdir2/**
+      <ol>
+<li>
+<h3>执行pdf转图片，再把图片转成pdf的脚本</h3>
+</li>
+</ol>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#参数为文件名，不含扩展.pdf </span>
+<span class="k">for</span> i in <span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="k">do</span>
+python3 app.py <span class="nv">$i</span>
+rm <span class="nv">$i</span>.pdf
+python3 makepdf.py <span class="nv">$i</span>
+rm -fr <span class="nv">$i</span>
+<span class="k">done</span>
 </pre></div>
+</td></tr></table>
 
-
-<p>就可以在vim中方便的打开设置好的目录下的文件， <strong> 《Vim实用技巧》  </strong> 还有更多的技巧，可以值得去看看。</p>
-<p>另外，在网上无意中发现《Vim实用技巧》的作者的博客<a href="http://easwy.com/blog/">易水博客</a>,值得一看。</p>
+<ol>
+<li>
+<h3>把图片转成pdf</h3>
+</li>
+</ol>
+<p>把指定目录中的图片根据名称排序，生成一个pdf文件，如果文件比较大
+时间比较长，对内存要求也比较高
+--dirname
+--makepdf.py
+--convert_dirname.pdf
+在当前目录下生成 convert_name.pdf</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1 …</pre></div></td></tr></table>
       <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-08_15-07_vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian.html#vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian">    Continue reading
+      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-10-02_19-55_pdfzhuan-tu-pian-tu-pian-zhuan-pdftu-pian-ya-suo.html#pdfzhuan-tu-pian-tu-pian-zhuan-pdftu-pian-ya-suo">    Continue reading
 </a>
   </div>
 </article>
