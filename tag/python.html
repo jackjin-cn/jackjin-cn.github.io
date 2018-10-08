@@ -79,6 +79,39 @@
 
 <article>
   <header>
+    <h2><a href="http://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html#mac-xia-bian-yi-python3-de-pythonmagickbao">mac 下编译python3 的 PythonMagick包</a></h2>
+    <p>
+          Posted on 2018-10-08 星期一 14:45 in <a href="http://jackjin-cn.github.io/category/pythonmaclib.html">python,mac,lib</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://jackjin-cn.github.io/tag/python.html">python</a>,              <a href="http://jackjin-cn.github.io/tag/mac.html">mac</a>
+    </p>
+  </header>
+  <div>
+      <h2>mac 下编译PythonMagick</h2>
+<h3>由于要压缩漫画pdf，找了很多办法，其中有用到 <em>imagemagick</em>,这个比较 好安装。</h3>
+<div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">imagemagick</span><span class="mi">@6</span>
+<span class="n">brew</span> <span class="n">link</span> <span class="n">imagemagick</span><span class="mi">@6</span> <span class="o">--</span><span class="n">force</span>
+</pre></div>
+
+
+<h3>不过，pythonmagcik这个包就比较麻烦了，windows下有编译好的二进制包，mac需要自己编译，比较麻烦，也走了不少弯路。</h3>
+<p>网上看了不少教程，自己也摸索了下，现在是能用了。</p>
+<p>代码,过程放在下面</p>
+<p>下载源码包 http://www.imagemagick.org/download/python/releases/PythonMagick-0.9.18.tar.xz
+0.9.19不行，编译没问题，但安装后，使用导入有问题。
+主要是注意python2和python3的区别</p>
+<div class="highlight"><pre><span></span><span class="n">Installing</span> <span class="n">PythonMagick …</span></pre></div>
+      <br>
+      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html#mac-xia-bian-yi-python3-de-pythonmagickbao">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://jackjin-cn.github.io/2018/2018-10-02_19-55_pdfzhuan-tu-pian-tu-pian-zhuan-pdftu-pian-ya-suo.html#pdfzhuan-tu-pian-tu-pian-zhuan-pdftu-pian-ya-suo">pdf转图片，图片转pdf，图片压缩</a></h2>
     <p>
           Posted on 2018-10-02 星期二 19:55 in <a href="http://jackjin-cn.github.io/category/pdf.html">pdf</a>
@@ -186,37 +219,6 @@ rm -fr <span class="nv">$i</span>
 </ul>
       <br>
       <a class="btn" href="http://jackjin-cn.github.io/2018/2018-07-10_22-35_antiword.html#antiword">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html#brew-zhong-qie-huan-ruan-jian-ban-ben">brew 中切换软件版本</a></h2>
-    <p>
-          Posted on 2018-07-04 星期三 12:14 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://jackjin-cn.github.io/tag/brew.html">brew</a>,              <a href="http://jackjin-cn.github.io/tag/python.html">python</a>
-    </p>
-  </header>
-  <div>
-      <h1>brew 中切换软件版本</h1>
-<p>我有更新软件的习惯，习惯性的每天更新一下。比如brew ,pip3等。</p>
-<p>这不，前天把brew 就把python 3.6.5 升级到了python 3.7了，这个是大升级，结果python库都没有了，当然可以另行安装，也很方便，反正有写了批量更新的脚本，但没有到还有兼容性的问题。</p>
-<p>网上找一堆办法，有的命令已经过期了 <em>brew versions</em>,有的太复杂，看不明白。
-后来还是找到了一个办法，提前是老版本python没有删除。</p>
-<blockquote>
-<p>brew info python3</p>
-</blockquote>
-<div class="highlight"><pre><span></span><span class="n">python</span><span class="o">:</span> <span class="n">stable</span> <span class="mf">3.7</span><span class="o">.</span><span class="mi">0</span> <span class="o">(</span><span class="n">bottled</span><span class="o">),</span> <span class="n">HEAD</span>
-<span class="n">Interpreted</span><span class="o">,</span> <span class="n">interactive</span><span class="o">,</span> <span class="n">object</span><span class="o">-</span><span class="n">oriented</span> <span class="n">programming</span> <span class="n">language</span>
-<span class="n">https</span><span class="o">://</span><span class="n">www</span><span class="o">.</span><span class="na">python</span><span class="o">.</span><span class="na">org</span><span class="o">/</span>
-<span class="sr">/usr …</span></pre></div>
-      <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html#brew-zhong-qie-huan-ruan-jian-ban-ben">    Continue reading
 </a>
   </div>
 </article>

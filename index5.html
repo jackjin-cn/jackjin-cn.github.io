@@ -78,6 +78,29 @@
 
 <article>
   <header>
+    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html#vimzhong-de-autocmd">vim中的autocmd</a></h2>
+    <p>
+          Posted on 2016-01-19 星期二 08:58 in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://jackjin-cn.github.io/tag/autocmd.html">autocmd</a>,              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>
+    </p>
+  </header>
+  <div>
+      <p>原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保存后才能高亮，也试过autocmd的其它形式，也是不行，不过，昨天在尝试autocmd的时候，无意中发发现了解决办法。</p>
+<div class="highlight"><pre><span></span>autocmd BufReadpre *.mytext set syn=mytext
+mytext是指代自己定义的文件格式和语法文件
+</pre></div>
+      <br>
+      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html#vimzhong-de-autocmd">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://jackjin-cn.github.io/2016/2016-01-11_22-11_cygwin.html#cygwin">cygwin</a></h2>
     <p>
           Posted on 2016-01-11 星期一 22:11 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
@@ -171,35 +194,6 @@
 <p>用法上和linux版的没有区别，不过，有一点要注意是要把<strong><code>单引号'</code>换成<code>双引号"</code></strong></p>
       <br>
       <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html#awkwen-ben-gong-ju-de-xue-xi">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html#git-ben-di-shan-chu-hou-de-wen-ti">git 本地删除后的问题</a></h2>
-    <p>
-          Posted on 2016-01-08 星期五 23:09 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://jackjin-cn.github.io/tag/git.html">git</a>
-    </p>
-  </header>
-  <div>
-      <h2>git 本地删除后的问题</h2>
-<p>在用pelican生成网页的时假，如果不小心用<code>make clean</code>的话，会把<strong>.git</strong>删除，就会产生配对问题，需要重新配对。</p>
-<p>对于网页不需要保留远程文件，所以就如下操作</p>
-<div class="highlight"><pre><span></span>git init
-git add .
-git commit -m &#39;update&#39;
-git remote rm origin
-git push --force origin master  强制推送
-git push -u origin master 重新远程与本地对应
-</pre></div>
-      <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html#git-ben-di-shan-chu-hou-de-wen-ti">    Continue reading
 </a>
   </div>
 </article>

@@ -79,6 +79,56 @@
 
 <article>
   <header>
+    <h2><a href="http://jackjin-cn.github.io/2018/2018-07-01_22-42_pi-liang-cp936toutf8.html#pi-liang-cp936toutf8">批量cp936toutf8</a></h2>
+    <p>
+          Posted on 2018-07-01 星期日 22:42 in <a href="http://jackjin-cn.github.io/category/python.html">python</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://jackjin-cn.github.io/tag/unicode.html">unicode</a>,              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>,              <a href="http://jackjin-cn.github.io/tag/encoding.html">encoding</a>
+    </p>
+  </header>
+  <div>
+      <h2>今天在用pelican转网页的时候，原来在<strong>windows</strong>下写的文件，代码是<strong>cp936</strong>，识别不了，要转成<strong>utf8</strong>格式。</h2>
+<p>通过搜索找到了以下代码</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="k">for</span> i in <span class="sb">`</span>find . -name <span class="s2">&quot;*.cal&quot;</span><span class="sb">`</span>
+<span class="k">do</span>
+    vim -s ~/bin/cp936-utf8.vi <span class="nv">$i</span>
+<span class="k">done</span>
+
+用写一段vim用的vi命令就可以了
+</pre></div>
+</td></tr></table>
+
+<div class="highlight"><pre><span></span>&quot;cp936-utf8.vi&quot;
+:set fileencoding=utf8
+:wq!
+</pre></div>
+
+
+<p>懂vim的看的懂，这两句做了两件事</p>
+<ul>
+<li>设置文件编码</li>
+<li>保存写入</li>
+</ul>
+<h3>另外也学习了  <strong>find</strong> 的用法</h3>
+<div class="highlight"><pre><span></span>find . -name …</pre></div>
+      <br>
+      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-07-01_22-42_pi-liang-cp936toutf8.html#pi-liang-cp936toutf8">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html#zai-ci-pei-zhi-pelicanxie-bo-ke">再次配置pelican写博客</a></h2>
     <p>
           Posted on 2018-07-01 星期日 20:13 in <a href="http://jackjin-cn.github.io/category/python.html">python</a>
@@ -162,29 +212,6 @@ modprobe 8192ee
 <p>发现有很多额外的显示，值得一看，也能发现很多非常有意思的东西！</p>
       <br>
       <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html#vimde-verboseming-ling">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html#vimzhong-de-autocmd">vim中的autocmd</a></h2>
-    <p>
-          Posted on 2016-01-19 星期二 08:58 in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://jackjin-cn.github.io/tag/autocmd.html">autocmd</a>,              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>
-    </p>
-  </header>
-  <div>
-      <p>原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保存后才能高亮，也试过autocmd的其它形式，也是不行，不过，昨天在尝试autocmd的时候，无意中发发现了解决办法。</p>
-<div class="highlight"><pre><span></span>autocmd BufReadpre *.mytext set syn=mytext
-mytext是指代自己定义的文件格式和语法文件
-</pre></div>
-      <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html#vimzhong-de-autocmd">    Continue reading
 </a>
   </div>
 </article>

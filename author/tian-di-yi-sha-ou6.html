@@ -79,6 +79,35 @@
 
 <article>
   <header>
+    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html#git-ben-di-shan-chu-hou-de-wen-ti">git 本地删除后的问题</a></h2>
+    <p>
+          Posted on 2016-01-08 星期五 23:09 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://jackjin-cn.github.io/tag/git.html">git</a>
+    </p>
+  </header>
+  <div>
+      <h2>git 本地删除后的问题</h2>
+<p>在用pelican生成网页的时假，如果不小心用<code>make clean</code>的话，会把<strong>.git</strong>删除，就会产生配对问题，需要重新配对。</p>
+<p>对于网页不需要保留远程文件，所以就如下操作</p>
+<div class="highlight"><pre><span></span>git init
+git add .
+git commit -m &#39;update&#39;
+git remote rm origin
+git push --force origin master  强制推送
+git push -u origin master 重新远程与本地对应
+</pre></div>
+      <br>
+      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html#git-ben-di-shan-chu-hou-de-wen-ti">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://jackjin-cn.github.io/2016/2016-01-08_15-07_vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian.html#vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian">vim中的find命令，打开文件很方便</a></h2>
     <p>
           Posted on 2016-01-08 星期五 15:07 in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
@@ -162,32 +191,6 @@ readers.py:    file_extensions = [&#39;md&#39;, &#39;markdown&#39;, &#39;mkd&#39
 </td></tr></table>
       <br>
       <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html#zai-linuxxia-ba-cp936zhuan-cheng-utf-8">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html#zai-vimzhong-yong-pandocjin-xing-yu-lan">在vim中用pandoc进行预览</a></h2>
-    <p>
-          Posted on 2016-01-05 星期二 17:37 in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://jackjin-cn.github.io/tag/ruan-jian.html">软件</a>,              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>,              <a href="http://jackjin-cn.github.io/tag/pandoc.html">pandoc</a>,              <a href="http://jackjin-cn.github.io/tag/html.html">html</a>
-    </p>
-  </header>
-  <div>
-      <h2>在vim中用pandoc进行预览</h2>
-<div class="highlight"><pre><span></span>&quot;----------生成打包图片的单一html文件
-map &amp;lt;LEADER&amp;gt;mh &amp;lt;ESC&amp;gt;:w&amp;lt;CR&amp;gt;&amp;lt;ESC&amp;gt;:silent !pandoc  -s --self-contained % -c paht/to/style.css -o %:r.html&amp;lt;CR&amp;gt;
-</pre></div>
-
-
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html">参见《pandoc的用法（1）》</a></p>
-      <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html#zai-vimzhong-yong-pandocjin-xing-yu-lan">    Continue reading
 </a>
   </div>
 </article>
