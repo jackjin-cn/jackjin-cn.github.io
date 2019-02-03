@@ -1,153 +1,241 @@
-
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="" />
 
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/stylesheet/style.min.css">
-
-  <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/pygments/github.min.css">
-  <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/font-awesome/css/font-awesome.min.css">
+        <title>vim的verbose命令</title>
+        <meta charset="utf-8" />
+        <link href="https://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home Full RSS Feed" />
 
 
+        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
 
-    <link href="https://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home RSS">
+        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/gumby.css" />
+        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/style.css" />
+        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/pygment.css" />
+
+        <script src="https://jackjin-cn.github.io/theme/js/libs/modernizr-2.6.2.min.js"></script>
 
 
-<!-- Google Analytics -->
-<script type="text/javascript">
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-72007782-1', 'auto');
-  ga('send', 'pageview');
-</script>
-<!-- End Google Analytics -->
-
-<meta name="author" content="天地一沙鸥" />
-<meta name="description" content="在鼓捣autocmd的时候，看到vim的audocmd的帮助 set verbose=9 发现有很多额外的显示，值得一看，也能发现很多非常有意思的东西！" />
-<meta name="keywords" content="vim">
-
-<meta property="og:site_name" content="Jackjin's Home"/>
-<meta property="og:title" content="vim的verbose命令"/>
-<meta property="og:description" content="在鼓捣autocmd的时候，看到vim的audocmd的帮助 set verbose=9 发现有很多额外的显示，值得一看，也能发现很多非常有意思的东西！"/>
-<meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="https://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html"/>
-<meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2016-01-19 10:00:00+08:00"/>
-<meta property="article:modified_time" content=""/>
-<meta property="article:author" content="https://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">
-<meta property="article:section" content="vim"/>
-<meta property="article:tag" content="vim"/>
-<meta property="og:image" content="">
-
-  <title>Jackjin's Home &ndash; vim的verbose命令</title>
 
 </head>
-<body>
-  <aside>
-    <div>
-      <a href="https://jackjin-cn.github.io">
-        <img src="https://jackjin-cn.github.io/theme/img/profile.png" alt="" title="">
-      </a>
-      <h1><a href="https://jackjin-cn.github.io"></a></h1>
+
+<body id="index" class="home">
 
 
-      <nav>
-        <ul class="list">
+    <div class="container">
 
-          <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
-          <li><a href="http://python.org/" target="_blank">Python.org</a></li>
-          <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
-          <li><a href="http://kevinyoung.gitcafe.io" target="_blank">煎挠橙的blog</a></li>
-        </ul>
-      </nav>
+        <div class="row">
 
-      <ul class="social">
-        <li><a class="sc-aaa" href="#" target="_blank"><i class="fa fa-aaa"></i></a></li>
-        <li><a class="sc-Another social link" href="#" target="_blank"><i class="fa fa-Another social link"></i></a></li>
-      </ul>
-    </div>
+          <header id="banner" class="body">
+                  <h1><a href="https://jackjin-cn.github.io/">Jackjin's Home <strong></strong></a></h1>
+          </header><!-- /#banner -->
 
+            <div id="navigation" class="navbar row">
+              <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
+             
+              <ul class="columns">
+                <li><a href="https://jackjin-cn.github.io/">Home</a></li>
 
-  </aside>
-  <main>
+                <li><a href="https://jackjin-cn.github.io/archives.html">archives</a></li>
+                <li><a href="https://jackjin-cn.github.io/tags.html">tags</a></li>
+                <li><a href="https://jackjin-cn.github.io/categories.html">categories</a></li>
 
+              </ul>
+            </div>
 
-<article class="single">
-  <header>
-      
-    <h1 id="vimde-verboseming-ling">vim的verbose命令</h1>
-    <p>
-          Posted on 2016-01-19 星期二 10:00 in <a href="https://jackjin-cn.github.io/category/vim.html">vim</a>
+<section id="content" class="body">
+
+   <div class="row">
+        <div class="eleven columns">
 
 
-    </p>
-  </header>
-
-
-  <div>
-    <p>在鼓捣autocmd的时候，看到vim的audocmd的帮助</p>
+            <header>
+              <h2 class="entry-title">
+                <a href="https://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html" rel="bookmark"
+                   title="Permalink to vim的verbose命令">vim的verbose命令</a></h2>
+           
+            </header>
+            <footer class="post-info">
+              <abbr class="published" title="2016-01-19T10:00:00+08:00">
+                2016-01-19 星期二 10:00
+              </abbr>
+              <address class="vcard author">By 
+                <a class="url fn" href="https://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html"> 天地一沙鸥</a>
+              </address>
+            </footer><!-- /.post-info -->
+            <div class="entry-content">
+              <p>在鼓捣autocmd的时候，看到vim的audocmd的帮助</p>
 <div class="highlight"><pre><span></span>set verbose=9
 </pre></div>
 
 
 <p>发现有很多额外的显示，值得一看，也能发现很多非常有意思的东西！</p>
-  </div>
-  <div class="tag-cloud">
-    <p>
-      <a href="https://jackjin-cn.github.io/tag/vim.html">vim</a>
-    </p>
-  </div>
+            </div><!-- /.entry-content -->
+            <div class="comments">
+              <h3>Comments</h3>
+              <div id="disqus_thread"></div>
+              <script type="text/javascript">
+                var disqus_identifier = "2016/2016-01-19_10-00_vimde-verboseming-ling.html";
+                (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'https://jackjin.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                })();
+              </script>
+            </div>
+
+
+        </div><!-- /.eleven.columns -->
+
+<div class="three columns">
+
+  <h4>Pages</h4>
+
+  <ul>
+    <li><a href="https://jackjin-cn.github.io/archives.html">archives</a></li>
+    <li><a href="https://jackjin-cn.github.io/tags.html">tags</a></li>
+    <li><a href="https://jackjin-cn.github.io/categories.html">categories</a></li>
+
+  
+  <h4>Categories</h4>
+  <ul class="blank">
+    <li><a href="https://jackjin-cn.github.io/category/dian-nao.html">电脑</a></li>
+    <li><a href="https://jackjin-cn.github.io/category/linux.html">linux</a></li>
+    <li><a href="https://jackjin-cn.github.io/category/mac.html">mac</a></li>
+    <li><a href="https://jackjin-cn.github.io/category/pdf.html">pdf</a></li>
+    <li><a href="https://jackjin-cn.github.io/category/python.html">python</a></li>
+    <li><a href="https://jackjin-cn.github.io/category/pythonmaclib.html">python,mac,lib</a></li>
+    <li><a href="https://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
+    <li><a href="https://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a></li>
+    <li><a href="https://jackjin-cn.github.io/category/shell.html">shell</a></li>
+    <li><a href="https://jackjin-cn.github.io/category/vim.html">vim</a></li>
+    <li><a href="https://jackjin-cn.github.io/category/za-gan.html">杂感</a></li>
+    <li><a href="https://jackjin-cn.github.io/category/za-lei.html">杂类</a></li>
+  </ul>
+
+
+<h4>Tags</h4>
+	<ul class="blank">
+	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/debian.html">debian</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/realtek.html">realtek</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/office.html">office</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian-ming.html">文件名</a></li>
+	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/pandoc.html">pandoc</a></li>
+	    <li class="tag-2"><a href="https://jackjin-cn.github.io/tag/mac.html">mac</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/encoding.html">encoding</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian-cao-zuo.html">文件操作</a></li>
+	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/zhong-wen.html">中文</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/dian-nao.html">电脑</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/os.html">os</a></li>
+	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/find.html">find</a></li>
+	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/command-line.html">command line</a></li>
+	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/brew.html">brew</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/script.html">script</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/autocmd.html">autocmd</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/zhuan-zai.html">转载</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/for.html">for</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/ya-suo.html">压缩</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian.html">文件</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/css.html">css</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/qu-dong.html">驱动</a></li>
+	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/pelican.html">pelican</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/sui-bi.html">随笔</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/time.html">time</a></li>
+	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/html.html">html</a></li>
+	    <li class="tag-2"><a href="https://jackjin-cn.github.io/tag/zhe-teng.html">折腾</a></li>
+	    <li class="tag-2"><a href="https://jackjin-cn.github.io/tag/ruan-jian.html">软件</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/work.html">work</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wine.html">wine</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/code.html">code</a></li>
+	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/shell.html">shell</a></li>
+	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/bash.html">bash</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/qq.html">qq</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/tips.html">tips</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/xue-xi.html">学习</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/hei-ping-guo.html">黑苹果</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian-chu-li.html">文件处理</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/gan-xiang.html">感想</a></li>
+	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/python.html">python</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/awk.html">awk</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/cygwin.html">cygwin</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/pdf.html">pdf</a></li>
+	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/vim.html">vim</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/macos.html">macos</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/unicode.html">unicode</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/ben-wen.html">本文</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/path.html">path</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/xin-qing.html">心情</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/git.html">git</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/markdown.html">markdown</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wifi.html">wifi</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/github.html">github</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/windows.html">windows</a></li>
+	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/linux.html">linux</a></li>
+	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian-cha-zhao.html">文件查找</a></li>
+</ul>
+
+
+<nav class="widget">
+  <h4>Social</h4>
+  <ul class="blank">
+    <li><a href="#">aaa</a></li>
+    <li><a href="#">Another social link</a></li>
+  </ul>
+</nav>
+
+</div> </div><!-- /.row -->
+
+
+</section>
+
+       </div><!-- /.row -->
+    </div><!-- /.container -->
+
+
+       <div class="container.nopad bg">
+
+    
+        <footer id="credits" class="row">
+          <div class="seven columns left-center">
+
+                   <address id="about" class="vcard body">
+                    Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
+                    which takes great advantage of <a href="http://python.org">Python</a>.
+                    <br />
+                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>
+                    </address>
+          </div>
+
+
+          <div class="seven columns">
+            <div class="row">
+              <ul class="socbtns">
 
 
 
 
 
-<!-- Disqus -->
-<div id="disqus_thread"></div>
+              </ul>
+            </div>
+          </div>
+        </footer>
+
+    </div>
+
+
 <script type="text/javascript">
     var disqus_shortname = 'jackjin';
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
 </script>
-<noscript>
-        Please enable JavaScript to view comments.
-
-</noscript>
-<!-- End Disqus -->
-</article>
-
-    <footer>
-<p>&copy;  </p>
-<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
-</p>    </footer>
-  </main>
-
-
-
-
-<script type="application/ld+json">
-{
-  "@context" : "http://schema.org",
-  "@type" : "Blog",
-  "name": " Jackjin's Home ",
-  "url" : "https://jackjin-cn.github.io",
-  "image": "",
-  "description": ""
-}
-</script>
-
+  <script src="https://jackjin-cn.github.io/theme/js/libs/jquery-1.9.1.min.js"></script>
+  <script src="https://jackjin-cn.github.io/theme/js/libs/gumby.min.js"></script>
+  <script src="https://jackjin-cn.github.io/theme/js/plugins.js"></script>
 </body>
 </html>
