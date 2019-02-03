@@ -79,81 +79,6 @@
 
 <article>
   <header>
-    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html#vimde-verboseming-ling">vim的verbose命令</a></h2>
-    <p>
-          Posted on 2016-01-19 星期二 10:00 in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>
-    </p>
-  </header>
-  <div>
-      <p>在鼓捣autocmd的时候，看到vim的audocmd的帮助</p>
-<div class="highlight"><pre><span></span>set verbose=9
-</pre></div>
-
-
-<p>发现有很多额外的显示，值得一看，也能发现很多非常有意思的东西！</p>
-      <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html#vimde-verboseming-ling">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html#vimzhong-de-autocmd">vim中的autocmd</a></h2>
-    <p>
-          Posted on 2016-01-19 星期二 08:58 in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://jackjin-cn.github.io/tag/autocmd.html">autocmd</a>,              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>
-    </p>
-  </header>
-  <div>
-      <p>原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保存后才能高亮，也试过autocmd的其它形式，也是不行，不过，昨天在尝试autocmd的时候，无意中发发现了解决办法。</p>
-<div class="highlight"><pre><span></span>autocmd BufReadpre *.mytext set syn=mytext
-mytext是指代自己定义的文件格式和语法文件
-</pre></div>
-      <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html#vimzhong-de-autocmd">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-08_15-07_vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian.html#vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian">vim中的find命令，打开文件很方便</a></h2>
-    <p>
-          Posted on 2016-01-08 星期五 15:07 in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>,              <a href="http://jackjin-cn.github.io/tag/wen-jian.html">文件</a>,              <a href="http://jackjin-cn.github.io/tag/find.html">find</a>,              <a href="http://jackjin-cn.github.io/tag/path.html">path</a>
-    </p>
-  </header>
-  <div>
-      <p>这几天看《Vim实用技巧》,其中介绍了 <strong>:find</strong> 命令的使用</p>
-<p>在vim的配件文件<code>.vimrc or _vimrc</code>进行如下设置</p>
-<div class="highlight"><pre><span></span>set path+=yourdir1/**,youdir2/**
-</pre></div>
-
-
-<p>就可以在vim中方便的打开设置好的目录下的文件， <strong> 《Vim实用技巧》  </strong> 还有更多的技巧，可以值得去看看。</p>
-<p>另外，在网上无意中发现《Vim实用技巧》的作者的博客<a href="http://easwy.com/blog/">易水博客</a>,值得一看。</p>
-      <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-08_15-07_vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian.html#vimzhong-de-findming-ling-da-kai-wen-jian-hen-fang-bian">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
     <h2><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html#zai-vimzhong-yong-pandocjin-xing-yu-lan">在vim中用pandoc进行预览</a></h2>
     <p>
           Posted on 2016-01-05 星期二 17:37 in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
@@ -176,13 +101,64 @@ map &amp;lt;LEADER&amp;gt;mh &amp;lt;ESC&amp;gt;:w&amp;lt;CR&amp;gt;&amp;lt;ESC&
       <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html#zai-vimzhong-yong-pandocjin-xing-yu-lan">    Continue reading
 </a>
   </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-05_15-02_vimde-findming-ling.html#vimde-findming-ling">vim的find命令</a></h2>
+    <p>
+          Posted on 2016-01-05 星期二 15:02 in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://jackjin-cn.github.io/tag/ruan-jian.html">软件</a>,              <a href="http://jackjin-cn.github.io/tag/xue-xi.html">学习</a>
+    </p>
+  </header>
+  <div>
+      <h2>vim的find命令</h2>
+<p><strong>:find</strong> 命令可以用来打开文件，不需要输入完成路径。不过，需要设置'path'选项:</p>
+<div class="highlight"><pre><span></span>:set path+=app/\*\*
+</pre></div>
+
+
+<p>然后可以用<tab>进行补全了，这个在一个项目中有多个目录时，打开文件特别实用。而且有同名文件也可以进行识别。</p>
+<p>摘自《Vim实用技巧》</p>
+      <br>
+      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-05_15-02_vimde-findming-ling.html#vimde-findming-ling">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-36_strftimede-yi-dian-yong-fa.html#strftimede-yi-dian-yong-fa">strftime的一点用法</a></h2>
+    <p>
+          Posted on 2016-01-02 星期六 19:36 in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>,              <a href="http://jackjin-cn.github.io/tag/time.html">time</a>
+    </p>
+  </header>
+  <div>
+      <h1>strftime的一点用法</h1>
+<p>最近想写，用<strong>Vim</strong>进行编辑，想设置加入时间的快捷方式</p>
+<div class="highlight"><pre><span></span><span class="nt">map</span> <span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">LEADER</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;</span><span class="nt">bt</span> <span class="nt">A</span><span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">C-R</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;=</span><span class="nt">strftime</span><span class="o">(</span><span class="s2">&quot;%Y-%m-%d %A %H:%M&quot;</span><span class="o">)&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">CR</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;</span>
+</pre></div>
+
+
+<p>效果如下:</p>
+<div class="highlight"><pre><span></span>2016-01-02 星期六 19:39
+</pre></div>
+      <br>
+      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-02_19-36_strftimede-yi-dian-yong-fa.html#strftimede-yi-dian-yong-fa">    Continue reading
+</a>
+  </div>
 </article>
 
   <div class="pagination">
-    <a class="btn float-left" href="http://jackjin-cn.github.io/category/vim2.html">
-      <i class="fa fa-angle-left"></i>     Older Posts
-
-    </a>
   </div>
 
 

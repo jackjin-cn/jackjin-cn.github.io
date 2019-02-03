@@ -78,144 +78,162 @@
 
 <article>
   <header>
-    <h2><a href="http://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html#brew-zhong-qie-huan-ruan-jian-ban-ben">brew 中切换软件版本</a></h2>
+    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-02_20-56_wine-qq-79ban-de-an-zhuang.html#wine-qq-79ban-de-an-zhuang">Wine QQ 7.9版的安装</a></h2>
     <p>
-          Posted on 2018-07-04 星期三 12:14 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
+          Posted on 2016-01-02 星期六 20:56 in <a href="http://jackjin-cn.github.io/category/linux.html">linux</a>
 
 
           &#8226;     Tagged with
 
-              <a href="http://jackjin-cn.github.io/tag/brew.html">brew</a>,              <a href="http://jackjin-cn.github.io/tag/python.html">python</a>
+              <a href="http://jackjin-cn.github.io/tag/wine.html">wine</a>,              <a href="http://jackjin-cn.github.io/tag/qq.html">qq</a>,              <a href="http://jackjin-cn.github.io/tag/debian.html">debian</a>,              <a href="http://jackjin-cn.github.io/tag/linux.html">linux</a>
     </p>
   </header>
   <div>
-      <h1>brew 中切换软件版本</h1>
-<p>我有更新软件的习惯，习惯性的每天更新一下。比如brew ,pip3等。</p>
-<p>这不，前天把brew 就把python 3.6.5 升级到了python 3.7了，这个是大升级，结果python库都没有了，当然可以另行安装，也很方便，反正有写了批量更新的脚本，但没有到还有兼容性的问题。</p>
-<p>网上找一堆办法，有的命令已经过期了 <em>brew versions</em>,有的太复杂，看不明白。
-后来还是找到了一个办法，提前是老版本python没有删除。</p>
+      <h1>Wine QQ 7.9版的安装</h1>
 <blockquote>
-<p>brew info python3</p>
+<ol>
+<li>
+<p>安装最新的wine，安装QQ7.9.exe</p>
+</li>
+<li>
+<p>根据网上的教程增加字体，修改注册表</p>
+</li>
+<li>
+<p>winecfg配置成win8.1</p>
+</li>
+<li>
+<p>几个动态库,mfc4.2,riched20,wininet，gdiplus,iphlapi,urlmon设置成原装先于内建，这几个dll文件可以从windows系统复制过来，基本都在windows\systme32里面。</p>
+</li>
+</ol>
+<blockquote>
+<p><img alt="wineqq" src="http://jackjin-cn.github.io/images/wine-qq.png" title="wine-qq设置"></p>
 </blockquote>
-<div class="highlight"><pre><span></span><span class="n">python</span><span class="o">:</span> <span class="n">stable</span> <span class="mf">3.7</span><span class="o">.</span><span class="mi">0</span> <span class="o">(</span><span class="n">bottled</span><span class="o">),</span> <span class="n">HEAD</span>
-<span class="n">Interpreted</span><span class="o">,</span> <span class="n">interactive</span><span class="o">,</span> <span class="n">object</span><span class="o">-</span><span class="n">oriented</span> <span class="n">programming</span> <span class="n">language</span>
-<span class="n">https</span><span class="o">://</span><span class="n">www</span><span class="o">.</span><span class="na">python</span><span class="o">.</span><span class="na">org</span><span class="o">/</span>
-<span class="sr">/usr …</span></pre></div>
+</blockquote>
       <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html#brew-zhong-qie-huan-ruan-jian-ban-ben">    Continue reading
+      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-02_20-56_wine-qq-79ban-de-an-zhuang.html#wine-qq-79ban-de-an-zhuang">    Continue reading
 </a>
   </div>
   <hr />
 </article>
 <article>
   <header>
-    <h2><a href="http://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html#sedde-yi-dian-yong-chu">sed的一点用处</a></h2>
+    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html#zhuan-pelicande-yong-fa">转pelican的用法</a></h2>
     <p>
-          Posted on 2018-07-03 星期二 14:32 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
+          Posted on 2016-01-02 星期六 20:08 in <a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a>
 
 
           &#8226;     Tagged with
 
-              <a href="http://jackjin-cn.github.io/tag/wen-jian-chu-li.html">文件处理</a>,              <a href="http://jackjin-cn.github.io/tag/linux.html">linux</a>,              <a href="http://jackjin-cn.github.io/tag/mac.html">mac</a>
+              <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a>,              <a href="http://jackjin-cn.github.io/tag/zhuan-zai.html">转载</a>
     </p>
   </header>
   <div>
-      <h1>sed的一点用处</h1>
-<p>最近在弄pelican 与 github的博客，下载很不要模板，更换很不方便，想能不能用命令修改，google一下，还是真有办法的。</p>
-<h2>提醒不要用mac osx 自带的sed</h2>
-<h2>我用brew 安装了gnu-sed</h2>
-<div class="highlight"><pre><span></span>gsed -i 99c\jtheme=&quot;theme_name&quot; pelianconf.py
-
--i 表示直接修改文件
-99c\jtheme=&quot;theme_name&quot;  表示将99行的内容直接替换(c)成jtheme=&quot;theme_name&quot;  \是起一个分隔的作用。
-有不明白的地方可以看教程，语法有点类似vim
-````
-
-## 下面是我自己用的脚本，在选中的theme的目录下运行
+      <p>转自<a href="http://kevinyoung.gitcafe.io/articles/blog/build_your_blog.html">煎挠橙的博客</a></p>
+<blockquote>
+<p>思路</p>
+</blockquote>
+<p>一般而言，搭建一个独立博客需要三样东西：</p>
+<div class="highlight"><pre><span></span>博客软件
+托管服务器
+独立的域名
 </pre></div>
 
 
-<h1>!/usr/bin/env python3</h1>
-<h1>-<em>- coding: utf-8 -</em>-</h1>
-<p>import os
-cwd=os.getcwd()
-path=(cwd.split('/'))
-cfname …</p>
-      <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html#sedde-yi-dian-yong-chu">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://jackjin-cn.github.io/2018/2018-07-02_22-07_pelican-shang-chuan-dao-github.html#pelican-shang-chuan-dao-github">Pelican 上传到github</a></h2>
-    <p>
-          Posted on 2018-07-02 星期一 22:07 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a>,              <a href="http://jackjin-cn.github.io/tag/github.html">github</a>,              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>,              <a href="http://jackjin-cn.github.io/tag/python.html">python</a>
-    </p>
-  </header>
-  <div>
-      <h1>Pelican 上传到github</h1>
-<p>折腾了半天，应该可以在几台电脑上上传博客内容了吧。</p>
-<h3>初始部分</h3>
-<div class="highlight"><pre><span></span>git init
-git add .
-git commit
-git remote add origin https://github.com/jackjin-cn/jackjin-cn.github.io.git
-
-#先取回云端内容
-git pull origin master
-git commit
-git push origin master #可以加参数 -f
+<p>博客软件用来生成你的博客页面，而生成好的页面则需要放到托管的服务器上才能被别人看到。
+博客软件</p>
+<p>我选择Pleican作为博客软件主要是出于以下的考虑：</p>
+<div class="highlight"><pre><span></span>基于Python，简单易上手
+生成静态页面，不需要数据库，访问速度快，易于维护
+支持markdown标记语言
 </pre></div>
 
 
-<h2>我的上传博客到githubio的脚本</h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="nb">cd</span> ~/pelicanoutput/blog
-makeriji
-git …</pre></div></td></tr></table>
+<p>和著名的wordpress相比，pelican搭建起来的博客功能和界面会相对单薄一些，但对于我来说绝对够用，况且写博客的初衷也是想把注意力放在内容上，工具越简单越好。
+托管服务器</p>
+<p>这里选择github的原因也很简单：</p>
+<div class="highlight"><pre><span></span>免费
+省事
+可以直接用git进行版本管理
+</pre></div>
+
+
+<p>磨刀</p>
+<p>这份教程中提到的方法虽然简单，但仍旧需要你有一些基础，主要有
+1.python基础</p>
+<p>你至少应该能够配置python的环境，能够顺利的安装python的插件,了解一些简单的python语法。
+2.了解Markdown</p>
+<p>没听说过不要紧，推荐阅读我的文章你为什么应该用markdown写文章。</p>
+<p>另外这里有一份简短的介绍，详细的语法说明则可以在这里找到。
+3.对git/github有所了解</p>
+<p>如果不了解也同样没有关系，这个一站式的教程可以帮到你。</p>
+<p>这里多说一点 …</p>
       <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-07-02_22-07_pelican-shang-chuan-dao-github.html#pelican-shang-chuan-dao-github">    Continue reading
+      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html#zhuan-pelicande-yong-fa">    Continue reading
 </a>
   </div>
   <hr />
 </article>
 <article>
   <header>
-    <h2><a href="http://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html#vim-zhong-cha-ru-ri-qi">Vim 中插入日期</a></h2>
+    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html#guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti">关于在pelican的date中使用中文的问题</a></h2>
     <p>
-          Posted on 2018-07-02 星期一 12:34 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
+          Posted on 2016-01-02 星期六 19:46 in <a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a>
 
 
           &#8226;     Tagged with
 
-              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>,              <a href="http://jackjin-cn.github.io/tag/script.html">script</a>,              <a href="http://jackjin-cn.github.io/tag/tips.html">tips</a>
+              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>,              <a href="http://jackjin-cn.github.io/tag/python.html">python</a>,              <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a>,              <a href="http://jackjin-cn.github.io/tag/zhong-wen.html">中文</a>
     </p>
   </header>
   <div>
-      <h1>Vim 中插入日期</h1>
-<h2>1. 写blog的时候要前几行插入固定的内容，时间找到以下的脚本</h2>
-<div class="highlight"><pre><span></span>function! TitleInsert()
-call setline(1,&quot;Title:&quot;)
-call setline(2,&quot;Date: &quot;. strftime(&quot;%Y-%m-%d %H:%M:%S&quot;))
-call setline(3,&quot;Modified: &quot;)
-&quot;call setline(3,&quot;Modified: &quot;. strftime(&quot;%Y-%m-%d %H:%M:%S&quot;))
-call setline(4,&quot;Category:  &quot;)
-call setline(5,&quot;Tags: &quot;)
-call setline(6,&quot;Author:天地一沙鸥 …</pre></div>
+      <h1>关于在pelican的date中使用中文的问题</h1>
+<p>想在pelican的date中应用如下格式</p>
+<blockquote>
+<p>2016-01-02 星期六 19:31</p>
+</blockquote>
+<p>结果在'make html'时出现如下错误：</p>
+<div class="highlight"><pre><span></span><span class="n">ValueError</span><span class="o">:</span> <span class="n">u</span><span class="s1">&#39;2016-01-02 \u661f\u671f\u516d 19:36&#39;</span> <span class="k">is</span> <span class="n">not</span> <span class="n">a</span> <span class="n">valid</span> <span class="n">date</span>
+</pre></div>
+
+
+<p>应该是python2的utf-8中文支持的老问题了</p>
+<p>不过，我发现，想要上面的日期格式，只需要在 <strong>pelicanconf.py</strong>中如下设置:</p>
+<div class="highlight"><pre><span></span>DEFAULT_DATE_FORMAT = u&#39;%Y-%m-%d %A %H:%M&#39;
+</pre></div>
+
+
+<p>pelican会在时间里加上星期几了</p>
+<p>这个软件做得还是很人性化的了。</p>
       <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html#vim-zhong-cha-ru-ri-qi">    Continue reading
+      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html#guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-36_strftimede-yi-dian-yong-fa.html#strftimede-yi-dian-yong-fa">strftime的一点用法</a></h2>
+    <p>
+          Posted on 2016-01-02 星期六 19:36 in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>,              <a href="http://jackjin-cn.github.io/tag/time.html">time</a>
+    </p>
+  </header>
+  <div>
+      <h1>strftime的一点用法</h1>
+<p>最近想写，用<strong>Vim</strong>进行编辑，想设置加入时间的快捷方式</p>
+<div class="highlight"><pre><span></span><span class="nt">map</span> <span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">LEADER</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;</span><span class="nt">bt</span> <span class="nt">A</span><span class="o">&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">C-R</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;=</span><span class="nt">strftime</span><span class="o">(</span><span class="s2">&quot;%Y-%m-%d %A %H:%M&quot;</span><span class="o">)&amp;</span><span class="nt">lt</span><span class="o">;</span><span class="nt">CR</span><span class="o">&amp;</span><span class="nt">gt</span><span class="o">;</span>
+</pre></div>
+
+
+<p>效果如下:</p>
+<div class="highlight"><pre><span></span>2016-01-02 星期六 19:39
+</pre></div>
+      <br>
+      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-02_19-36_strftimede-yi-dian-yong-fa.html#strftimede-yi-dian-yong-fa">    Continue reading
 </a>
   </div>
 </article>

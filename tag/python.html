@@ -79,157 +79,42 @@
 
 <article>
   <header>
-    <h2><a href="http://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html#mac-xia-bian-yi-python3-de-pythonmagickbao">mac 下编译python3 的 PythonMagick包</a></h2>
+    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html#guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti">关于在pelican的date中使用中文的问题</a></h2>
     <p>
-          Posted on 2018-10-08 星期一 14:45 in <a href="http://jackjin-cn.github.io/category/pythonmaclib.html">python,mac,lib</a>
+          Posted on 2016-01-02 星期六 19:46 in <a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a>
 
 
           &#8226;     Tagged with
 
-              <a href="http://jackjin-cn.github.io/tag/python.html">python</a>,              <a href="http://jackjin-cn.github.io/tag/mac.html">mac</a>
+              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>,              <a href="http://jackjin-cn.github.io/tag/python.html">python</a>,              <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a>,              <a href="http://jackjin-cn.github.io/tag/zhong-wen.html">中文</a>
     </p>
   </header>
   <div>
-      <h2>mac 下编译PythonMagick</h2>
-<h3>由于要压缩漫画pdf，找了很多办法，其中有用到 <em>imagemagick</em>,这个比较 好安装。</h3>
-<div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">imagemagick</span><span class="mi">@6</span>
-<span class="n">brew</span> <span class="n">link</span> <span class="n">imagemagick</span><span class="mi">@6</span> <span class="o">--</span><span class="n">force</span>
-</pre></div>
-
-
-<h3>不过，pythonmagcik这个包就比较麻烦了，windows下有编译好的二进制包，mac需要自己编译，比较麻烦，也走了不少弯路。</h3>
-<p>网上看了不少教程，自己也摸索了下，现在是能用了。</p>
-<p>代码,过程放在下面</p>
-<p>下载源码包<a href="http://www.imagemagick.org/download/python/releases/PythonMagick-0.9.18.tar.xz">PythonMagic-0.9.19</a></p>
-<p>而 0.9.19 不行，编译没问题，但安装后，使用导入有问题。
-据说是后面的版本api什么的改了，好像可以改文件什么的，但是我不会，就用老点的版本吧</p>
-<h3>现在看来，主要还是python版本的问题，这就是折腾这么多时间的心得</h3>
-<p>主要是注意python2和python3的区别</p>
-<div class="highlight"><pre><span></span><span class="n">Installing</span> <span class="n">PythonMagick …</span></pre></div>
-      <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html#mac-xia-bian-yi-python3-de-pythonmagickbao">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://jackjin-cn.github.io/2018/2018-10-02_19-55_pdfzhuan-tu-pian-tu-pian-zhuan-pdftu-pian-ya-suo.html#pdfzhuan-tu-pian-tu-pian-zhuan-pdftu-pian-ya-suo">pdf转图片，图片转pdf，图片压缩</a></h2>
-    <p>
-          Posted on 2018-10-02 星期二 19:55 in <a href="http://jackjin-cn.github.io/category/pdf.html">pdf</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://jackjin-cn.github.io/tag/python.html">python</a>,              <a href="http://jackjin-cn.github.io/tag/pdf.html">pdf</a>,              <a href="http://jackjin-cn.github.io/tag/ya-suo.html">压缩</a>
-    </p>
-  </header>
-  <div>
-      <ol>
-<li>
-<h3>执行pdf转图片，再把图片转成pdf的脚本</h3>
-</li>
-</ol>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="c1">#参数为文件名，不含扩展.pdf </span>
-<span class="k">for</span> i in <span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span><span class="p">;</span>
-<span class="k">do</span>
-python3 app.py <span class="nv">$i</span>
-rm <span class="nv">$i</span>.pdf
-python3 makepdf.py <span class="nv">$i</span>
-rm -fr <span class="nv">$i</span>
-<span class="k">done</span>
-</pre></div>
-</td></tr></table>
-
-<ol>
-<li>
-<h3>把图片转成pdf</h3>
-</li>
-</ol>
-<p>把指定目录中的图片根据名称排序，生成一个pdf文件，如果文件比较大
-时间比较长，对内存要求也比较高
---dirname
---makepdf.py
---convert_dirname.pdf
-在当前目录下生成 convert_name.pdf</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1 …</pre></div></td></tr></table>
-      <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-10-02_19-55_pdfzhuan-tu-pian-tu-pian-zhuan-pdftu-pian-ya-suo.html#pdfzhuan-tu-pian-tu-pian-zhuan-pdftu-pian-ya-suo">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://jackjin-cn.github.io/2018/2018-07-11_09-40_doczhuan-docx.html#doczhuan-docx">doc转docx</a></h2>
-    <p>
-          Posted on 2018-07-11 星期三 09:40 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://jackjin-cn.github.io/tag/python.html">python</a>,              <a href="http://jackjin-cn.github.io/tag/brew.html">brew</a>,              <a href="http://jackjin-cn.github.io/tag/office.html">office</a>,              <a href="http://jackjin-cn.github.io/tag/command-line.html">command line</a>
-    </p>
-  </header>
-  <div>
-      <h1>doc转docx</h1>
-<p>网上找了很多办法，想在mac把doc转成docx。一般有2种方案。</p>
-<ol>
-<li>antiword 可以把doc转成纯文件，或者docbook格式（这个我没有搞明白）</li>
-<li>用unoconv + libreoffice.</li>
-</ol>
-<p>昨天晚上试了一下第二种方案，libreoffice的版本要3.x和4.x，官网上只有5和6了，找了一下，还是找到了。</p>
-<p><a href="https://libreoffice.en.uptodown.com/mac/download/46193">libreoffice 4下载</a>,希望以后还能用。</p>
-<p>安装好以后就可以使用了。</p>
+      <h1>关于在pelican的date中使用中文的问题</h1>
+<p>想在pelican的date中应用如下格式</p>
 <blockquote>
-<p>uniconv -f docx source.doc</p>
-<p>这样就可以转换了，如果成功的话会生成一个同名的docx文件，当然，仔细看说明，应该也还可以指定输出文件名了。</p>
+<p>2016-01-02 星期六 19:31</p>
 </blockquote>
+<p>结果在'make html'时出现如下错误：</p>
+<div class="highlight"><pre><span></span><span class="n">ValueError</span><span class="o">:</span> <span class="n">u</span><span class="s1">&#39;2016-01-02 \u661f\u671f\u516d 19:36&#39;</span> <span class="k">is</span> <span class="n">not</span> <span class="n">a</span> <span class="n">valid</span> <span class="n">date</span>
+</pre></div>
+
+
+<p>应该是python2的utf-8中文支持的老问题了</p>
+<p>不过，我发现，想要上面的日期格式，只需要在 <strong>pelicanconf.py</strong>中如下设置:</p>
+<div class="highlight"><pre><span></span>DEFAULT_DATE_FORMAT = u&#39;%Y-%m-%d %A %H:%M&#39;
+</pre></div>
+
+
+<p>pelican会在时间里加上星期几了</p>
+<p>这个软件做得还是很人性化的了。</p>
       <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-07-11_09-40_doczhuan-docx.html#doczhuan-docx">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://jackjin-cn.github.io/2018/2018-07-10_22-35_antiword.html#antiword">antiword</a></h2>
-    <p>
-          Posted on 2018-07-10 星期二 22:35 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://jackjin-cn.github.io/tag/mac.html">mac</a>,              <a href="http://jackjin-cn.github.io/tag/work.html">work</a>,              <a href="http://jackjin-cn.github.io/tag/python.html">python</a>,              <a href="http://jackjin-cn.github.io/tag/command-line.html">command line</a>
-    </p>
-  </header>
-  <div>
-      <h1>Title:antiword</h1>
-<h2>一直想找一个 在mac下能用的doc to docx的方法</h2>
-<p>结果找到一个叫<em>antiword</em>的开源软件,以命令行的方式把doc转成纯文本之类的，比用python方便一点，还可以转成pdf之类的 。</p>
-<ul>
-<li>不过，好像还有一个参数，可以转成xml之类的格式 ，docbook，我初步试了一下，找到一个把odcbook 转成 docx的程序，结果行不通，不能把docbook格式转成docx。有点遗憾。</li>
-</ul>
-      <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-07-10_22-35_antiword.html#antiword">    Continue reading
+      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-02_19-46_guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti.html#guan-yu-zai-pelicande-datezhong-shi-yong-zhong-wen-de-wen-ti">    Continue reading
 </a>
   </div>
 </article>
 
   <div class="pagination">
-    <a class="btn float-left" href="http://jackjin-cn.github.io/tag/python2.html">
-      <i class="fa fa-angle-left"></i>     Older Posts
-
-    </a>
   </div>
 
 
