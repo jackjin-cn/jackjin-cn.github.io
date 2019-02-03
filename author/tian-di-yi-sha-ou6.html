@@ -79,6 +79,36 @@
 
 <article>
   <header>
+    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html#awkwen-ben-gong-ju-de-xue-xi">awk文本工具的学习</a></h2>
+    <p>
+          Posted on 2016-01-09 星期六 09:59 in <a href="http://jackjin-cn.github.io/category/linux.html">linux</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://jackjin-cn.github.io/tag/awk.html">awk</a>,              <a href="http://jackjin-cn.github.io/tag/linux.html">linux</a>,              <a href="http://jackjin-cn.github.io/tag/ben-wen.html">本文</a>,              <a href="http://jackjin-cn.github.io/tag/shell.html">shell</a>,              <a href="http://jackjin-cn.github.io/tag/windows.html">windows</a>
+    </p>
+  </header>
+  <div>
+      <p><a href="http://coolshell.cn/articles/9070.html">转自：酷 壳 AWK 简明教程</a></p>
+<p><a href="http://www.runoob.com/linux/linux-comm-awk.html">转自：Linux awk 命令</a></p>
+<p>自己尝试了一下,感觉很强大。</p>
+<p>特别是模式匹配和过滤功能。</p>
+<p>输出包含：的行，并加上行号。/模式/,NR是等号</p>
+<div class="highlight"><pre><span></span>awk   &#39;/^#/{print NR,$0 }&#39; ~/diary/2015/09/2015-09-08.cal
+</pre></div>
+
+
+<p>后来下载了windows版的awk，是3.1.6版</p>
+<p>用法上和linux版的没有区别，不过，有一点要注意是要把<strong><code>单引号'</code>换成<code>双引号"</code></strong></p>
+      <br>
+      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html#awkwen-ben-gong-ju-de-xue-xi">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://jackjin-cn.github.io/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html#git-ben-di-shan-chu-hou-de-wen-ti">git 本地删除后的问题</a></h2>
     <p>
           Posted on 2016-01-08 星期五 23:09 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
@@ -159,38 +189,6 @@ readers.py:    file_extensions = [&#39;md&#39;, &#39;markdown&#39;, &#39;mkd&#39
 <p>我没有找到其它办法，不过这个方法还算方便吧。</p>
       <br>
       <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html#xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html#zai-linuxxia-ba-cp936zhuan-cheng-utf-8">在linux下把cp936转成utf-8</a></h2>
-    <p>
-          Posted on 2016-01-06 星期三 19:43 in <a href="http://jackjin-cn.github.io/category/linux.html">linux</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://jackjin-cn.github.io/tag/linux.html">linux</a>,              <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a>,              <a href="http://jackjin-cn.github.io/tag/code.html">code</a>,              <a href="http://jackjin-cn.github.io/tag/zhong-wen.html">中文</a>
-    </p>
-  </header>
-  <div>
-      <h2>在linux下把cp936转成utf-8</h2>
-<p>今天需要把原来写的文字用博客的形式发布，用pelican转换的第一个问题就是文件的内码格式不到，原来是 <strong>cp936</strong> (中文ASCII)的形式，需要转成<strong>utf-8</strong>。</p>
-<p>网上找了一下，可以用<code>iconv</code> 这个工具，不过不支持批量转换，于是又搜了一下，用bash写了一个，在此记录一下。
-另外说明一下，<strong>iconv</strong> 不支持自动识别文件编码，要手动指定</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="k">for</span> file in *.txt 
-    <span class="k">do</span> iconv -c -f gb18030 -t utf8 <span class="nv">$file</span> -o <span class="nv">$file</span>.uu
-<span class="k">done</span>
-</pre></div>
-</td></tr></table>
-      <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html#zai-linuxxia-ba-cp936zhuan-cheng-utf-8">    Continue reading
 </a>
   </div>
 </article>

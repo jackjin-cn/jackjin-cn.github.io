@@ -78,6 +78,38 @@
 
 <article>
   <header>
+    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html#zai-linuxxia-ba-cp936zhuan-cheng-utf-8">在linux下把cp936转成utf-8</a></h2>
+    <p>
+          Posted on 2016-01-06 星期三 19:43 in <a href="http://jackjin-cn.github.io/category/linux.html">linux</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://jackjin-cn.github.io/tag/linux.html">linux</a>,              <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a>,              <a href="http://jackjin-cn.github.io/tag/code.html">code</a>,              <a href="http://jackjin-cn.github.io/tag/zhong-wen.html">中文</a>
+    </p>
+  </header>
+  <div>
+      <h2>在linux下把cp936转成utf-8</h2>
+<p>今天需要把原来写的文字用博客的形式发布，用pelican转换的第一个问题就是文件的内码格式不到，原来是 <strong>cp936</strong> (中文ASCII)的形式，需要转成<strong>utf-8</strong>。</p>
+<p>网上找了一下，可以用<code>iconv</code> 这个工具，不过不支持批量转换，于是又搜了一下，用bash写了一个，在此记录一下。
+另外说明一下，<strong>iconv</strong> 不支持自动识别文件编码，要手动指定</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="k">for</span> file in *.txt 
+    <span class="k">do</span> iconv -c -f gb18030 -t utf8 <span class="nv">$file</span> -o <span class="nv">$file</span>.uu
+<span class="k">done</span>
+</pre></div>
+</td></tr></table>
+      <br>
+      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-06_19-43_zai-linuxxia-ba-cp936zhuan-cheng-utf-8.html#zai-linuxxia-ba-cp936zhuan-cheng-utf-8">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html#zai-vimzhong-yong-pandocjin-xing-yu-lan">在vim中用pandoc进行预览</a></h2>
     <p>
           Posted on 2016-01-05 星期二 17:37 in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
@@ -155,46 +187,6 @@ pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含
 <p>摘自《Vim实用技巧》</p>
       <br>
       <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-05_15-02_vimde-findming-ling.html#vimde-findming-ling">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-03_16-44_xin-wen-zu-de-mei-luo.html#xin-wen-zu-de-mei-luo">新闻组的没落</a></h2>
-    <p>
-          Posted on 2016-01-03 星期日 16:44 in <a href="http://jackjin-cn.github.io/category/za-gan.html">杂感</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://jackjin-cn.github.io/tag/ruan-jian.html">软件</a>,              <a href="http://jackjin-cn.github.io/tag/gan-xiang.html">感想</a>
-    </p>
-  </header>
-  <div>
-      <h2>新闻组的没落</h2>
-<p>最近几天在折腾debian，安装了thunderbird，设置了邮件帐户，在设置的时候看到还可以进行新闻组的设置，不经想出N年组用 <em>outlookpress</em> 看新闻组的光景，当时还是拔号上网，为省钱，都是先同步下载好离线看的，内容还是蛮多，有关网站还能上。</p>
-<p>今天在网上找一下，中文可用的新闻组很少了，能上的也基本没有什么内容或者更新了，感叹时间变化太快了，技术发展了更迭不断，当年火的不得了东西，不管是软件还是硬件，到了现在都发生了很大的变化，我所喜欢的东东，很多都淘汰了。</p>
-<ul>
-<li>
-<p>ti-92plus 图形计算器</p>
-</li>
-<li>
-<p>掌上通黑白手持电脑（windows系统）</p>
-</li>
-<li>
-<p>windows mobile 手机（彩色，e850,hkc）</p>
-</li>
-<li>
-<p>nokia 手机（s60）N72,N8</p>
-</li>
-<li>
-<p>黑莓手机  9930</p>
-</li>
-</ul>
-<p>看来，玩数码，是要亏很多钱的，也没有什么实质的收获，至少对生活无太大帮助。</p>
-      <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-03_16-44_xin-wen-zu-de-mei-luo.html#xin-wen-zu-de-mei-luo">    Continue reading
 </a>
   </div>
 </article>

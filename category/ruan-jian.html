@@ -79,65 +79,134 @@
 
 <article>
   <header>
-    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html#xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming">修改pelican所支持的内容文件的扩展名</a></h2>
+    <h2><a href="http://jackjin-cn.github.io/2018/2018-07-11_09-40_doczhuan-docx.html#doczhuan-docx">doc转docx</a></h2>
     <p>
-          Posted on 2016-01-06 星期三 19:58 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
+          Posted on 2018-07-11 星期三 09:40 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
 
 
           &#8226;     Tagged with
 
-              <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a>,              <a href="http://jackjin-cn.github.io/tag/wen-jian-ming.html">文件名</a>,              <a href="http://jackjin-cn.github.io/tag/markdown.html">markdown</a>,              <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a>
+              <a href="http://jackjin-cn.github.io/tag/python.html">python</a>,              <a href="http://jackjin-cn.github.io/tag/brew.html">brew</a>,              <a href="http://jackjin-cn.github.io/tag/office.html">office</a>,              <a href="http://jackjin-cn.github.io/tag/command-line.html">command line</a>
     </p>
   </header>
   <div>
-      <h2>修改pelican所支持的内容文件的扩展名</h2>
-<p>pelican的内容文本文件只支持常见markdown的扩展名<code>markdown,md,mkd</code>等，我比较喜欢用vim制作自己的文件模板，这样就需要自己取文件扩展名，比如*.blog，前几天没想到办法，今天找到办法了。</p>
-<p>用grep 在 <strong>/usr/local/lib/python2.7/dist-packages/pelican</strong> 找了下<strong>md</strong></p>
-<div class="highlight"><pre><span></span>$/usr/local/lib/python2.7/dist-packages/pelican$ grep &#39;md&#39; *.py
-结果如下：
-readers.py:    file_extensions = [&#39;md&#39;, &#39;markdown&#39;, &#39;mkd&#39;, &#39;mdown&#39;]
-</pre></div>
-
-
-<p>于是只是修改<code>readers.py</code>，加入自己想要的扩展名就可以了。</p>
-<p>我没有找到其它办法，不过这个方法还算方便吧。</p>
+      <h1>doc转docx</h1>
+<p>网上找了很多办法，想在mac把doc转成docx。一般有2种方案。</p>
+<ol>
+<li>antiword 可以把doc转成纯文件，或者docbook格式（这个我没有搞明白）</li>
+<li>用unoconv + libreoffice.</li>
+</ol>
+<p>昨天晚上试了一下第二种方案，libreoffice的版本要3.x和4.x，官网上只有5和6了，找了一下，还是找到了。</p>
+<p><a href="https://libreoffice.en.uptodown.com/mac/download/46193">libreoffice 4下载</a>,希望以后还能用。</p>
+<p>安装好以后就可以使用了。</p>
+<blockquote>
+<p>uniconv -f docx source.doc</p>
+<p>这样就可以转换了，如果成功的话会生成一个同名的docx文件，当然，仔细看说明，应该也还可以指定输出文件名了。</p>
+</blockquote>
       <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html#xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming">    Continue reading
+      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-07-11_09-40_doczhuan-docx.html#doczhuan-docx">    Continue reading
 </a>
   </div>
   <hr />
 </article>
 <article>
   <header>
-    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html#pandocde-yong-fa-1">pandoc的用法（1）</a></h2>
+    <h2><a href="http://jackjin-cn.github.io/2018/2018-07-10_22-35_antiword.html#antiword">antiword</a></h2>
     <p>
-          Posted on 2016-01-05 星期二 17:28 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
+          Posted on 2018-07-10 星期二 22:35 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
 
 
           &#8226;     Tagged with
 
-              <a href="http://jackjin-cn.github.io/tag/pandoc.html">pandoc</a>,              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>,              <a href="http://jackjin-cn.github.io/tag/html.html">html</a>,              <a href="http://jackjin-cn.github.io/tag/css.html">css</a>
+              <a href="http://jackjin-cn.github.io/tag/mac.html">mac</a>,              <a href="http://jackjin-cn.github.io/tag/work.html">work</a>,              <a href="http://jackjin-cn.github.io/tag/python.html">python</a>,              <a href="http://jackjin-cn.github.io/tag/command-line.html">command line</a>
     </p>
   </header>
   <div>
-      <h2>pandoc的用法（1）</h2>
-<p>用vim写markdown，自己在.vimrc里也写快捷命令进行预览，感觉还是很方便的。</p>
+      <h1>Title:antiword</h1>
+<h2>一直想找一个 在mac下能用的doc to docx的方法</h2>
+<p>结果找到一个叫<em>antiword</em>的开源软件,以命令行的方式把doc转成纯文本之类的，比用python方便一点，还可以转成pdf之类的 。</p>
+<ul>
+<li>不过，好像还有一个参数，可以转成xml之类的格式 ，docbook，我初步试了一下，找到一个把odcbook 转成 docx的程序，结果行不通，不能把docbook格式转成docx。有点遗憾。</li>
+</ul>
+      <br>
+      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-07-10_22-35_antiword.html#antiword">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://jackjin-cn.github.io/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html#yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian">一行代码搞定改名&copy文件</a></h2>
+    <p>
+          Posted on 2018-07-04 星期三 19:12 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a>,              <a href="http://jackjin-cn.github.io/tag/shell.html">shell</a>
+    </p>
+  </header>
+  <div>
+      <h1>一行代码搞定改名&amp;copy文件</h1>
+<h2>1. 分段探索的过程</h2>
 <blockquote>
-<p>pandoc在生成html文件的时候，可以支持css，还可以生成单独的文件，包含在图片里面。</p>
+<p>[jjb@ ~/pelicanoutput/pelican/pelican-themes #6]$for i in <code>find . -name screenshot.png</code> ;do echo ${i} ;done;</p>
 </blockquote>
-<div class="highlight"><pre><span></span>pandoc -c style.css  #包含css样式（可以包括路径,但html和css是分离）
-pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含在一个html文件中,生成docx文件也可以用这个参数，图片被包含在docx文件中）
+<div class="highlight"><pre><span></span>./bricks/screenshot.png
+./monospace/screenshot.png
+./foundation-default-colours/screenshot.png
 </pre></div>
 
 
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html">参见我在vim中用pandoc进行预览</a></p>
+<hr>
+<h2>2. 分段探索的过程</h2>
+<blockquote>
+<p>[jjb@ ~/pelicanoutput/pelican/pelican-themes #8]$for i in <code>find . -name screenshot.png</code> ;do echo  <code>dirname $i</code>;done;</p>
+</blockquote>
+<div class="highlight"><pre><span></span>./bricks
+./monospace …</pre></div>
       <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html#pandocde-yong-fa-1">    Continue reading
+      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html#yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
+    <h2><a href="http://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html#brew-zhong-qie-huan-ruan-jian-ban-ben">brew 中切换软件版本</a></h2>
+    <p>
+          Posted on 2018-07-04 星期三 12:14 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://jackjin-cn.github.io/tag/brew.html">brew</a>,              <a href="http://jackjin-cn.github.io/tag/python.html">python</a>
+    </p>
+  </header>
+  <div>
+      <h1>brew 中切换软件版本</h1>
+<p>我有更新软件的习惯，习惯性的每天更新一下。比如brew ,pip3等。</p>
+<p>这不，前天把brew 就把python 3.6.5 升级到了python 3.7了，这个是大升级，结果python库都没有了，当然可以另行安装，也很方便，反正有写了批量更新的脚本，但没有到还有兼容性的问题。</p>
+<p>网上找一堆办法，有的命令已经过期了 <em>brew versions</em>,有的太复杂，看不明白。
+后来还是找到了一个办法，提前是老版本python没有删除。</p>
+<blockquote>
+<p>brew info python3</p>
+</blockquote>
+<div class="highlight"><pre><span></span><span class="n">python</span><span class="o">:</span> <span class="n">stable</span> <span class="mf">3.7</span><span class="o">.</span><span class="mi">0</span> <span class="o">(</span><span class="n">bottled</span><span class="o">),</span> <span class="n">HEAD</span>
+<span class="n">Interpreted</span><span class="o">,</span> <span class="n">interactive</span><span class="o">,</span> <span class="n">object</span><span class="o">-</span><span class="n">oriented</span> <span class="n">programming</span> <span class="n">language</span>
+<span class="n">https</span><span class="o">://</span><span class="n">www</span><span class="o">.</span><span class="na">python</span><span class="o">.</span><span class="na">org</span><span class="o">/</span>
+<span class="sr">/usr …</span></pre></div>
+      <br>
+      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html#brew-zhong-qie-huan-ruan-jian-ban-ben">    Continue reading
 </a>
   </div>
 </article>
 
   <div class="pagination">
+    <a class="btn float-left" href="http://jackjin-cn.github.io/category/ruan-jian2.html">
+      <i class="fa fa-angle-left"></i>     Older Posts
+
+    </a>
   </div>
 
 

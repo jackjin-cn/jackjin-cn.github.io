@@ -79,123 +79,109 @@
 
 <article>
   <header>
-    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html#zai-vimzhong-yong-pandocjin-xing-yu-lan">在vim中用pandoc进行预览</a></h2>
+    <h2><a href="http://jackjin-cn.github.io/2018/2018-08-24_21-39_hei-ping-guo-de-xiu-fu.html#hei-ping-guo-de-xiu-fu">黑苹果的修复</a></h2>
     <p>
-          Posted on 2016-01-05 星期二 17:37 in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
+          Posted on 2018-08-24 星期五 21:39 in <a href="http://jackjin-cn.github.io/category/dian-nao.html">电脑</a>
 
 
           &#8226;     Tagged with
 
-              <a href="http://jackjin-cn.github.io/tag/ruan-jian.html">软件</a>,              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>,              <a href="http://jackjin-cn.github.io/tag/pandoc.html">pandoc</a>,              <a href="http://jackjin-cn.github.io/tag/html.html">html</a>
+              <a href="http://jackjin-cn.github.io/tag/hei-ping-guo.html">黑苹果</a>,              <a href="http://jackjin-cn.github.io/tag/zhe-teng.html">折腾</a>
     </p>
   </header>
   <div>
-      <h2>在vim中用pandoc进行预览</h2>
-<div class="highlight"><pre><span></span>&quot;----------生成打包图片的单一html文件
-map &amp;lt;LEADER&amp;gt;mh &amp;lt;ESC&amp;gt;:w&amp;lt;CR&amp;gt;&amp;lt;ESC&amp;gt;:silent !pandoc  -s --self-contained % -c paht/to/style.css -o %:r.html&amp;lt;CR&amp;gt;
-</pre></div>
-
-
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html">参见《pandoc的用法（1）》</a></p>
+      <h2>黑苹果的修复</h2>
+<p>前段时间，装了个黑苹果，机器是<strong>nuci5 ryb</strong>,效果还不错，除了wifi不能用，其它还好，声卡也没有问题，用的见网上现成的配置。</p>
+<p>前几天，<em>手贱</em>一下，把clover升级到最新版本（不是配置程序，是启动器），结果不能启动，死机，弄好好几次不行，试着在windows下，把esp分区的文件恢复，也没有。</p>
+<h3>其实没有特别的原因，估计是 <em>EFI</em> 分别的启动程序有问题了。弄了好几次，差点放弃了。</h3>
+<p>今天心血来潮，想着把那块安装macos的分区的硬盘拆下，接到移动硬盘，然后联到MBP上，看到分区内容，还有以前efi文件的多个备份，想想有门啊。先重新安装了clover启动程序，当然是装在这个硬盘的分区上，然后把以前好用的EFI的备份复制过去，然后把硬盘装回去，一切ok，久违的启动画面出现了，太高兴了。</p>
+<h3>作为有升级强迫症的人，有些重要的东西，稳定就好，不必追新，以后再也不要<em>手贱</em>了 …</h3>
       <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html#zai-vimzhong-yong-pandocjin-xing-yu-lan">    Continue reading
+      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-08-24_21-39_hei-ping-guo-de-xiu-fu.html#hei-ping-guo-de-xiu-fu">    Continue reading
 </a>
   </div>
   <hr />
 </article>
 <article>
   <header>
-    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html#pandocde-yong-fa-1">pandoc的用法（1）</a></h2>
+    <h2><a href="http://jackjin-cn.github.io/2018/2018-07-17_12-38_find-cha-zhao-man-zu-duo-ge-tiao-jian-de-wen-jian.html#find-cha-zhao-man-zu-duo-ge-tiao-jian-de-wen-jian">find 查找满足多个条件的文件</a></h2>
     <p>
-          Posted on 2016-01-05 星期二 17:28 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
+          Posted on 2018-07-17 星期二 12:38 in <a href="http://jackjin-cn.github.io/category/shell.html">shell</a>
 
 
           &#8226;     Tagged with
 
-              <a href="http://jackjin-cn.github.io/tag/pandoc.html">pandoc</a>,              <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>,              <a href="http://jackjin-cn.github.io/tag/html.html">html</a>,              <a href="http://jackjin-cn.github.io/tag/css.html">css</a>
+              <a href="http://jackjin-cn.github.io/tag/find.html">find</a>,              <a href="http://jackjin-cn.github.io/tag/wen-jian-cha-zhao.html">文件查找</a>,              <a href="http://jackjin-cn.github.io/tag/linux.html">linux</a>
     </p>
   </header>
   <div>
-      <h2>pandoc的用法（1）</h2>
-<p>用vim写markdown，自己在.vimrc里也写快捷命令进行预览，感觉还是很方便的。</p>
+      <h1>用find 查找满足多个条件的文件</h1>
+<p>网上看了教程，find 可以添加 -o 作为或者条件，我试了一下，-a 表示 and,居然也是可以的</p>
+<h2>更正，昨天看了一个教程，原来find的条件默认是and这样的关系。</h2>
+<h2>下面就是找出文件名同时满足三个条件的用法，其它更高级的用法可以自行搜索</h2>
 <blockquote>
-<p>pandoc在生成html文件的时候，可以支持css，还可以生成单独的文件，包含在图片里面。</p>
+<p>find . -name '<em>关键词</em>' -a -name '<em>关键词2</em>' -a -name '<em>关键词</em>'</p>
+<p>加*作用是通配符，可以自行尝试。</p>
 </blockquote>
-<div class="highlight"><pre><span></span>pandoc -c style.css  #包含css样式（可以包括路径,但html和css是分离）
-pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含在一个html文件中,生成docx文件也可以用这个参数，图片被包含在docx文件中）
-</pre></div>
-
-
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html">参见我在vim中用pandoc进行预览</a></p>
       <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html#pandocde-yong-fa-1">    Continue reading
+      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-07-17_12-38_find-cha-zhao-man-zu-duo-ge-tiao-jian-de-wen-jian.html#find-cha-zhao-man-zu-duo-ge-tiao-jian-de-wen-jian">    Continue reading
 </a>
   </div>
   <hr />
 </article>
 <article>
   <header>
-    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-05_15-02_vimde-findming-ling.html#vimde-findming-ling">vim的find命令</a></h2>
+    <h2><a href="http://jackjin-cn.github.io/2018/2018-07-11_09-40_doczhuan-docx.html#doczhuan-docx">doc转docx</a></h2>
     <p>
-          Posted on 2016-01-05 星期二 15:02 in <a href="http://jackjin-cn.github.io/category/vim.html">vim</a>
+          Posted on 2018-07-11 星期三 09:40 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
 
 
           &#8226;     Tagged with
 
-              <a href="http://jackjin-cn.github.io/tag/ruan-jian.html">软件</a>,              <a href="http://jackjin-cn.github.io/tag/xue-xi.html">学习</a>
+              <a href="http://jackjin-cn.github.io/tag/python.html">python</a>,              <a href="http://jackjin-cn.github.io/tag/brew.html">brew</a>,              <a href="http://jackjin-cn.github.io/tag/office.html">office</a>,              <a href="http://jackjin-cn.github.io/tag/command-line.html">command line</a>
     </p>
   </header>
   <div>
-      <h2>vim的find命令</h2>
-<p><strong>:find</strong> 命令可以用来打开文件，不需要输入完成路径。不过，需要设置'path'选项:</p>
-<div class="highlight"><pre><span></span>:set path+=app/\*\*
-</pre></div>
-
-
-<p>然后可以用<tab>进行补全了，这个在一个项目中有多个目录时，打开文件特别实用。而且有同名文件也可以进行识别。</p>
-<p>摘自《Vim实用技巧》</p>
+      <h1>doc转docx</h1>
+<p>网上找了很多办法，想在mac把doc转成docx。一般有2种方案。</p>
+<ol>
+<li>antiword 可以把doc转成纯文件，或者docbook格式（这个我没有搞明白）</li>
+<li>用unoconv + libreoffice.</li>
+</ol>
+<p>昨天晚上试了一下第二种方案，libreoffice的版本要3.x和4.x，官网上只有5和6了，找了一下，还是找到了。</p>
+<p><a href="https://libreoffice.en.uptodown.com/mac/download/46193">libreoffice 4下载</a>,希望以后还能用。</p>
+<p>安装好以后就可以使用了。</p>
+<blockquote>
+<p>uniconv -f docx source.doc</p>
+<p>这样就可以转换了，如果成功的话会生成一个同名的docx文件，当然，仔细看说明，应该也还可以指定输出文件名了。</p>
+</blockquote>
       <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-05_15-02_vimde-findming-ling.html#vimde-findming-ling">    Continue reading
+      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-07-11_09-40_doczhuan-docx.html#doczhuan-docx">    Continue reading
 </a>
   </div>
   <hr />
 </article>
 <article>
   <header>
-    <h2><a href="http://jackjin-cn.github.io/2016/2016-01-03_16-44_xin-wen-zu-de-mei-luo.html#xin-wen-zu-de-mei-luo">新闻组的没落</a></h2>
+    <h2><a href="http://jackjin-cn.github.io/2018/2018-07-10_22-35_antiword.html#antiword">antiword</a></h2>
     <p>
-          Posted on 2016-01-03 星期日 16:44 in <a href="http://jackjin-cn.github.io/category/za-gan.html">杂感</a>
+          Posted on 2018-07-10 星期二 22:35 in <a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a>
 
 
           &#8226;     Tagged with
 
-              <a href="http://jackjin-cn.github.io/tag/ruan-jian.html">软件</a>,              <a href="http://jackjin-cn.github.io/tag/gan-xiang.html">感想</a>
+              <a href="http://jackjin-cn.github.io/tag/mac.html">mac</a>,              <a href="http://jackjin-cn.github.io/tag/work.html">work</a>,              <a href="http://jackjin-cn.github.io/tag/python.html">python</a>,              <a href="http://jackjin-cn.github.io/tag/command-line.html">command line</a>
     </p>
   </header>
   <div>
-      <h2>新闻组的没落</h2>
-<p>最近几天在折腾debian，安装了thunderbird，设置了邮件帐户，在设置的时候看到还可以进行新闻组的设置，不经想出N年组用 <em>outlookpress</em> 看新闻组的光景，当时还是拔号上网，为省钱，都是先同步下载好离线看的，内容还是蛮多，有关网站还能上。</p>
-<p>今天在网上找一下，中文可用的新闻组很少了，能上的也基本没有什么内容或者更新了，感叹时间变化太快了，技术发展了更迭不断，当年火的不得了东西，不管是软件还是硬件，到了现在都发生了很大的变化，我所喜欢的东东，很多都淘汰了。</p>
+      <h1>Title:antiword</h1>
+<h2>一直想找一个 在mac下能用的doc to docx的方法</h2>
+<p>结果找到一个叫<em>antiword</em>的开源软件,以命令行的方式把doc转成纯文本之类的，比用python方便一点，还可以转成pdf之类的 。</p>
 <ul>
-<li>
-<p>ti-92plus 图形计算器</p>
-</li>
-<li>
-<p>掌上通黑白手持电脑（windows系统）</p>
-</li>
-<li>
-<p>windows mobile 手机（彩色，e850,hkc）</p>
-</li>
-<li>
-<p>nokia 手机（s60）N72,N8</p>
-</li>
-<li>
-<p>黑莓手机  9930</p>
-</li>
+<li>不过，好像还有一个参数，可以转成xml之类的格式 ，docbook，我初步试了一下，找到一个把odcbook 转成 docx的程序，结果行不通，不能把docbook格式转成docx。有点遗憾。</li>
 </ul>
-<p>看来，玩数码，是要亏很多钱的，也没有什么实质的收获，至少对生活无太大帮助。</p>
       <br>
-      <a class="btn" href="http://jackjin-cn.github.io/2016/2016-01-03_16-44_xin-wen-zu-de-mei-luo.html#xin-wen-zu-de-mei-luo">    Continue reading
+      <a class="btn" href="http://jackjin-cn.github.io/2018/2018-07-10_22-35_antiword.html#antiword">    Continue reading
 </a>
   </div>
 </article>

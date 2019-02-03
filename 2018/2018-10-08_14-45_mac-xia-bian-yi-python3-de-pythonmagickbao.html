@@ -33,17 +33,17 @@
 <!-- End Google Analytics -->
 
 <meta name="author" content="天地一沙鸥" />
-<meta name="description" content="mac 下编译PythonMagick 由于要压缩漫画pdf，找了很多办法，其中有用到 imagemagick,这个比较 好安装。 brew install imagemagick@6 brew link imagemagick@6 --force 不过，pythonmagcik这个包就比较麻烦了，windows下有编译好的二进制包，mac需要自己编译，比较麻烦，也走了不少弯路。 网上看了不少教程，自己也摸索了下，现在是能用了。 代码,过程放在下面 下载源码包PythonMagic-0.9.19 而 0.9.19 不行，编译没问题，但安装后，使用导入有问题。 据说是后面的版本api什么的改了，好像可以改文件什么的，但是我不会，就用老点的版本吧 现在看来，主要还是python版本的问题，这就是折腾这么多时间的心得 主要是注意python2和python3的区别 Installing PythonMagick …" />
+<meta name="description" content="mac 下编译PythonMagick 由于要压缩漫画pdf，找了很多办法，其中有用到 imagemagick,这个比较 好安装。 brew install imagemagick@6 brew link imagemagick@6 --force 不过，pythonmagcik这个包就比较麻烦了，windows下有编译好的二进制包，mac需要自己编译，比较麻烦，也走了不少弯路。 网上看了不少教程，自己也摸索了下，现在是能用了。 代码,过程放在下面 下载源码包PythonMagic-0.9.18.tar.xz 而 0.9.19 不行，编译没问题，但安装后，使用导入有问题。 据说是后面的版本api什么的改了，好像可以改文件什么的，但是我不会，就用老点的版本吧 现在看来，主要还是python版本的问题，这就是折腾这么多时间的心得 主要是注意python2和python3的区别 …" />
 <meta name="keywords" content="python, mac">
 
 <meta property="og:site_name" content="Jackjin's Home"/>
 <meta property="og:title" content="mac 下编译python3 的 PythonMagick包"/>
-<meta property="og:description" content="mac 下编译PythonMagick 由于要压缩漫画pdf，找了很多办法，其中有用到 imagemagick,这个比较 好安装。 brew install imagemagick@6 brew link imagemagick@6 --force 不过，pythonmagcik这个包就比较麻烦了，windows下有编译好的二进制包，mac需要自己编译，比较麻烦，也走了不少弯路。 网上看了不少教程，自己也摸索了下，现在是能用了。 代码,过程放在下面 下载源码包PythonMagic-0.9.19 而 0.9.19 不行，编译没问题，但安装后，使用导入有问题。 据说是后面的版本api什么的改了，好像可以改文件什么的，但是我不会，就用老点的版本吧 现在看来，主要还是python版本的问题，这就是折腾这么多时间的心得 主要是注意python2和python3的区别 Installing PythonMagick …"/>
+<meta property="og:description" content="mac 下编译PythonMagick 由于要压缩漫画pdf，找了很多办法，其中有用到 imagemagick,这个比较 好安装。 brew install imagemagick@6 brew link imagemagick@6 --force 不过，pythonmagcik这个包就比较麻烦了，windows下有编译好的二进制包，mac需要自己编译，比较麻烦，也走了不少弯路。 网上看了不少教程，自己也摸索了下，现在是能用了。 代码,过程放在下面 下载源码包PythonMagic-0.9.18.tar.xz 而 0.9.19 不行，编译没问题，但安装后，使用导入有问题。 据说是后面的版本api什么的改了，好像可以改文件什么的，但是我不会，就用老点的版本吧 现在看来，主要还是python版本的问题，这就是折腾这么多时间的心得 主要是注意python2和python3的区别 …"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="http://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2018-10-08 14:45:42+08:00"/>
-<meta property="article:modified_time" content="2018-10-08 17:12:15+08:00"/>
+<meta property="article:modified_time" content="2018-10-08 17:13:27+08:00"/>
 <meta property="article:author" content="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">
 <meta property="article:section" content="python,mac,lib"/>
 <meta property="article:tag" content="python"/>
@@ -106,7 +106,7 @@
 <h3>不过，pythonmagcik这个包就比较麻烦了，windows下有编译好的二进制包，mac需要自己编译，比较麻烦，也走了不少弯路。</h3>
 <p>网上看了不少教程，自己也摸索了下，现在是能用了。</p>
 <p>代码,过程放在下面</p>
-<p>下载源码包<a href="http://www.imagemagick.org/download/python/releases/PythonMagick-0.9.18.tar.xz">PythonMagic-0.9.19</a></p>
+<p>下载源码包<a href="http://www.imagemagick.org/download/python/releases/PythonMagick-0.9.18.tar.xz">PythonMagic-0.9.18.tar.xz</a></p>
 <p>而 0.9.19 不行，编译没问题，但安装后，使用导入有问题。
 据说是后面的版本api什么的改了，好像可以改文件什么的，但是我不会，就用老点的版本吧</p>
 <h3>现在看来，主要还是python版本的问题，这就是折腾这么多时间的心得</h3>
