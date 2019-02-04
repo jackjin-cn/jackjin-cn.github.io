@@ -1,351 +1,205 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html>
 <head>
+    <title> Jackjin's Home </title>
+    <link rel="shortcut icon" href="https://jackjin-cn.github.io/images/" />
 
-        <title>Jackjin's Home - mac</title>
-        <meta charset="utf-8" />
-        <link href="https://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home Full RSS Feed" />
+    <script src="https://jackjin-cn.github.io/theme/js/jquery-3.1.1.min.js"></script>
 
+    <!-- extra css -->
 
-        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+    <!-- uikit basic -->
+    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/uikit.min.css"/>
+    <script src="https://jackjin-cn.github.io/theme/js/uikit.min.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/gumby.css" />
-        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/style.css" />
-        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/pygment.css" />
+    <!-- uk components -->
+    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/components/sticky.css"/>
+    <script src="https://jackjin-cn.github.io/theme/js/components/sticky.js"></script>
+    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/components/search.css"/>
+    <script src="https://jackjin-cn.github.io/theme/js/components/search.js"></script>
 
-        <script src="https://jackjin-cn.github.io/theme/js/libs/modernizr-2.6.2.min.js"></script>
-
-
-
+    <!-- self defined  -->
+    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/highlight.css"/>
+    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/main.css"/>
 
 </head>
+<body>
 
-<body id="index" class="home">
+    <main class="jojo-theme">
+        <div class="uk-container uk-container-center">
+
+            <!-- nav -->
 
 
-    <div class="container">
+            <div class="uk-grid uk-margin-large-top">
+                <div class="uk-width-medium-1-10">
 
-        <div class="row">
 
-          <header id="banner" class="body">
-                  <h1><a href="https://jackjin-cn.github.io/">Jackjin's Home <strong></strong></a></h1>
-          </header><!-- /#banner -->
 
-            <div id="navigation" class="navbar row">
-              <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
-             
-              <ul class="columns">
-                <li><a href="https://jackjin-cn.github.io/">Home</a></li>
+                </div>
+                <div class="uk-width-medium-7-10">
+                    <div class="uk-margin-top">
+                        <!-- content -->
+    <article class="uk-article">
+            <div class="uk-grid">
+                <div class="uk-width-medium-2-10">
+                        <div class="tags">
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/python.html">python</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/mac.html">mac</a>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="uk-width-medium-8-10">
+                    <h2>
+                        <a href="https://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html" rel="bookmark"> mac 下编译python3 的 PythonMagick包 </a>
+                    </h2>
+                    <p class="uk-article-meta">
+                        2018-10-08 星期一 14:45
+                    </p>
+                    <p>mac 下编译PythonMagick 由于要压缩漫画pdf，找了很多办法，其中有用到 imagemagick,这个比较 好安装。 brew install imagemagick@6 brew link imagemagick@6 --force 不过，pythonmagcik这个包就比较麻烦了，windows下有编译好的二进制包，mac需要自己编译，比较麻烦，也走了不少弯路。 网上看了不少教程，自己也摸索了下，现在是能用了。 代码,过程放在下面 下载源码包PythonMagic-0.9.18.tar.xz 而 0.9.19 不行，编译没问题，但安装后，使用导入有问题。 据说是后面的版本api什么的改了，好像可以改文件什么的，但是我不会，就用老点的版本吧 现在看来，主要还是python版本的问题，这就是折腾这么多时间的心得 主要是注意python2和python3的区别 …</p>
+                    <!--<p> mac 下编译PythonMagick 由于要压缩漫画pdf，找了很多办法，其中有用到 imagemagick,这个比较 好安装。 brew install imagemagick@6 brew link imagemagick@6 --force 不过，pythonmagcik这个包就比较麻烦了，windows下有编译好的二进制包，mac需要自己编译，比较麻烦，也走了不少弯路。 网上看了不少教程，自己也摸索了下，现在是能用了。 代码,过程放在下面 下载源码包PythonMagic-0.9.18.tar.xz 而 0.9.19 不行，编译没问题，但安装后，使用导入有问题。 据说是后面的版本api什么的改了，好像可以改文件什么的，但是我不会，就用老点的版本吧 现在看来，主要还是python版本的问题，这就是折腾这么多时间的心得 主要是注意python2和python3的区别 Installing PythonMagick on OS X # 网上原来是 brew install boost #我要为python3编译 加了参数--with-python3,如果不加，可以通过编译，但是import 会有问题. brew install --with-magick<span...</p>-->
+                    <p class="uk-text-right jojo-read-more"><a href="https://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html">Read More...</a></p>
+                </div>
+            </div>
+            <hr class="uk-article-divider">
+            <div class="uk-grid">
+                <div class="uk-width-medium-2-10">
+                        <div class="tags">
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/os.html">os</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/mac.html">mac</a>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="uk-width-medium-8-10">
+                    <h2>
+                        <a href="https://jackjin-cn.github.io/2018/2018-08-24_21-51_maczhong-pi-liang-da-yin-wen-jian.html" rel="bookmark"> mac中批量打印文件 </a>
+                    </h2>
+                    <p class="uk-article-meta">
+                        2018-08-24 星期五 21:51
+                    </p>
+                    <p>mac中批量打印文件 由于工作关系，要批量打印word文档，在mac下，没有找到特别的办法，用libreoffice打印，文档格式有问题。 网上搜索了很多次，无果。结果，看到了一个办法，很简单，也实用。 就是打开打印机，直接把word文档施放进去，也就是生成一个队列，好像就可以了。 用命令行，没有找到好的办法。 lp 命令只能打印pdf和ps文件。</p>
+                    <!--<p> mac中批量打印文件 由于工作关系，要批量打印word文档，在mac下，没有找到特别的办法，用libreoffice打印，文档格式有问题。 网上搜索了很多次，无果。结果，看到了一个办法，很简单，也实用。 就是打开打印机，直接把word文档施放进去，也就是生成一个队列，好像就可以了。 用命令行，没有找到好的办法。 lp 命令只能打印pdf和ps文件。...</p>-->
+                    <p class="uk-text-right jojo-read-more"><a href="https://jackjin-cn.github.io/2018/2018-08-24_21-51_maczhong-pi-liang-da-yin-wen-jian.html">Read More...</a></p>
+                </div>
+            </div>
+            <hr class="uk-article-divider">
+            <div class="uk-grid">
+                <div class="uk-width-medium-2-10">
+                        <div class="tags">
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/mac.html">mac</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/work.html">work</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/python.html">python</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/command-line.html">command line</a>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="uk-width-medium-8-10">
+                    <h2>
+                        <a href="https://jackjin-cn.github.io/2018/2018-07-10_22-35_antiword.html" rel="bookmark"> antiword </a>
+                    </h2>
+                    <p class="uk-article-meta">
+                        2018-07-10 星期二 22:35
+                    </p>
+                    <p>Title:antiword 一直想找一个 在mac下能用的doc to docx的方法 结果找到一个叫antiword的开源软件,以命令行的方式把doc转成纯文本之类的，比用python方便一点，还可以转成pdf之类的 。 不过，好像还有一个参数，可以转成xml之类的格式 ，docbook，我初步试了一下，找到一个把odcbook 转成 docx的程序，结果行不通，不能把docbook格式转成docx。有点遗憾。</p>
+                    <!--<p> Title:antiword 一直想找一个 在mac下能用的doc to docx的方法 结果找到一个叫antiword的开源软件,以命令行的方式把doc转成纯文本之类的，比用python方便一点，还可以转成pdf之类的 。 不过，好像还有一个参数，可以转成xml之类的格式 ，docbook，我初步试了一下，找到一个把odcbook 转成 docx的程序，结果行不通，不能把docbook格式转成docx。有点遗憾。...</p>-->
+                    <p class="uk-text-right jojo-read-more"><a href="https://jackjin-cn.github.io/2018/2018-07-10_22-35_antiword.html">Read More...</a></p>
+                </div>
+            </div>
+            <hr class="uk-article-divider">
+            <div class="uk-grid">
+                <div class="uk-width-medium-2-10">
+                        <div class="tags">
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/wen-jian-chu-li.html">文件处理</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/linux.html">linux</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/mac.html">mac</a>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="uk-width-medium-8-10">
+                    <h2>
+                        <a href="https://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html" rel="bookmark"> sed的一点用处 </a>
+                    </h2>
+                    <p class="uk-article-meta">
+                        2018-07-03 星期二 14:32
+                    </p>
+                    <p>sed的一点用处 最近在弄pelican 与 github的博客，下载很不要模板，更换很不方便，想能不能用命令修改，google一下，还是真有办法的。 提醒不要用mac osx 自带的sed 我用brew 安装了gnu-sed gsed -i 99c\jtheme="theme_name" pelianconf.py -i 表示直接修改文件 99c\jtheme="theme_name" 表示将99行的内容直接替换(c)成jtheme="theme_name" \是起一个分隔的作用。 有不明白的地方可以看教程，语法有点类似vim ```` ## 下面是我自己用的脚本，在选中的theme的目录下运行 !/usr/bin/env python3 -- coding: utf-8 -- import os cwd=os.getcwd() path=(cwd.split('/')) cfname …</p>
+                    <!--<p> sed的一点用处 最近在弄pelican 与 github的博客，下载很不要模板，更换很不方便，想能不能用命令修改，google一下，还是真有办法的。 提醒不要用mac osx 自带的sed 我用brew 安装了gnu-sed gsed -i 99c\jtheme="theme_name" pelianconf.py -i 表示直接修改文件 99c\jtheme="theme_name" 表示将99行的内容直接替换(c)成jtheme="theme_name" \是起一个分隔的作用。 有不明白的地方可以看教程，语法有点类似vim ```` ## 下面是我自己用的脚本，在选中的theme的目录下运行 !/usr/bin/env python3 -- coding: utf-8 -- import os cwd=os.getcwd() path=(cwd.split('/')) cfname=home+'/pelicanoutput/blog_pelicanconf.py' cmd="gsed -i '99c\jtheme=" + '"'+path[-1]+'"'+"' "+cfname print(cmd) os.system(cmd) ```...</p>-->
+                    <p class="uk-text-right jojo-read-more"><a href="https://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html">Read More...</a></p>
+                </div>
+            </div>
+            <hr class="uk-article-divider">
+    </article>
 
-                <li><a href="https://jackjin-cn.github.io/archives.html">archives</a></li>
-                <li><a href="https://jackjin-cn.github.io/tags.html">tags</a></li>
-                <li><a href="https://jackjin-cn.github.io/categories.html">categories</a></li>
+                    </div>
+                </div>
+                <div class="uk-width-medium-2-10">
 
-              </ul>
+                    <!-- author info -->
+
+                    <!-- newest articles -->
+
+
+                    <!-- related links -->
+
+                </div>
             </div>
 
-<section id="content">
+            <!-- footer -->
 
+        </div>
+    </main>
 
 
-   <div class="row">
-
-
-        <div class="eleven columns">
-                 <ol id="post-list">
-                        <li><article class="hentry">
-                                <header> <h2 class="entry-title"><a href="https://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html" rel="bookmark" title="Permalink to mac 下编译python3 的 PythonMagick包">mac 下编译python3 的 PythonMagick包</a></h2> </header>
-                                <footer class="post-info">
-                                    <abbr class="published" title="2018-10-08T14:45:42+08:00"> 2018-10-08 星期一 14:45 </abbr>
-                                    <address class="vcard author">By 
-                                    <a class="url fn" href="https://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html"> 天地一沙鸥</a>
-                                    </address>
-                                </footer><!-- /.post-info -->
-                                <div class="entry-content"> <h2>mac 下编译PythonMagick</h2>
-<h3>由于要压缩漫画pdf，找了很多办法，其中有用到 <em>imagemagick</em>,这个比较 好安装。</h3>
-<div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">imagemagick</span><span class="mi">@6</span>
-<span class="n">brew</span> <span class="n">link</span> <span class="n">imagemagick</span><span class="mi">@6</span> <span class="o">--</span><span class="n">force</span>
-</pre></div>
-
-
-<h3>不过，pythonmagcik这个包就比较麻烦了，windows下有编译好的二进制包，mac需要自己编译，比较麻烦，也走了不少弯路。</h3>
-<p>网上看了不少教程，自己也摸索了下，现在是能用了。</p>
-<p>代码,过程放在下面</p>
-<p>下载源码包<a href="http://www.imagemagick.org/download/python/releases/PythonMagick-0.9.18.tar.xz">PythonMagic-0.9.18.tar.xz</a></p>
-<p>而 0.9.19 不行，编译没问题，但安装后，使用导入有问题。
-据说是后面的版本api什么的改了，好像可以改文件什么的，但是我不会，就用老点的版本吧</p>
-<h3>现在看来，主要还是python版本的问题，这就是折腾这么多时间的心得</h3>
-<p>主要是注意python2和python3的区别 …</p> </div><!-- /.entry-content -->
-
-                                <div class="medium primary btn"><a href="https://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html" rel="bookmark" title="Permalink to mac 下编译python3 的 PythonMagick包">Read more <i class="icon-arrow-right"></i></a></div>
-
-
-
-                                <div class="row tag-row">
-                                        <span>Tagged as : </span>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/python.html">python</a>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/mac.html">mac</a>
-                                </div>
-
-
-
-                        </article></li>
-                        <li><article class="hentry">
-                                <header> <h2 class="entry-title"><a href="https://jackjin-cn.github.io/2018/2018-08-24_21-51_maczhong-pi-liang-da-yin-wen-jian.html" rel="bookmark" title="Permalink to mac中批量打印文件">mac中批量打印文件</a></h2> </header>
-                                <footer class="post-info">
-                                    <abbr class="published" title="2018-08-24T21:51:51+08:00"> 2018-08-24 星期五 21:51 </abbr>
-                                    <address class="vcard author">By 
-                                    <a class="url fn" href="https://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html"> 天地一沙鸥</a>
-                                    </address>
-                                </footer><!-- /.post-info -->
-                                <div class="entry-content"> <h2>mac中批量打印文件</h2>
-<p>由于工作关系，要批量打印word文档，在mac下，没有找到特别的办法，用libreoffice打印，文档格式有问题。</p>
-<p>网上搜索了很多次，无果。结果，看到了一个办法，很简单，也实用。</p>
-<h2>就是打开打印机，直接把word文档施放进去，也就是生成一个队列，好像就可以了。</h2>
-<p>用命令行，没有找到好的办法。</p>
-<p><strong>lp</strong> 命令只能打印pdf和ps文件。</p> </div><!-- /.entry-content -->
-
-                                <div class="medium primary btn"><a href="https://jackjin-cn.github.io/2018/2018-08-24_21-51_maczhong-pi-liang-da-yin-wen-jian.html" rel="bookmark" title="Permalink to mac中批量打印文件">Read more <i class="icon-arrow-right"></i></a></div>
-
-
-
-                                <div class="row tag-row">
-                                        <span>Tagged as : </span>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/os.html">os</a>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/mac.html">mac</a>
-                                </div>
-
-
-
-                        </article></li>
-                        <li><article class="hentry">
-                                <header> <h2 class="entry-title"><a href="https://jackjin-cn.github.io/2018/2018-07-10_22-35_antiword.html" rel="bookmark" title="Permalink to antiword">antiword</a></h2> </header>
-                                <footer class="post-info">
-                                    <abbr class="published" title="2018-07-10T22:35:04+08:00"> 2018-07-10 星期二 22:35 </abbr>
-                                    <address class="vcard author">By 
-                                    <a class="url fn" href="https://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html"> 天地一沙鸥</a>
-                                    </address>
-                                </footer><!-- /.post-info -->
-                                <div class="entry-content"> <h1>Title:antiword</h1>
-<h2>一直想找一个 在mac下能用的doc to docx的方法</h2>
-<p>结果找到一个叫<em>antiword</em>的开源软件,以命令行的方式把doc转成纯文本之类的，比用python方便一点，还可以转成pdf之类的 。</p>
-<ul>
-<li>不过，好像还有一个参数，可以转成xml之类的格式 ，docbook，我初步试了一下，找到一个把odcbook 转成 docx的程序，结果行不通，不能把docbook格式转成docx。有点遗憾。</li>
-</ul> </div><!-- /.entry-content -->
-
-                                <div class="medium primary btn"><a href="https://jackjin-cn.github.io/2018/2018-07-10_22-35_antiword.html" rel="bookmark" title="Permalink to antiword">Read more <i class="icon-arrow-right"></i></a></div>
-
-
-
-                                <div class="row tag-row">
-                                        <span>Tagged as : </span>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/mac.html">mac</a>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/work.html">work</a>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/python.html">python</a>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/command-line.html">command line</a>
-                                </div>
-
-
-
-                        </article></li>
-                        <li><article class="hentry">
-                                <header> <h2 class="entry-title"><a href="https://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html" rel="bookmark" title="Permalink to sed的一点用处">sed的一点用处</a></h2> </header>
-                                <footer class="post-info">
-                                    <abbr class="published" title="2018-07-03T14:32:35+08:00"> 2018-07-03 星期二 14:32 </abbr>
-                                    <address class="vcard author">By 
-                                    <a class="url fn" href="https://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html"> 天地一沙鸥</a>
-                                    </address>
-                                </footer><!-- /.post-info -->
-                                <div class="entry-content"> <h1>sed的一点用处</h1>
-<p>最近在弄pelican 与 github的博客，下载很不要模板，更换很不方便，想能不能用命令修改，google一下，还是真有办法的。</p>
-<h2>提醒不要用mac osx 自带的sed</h2>
-<h2>我用brew 安装了gnu-sed</h2>
-<div class="highlight"><pre><span></span>gsed -i 99c\jtheme=&quot;theme_name&quot; pelianconf.py
-
--i 表示直接修改文件
-99c\jtheme=&quot;theme_name&quot;  表示将99行的内容直接替换(c)成jtheme=&quot;theme_name&quot;  \是起一个分隔的作用。
-有不明白的地方可以看教程，语法有点类似vim
-````
-
-## 下面是我自己用的脚本，在选中的theme的目录下运行
-</pre></div>
-
-
-<h1>!/usr/bin/env python3</h1>
-<h1>-<em>- coding: utf-8 -</em>-</h1>
-<p>import os
-cwd=os.getcwd()
-path=(cwd.split('/'))
-cfname …</p> </div><!-- /.entry-content -->
-
-                                <div class="medium primary btn"><a href="https://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html" rel="bookmark" title="Permalink to sed的一点用处">Read more <i class="icon-arrow-right"></i></a></div>
-
-
-
-                                <div class="row tag-row">
-                                        <span>Tagged as : </span>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/wen-jian-chu-li.html">文件处理</a>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/linux.html">linux</a>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/mac.html">mac</a>
-                                </div>
-
-
-
-                        </article></li>
-                </ol><!-- /#posts-list -->
-
-        </div><!-- /.eleven.columns -->
-        
-<div class="three columns">
-
-  <h4>Pages</h4>
-
-  <ul>
-    <li><a href="https://jackjin-cn.github.io/archives.html">archives</a></li>
-    <li><a href="https://jackjin-cn.github.io/tags.html">tags</a></li>
-    <li><a href="https://jackjin-cn.github.io/categories.html">categories</a></li>
-
-  
-  <h4>Categories</h4>
-  <ul class="blank">
-    <li><a href="https://jackjin-cn.github.io/category/dian-nao.html">电脑</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/linux.html">linux</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/mac.html">mac</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/pdf.html">pdf</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/python.html">python</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/pythonmaclib.html">python,mac,lib</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/shell.html">shell</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/vim.html">vim</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/za-gan.html">杂感</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/za-lei.html">杂类</a></li>
-  </ul>
-
-
-<h4>Tags</h4>
-	<ul class="blank">
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/debian.html">debian</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/realtek.html">realtek</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/office.html">office</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian-ming.html">文件名</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/pandoc.html">pandoc</a></li>
-	    <li class="tag-2"><a href="https://jackjin-cn.github.io/tag/mac.html">mac</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/encoding.html">encoding</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian-cao-zuo.html">文件操作</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/zhong-wen.html">中文</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/dian-nao.html">电脑</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/os.html">os</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/find.html">find</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/command-line.html">command line</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/brew.html">brew</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/script.html">script</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/autocmd.html">autocmd</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/zhuan-zai.html">转载</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/for.html">for</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/ya-suo.html">压缩</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian.html">文件</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/css.html">css</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/qu-dong.html">驱动</a></li>
-	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/pelican.html">pelican</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/sui-bi.html">随笔</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/time.html">time</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/html.html">html</a></li>
-	    <li class="tag-2"><a href="https://jackjin-cn.github.io/tag/zhe-teng.html">折腾</a></li>
-	    <li class="tag-2"><a href="https://jackjin-cn.github.io/tag/ruan-jian.html">软件</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/work.html">work</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wine.html">wine</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/code.html">code</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/shell.html">shell</a></li>
-	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/bash.html">bash</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/qq.html">qq</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/tips.html">tips</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/xue-xi.html">学习</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/hei-ping-guo.html">黑苹果</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian-chu-li.html">文件处理</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/gan-xiang.html">感想</a></li>
-	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/python.html">python</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/awk.html">awk</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/cygwin.html">cygwin</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/pdf.html">pdf</a></li>
-	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/vim.html">vim</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/macos.html">macos</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/unicode.html">unicode</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/ben-wen.html">本文</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/path.html">path</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/xin-qing.html">心情</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/git.html">git</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/markdown.html">markdown</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wifi.html">wifi</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/github.html">github</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/windows.html">windows</a></li>
-	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/linux.html">linux</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian-cha-zhao.html">文件查找</a></li>
-</ul>
-
-
-<nav class="widget">
-  <h4>Social</h4>
-  <ul class="blank">
-    <li><a href="#">aaa</a></li>
-    <li><a href="#">Another social link</a></li>
-  </ul>
-</nav>
-
-</div> </div><!-- /.row -->
-
-<p class="paginator">
-    Page 1 / 1
-</p>
-</section><!-- /#content -->
-
-       </div><!-- /.row -->
-    </div><!-- /.container -->
-
-
-       <div class="container.nopad bg">
-
-    
-        <footer id="credits" class="row">
-          <div class="seven columns left-center">
-
-                   <address id="about" class="vcard body">
-                    Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                    which takes great advantage of <a href="http://python.org">Python</a>.
-                    <br />
-                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>
-                    </address>
-          </div>
-
-
-          <div class="seven columns">
-            <div class="row">
-              <ul class="socbtns">
-
-
-
-
-
-              </ul>
-            </div>
-          </div>
-        </footer>
-
-    </div>
-
-
-<script type="text/javascript">
-    var disqus_shortname = 'jackjin';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
-  <script src="https://jackjin-cn.github.io/theme/js/libs/jquery-1.9.1.min.js"></script>
-  <script src="https://jackjin-cn.github.io/theme/js/libs/gumby.min.js"></script>
-  <script src="https://jackjin-cn.github.io/theme/js/plugins.js"></script>
 </body>
 </html>

@@ -1,261 +1,103 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html>
 <head>
+    <title> Jackjin's Home </title>
+    <link rel="shortcut icon" href="https://jackjin-cn.github.io/images/" />
 
-        <title>Jackjin's Home</title>
-        <meta charset="utf-8" />
-        <link href="https://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home Full RSS Feed" />
+    <script src="https://jackjin-cn.github.io/theme/js/jquery-3.1.1.min.js"></script>
 
+    <!-- extra css -->
 
-        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+    <!-- uikit basic -->
+    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/uikit.min.css"/>
+    <script src="https://jackjin-cn.github.io/theme/js/uikit.min.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/gumby.css" />
-        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/style.css" />
-        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/pygment.css" />
+    <!-- uk components -->
+    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/components/sticky.css"/>
+    <script src="https://jackjin-cn.github.io/theme/js/components/sticky.js"></script>
+    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/components/search.css"/>
+    <script src="https://jackjin-cn.github.io/theme/js/components/search.js"></script>
 
-        <script src="https://jackjin-cn.github.io/theme/js/libs/modernizr-2.6.2.min.js"></script>
-
-
-
+    <!-- self defined  -->
+    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/highlight.css"/>
+    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/main.css"/>
 
 </head>
+<body>
 
-<body id="index" class="home">
+    <main class="jojo-theme">
+        <div class="uk-container uk-container-center">
 
-
-    <div class="container">
-
-        <div class="row">
-
-          <header id="banner" class="body">
-                  <h1><a href="https://jackjin-cn.github.io/">Jackjin's Home <strong></strong></a></h1>
-          </header><!-- /#banner -->
-
-            <div id="navigation" class="navbar row">
-              <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
-             
-              <ul class="columns">
-                <li><a href="https://jackjin-cn.github.io/">Home</a></li>
-
-                <li><a href="https://jackjin-cn.github.io/archives.html">archives</a></li>
-                <li><a href="https://jackjin-cn.github.io/tags.html">tags</a></li>
-                <li><a href="https://jackjin-cn.github.io/categories.html">categories</a></li>
-
-              </ul>
-            </div>
-
-<section id="content">
-<h2>Articles in the mac category</h2>
+            <!-- nav -->
 
 
-   <div class="row">
-
-
-        <div class="eleven columns">
-                 <ol id="post-list">
-                        <li><article class="hentry">
-                                <header> <h2 class="entry-title"><a href="https://jackjin-cn.github.io/2019/2019-02-03_17-36_hei-ping-guo-qian-yi-xi-tong.html" rel="bookmark" title="Permalink to 黑苹果迁移系统">黑苹果迁移系统</a></h2> </header>
-                                <footer class="post-info">
-                                    <abbr class="published" title="2019-02-03T17:36:38+08:00"> 2019-02-03 星期日 17:36 </abbr>
-                                    <address class="vcard author">By 
-                                    <a class="url fn" href="https://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html"> 天地一沙鸥</a>
-                                    </address>
-                                </footer><!-- /.post-info -->
-                                <div class="entry-content"> <h2>黑苹果迁移系统</h2>
-<p>我原来的机器是nuc5i7，有一个sata接口和一个m.2(ngff)的接口，原来是win10(m.2 ssd 240g),macos(sata,ssd 128g)。</p>
-<p>我后来又从老的笔记本上拆下来一个m.2接口的ssd，硬盘容量大概是256个g。MAC os的硬盘sata接口只有128个g。然后一直说容量不够，然后呢我就把这个256g的m2接口的硬盘接到机器上扩大容量。但是有一个问题就是我原来的win10系统盘只能拆下来。</p>
-<p>我在京东上订了一个m2接口转sata接口的硬盘盒。想把系统重新转换，从原来的sata接口的硬盘上转到现在的m2接口的硬盘上。</p>
-<table>
-<thead>
-<tr>
-<th>机器接口</th>
-<th>m.2</th>
-<th>sata</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>原来</td>
-<td>m4 240g win10</td>
-<td>samsung 830 128g macosx</td>
-</tr>
-<tr>
-<td>过渡1</td>
-<td>transcend 240g exfat</td>
-<td>samsung 830 128g macosx</td>
-</tr>
-<tr>
-<td>过渡2</td>
-<td>transcend 240g mac …</td></tr></tbody></table> </div><!-- /.entry-content -->
-
-                                <div class="medium primary btn"><a href="https://jackjin-cn.github.io/2019/2019-02-03_17-36_hei-ping-guo-qian-yi-xi-tong.html" rel="bookmark" title="Permalink to 黑苹果迁移系统">Read more <i class="icon-arrow-right"></i></a></div>
+            <div class="uk-grid uk-margin-large-top">
+                <div class="uk-width-medium-1-10">
 
 
 
-                                <div class="row tag-row">
-                                        <span>Tagged as : </span>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/zhe-teng.html">折腾</a>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/dian-nao.html">电脑</a>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/macos.html">macos</a>
+                </div>
+                <div class="uk-width-medium-7-10">
+                    <div class="uk-margin-top">
+                        <!-- content -->
+    <article class="uk-article">
+            <div class="uk-grid">
+                <div class="uk-width-medium-2-10">
+                        <div class="tags">
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/zhe-teng.html">折腾</a>
+                                    </div>
                                 </div>
-
-
-
-                        </article></li>
-                </ol><!-- /#posts-list -->
-
-        </div><!-- /.eleven.columns -->
-        
-<div class="three columns">
-
-  <h4>Pages</h4>
-
-  <ul>
-    <li><a href="https://jackjin-cn.github.io/archives.html">archives</a></li>
-    <li><a href="https://jackjin-cn.github.io/tags.html">tags</a></li>
-    <li><a href="https://jackjin-cn.github.io/categories.html">categories</a></li>
-
-  
-  <h4>Categories</h4>
-  <ul class="blank">
-    <li><a href="https://jackjin-cn.github.io/category/dian-nao.html">电脑</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/linux.html">linux</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/mac.html">mac</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/pdf.html">pdf</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/python.html">python</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/pythonmaclib.html">python,mac,lib</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/shell.html">shell</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/vim.html">vim</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/za-gan.html">杂感</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/za-lei.html">杂类</a></li>
-  </ul>
-
-
-<h4>Tags</h4>
-	<ul class="blank">
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/debian.html">debian</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/realtek.html">realtek</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/office.html">office</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian-ming.html">文件名</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/pandoc.html">pandoc</a></li>
-	    <li class="tag-2"><a href="https://jackjin-cn.github.io/tag/mac.html">mac</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/encoding.html">encoding</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian-cao-zuo.html">文件操作</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/zhong-wen.html">中文</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/dian-nao.html">电脑</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/os.html">os</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/find.html">find</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/command-line.html">command line</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/brew.html">brew</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/script.html">script</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/autocmd.html">autocmd</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/zhuan-zai.html">转载</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/for.html">for</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/ya-suo.html">压缩</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian.html">文件</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/css.html">css</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/qu-dong.html">驱动</a></li>
-	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/pelican.html">pelican</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/sui-bi.html">随笔</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/time.html">time</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/html.html">html</a></li>
-	    <li class="tag-2"><a href="https://jackjin-cn.github.io/tag/zhe-teng.html">折腾</a></li>
-	    <li class="tag-2"><a href="https://jackjin-cn.github.io/tag/ruan-jian.html">软件</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/work.html">work</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wine.html">wine</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/code.html">code</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/shell.html">shell</a></li>
-	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/bash.html">bash</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/qq.html">qq</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/tips.html">tips</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/xue-xi.html">学习</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/hei-ping-guo.html">黑苹果</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian-chu-li.html">文件处理</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/gan-xiang.html">感想</a></li>
-	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/python.html">python</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/awk.html">awk</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/cygwin.html">cygwin</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/pdf.html">pdf</a></li>
-	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/vim.html">vim</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/macos.html">macos</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/unicode.html">unicode</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/ben-wen.html">本文</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/path.html">path</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/xin-qing.html">心情</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/git.html">git</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/markdown.html">markdown</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wifi.html">wifi</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/github.html">github</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/windows.html">windows</a></li>
-	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/linux.html">linux</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian-cha-zhao.html">文件查找</a></li>
-</ul>
-
-
-<nav class="widget">
-  <h4>Social</h4>
-  <ul class="blank">
-    <li><a href="#">aaa</a></li>
-    <li><a href="#">Another social link</a></li>
-  </ul>
-</nav>
-
-</div> </div><!-- /.row -->
-
-<p class="paginator">
-    Page 1 / 1
-</p>
-</section><!-- /#content -->
-
-       </div><!-- /.row -->
-    </div><!-- /.container -->
-
-
-       <div class="container.nopad bg">
-
-    
-        <footer id="credits" class="row">
-          <div class="seven columns left-center">
-
-                   <address id="about" class="vcard body">
-                    Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                    which takes great advantage of <a href="http://python.org">Python</a>.
-                    <br />
-                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>
-                    </address>
-          </div>
-
-
-          <div class="seven columns">
-            <div class="row">
-              <ul class="socbtns">
-
-
-
-
-
-              </ul>
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/dian-nao.html">电脑</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/macos.html">macos</a>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="uk-width-medium-8-10">
+                    <h2>
+                        <a href="https://jackjin-cn.github.io/2019/2019-02-03_17-36_hei-ping-guo-qian-yi-xi-tong.html" rel="bookmark"> 黑苹果迁移系统 </a>
+                    </h2>
+                    <p class="uk-article-meta">
+                        2019-02-03 星期日 17:36
+                    </p>
+                    <p>黑苹果迁移系统 我原来的机器是nuc5i7，有一个sata接口和一个m.2(ngff)的接口，原来是win10(m.2 ssd 240g),macos(sata,ssd 128g)。 我后来又从老的笔记本上拆下来一个m.2接口的ssd，硬盘容量大概是256个g。MAC os的硬盘sata接口只有128个g。然后一直说容量不够，然后呢我就把这个256g的m2接口的硬盘接到机器上扩大容量。但是有一个问题就是我原来的win10系统盘只能拆下来。 我在京东上订了一个m2接口转sata接口的硬盘盒。想把系统重新转换，从原来的sata接口的硬盘上转到现在的m2接口的硬盘上。 机器接口 m.2 sata 原来 m4 240g win10 samsung 830 128g macosx 过渡1 transcend 240g exfat samsung 830 128g macosx 过渡2 transcend 240g mac …</p>
+                    <!--<p> 黑苹果迁移系统 我原来的机器是nuc5i7，有一个sata接口和一个m.2(ngff)的接口，原来是win10(m.2 ssd 240g),macos(sata,ssd 128g)。 我后来又从老的笔记本上拆下来一个m.2接口的ssd，硬盘容量大概是256个g。MAC os的硬盘sata接口只有128个g。然后一直说容量不够，然后呢我就把这个256g的m2接口的硬盘接到机器上扩大容量。但是有一个问题就是我原来的win10系统盘只能拆下来。 我在京东上订了一个m2接口转sata接口的硬盘盒。想把系统重新转换，从原来的sata接口的硬盘上转到现在的m2接口的硬盘上。 机器接口 m.2 sata 原来 m4 240g win10 samsung 830 128g macosx 过渡1 transcend 240g exfat samsung 830 128g macosx 过渡2 transcend 240g mac os samsung 830 128g macosx 最终 m4 240g win10 transeced 240g转接成sata macosx 过程有点折腾，没钱，充分利用已有资源。 过程中出了点状况。记录一下。 在系统复制过程中，本来是利用系统自带的磁盘工具，想用恢复的方式 把samsung盘上的内容克隆到transcend上，结果到最后总是出现，哪怕是到系统恢复的时候用磁盘工具，也是一样的。 出现以下错误信息 未能完成该操作。（OSStatus 错误 16) 。 APFS 反转器未能反转宗卷 - 资源忙 估计是源盘是apfs的关系。 后来找到 Carbon Copy Cloner，但感觉是全盘复制，有几个分区没有复制，也不能启动。 找到另一个工具 Stellar Drive Clone ，这个工具好用，能够克隆过去。不过recovery和preboot分区复制的不成功，但不影响启动，也不高兴再折腾了。 我的机器是用clover启动的，记得还要把efi分区的文件也复制到新盘的efi分区，然后在bios里把clover所在磁盘设置为启动磁盘，然后一切就搞定了。 缺点就是原来clover启动会显示preboot ,recovery的启动项，就找不到了。不过，通用就行了，折腾了大半夜，好歹可以了。 记录一下，有需要的朋友也可以参考一下。...</p>-->
+                    <p class="uk-text-right jojo-read-more"><a href="https://jackjin-cn.github.io/2019/2019-02-03_17-36_hei-ping-guo-qian-yi-xi-tong.html">Read More...</a></p>
+                </div>
             </div>
-          </div>
-        </footer>
+            <hr class="uk-article-divider">
+    </article>
 
-    </div>
+                    </div>
+                </div>
+                <div class="uk-width-medium-2-10">
+
+                    <!-- author info -->
+
+                    <!-- newest articles -->
 
 
-<script type="text/javascript">
-    var disqus_shortname = 'jackjin';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
-  <script src="https://jackjin-cn.github.io/theme/js/libs/jquery-1.9.1.min.js"></script>
-  <script src="https://jackjin-cn.github.io/theme/js/libs/gumby.min.js"></script>
-  <script src="https://jackjin-cn.github.io/theme/js/plugins.js"></script>
+                    <!-- related links -->
+
+                </div>
+            </div>
+
+            <!-- footer -->
+
+        </div>
+    </main>
+
+
 </body>
 </html>

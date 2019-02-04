@@ -1,246 +1,109 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html>
 <head>
+    <title> Jackjin's Home </title>
+    <link rel="shortcut icon" href="https://jackjin-cn.github.io/images/" />
 
-        <title>Jackjin's Home - wifi</title>
-        <meta charset="utf-8" />
-        <link href="https://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home Full RSS Feed" />
+    <script src="https://jackjin-cn.github.io/theme/js/jquery-3.1.1.min.js"></script>
 
+    <!-- extra css -->
 
-        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+    <!-- uikit basic -->
+    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/uikit.min.css"/>
+    <script src="https://jackjin-cn.github.io/theme/js/uikit.min.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/gumby.css" />
-        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/style.css" />
-        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/pygment.css" />
+    <!-- uk components -->
+    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/components/sticky.css"/>
+    <script src="https://jackjin-cn.github.io/theme/js/components/sticky.js"></script>
+    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/components/search.css"/>
+    <script src="https://jackjin-cn.github.io/theme/js/components/search.js"></script>
 
-        <script src="https://jackjin-cn.github.io/theme/js/libs/modernizr-2.6.2.min.js"></script>
-
-
-
+    <!-- self defined  -->
+    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/highlight.css"/>
+    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/main.css"/>
 
 </head>
+<body>
 
-<body id="index" class="home">
+    <main class="jojo-theme">
+        <div class="uk-container uk-container-center">
+
+            <!-- nav -->
 
 
-    <div class="container">
-
-        <div class="row">
-
-          <header id="banner" class="body">
-                  <h1><a href="https://jackjin-cn.github.io/">Jackjin's Home <strong></strong></a></h1>
-          </header><!-- /#banner -->
-
-            <div id="navigation" class="navbar row">
-              <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
-             
-              <ul class="columns">
-                <li><a href="https://jackjin-cn.github.io/">Home</a></li>
-
-                <li><a href="https://jackjin-cn.github.io/archives.html">archives</a></li>
-                <li><a href="https://jackjin-cn.github.io/tags.html">tags</a></li>
-                <li><a href="https://jackjin-cn.github.io/categories.html">categories</a></li>
-
-              </ul>
-            </div>
-
-<section id="content">
+            <div class="uk-grid uk-margin-large-top">
+                <div class="uk-width-medium-1-10">
 
 
 
-   <div class="row">
-
-
-        <div class="eleven columns">
-                 <ol id="post-list">
-                        <li><article class="hentry">
-                                <header> <h2 class="entry-title"><a href="https://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html" rel="bookmark" title="Permalink to thinkpad L440 的wifi debian 网卡驱动">thinkpad L440 的wifi debian 网卡驱动</a></h2> </header>
-                                <footer class="post-info">
-                                    <abbr class="published" title="2016-01-24T18:41:00+08:00"> 2016-01-24 星期日 18:41 </abbr>
-                                    <address class="vcard author">By 
-                                    <a class="url fn" href="https://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html"> 天地一沙鸥</a>
-                                    </address>
-                                </footer><!-- /.post-info -->
-                                <div class="entry-content"> <h2>thinkpad L400 的wifi debian 网卡驱动</h2>
-<p>今天又弄起了<strong>thinkpad l440</strong>,无线网卡驱动有问题，连上后马上会断线，网上搜了半天，方案很多，好像不太成功。无线网卡的型号是 realtak 8192ee.</p>
-<p>今天偶然发现，几个命令</p>
-<div class="highlight"><pre><span></span>lsmod |grep rtl
-发现胡乱加载好几个网卡驱动
-便用 modprobe -r rtlwifi 这样的命令删除多余的驱动。
-最后发现管用的好像是下载的 realtek_new 管用，具体驱动名是 8192ee.
-modprobe 8192ee
-</pre></div> </div><!-- /.entry-content -->
-
-                                <div class="medium primary btn"><a href="https://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html" rel="bookmark" title="Permalink to thinkpad L440 的wifi debian 网卡驱动">Read more <i class="icon-arrow-right"></i></a></div>
-
-
-
-                                <div class="row tag-row">
-                                        <span>Tagged as : </span>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/debian.html">debian</a>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/linux.html">linux</a>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/wifi.html">wifi</a>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/qu-dong.html">驱动</a>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/realtek.html">realtek</a>
+                </div>
+                <div class="uk-width-medium-7-10">
+                    <div class="uk-margin-top">
+                        <!-- content -->
+    <article class="uk-article">
+            <div class="uk-grid">
+                <div class="uk-width-medium-2-10">
+                        <div class="tags">
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/debian.html">debian</a>
+                                    </div>
                                 </div>
-
-
-
-                        </article></li>
-                </ol><!-- /#posts-list -->
-
-        </div><!-- /.eleven.columns -->
-        
-<div class="three columns">
-
-  <h4>Pages</h4>
-
-  <ul>
-    <li><a href="https://jackjin-cn.github.io/archives.html">archives</a></li>
-    <li><a href="https://jackjin-cn.github.io/tags.html">tags</a></li>
-    <li><a href="https://jackjin-cn.github.io/categories.html">categories</a></li>
-
-  
-  <h4>Categories</h4>
-  <ul class="blank">
-    <li><a href="https://jackjin-cn.github.io/category/dian-nao.html">电脑</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/linux.html">linux</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/mac.html">mac</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/pdf.html">pdf</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/python.html">python</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/pythonmaclib.html">python,mac,lib</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/shell.html">shell</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/vim.html">vim</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/za-gan.html">杂感</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/za-lei.html">杂类</a></li>
-  </ul>
-
-
-<h4>Tags</h4>
-	<ul class="blank">
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/debian.html">debian</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/realtek.html">realtek</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/office.html">office</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian-ming.html">文件名</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/pandoc.html">pandoc</a></li>
-	    <li class="tag-2"><a href="https://jackjin-cn.github.io/tag/mac.html">mac</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/encoding.html">encoding</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian-cao-zuo.html">文件操作</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/zhong-wen.html">中文</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/dian-nao.html">电脑</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/os.html">os</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/find.html">find</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/command-line.html">command line</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/brew.html">brew</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/script.html">script</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/autocmd.html">autocmd</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/zhuan-zai.html">转载</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/for.html">for</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/ya-suo.html">压缩</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian.html">文件</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/css.html">css</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/qu-dong.html">驱动</a></li>
-	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/pelican.html">pelican</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/sui-bi.html">随笔</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/time.html">time</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/html.html">html</a></li>
-	    <li class="tag-2"><a href="https://jackjin-cn.github.io/tag/zhe-teng.html">折腾</a></li>
-	    <li class="tag-2"><a href="https://jackjin-cn.github.io/tag/ruan-jian.html">软件</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/work.html">work</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wine.html">wine</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/code.html">code</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/shell.html">shell</a></li>
-	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/bash.html">bash</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/qq.html">qq</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/tips.html">tips</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/xue-xi.html">学习</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/hei-ping-guo.html">黑苹果</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian-chu-li.html">文件处理</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/gan-xiang.html">感想</a></li>
-	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/python.html">python</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/awk.html">awk</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/cygwin.html">cygwin</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/pdf.html">pdf</a></li>
-	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/vim.html">vim</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/macos.html">macos</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/unicode.html">unicode</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/ben-wen.html">本文</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/path.html">path</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/xin-qing.html">心情</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/git.html">git</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/markdown.html">markdown</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wifi.html">wifi</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/github.html">github</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/windows.html">windows</a></li>
-	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/linux.html">linux</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian-cha-zhao.html">文件查找</a></li>
-</ul>
-
-
-<nav class="widget">
-  <h4>Social</h4>
-  <ul class="blank">
-    <li><a href="#">aaa</a></li>
-    <li><a href="#">Another social link</a></li>
-  </ul>
-</nav>
-
-</div> </div><!-- /.row -->
-
-<p class="paginator">
-    Page 1 / 1
-</p>
-</section><!-- /#content -->
-
-       </div><!-- /.row -->
-    </div><!-- /.container -->
-
-
-       <div class="container.nopad bg">
-
-    
-        <footer id="credits" class="row">
-          <div class="seven columns left-center">
-
-                   <address id="about" class="vcard body">
-                    Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                    which takes great advantage of <a href="http://python.org">Python</a>.
-                    <br />
-                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>
-                    </address>
-          </div>
-
-
-          <div class="seven columns">
-            <div class="row">
-              <ul class="socbtns">
-
-
-
-
-
-              </ul>
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/linux.html">linux</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/wifi.html">wifi</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/qu-dong.html">驱动</a>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="uk-width-medium-8-10">
+                    <h2>
+                        <a href="https://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html" rel="bookmark"> thinkpad L440 的wifi debian 网卡驱动 </a>
+                    </h2>
+                    <p class="uk-article-meta">
+                        2016-01-24 星期日 18:41
+                    </p>
+                    <p>thinkpad L400 的wifi debian 网卡驱动 今天又弄起了thinkpad l440,无线网卡驱动有问题，连上后马上会断线，网上搜了半天，方案很多，好像不太成功。无线网卡的型号是 realtak 8192ee. 今天偶然发现，几个命令 lsmod |grep rtl 发现胡乱加载好几个网卡驱动 便用 modprobe -r rtlwifi 这样的命令删除多余的驱动。 最后发现管用的好像是下载的 realtek_new 管用，具体驱动名是 8192ee. modprobe 8192ee</p>
+                    <!--<p> thinkpad L400 的wifi debian 网卡驱动 今天又弄起了thinkpad l440,无线网卡驱动有问题，连上后马上会断线，网上搜了半天，方案很多，好像不太成功。无线网卡的型号是 realtak 8192ee. 今天偶然发现，几个命令 lsmod |grep rtl 发现胡乱加载好几个网卡驱动 便用 modprobe -r rtlwifi 这样的命令删除多余的驱动。 最后发现管用的好像是下载的 realtek_new 管用，具体驱动名是 8192ee. modprobe 8192ee...</p>-->
+                    <p class="uk-text-right jojo-read-more"><a href="https://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html">Read More...</a></p>
+                </div>
             </div>
-          </div>
-        </footer>
+            <hr class="uk-article-divider">
+    </article>
 
-    </div>
+                    </div>
+                </div>
+                <div class="uk-width-medium-2-10">
+
+                    <!-- author info -->
+
+                    <!-- newest articles -->
 
 
-<script type="text/javascript">
-    var disqus_shortname = 'jackjin';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
-  <script src="https://jackjin-cn.github.io/theme/js/libs/jquery-1.9.1.min.js"></script>
-  <script src="https://jackjin-cn.github.io/theme/js/libs/gumby.min.js"></script>
-  <script src="https://jackjin-cn.github.io/theme/js/plugins.js"></script>
+                    <!-- related links -->
+
+                </div>
+            </div>
+
+            <!-- footer -->
+
+        </div>
+    </main>
+
+
 </body>
 </html>

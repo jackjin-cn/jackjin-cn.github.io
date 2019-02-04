@@ -1,283 +1,139 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html>
 <head>
+    <title> Jackjin's Home </title>
+    <link rel="shortcut icon" href="https://jackjin-cn.github.io/images/" />
 
-        <title>Jackjin's Home - brew</title>
-        <meta charset="utf-8" />
-        <link href="https://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home Full RSS Feed" />
+    <script src="https://jackjin-cn.github.io/theme/js/jquery-3.1.1.min.js"></script>
 
+    <!-- extra css -->
 
-        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-        <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+    <!-- uikit basic -->
+    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/uikit.min.css"/>
+    <script src="https://jackjin-cn.github.io/theme/js/uikit.min.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/gumby.css" />
-        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/style.css" />
-        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/pygment.css" />
+    <!-- uk components -->
+    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/components/sticky.css"/>
+    <script src="https://jackjin-cn.github.io/theme/js/components/sticky.js"></script>
+    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/components/search.css"/>
+    <script src="https://jackjin-cn.github.io/theme/js/components/search.js"></script>
 
-        <script src="https://jackjin-cn.github.io/theme/js/libs/modernizr-2.6.2.min.js"></script>
-
-
-
+    <!-- self defined  -->
+    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/highlight.css"/>
+    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/main.css"/>
 
 </head>
+<body>
 
-<body id="index" class="home">
+    <main class="jojo-theme">
+        <div class="uk-container uk-container-center">
+
+            <!-- nav -->
 
 
-    <div class="container">
+            <div class="uk-grid uk-margin-large-top">
+                <div class="uk-width-medium-1-10">
 
-        <div class="row">
 
-          <header id="banner" class="body">
-                  <h1><a href="https://jackjin-cn.github.io/">Jackjin's Home <strong></strong></a></h1>
-          </header><!-- /#banner -->
 
-            <div id="navigation" class="navbar row">
-              <a href="#" gumby-trigger="#navigation &gt; ul" class="toggle"><i class="icon-menu"></i></a>
-             
-              <ul class="columns">
-                <li><a href="https://jackjin-cn.github.io/">Home</a></li>
+                </div>
+                <div class="uk-width-medium-7-10">
+                    <div class="uk-margin-top">
+                        <!-- content -->
+    <article class="uk-article">
+            <div class="uk-grid">
+                <div class="uk-width-medium-2-10">
+                        <div class="tags">
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/python.html">python</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/brew.html">brew</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/office.html">office</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/command-line.html">command line</a>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="uk-width-medium-8-10">
+                    <h2>
+                        <a href="https://jackjin-cn.github.io/2018/2018-07-11_09-40_doczhuan-docx.html" rel="bookmark"> doc转docx </a>
+                    </h2>
+                    <p class="uk-article-meta">
+                        2018-07-11 星期三 09:40
+                    </p>
+                    <p>doc转docx 网上找了很多办法，想在mac把doc转成docx。一般有2种方案。 antiword 可以把doc转成纯文件，或者docbook格式（这个我没有搞明白） 用unoconv + libreoffice. 昨天晚上试了一下第二种方案，libreoffice的版本要3.x和4.x，官网上只有5和6了，找了一下，还是找到了。 libreoffice 4下载,希望以后还能用。 安装好以后就可以使用了。 uniconv -f docx source.doc 这样就可以转换了，如果成功的话会生成一个同名的docx文件，当然，仔细看说明，应该也还可以指定输出文件名了。</p>
+                    <!--<p> doc转docx 网上找了很多办法，想在mac把doc转成docx。一般有2种方案。 antiword 可以把doc转成纯文件，或者docbook格式（这个我没有搞明白） 用unoconv + libreoffice. 昨天晚上试了一下第二种方案，libreoffice的版本要3.x和4.x，官网上只有5和6了，找了一下，还是找到了。 libreoffice 4下载,希望以后还能用。 安装好以后就可以使用了。 uniconv -f docx source.doc 这样就可以转换了，如果成功的话会生成一个同名的docx文件，当然，仔细看说明，应该也还可以指定输出文件名了。...</p>-->
+                    <p class="uk-text-right jojo-read-more"><a href="https://jackjin-cn.github.io/2018/2018-07-11_09-40_doczhuan-docx.html">Read More...</a></p>
+                </div>
+            </div>
+            <hr class="uk-article-divider">
+            <div class="uk-grid">
+                <div class="uk-width-medium-2-10">
+                        <div class="tags">
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/brew.html">brew</a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <i class="uk-icon-tag"></i>
+                                    <div class="uk-badge uk-badge-notification">
+                                        <a href="https://jackjin-cn.github.io/tag/python.html">python</a>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="uk-width-medium-8-10">
+                    <h2>
+                        <a href="https://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html" rel="bookmark"> brew 中切换软件版本 </a>
+                    </h2>
+                    <p class="uk-article-meta">
+                        2018-07-04 星期三 12:14
+                    </p>
+                    <p>brew 中切换软件版本 我有更新软件的习惯，习惯性的每天更新一下。比如brew ,pip3等。 这不，前天把brew 就把python 3.6.5 升级到了python 3.7了，这个是大升级，结果python库都没有了，当然可以另行安装，也很方便，反正有写了批量更新的脚本，但没有到还有兼容性的问题。 网上找一堆办法，有的命令已经过期了 brew versions,有的太复杂，看不明白。 后来还是找到了一个办法，提前是老版本python没有删除。 brew info python3 python: stable 3.7.0 (bottled), HEAD Interpreted, interactive, object-oriented programming language https://www.python.org/ /usr …</p>
+                    <!--<p> brew 中切换软件版本 我有更新软件的习惯，习惯性的每天更新一下。比如brew ,pip3等。 这不，前天把brew 就把python 3.6.5 升级到了python 3.7了，这个是大升级，结果python库都没有了，当然可以另行安装，也很方便，反正有写了批量更新的脚本，但没有到还有兼容性的问题。 网上找一堆办法，有的命令已经过期了 brew versions,有的太复杂，看不明白。 后来还是找到了一个办法，提前是老版本python没有删除。 brew info python3 python: stable 3.7.0 (bottled), HEAD Interpreted, interactive, object-oriented programming language https://www.python.org/ /usr/local/Cellar/python/3.6.<span...</p>-->
+                    <p class="uk-text-right jojo-read-more"><a href="https://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html">Read More...</a></p>
+                </div>
+            </div>
+            <hr class="uk-article-divider">
+    </article>
 
-                <li><a href="https://jackjin-cn.github.io/archives.html">archives</a></li>
-                <li><a href="https://jackjin-cn.github.io/tags.html">tags</a></li>
-                <li><a href="https://jackjin-cn.github.io/categories.html">categories</a></li>
+                    </div>
+                </div>
+                <div class="uk-width-medium-2-10">
 
-              </ul>
+                    <!-- author info -->
+
+                    <!-- newest articles -->
+
+
+                    <!-- related links -->
+
+                </div>
             </div>
 
-<section id="content">
+            <!-- footer -->
+
+        </div>
+    </main>
 
 
-
-   <div class="row">
-
-
-        <div class="eleven columns">
-                 <ol id="post-list">
-                        <li><article class="hentry">
-                                <header> <h2 class="entry-title"><a href="https://jackjin-cn.github.io/2018/2018-07-11_09-40_doczhuan-docx.html" rel="bookmark" title="Permalink to doc转docx">doc转docx</a></h2> </header>
-                                <footer class="post-info">
-                                    <abbr class="published" title="2018-07-11T09:40:36+08:00"> 2018-07-11 星期三 09:40 </abbr>
-                                    <address class="vcard author">By 
-                                    <a class="url fn" href="https://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html"> 天地一沙鸥</a>
-                                    </address>
-                                </footer><!-- /.post-info -->
-                                <div class="entry-content"> <h1>doc转docx</h1>
-<p>网上找了很多办法，想在mac把doc转成docx。一般有2种方案。</p>
-<ol>
-<li>antiword 可以把doc转成纯文件，或者docbook格式（这个我没有搞明白）</li>
-<li>用unoconv + libreoffice.</li>
-</ol>
-<p>昨天晚上试了一下第二种方案，libreoffice的版本要3.x和4.x，官网上只有5和6了，找了一下，还是找到了。</p>
-<p><a href="https://libreoffice.en.uptodown.com/mac/download/46193">libreoffice 4下载</a>,希望以后还能用。</p>
-<p>安装好以后就可以使用了。</p>
-<blockquote>
-<p>uniconv -f docx source.doc</p>
-<p>这样就可以转换了，如果成功的话会生成一个同名的docx文件，当然，仔细看说明，应该也还可以指定输出文件名了。</p>
-</blockquote> </div><!-- /.entry-content -->
-
-                                <div class="medium primary btn"><a href="https://jackjin-cn.github.io/2018/2018-07-11_09-40_doczhuan-docx.html" rel="bookmark" title="Permalink to doc转docx">Read more <i class="icon-arrow-right"></i></a></div>
-
-
-
-                                <div class="row tag-row">
-                                        <span>Tagged as : </span>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/python.html">python</a>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/brew.html">brew</a>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/office.html">office</a>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/command-line.html">command line</a>
-                                </div>
-
-
-
-                        </article></li>
-                        <li><article class="hentry">
-                                <header> <h2 class="entry-title"><a href="https://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html" rel="bookmark" title="Permalink to brew 中切换软件版本">brew 中切换软件版本</a></h2> </header>
-                                <footer class="post-info">
-                                    <abbr class="published" title="2018-07-04T12:14:13+08:00"> 2018-07-04 星期三 12:14 </abbr>
-                                    <address class="vcard author">By 
-                                    <a class="url fn" href="https://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html"> 天地一沙鸥</a>
-                                    </address>
-                                </footer><!-- /.post-info -->
-                                <div class="entry-content"> <h1>brew 中切换软件版本</h1>
-<p>我有更新软件的习惯，习惯性的每天更新一下。比如brew ,pip3等。</p>
-<p>这不，前天把brew 就把python 3.6.5 升级到了python 3.7了，这个是大升级，结果python库都没有了，当然可以另行安装，也很方便，反正有写了批量更新的脚本，但没有到还有兼容性的问题。</p>
-<p>网上找一堆办法，有的命令已经过期了 <em>brew versions</em>,有的太复杂，看不明白。
-后来还是找到了一个办法，提前是老版本python没有删除。</p>
-<blockquote>
-<p>brew info python3</p>
-</blockquote>
-<div class="highlight"><pre><span></span><span class="n">python</span><span class="o">:</span> <span class="n">stable</span> <span class="mf">3.7</span><span class="o">.</span><span class="mi">0</span> <span class="o">(</span><span class="n">bottled</span><span class="o">),</span> <span class="n">HEAD</span>
-<span class="n">Interpreted</span><span class="o">,</span> <span class="n">interactive</span><span class="o">,</span> <span class="n">object</span><span class="o">-</span><span class="n">oriented</span> <span class="n">programming</span> <span class="n">language</span>
-<span class="n">https</span><span class="o">://</span><span class="n">www</span><span class="o">.</span><span class="na">python</span><span class="o">.</span><span class="na">org</span><span class="o">/</span>
-<span class="sr">/usr …</span></pre></div> </div><!-- /.entry-content -->
-
-                                <div class="medium primary btn"><a href="https://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html" rel="bookmark" title="Permalink to brew 中切换软件版本">Read more <i class="icon-arrow-right"></i></a></div>
-
-
-
-                                <div class="row tag-row">
-                                        <span>Tagged as : </span>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/brew.html">brew</a>
-                                            <a class="danger label" href="https://jackjin-cn.github.io/tag/python.html">python</a>
-                                </div>
-
-
-
-                        </article></li>
-                </ol><!-- /#posts-list -->
-
-        </div><!-- /.eleven.columns -->
-        
-<div class="three columns">
-
-  <h4>Pages</h4>
-
-  <ul>
-    <li><a href="https://jackjin-cn.github.io/archives.html">archives</a></li>
-    <li><a href="https://jackjin-cn.github.io/tags.html">tags</a></li>
-    <li><a href="https://jackjin-cn.github.io/categories.html">categories</a></li>
-
-  
-  <h4>Categories</h4>
-  <ul class="blank">
-    <li><a href="https://jackjin-cn.github.io/category/dian-nao.html">电脑</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/linux.html">linux</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/mac.html">mac</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/pdf.html">pdf</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/python.html">python</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/pythonmaclib.html">python,mac,lib</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/shell.html">shell</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/vim.html">vim</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/za-gan.html">杂感</a></li>
-    <li><a href="https://jackjin-cn.github.io/category/za-lei.html">杂类</a></li>
-  </ul>
-
-
-<h4>Tags</h4>
-	<ul class="blank">
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/debian.html">debian</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/realtek.html">realtek</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/office.html">office</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian-ming.html">文件名</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/pandoc.html">pandoc</a></li>
-	    <li class="tag-2"><a href="https://jackjin-cn.github.io/tag/mac.html">mac</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/encoding.html">encoding</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian-cao-zuo.html">文件操作</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/zhong-wen.html">中文</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/dian-nao.html">电脑</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/os.html">os</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/find.html">find</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/command-line.html">command line</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/brew.html">brew</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/script.html">script</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/autocmd.html">autocmd</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/zhuan-zai.html">转载</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/for.html">for</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/ya-suo.html">压缩</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian.html">文件</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/css.html">css</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/qu-dong.html">驱动</a></li>
-	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/pelican.html">pelican</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/sui-bi.html">随笔</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/time.html">time</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/html.html">html</a></li>
-	    <li class="tag-2"><a href="https://jackjin-cn.github.io/tag/zhe-teng.html">折腾</a></li>
-	    <li class="tag-2"><a href="https://jackjin-cn.github.io/tag/ruan-jian.html">软件</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/work.html">work</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wine.html">wine</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/code.html">code</a></li>
-	    <li class="tag-3"><a href="https://jackjin-cn.github.io/tag/shell.html">shell</a></li>
-	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/bash.html">bash</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/qq.html">qq</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/tips.html">tips</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/xue-xi.html">学习</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/hei-ping-guo.html">黑苹果</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian-chu-li.html">文件处理</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/gan-xiang.html">感想</a></li>
-	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/python.html">python</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/awk.html">awk</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/cygwin.html">cygwin</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/pdf.html">pdf</a></li>
-	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/vim.html">vim</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/macos.html">macos</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/unicode.html">unicode</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/ben-wen.html">本文</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/path.html">path</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/xin-qing.html">心情</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/git.html">git</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/markdown.html">markdown</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wifi.html">wifi</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/github.html">github</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/windows.html">windows</a></li>
-	    <li class="tag-1"><a href="https://jackjin-cn.github.io/tag/linux.html">linux</a></li>
-	    <li class="tag-4"><a href="https://jackjin-cn.github.io/tag/wen-jian-cha-zhao.html">文件查找</a></li>
-</ul>
-
-
-<nav class="widget">
-  <h4>Social</h4>
-  <ul class="blank">
-    <li><a href="#">aaa</a></li>
-    <li><a href="#">Another social link</a></li>
-  </ul>
-</nav>
-
-</div> </div><!-- /.row -->
-
-<p class="paginator">
-    Page 1 / 1
-</p>
-</section><!-- /#content -->
-
-       </div><!-- /.row -->
-    </div><!-- /.container -->
-
-
-       <div class="container.nopad bg">
-
-    
-        <footer id="credits" class="row">
-          <div class="seven columns left-center">
-
-                   <address id="about" class="vcard body">
-                    Proudly powered by <a href="http://getpelican.com/">Pelican</a>,
-                    which takes great advantage of <a href="http://python.org">Python</a>.
-                    <br />
-                    Based on the <a target="_blank" href="http://gumbyframework.com">Gumby Framework</a>
-                    </address>
-          </div>
-
-
-          <div class="seven columns">
-            <div class="row">
-              <ul class="socbtns">
-
-
-
-
-
-              </ul>
-            </div>
-          </div>
-        </footer>
-
-    </div>
-
-
-<script type="text/javascript">
-    var disqus_shortname = 'jackjin';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
-  <script src="https://jackjin-cn.github.io/theme/js/libs/jquery-1.9.1.min.js"></script>
-  <script src="https://jackjin-cn.github.io/theme/js/libs/gumby.min.js"></script>
-  <script src="https://jackjin-cn.github.io/theme/js/plugins.js"></script>
 </body>
 </html>
