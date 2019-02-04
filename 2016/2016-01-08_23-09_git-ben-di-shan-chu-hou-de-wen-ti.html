@@ -1,66 +1,83 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title> Jackjin's Home </title>
-    <link rel="shortcut icon" href="https://jackjin-cn.github.io/images/" />
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="天地一沙鸥" />
+        <meta name="copyright" content="天地一沙鸥" />
 
-    <script src="https://jackjin-cn.github.io/theme/js/jquery-3.1.1.min.js"></script>
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
 
-    <!-- extra css -->
+<meta name="keywords" content="git, 软件, " />
 
-    <!-- uikit basic -->
-    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/uikit.min.css"/>
-    <script src="https://jackjin-cn.github.io/theme/js/uikit.min.js"></script>
+<meta property="og:title" content="git 本地删除后的问题 "/>
+<meta property="og:url" content="https://jackjin-cn.github.io/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html" />
+<meta property="og:description" content="git 本地删除后的问题 在用pelican生成网页的时假，如果不小心用make clean的话，会把.git删除，就会产生配对问题，需要重新配对。 对于网页不需要保留远程文件，所以就如下操作 git init git add . git commit -m &#39;update&#39; git remote rm origin git push --force origin master 强制推送 git push -u origin master 重新远程与本地对应" />
+<meta property="og:site_name" content="Jackjin&#39;s Home" />
+<meta property="og:article:author" content="天地一沙鸥" />
+<meta property="og:article:published_time" content="2016-01-08T23:09:00+08:00" />
+<meta name="twitter:title" content="git 本地删除后的问题 ">
+<meta name="twitter:description" content="git 本地删除后的问题 在用pelican生成网页的时假，如果不小心用make clean的话，会把.git删除，就会产生配对问题，需要重新配对。 对于网页不需要保留远程文件，所以就如下操作 git init git add . git commit -m &#39;update&#39; git remote rm origin git push --force origin master 强制推送 git push -u origin master 重新远程与本地对应">
 
-    <!-- uk components -->
-    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/components/sticky.css"/>
-    <script src="https://jackjin-cn.github.io/theme/js/components/sticky.js"></script>
-    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/components/search.css"/>
-    <script src="https://jackjin-cn.github.io/theme/js/components/search.js"></script>
-
-    <!-- self defined  -->
-    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/highlight.css"/>
-    <link rel="stylesheet" href="https://jackjin-cn.github.io/theme/css/main.css"/>
-
-</head>
-<body>
-
-    <main class="jojo-theme">
-        <div class="uk-container uk-container-center">
-
-            <!-- nav -->
-
-
-            <div class="uk-grid uk-margin-large-top">
-                <div class="uk-width-medium-1-10">
-
-
-
-                </div>
-                <div class="uk-width-medium-7-10">
-                    <div class="uk-margin-top">
-                        <!-- content -->
-    <article class="uk-article">
-
-        <h1 class="uk-article-title">
-           <a href="https://jackjin-cn.github.io/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html" rel="bookmark"> git 本地删除后的问题 </a>
-        </h1>
-
-            <div class="tags">
-                <i class="uk-icon-tags"></i>
-                    <div class="uk-badge uk-badge-notification">
-                        <a href="https://jackjin-cn.github.io/tag/git.html">git</a>
+        <title>git 本地删除后的问题  · Jackjin&#39;s Home
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/css/custom.css" media="screen">
+        <link href="https://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin&#39;s Home - Full RSS Feed" />
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-72007782-1', 'auto');
+    ga('send', 'pageview');
+</script>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="https://jackjin-cn.github.io/"><span class=site-name>Jackjin's Home</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="https://jackjin-cn.github.io">Home</a></li>
+                            <li ><a href="https://jackjin-cn.github.io/categories.html">Categories</a></li>
+                            <li ><a href="https://jackjin-cn.github.io/tags.html">Tags</a></li>
+                            <li ><a href="https://jackjin-cn.github.io/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="https://jackjin-cn.github.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
                     </div>
+                </div>
             </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="https://jackjin-cn.github.io/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html"> git 本地删除后的问题  </a></h1>
+    </header>
+</div>
 
-        <!-- meta -->
-        <p class="uk-article-meta">
-            2016-01-08 星期五 23:09
-        </p>
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
 
-        <hr class="uk-article-divider">
-
-        <h2>git 本地删除后的问题</h2>
+            
+            <h2>git 本地删除后的问题</h2>
 <p>在用pelican生成网页的时假，如果不小心用<code>make clean</code>的话，会把<strong>.git</strong>删除，就会产生配对问题，需要重新配对。</p>
 <p>对于网页不需要保留远程文件，所以就如下操作</p>
 <div class="highlight"><pre><span></span>git init
@@ -70,41 +87,125 @@ git remote rm origin
 git push --force origin master  强制推送
 git push -u origin master 重新远程与本地对应
 </pre></div>
-    </article>
+            
+            <section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+                href="https://jackjin-cn.github.io/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+                    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jackjin';
+        var disqus_identifier = 'https://jackjin-cn.github.io/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html';
+    var disqus_url = 'https://jackjin-cn.github.io/2016/2016-01-08_23-09_git-ben-di-shan-chu-hou-de-wen-ti.html';
 
-    <!--disqus-->
-        <div id="disqus_thread" class="uk-margin-large-top"></div>
-        <script>
-            (function() {
-                var d = document, s = d.createElement('script');
-                
-                s.src = '//jackjin.disqus.com/embed.js';
-                
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-                    </div>
-                </div>
-                <div class="uk-width-medium-2-10">
-
-                    <!-- author info -->
-
-                    <!-- newest articles -->
-
-
-                    <!-- related links -->
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
                 </div>
             </div>
-
-            <!-- footer -->
-
         </div>
-    </main>
+    </div>
+</div>
+</section>
+
+            <hr/>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2016-01-08T23:09:00+08:00"> 1 8, 2016</time>
+            <h4>Category</h4>
+            <a class="category-link" href="https://jackjin-cn.github.io/categories.html#ruan-jian-ref">软件</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://jackjin-cn.github.io/tags.html#git-ref">git
+                    <span>1</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+    <a href="#" title="My aaa Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-aaa sidebar-social-links"></i></a>
+    <a href="#" title="My Another social link Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-another social link sidebar-social-links"></i></a>
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+        <div id="push"></div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+            <script type="text/javascript">
+var disqus_shortname = 'jackjin';
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
 
 
-</body>
+    </body>
+    <!-- Theme: Elegant built for Pelican
+    License : http://oncrashreboot.com/pelican-elegant -->
 </html>
