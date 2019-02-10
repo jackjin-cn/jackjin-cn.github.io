@@ -1,245 +1,202 @@
 <!DOCTYPE html>
-<html lang="zh">
-<head>
-        <meta charset="utf-8" />
-        <title>Jackjin's Home</title>
-        <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/main.css" />
-        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home RSS Feed" />
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="天地一沙鸥" />
+        <meta name="copyright" content="天地一沙鸥" />
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-</head>
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="http://jackjin-cn.github.io/">Jackjin's Home </a></h1>
-                <nav><ul>
-                    <li><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
-                    <li><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
-                    <li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/dian-nao.html">电脑</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/linux.html">linux</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/mac.html">mac</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/pdf.html">pdf</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/python.html">python</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/pythonmaclib.html">python,mac,lib</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/shell.html">shell</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/vim.html">vim</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/za-gan.html">杂感</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/za-lei.html">杂类</a></li>
-                </ul>
-                </nav>
-        </header><!-- /#banner -->
-
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="http://jackjin-cn.github.io/2019/2019-02-03_17-36_hei-ping-guo-qian-yi-xi-tong.html">黑苹果迁移系统</a></h1>
-<footer class="post-info">
-        <span>2019-02-03 星期日 17:36</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/zhe-teng.html">折腾</a><a href="http://jackjin-cn.github.io/tag/dian-nao.html">电脑</a><a href="http://jackjin-cn.github.io/tag/macos.html">macos</a></span>
-</footer><!-- /.post-info --><h2>黑苹果迁移系统</h2>
-<p>我原来的机器是nuc5i7，有一个sata接口和一个m.2(ngff)的接口，原来是win10(m.2 ssd 240g),macos(sata,ssd 128g)。</p>
-<p>我后来又从老的笔记本上拆下来一个m.2接口的ssd，硬盘容量大概是256个g。MAC os的硬盘sata接口只有128个g。然后一直说容量不够，然后呢我就把这个256g的m2接口的硬盘接到机器上扩大容量。但是有一个问题就是我原来的win10系统盘只能拆下来。</p>
-<p>我在京东上订了一个m2接口转sata接口的硬盘盒。想把系统重新转换，从原来的sata接口的硬盘上转到现在的m2接口的硬盘上。</p>
-<table>
-<thead>
-<tr>
-<th>机器接口</th>
-<th>m.2</th>
-<th>sata</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>原来</td>
-<td>m4 240g win10</td>
-<td>samsung 830 128g macosx</td>
-</tr>
-<tr>
-<td>过渡1</td>
-<td>transcend 240g exfat</td>
-<td>samsung 830 128g macosx</td>
-</tr>
-<tr>
-<td>过渡2</td>
-<td>transcend 240g mac os</td>
-<td>samsung 830 128g macosx</td>
-</tr>
-<tr>
-<td>最终</td>
-<td>m4 240g win10</td>
-<td>transeced 240g转接成sata macosx</td>
-</tr>
-</tbody>
-</table>
-<p>过程有点折腾，没钱，充分利用已有资源。</p>
-<p>过程中出了点状况。记录一下。</p>
-<p>在系统复制过程中，本来是利用系统自带的磁盘工具，想用恢复的方式 把samsung盘上的内容克隆到transcend上，结果到最后总是出现，哪怕是到系统恢复的时候用磁盘工具，也是一样的。
-出现以下错误信息</p>
-<p><strong>未能完成该操作。（OSStatus 错误 16) 。</strong></p>
-<p><strong>APFS 反转器未能反转宗卷 - 资源忙</strong></p>
-<p>估计是源盘是apfs的关系。
-后来找到 <strong>Carbon Copy Cloner</strong>，但感觉是全盘复制，有几个分区没有复制，也不能启动。</p>
-<p>找到另一个工具 <strong>Stellar Drive Clone</strong> ，这个工具好用，能够克隆过去。不过recovery和preboot分区复制的不成功，但不影响启动，也不高兴再折腾了。</p>
-<p>我的机器是用clover启动的，记得还要把efi分区的文件也复制到新盘的efi分区，然后在bios里把clover所在磁盘设置为启动磁盘，然后一切就搞定了。</p>
-<p>缺点就是原来clover启动会显示preboot ,recovery的启动项，就找不到了。不过，通用就行了，折腾了大半夜，好歹可以了。</p>
-<p>记录一下，有需要的朋友也可以参考一下。</p><p><a href="http://jackjin-cn.github.io/2019/2019-02-03_17-36_hei-ping-guo-qian-yi-xi-tong.html#disqus_thread">comments</a></p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <ol id="posts-list" class="hfeed">
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html" rel="bookmark"
-                           title="Permalink to mac 下编译python3 的 PythonMagick包">mac 下编译python3 的 PythonMagick包</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>2018-10-08 星期一 14:45</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/python.html">python</a><a href="http://jackjin-cn.github.io/tag/mac.html">mac</a></span>
-</footer><!-- /.post-info -->                <h2>mac 下编译PythonMagick</h2>
-<h3>由于要压缩漫画pdf，找了很多办法，其中有用到 <em>imagemagick</em>,这个比较 好安装。</h3>
-<div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">imagemagick</span><span class="mi">@6</span>
-<span class="n">brew</span> <span class="n">link</span> <span class="n">imagemagick</span><span class="mi">@6</span> <span class="o">--</span><span class="n">force</span>
-</pre></div>
-
-
-<h3>不过，pythonmagcik这个包就比较麻烦了，windows下有编译好的二进制包，mac需要自己编译，比较麻烦，也走了不少弯路。</h3>
-<p>网上看了不少教程，自己也摸索了下，现在是能用了。</p>
-<p>代码,过程放在下面</p>
-<p>下载源码包<a href="http://www.imagemagick.org/download/python/releases/PythonMagick-0.9.18.tar.xz">PythonMagic-0.9.18.tar.xz</a></p>
-<p>而 0.9.19 不行，编译没问题，但安装后，使用导入有问题。
-据说是后面的版本api什么的改了，好像可以改文件什么的，但是我不会，就用老点的版本吧</p>
-<h3>现在看来，主要还是python版本的问题，这就是折腾这么多时间的心得</h3>
-<p>主要是注意python2和python3的区别 …</p>
-                <a class="readmore" href="http://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html">read more</a>
-<p><a href="http://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://jackjin-cn.github.io/2018/2018-10-02_19-55_pdfzhuan-tu-pian-tu-pian-zhuan-pdftu-pian-ya-suo.html" rel="bookmark"
-                           title="Permalink to pdf转图片，图片转pdf，图片压缩">pdf转图片，图片转pdf，图片压缩</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>2018-10-02 星期二 19:55</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/python.html">python</a><a href="http://jackjin-cn.github.io/tag/pdf.html">pdf</a><a href="http://jackjin-cn.github.io/tag/ya-suo.html">压缩</a></span>
-</footer><!-- /.post-info -->                <ol>
-<li>
-<h3>执行pdf转图片，再把图片转成pdf的脚本</h3>
-</li>
-</ol>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="c1">#参数为文件名，不含扩展.pdf </span>
-<span class="k">for</span> i in <span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span><span class="p">;</span>
-<span class="k">do</span>
-python3 app.py <span class="nv">$i</span>
-rm <span class="nv">$i</span>.pdf
-python3 makepdf.py <span class="nv">$i</span>
-rm -fr <span class="nv">$i</span>
-<span class="k">done</span>
-</pre></div>
-</td></tr></table>
-
-<ol>
-<li>
-<h3>把图片转成pdf</h3>
-</li>
-</ol>
-<p>把指定目录中的图片根据名称排序，生成一个pdf文件，如果文件比较大
-时间比较长，对内存要求也比较高
---dirname
---makepdf.py
---convert_dirname.pdf
-在当前目录下生成 convert_name.pdf</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1 …</pre></div></td></tr></table>
-                <a class="readmore" href="http://jackjin-cn.github.io/2018/2018-10-02_19-55_pdfzhuan-tu-pian-tu-pian-zhuan-pdftu-pian-ya-suo.html">read more</a>
-<p><a href="http://jackjin-cn.github.io/2018/2018-10-02_19-55_pdfzhuan-tu-pian-tu-pian-zhuan-pdftu-pian-ya-suo.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://jackjin-cn.github.io/2018/2018-08-24_21-51_maczhong-pi-liang-da-yin-wen-jian.html" rel="bookmark"
-                           title="Permalink to mac中批量打印文件">mac中批量打印文件</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>2018-08-24 星期五 21:51</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/os.html">os</a><a href="http://jackjin-cn.github.io/tag/mac.html">mac</a></span>
-</footer><!-- /.post-info -->                <h2>mac中批量打印文件</h2>
-<p>由于工作关系，要批量打印word文档，在mac下，没有找到特别的办法，用libreoffice打印，文档格式有问题。</p>
-<p>网上搜索了很多次，无果。结果，看到了一个办法，很简单，也实用。</p>
-<h2>就是打开打印机，直接把word文档施放进去，也就是生成一个队列，好像就可以了。</h2>
-<p>用命令行，没有找到好的办法。</p>
-<p><strong>lp</strong> 命令只能打印pdf和ps文件。</p>
-                <a class="readmore" href="http://jackjin-cn.github.io/2018/2018-08-24_21-51_maczhong-pi-liang-da-yin-wen-jian.html">read more</a>
-<p><a href="http://jackjin-cn.github.io/2018/2018-08-24_21-51_maczhong-pi-liang-da-yin-wen-jian.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
-            </article></li>
-            </ol><!-- /#posts-list -->
-<p class="paginator">
-    Page 1 / 9
-        <a href="http://jackjin-cn.github.io/index2.html">&raquo;</a>
-</p>
-            </section><!-- /#content -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="http://kevinyoung.gitcafe.io">煎挠橙的blog</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
-
-                            <li><a href="#">aiwanke</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
-
-        <footer id="contentinfo" class="body">
-                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
-        </footer><!-- /#contentinfo -->
-
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-72007782-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
-<script type="text/javascript">
-    var disqus_shortname = 'jackjin';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
+<meta property="og:title" content="Jackjin&#39;s Home"/>
+<meta name="twitter:title" content="Jackjin&#39;s Home">
+<meta property="og:url" content="http://jackjin-cn.github.io" />
+<meta property="og:site_name" content="Jackjin&#39;s Home" />
+<meta property="og:article:author" content="天地一沙鸥" />
+        <title>Jackjin&#39;s Home
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/css/custom.css" media="screen">
+        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin&#39;s Home - Full RSS Feed" />
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-72007782-1', 'auto');
+    ga('send', 'pageview');
 </script>
-</body>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="http://jackjin-cn.github.io/"><span class=site-name>Jackjin's Home</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li  class="active"><a href="http://jackjin-cn.github.io">Home</a></li>
+                            <li ><a href="http://jackjin-cn.github.io/categories.html">Categories</a></li>
+                            <li ><a href="http://jackjin-cn.github.io/tags.html">Tags</a></li>
+                            <li ><a href="http://jackjin-cn.github.io/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="http://jackjin-cn.github.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<div class="row-fluid">
+
+    <div class="row-fluid">
+
+    </div>
+
+    <div class="row-fluid">
+        <div class="span8 offset2">
+            <header>
+            <h1 id="recent-posts">Recent Posts <a id="allposts" href="http://jackjin-cn.github.io/archives.html">all posts</a></h1>
+            </header>
+        <div class="recent-posts">
+            <article>
+                <a href="http://jackjin-cn.github.io/2019/2019-02-03_17-36_hei-ping-guo-qian-yi-xi-tong.html">黑苹果迁移系统  </a>
+                <section>
+                    posted in
+                <a href="http://jackjin-cn.github.io/categories.html#mac-ref">mac</a>
+                <div class="recent-posts-time">
+                <time pubdate="pubdate" datetime="2019-02-03T17:36:38+08:00">2019-02-03 星期日 17:36</time>
+                </div>
+                </section>
+            </article>
+            <article>
+                <a href="http://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html">mac 下编译python3 的 PythonMagick包  </a>
+                <section>
+                    posted in
+                <a href="http://jackjin-cn.github.io/categories.html#pythonmaclib-ref">python,mac,lib</a>
+                <div class="recent-posts-time">
+                <time pubdate="pubdate" datetime="2018-10-08T14:45:42+08:00">2018-10-08 星期一 14:45</time>
+                </div>
+                </section>
+            </article>
+            <article>
+                <a href="http://jackjin-cn.github.io/2018/2018-10-02_19-55_pdfzhuan-tu-pian-tu-pian-zhuan-pdftu-pian-ya-suo.html">pdf转图片，图片转pdf，图片压缩  </a>
+                <section>
+                    posted in
+                <a href="http://jackjin-cn.github.io/categories.html#pdf-ref">pdf</a>
+                <div class="recent-posts-time">
+                <time pubdate="pubdate" datetime="2018-10-02T19:55:02+08:00">2018-10-02 星期二 19:55</time>
+                </div>
+                </section>
+            </article>
+            <article>
+                <a href="http://jackjin-cn.github.io/2018/2018-08-24_21-51_maczhong-pi-liang-da-yin-wen-jian.html">mac中批量打印文件  </a>
+                <section>
+                    posted in
+                <a href="http://jackjin-cn.github.io/categories.html#dian-nao-ref">电脑</a>
+                <div class="recent-posts-time">
+                <time pubdate="pubdate" datetime="2018-08-24T21:51:51+08:00">2018-08-24 星期五 21:51</time>
+                </div>
+                </section>
+            </article>
+            <article>
+                <a href="http://jackjin-cn.github.io/2018/2018-08-24_21-39_hei-ping-guo-de-xiu-fu.html">黑苹果的修复  </a>
+                <section>
+                    posted in
+                <a href="http://jackjin-cn.github.io/categories.html#dian-nao-ref">电脑</a>
+                <div class="recent-posts-time">
+                <time pubdate="pubdate" datetime="2018-08-24T21:39:29+08:00">2018-08-24 星期五 21:39</time>
+                </div>
+                </section>
+            </article>
+            <article>
+                <a href="http://jackjin-cn.github.io/2018/2018-07-17_12-38_find-cha-zhao-man-zu-duo-ge-tiao-jian-de-wen-jian.html">find 查找满足多个条件的文件  </a>
+                <section>
+                    posted in
+                <a href="http://jackjin-cn.github.io/categories.html#shell-ref">shell</a>
+                <div class="recent-posts-time">
+                <time pubdate="pubdate" datetime="2018-07-17T12:38:14+08:00">2018-07-17 星期二 12:38</time>
+                </div>
+                </section>
+            </article>
+            <article>
+                <a href="http://jackjin-cn.github.io/2018/2018-07-11_09-40_doczhuan-docx.html">doc转docx  </a>
+                <section>
+                    posted in
+                <a href="http://jackjin-cn.github.io/categories.html#ruan-jian-ref">软件</a>
+                <div class="recent-posts-time">
+                <time pubdate="pubdate" datetime="2018-07-11T09:40:36+08:00">2018-07-11 星期三 09:40</time>
+                </div>
+                </section>
+            </article>
+            <article>
+                <a href="http://jackjin-cn.github.io/2018/2018-07-10_22-35_antiword.html">antiword  </a>
+                <section>
+                    posted in
+                <a href="http://jackjin-cn.github.io/categories.html#ruan-jian-ref">软件</a>
+                <div class="recent-posts-time">
+                <time pubdate="pubdate" datetime="2018-07-10T22:35:04+08:00">2018-07-10 星期二 22:35</time>
+                </div>
+                </section>
+            </article>
+            <article>
+                <a href="http://jackjin-cn.github.io/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html">一行代码搞定改名&copy文件  </a>
+                <section>
+                    posted in
+                <a href="http://jackjin-cn.github.io/categories.html#ruan-jian-ref">软件</a>
+                <div class="recent-posts-time">
+                <time pubdate="pubdate" datetime="2018-07-04T19:12:53+08:00">2018-07-04 星期三 19:12</time>
+                </div>
+                </section>
+            </article>
+            <article>
+                <a href="http://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html">brew 中切换软件版本  </a>
+                <section>
+                    posted in
+                <a href="http://jackjin-cn.github.io/categories.html#ruan-jian-ref">软件</a>
+                <div class="recent-posts-time">
+                <time pubdate="pubdate" datetime="2018-07-04T12:14:13+08:00">2018-07-04 星期三 12:14</time>
+                </div>
+                </section>
+            </article>
+        </div>
+        </div>
+    </div>
+</div>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+        <div id="push"></div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>        <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+    </body>
+    <!-- Theme: Elegant built for Pelican
+    License : http://oncrashreboot.com/pelican-elegant -->
 </html>
