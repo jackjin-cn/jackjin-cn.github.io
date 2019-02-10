@@ -1,46 +1,83 @@
 <!DOCTYPE html>
-<html lang="zh">
-<head>
-        <meta charset="utf-8" />
-        <title>再次配置pelican写博客</title>
-        <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/main.css" />
-        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home RSS Feed" />
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="天地一沙鸥" />
+        <meta name="copyright" content="天地一沙鸥" />
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-</head>
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="http://jackjin-cn.github.io/">Jackjin's Home </a></h1>
-                <nav><ul>
-                    <li><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
-                    <li><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
-                    <li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/linux.html">linux</a></li>
-                    <li class="active"><a href="http://jackjin-cn.github.io/category/python.html">python</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/vim.html">vim</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/za-gan.html">杂感</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/za-lei.html">杂类</a></li>
-                </ul>
-                </nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="http://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html" rel="bookmark"
-           title="Permalink to 再次配置pelican写博客">再次配置pelican写博客</a></h1>
+<meta name="keywords" content="pelican, 折腾, python, " />
+
+<meta property="og:title" content="再次配置pelican写博客 "/>
+<meta property="og:url" content="https://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html" />
+<meta property="og:description" content="今天再次折腾一下，争取在三个机器上可以使用。 在～目前建立下面的目录了 Pelicanoutput blog #blog的输出网页 riji 同上 pelican pelican-plugins pelican-theme riji-pelicanconf.py blog-pelicanconf.py 另外，还改到了 python 库中的 pelican 中 /usr/local/lib/python3.7/site-packages/pelican/reader.py 中内容 增加了 &#39;cal&#39; ,&#39;blog&#39; 的文件的扩展名，前面有写过的。" />
+<meta property="og:site_name" content="Jackjin&#39;s Home" />
+<meta property="og:article:author" content="天地一沙鸥" />
+<meta property="og:article:published_time" content="2018-07-01T20:13:00+08:00" />
+<meta name="twitter:title" content="再次配置pelican写博客 ">
+<meta name="twitter:description" content="今天再次折腾一下，争取在三个机器上可以使用。 在～目前建立下面的目录了 Pelicanoutput blog #blog的输出网页 riji 同上 pelican pelican-plugins pelican-theme riji-pelicanconf.py blog-pelicanconf.py 另外，还改到了 python 库中的 pelican 中 /usr/local/lib/python3.7/site-packages/pelican/reader.py 中内容 增加了 &#39;cal&#39; ,&#39;blog&#39; 的文件的扩展名，前面有写过的。">
+
+        <title>再次配置pelican写博客  · Jackjin&#39;s Home
+</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/css/custom.css" media="screen">
+        <link href="https://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin&#39;s Home - Full RSS Feed" />
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-72007782-1', 'auto');
+    ga('send', 'pageview');
+</script>
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="https://jackjin-cn.github.io/"><span class=site-name>Jackjin's Home</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="https://jackjin-cn.github.io">Home</a></li>
+                            <li ><a href="https://jackjin-cn.github.io/categories.html">Categories</a></li>
+                            <li ><a href="https://jackjin-cn.github.io/tags.html">Tags</a></li>
+                            <li ><a href="https://jackjin-cn.github.io/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="https://jackjin-cn.github.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page-header span10 offset2">
+    <h1><a href="https://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html"> 再次配置pelican写博客  </a></h1>
     </header>
+</div>
 
-    <div class="entry-content">
-<footer class="post-info">
-        <span>2018-07-01 星期日 20:13</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a><a href="http://jackjin-cn.github.io/tag/zhe-teng.html">折腾</a></span>
-</footer><!-- /.post-info -->      <h1>今天再次折腾一下，争取在三个机器上可以使用。</h1>
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            
+            <h1>今天再次折腾一下，争取在三个机器上可以使用。</h1>
 <p>在～目前建立下面的目录了</p>
 <blockquote>
 <p>Pelicanoutput</p>
@@ -57,66 +94,128 @@
 </blockquote>
 </blockquote>
 <h2>另外，还改到了 python 库中的 <em>pelican</em> 中 <strong>/usr/local/lib/python3.7/site-packages/pelican/reader.py</strong> 中内容 增加了 'cal' ,'blog' 的文件的扩展名，前面有写过的。</h2>
-    </div><!-- /.entry-content -->
-    <div class="comments">
-      <h2>Comments !</h2>
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-        var disqus_identifier = "2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html";
-        var disqus_url = "http://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html";
-        (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//jackjin.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
-    </div>
-
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="http://kevinyoung.gitcafe.io">煎挠橙的blog</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
-
-                            <li><a href="#">aiwanke</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
-
-        <footer id="contentinfo" class="body">
-                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
-        </footer><!-- /#contentinfo -->
-
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-72007782-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
+            
+            <section>
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
+                href="https://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html#disqus_thread">
+                Comments
+            </a>
+        </div>
+        <div id="disqus_thread" class="accordion-body collapse">
+            <div class="accordion-inner">
+                <div class="comments">
+                    <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'jackjin';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
+        var disqus_identifier = 'https://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html';
+    var disqus_url = 'https://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html';
+
+    (function() {
+         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+         dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+     })();
 </script>
-</body>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+            <hr/>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2018-07-01T20:13:00+08:00"> 7 1, 2018</time>
+            <h4>Category</h4>
+            <a class="category-link" href="https://jackjin-cn.github.io/categories.html#python-ref">python</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="https://jackjin-cn.github.io/tags.html#pelican-ref">pelican
+                    <span>5</span>
+</a></li>
+                <li><a href="https://jackjin-cn.github.io/tags.html#zhe-teng-ref">折腾
+                    <span>3</span>
+</a></li>
+            </ul>
+<h4>Contact</h4>
+    <a href="#" title="My aaa Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-aaa sidebar-social-links"></i></a>
+    <a href="#" title="My Another social link Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-another social link sidebar-social-links"></i></a>
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+        <div id="push"></div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+            <script type="text/javascript">
+var disqus_shortname = 'jackjin';
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+<script  language="javascript" type="text/javascript">
+function uncollapse() {
+    if (window.location.hash.match(/^#comment-\d+$/)) {
+        $('#disqus_thread').collapse('show');
+    }
+}
+</script>
+<script type="text/javascript" language="JavaScript">
+uncollapse();
+window.onhashchange=function(){
+    if (window.location.hash.match(/^#comment-\d+$/))
+        window.location.reload(true);
+}
+</script>
+<script>
+$('#disqus_thread').on('shown', function () {
+    var link = document.getElementsByClassName('accordion-toggle');
+    var old_innerHTML = link[0].innerHTML;
+    $(link[0]).fadeOut(500, function() {
+        $(this).text('Click here to hide comments').fadeIn(500);
+    });
+    $('#disqus_thread').on('hidden', function () {
+        $(link[0]).fadeOut(500, function() {
+            $(this).text(old_innerHTML).fadeIn(500);
+        });
+    })
+})
+</script>
+
+
+    </body>
+    <!-- Theme: Elegant built for Pelican
+    License : http://oncrashreboot.com/pelican-elegant -->
 </html>
