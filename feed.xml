@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Jackjin's Home</title><link>https://jackjin-cn.github.io/</link><description></description><lastBuildDate>Tue, 12 Feb 2019 18:15:30 +0800</lastBuildDate><item><title>mac vim中文输入法的切换</title><link>https://jackjin-cn.github.io/2019/2019-02-12_18-01_mac-vimzhong-wen-shu-ru-fa-de-qie-huan.html</link><description>&lt;h2&gt;关于mac vim中文输入法的切换&lt;/h2&gt;
+<rss version="2.0"><channel><title>Jackjin's Home</title><link>https://jackjin-cn.github.io/</link><description></description><lastBuildDate>Tue, 12 Feb 2019 18:16:34 +0800</lastBuildDate><item><title>mac vim中文输入法的切换</title><link>https://jackjin-cn.github.io/2019/2019-02-12_18-01_mac-vimzhong-wen-shu-ru-fa-de-qie-huan.html</link><description>&lt;h2&gt;关于mac vim中文输入法的切换&lt;/h2&gt;
 &lt;p&gt;在用vim写中文的时候，总是在vim模式切换的问题上比较头疼。在中文状态下，按《ESC》进入normal模式的时候，中文输入还是打开的，影响vim的操作，要手动切换成英文输入。编辑完成再次进入插入模式的时候，又要打开中文输入，很是不方便。&lt;/p&gt;
 &lt;p&gt;在网上找了很多帖子，尝试了好几个办法，感觉找到一个比较好用的。
 方法如下。&lt;/p&gt;
@@ -14,7 +14,7 @@
 &lt;/blockquote&gt;
 &lt;p&gt;如果不使用插件管理的话，可以搜索直接下载相关文件。
 然后在vim里安装插件，在命令模式下运行BundleInstall安装好插件，重启vim就可以了，效果完美，而且不影响速度。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="im-select" src="/image/imselect.png"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 12 Feb 2019 18:01:48 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2019-02-12:/2019/2019-02-12_18-01_mac-vimzhong-wen-shu-ru-fa-de-qie-huan.html</guid><category>vim</category><category>mac</category></item><item><title>黑苹果迁移系统</title><link>https://jackjin-cn.github.io/2019/2019-02-03_17-36_hei-ping-guo-qian-yi-xi-tong.html</link><description>&lt;h2&gt;黑苹果迁移系统&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="im-select" src="/images/imselect.png"&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 12 Feb 2019 18:01:48 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2019-02-12:/2019/2019-02-12_18-01_mac-vimzhong-wen-shu-ru-fa-de-qie-huan.html</guid><category>vim</category><category>mac</category></item><item><title>黑苹果迁移系统</title><link>https://jackjin-cn.github.io/2019/2019-02-03_17-36_hei-ping-guo-qian-yi-xi-tong.html</link><description>&lt;h2&gt;黑苹果迁移系统&lt;/h2&gt;
 &lt;p&gt;我原来的机器是nuc5i7，有一个sata接口和一个m.2(ngff)的接口，原来是win10(m.2 ssd 240g),macos(sata,ssd 128g)。&lt;/p&gt;
 &lt;p&gt;我后来又从老的笔记本上拆下来一个m.2接口的ssd，硬盘容量大概是256个g。MAC os的硬盘sata接口只有128个g。然后一直说容量不够，然后呢我就把这个256g的m2接口的硬盘接到机器上扩大容量。但是有一个问题就是我原来的win10系统盘只能拆下来。&lt;/p&gt;
 &lt;p&gt;我在京东上订了一个m2接口转sata接口的硬盘盒。想把系统重新转换，从原来的sata接口的硬盘上转到现在的m2接口的硬盘上。&lt;/p&gt;
