@@ -13,7 +13,7 @@
 <meta name="keywords" content="python, mac, python,mac,lib, " />
 
 <meta property="og:title" content="mac 下编译python3 的 PythonMagick包 "/>
-<meta property="og:url" content="https://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html" />
+<meta property="og:url" content="http://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html" />
 <meta property="og:description" content="mac 下编译PythonMagick 由于要压缩漫画pdf，找了很多办法，其中有用到 imagemagick,这个比较 好安装。 brew install imagemagick@6 brew link imagemagick@6 --force 不过，pythonmagcik这个包就比较麻烦了，windows下有编译好的二进制包，mac需要自己编译，比较麻烦，也走了不少弯路。 网上看了不少教程，自己也摸索了下，现在是能用了。 代码,过程放在下面 下载源码包PythonMagic-0.9.18.tar.xz 而 0.9.19 不行，编译没问题，但安装后，使用导入有问题。 据说是后面的版本api什么的改了，好像可以改文件什么的，但是我不会，就用老点的版本吧 现在看来，主要还是python版本的问题，这就是折腾这么多时间的心得 主要是注意python2和python3的区别 …" />
 <meta property="og:site_name" content="Jackjin&#39;s Home" />
 <meta property="og:article:author" content="天地一沙鸥" />
@@ -26,11 +26,11 @@
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/css/pygments.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/tipuesearch/tipuesearch.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/css/elegant.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/css/custom.css" media="screen">
-        <link href="https://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin&#39;s Home - Full RSS Feed" />
+        <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/css/custom.css" media="screen">
+        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin&#39;s Home - Full RSS Feed" />
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -50,14 +50,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="https://jackjin-cn.github.io/"><span class=site-name>Jackjin's Home</span></a>
+                    <a class="brand" href="http://jackjin-cn.github.io/"><span class=site-name>Jackjin's Home</span></a>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
-                            <li ><a href="https://jackjin-cn.github.io">Home</a></li>
-                            <li ><a href="https://jackjin-cn.github.io/categories.html">Categories</a></li>
-                            <li ><a href="https://jackjin-cn.github.io/tags.html">Tags</a></li>
-                            <li ><a href="https://jackjin-cn.github.io/archives.html">Archives</a></li>
-                            <li><form class="navbar-search" action="https://jackjin-cn.github.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            <li ><a href="http://jackjin-cn.github.io">Home</a></li>
+                            <li ><a href="http://jackjin-cn.github.io/categories.html">Categories</a></li>
+                            <li ><a href="http://jackjin-cn.github.io/tags.html">Tags</a></li>
+                            <li ><a href="http://jackjin-cn.github.io/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="http://jackjin-cn.github.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
                         </ul>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="https://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html"> mac 下编译python3 的 PythonMagick包  </a></h1>
+    <h1><a href="http://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html"> mac 下编译python3 的 PythonMagick包  </a></h1>
     </header>
 </div>
 
@@ -117,7 +117,7 @@
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="https://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html#disqus_thread">
+                href="http://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html#disqus_thread">
                 Comments
             </a>
         </div>
@@ -127,8 +127,8 @@
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'jackjin';
-        var disqus_identifier = 'https://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html';
-    var disqus_url = 'https://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html';
+        var disqus_identifier = 'http://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html';
+    var disqus_url = 'http://jackjin-cn.github.io/2018/2018-10-08_14-45_mac-xia-bian-yi-python3-de-pythonmagickbao.html';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -157,19 +157,19 @@
 <time datetime="2018-10-08T17:13:27+08:00">10 8, 2018</time>
 
             <h4>Category</h4>
-            <a class="category-link" href="https://jackjin-cn.github.io/categories.html#pythonmaclib-ref">python,mac,lib</a>
+            <a class="category-link" href="http://jackjin-cn.github.io/categories.html#pythonmaclib-ref">python,mac,lib</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="https://jackjin-cn.github.io/tags.html#mac-ref">mac
+                <li><a href="http://jackjin-cn.github.io/tags.html#mac-ref">mac
                     <span>5</span>
 </a></li>
-                <li><a href="https://jackjin-cn.github.io/tags.html#python-ref">python
+                <li><a href="http://jackjin-cn.github.io/tags.html#python-ref">python
                     <span>7</span>
 </a></li>
             </ul>
 <h4>Contact</h4>
-    <a href="#" title="My aaa Profile" class="sidebar-social-links" target="_blank">
-    <i class="fa fa-aaa sidebar-social-links"></i></a>
+    <a href="#" title="My aiwanke Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-aiwanke sidebar-social-links"></i></a>
     <a href="#" title="My Another social link Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-another social link sidebar-social-links"></i></a>
         </div>
