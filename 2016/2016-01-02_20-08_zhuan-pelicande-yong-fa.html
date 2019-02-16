@@ -13,7 +13,7 @@
 <meta name="keywords" content="pelican, 转载, 软件使用, " />
 
 <meta property="og:title" content="转pelican的用法 "/>
-<meta property="og:url" content="http://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html" />
+<meta property="og:url" content="https://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html" />
 <meta property="og:description" content="转自煎挠橙的博客 思路 一般而言，搭建一个独立博客需要三样东西： 博客软件 托管服务器 独立的域名 博客软件用来生成你的博客页面，而生成好的页面则需要放到托管的服务器上才能被别人看到。 博客软件 我选择Pleican作为博客软件主要是出于以下的考虑： 基于Python，简单易上手 生成静态页面，不需要数据库，访问速度快，易于维护 支持markdown标记语言 和著名的wordpress相比，pelican搭建起来的博客功能和界面会相对单薄一些，但对于我来说绝对够用，况且写博客的初衷也是想把注意力放在内容上，工具越简单越好。 托管服务器 这里选择github的原因也很简单： 免费 省事 可以直接用git进行版本管理 磨刀 这份教程中提到的方法虽然简单，但仍旧需要你有一些基础，主要有 1.python基础 你至少应该能够配置python的环境，能够顺利的安装python的插件,了解一些简单的python语法。 2.了解Markdown 没听说过不要紧，推荐阅读我的文章你为什么应该用markdown写文章。 另外这里有一份简短的介绍，详细的语法说明则可以在这里找到。 3.对git/github有所了解 如果不了解也同样没有关系，这个一站式的教程可以帮到你。 这里多说一点 …" />
 <meta property="og:site_name" content="Jackjin&#39;s Home" />
 <meta property="og:article:author" content="天地一沙鸥" />
@@ -25,11 +25,11 @@
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/css/pygments.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/tipuesearch/tipuesearch.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/css/elegant.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/css/custom.css" media="screen">
-        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin&#39;s Home - Full RSS Feed" />
+        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="https://jackjin-cn.github.io/theme/css/custom.css" media="screen">
+        <link href="https://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin&#39;s Home - Full RSS Feed" />
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -49,14 +49,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="http://jackjin-cn.github.io/"><span class=site-name>Jackjin's Home</span></a>
+                    <a class="brand" href="https://jackjin-cn.github.io/"><span class=site-name>Jackjin's Home</span></a>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right top-menu">
-                            <li ><a href="http://jackjin-cn.github.io">Home</a></li>
-                            <li ><a href="http://jackjin-cn.github.io/categories.html">Categories</a></li>
-                            <li ><a href="http://jackjin-cn.github.io/tags.html">Tags</a></li>
-                            <li ><a href="http://jackjin-cn.github.io/archives.html">Archives</a></li>
-                            <li><form class="navbar-search" action="http://jackjin-cn.github.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                            <li ><a href="https://jackjin-cn.github.io">Home</a></li>
+                            <li ><a href="https://jackjin-cn.github.io/categories.html">Categories</a></li>
+                            <li ><a href="https://jackjin-cn.github.io/tags.html">Tags</a></li>
+                            <li ><a href="https://jackjin-cn.github.io/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="https://jackjin-cn.github.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
                         </ul>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html"> 转pelican的用法  </a></h1>
+    <h1><a href="https://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html"> 转pelican的用法  </a></h1>
     </header>
 </div>
 
@@ -263,7 +263,7 @@ read answer #防止新打开的窗口被关闭</p>
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="http://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html#disqus_thread">
+                href="https://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html#disqus_thread">
                 Comments
             </a>
         </div>
@@ -273,8 +273,8 @@ read answer #防止新打开的窗口被关闭</p>
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'jackjin';
-        var disqus_identifier = 'http://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html';
-    var disqus_url = 'http://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html';
+        var disqus_identifier = 'https://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html';
+    var disqus_url = 'https://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -299,19 +299,19 @@ read answer #防止新打开的窗口被关闭</p>
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2016-01-02T20:08:00+08:00"> 1 2, 2016</time>
             <h4>Category</h4>
-            <a class="category-link" href="http://jackjin-cn.github.io/categories.html#ruan-jian-shi-yong-ref">软件使用</a>
+            <a class="category-link" href="https://jackjin-cn.github.io/categories.html#ruan-jian-shi-yong-ref">软件使用</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="http://jackjin-cn.github.io/tags.html#pelican-ref">pelican
+                <li><a href="https://jackjin-cn.github.io/tags.html#pelican-ref">pelican
                     <span>5</span>
 </a></li>
-                <li><a href="http://jackjin-cn.github.io/tags.html#zhuan-zai-ref">转载
+                <li><a href="https://jackjin-cn.github.io/tags.html#zhuan-zai-ref">转载
                     <span>1</span>
 </a></li>
             </ul>
 <h4>Contact</h4>
-    <a href="#" title="My aiwanke Profile" class="sidebar-social-links" target="_blank">
-    <i class="fa fa-aiwanke sidebar-social-links"></i></a>
+    <a href="#" title="My aaa Profile" class="sidebar-social-links" target="_blank">
+    <i class="fa fa-aaa sidebar-social-links"></i></a>
     <a href="#" title="My Another social link Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-another social link sidebar-social-links"></i></a>
         </div>
