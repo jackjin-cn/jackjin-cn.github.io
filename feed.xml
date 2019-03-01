@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Tue, 19 Feb 2019 16:39:33 +0800</lastBuildDate><item><title>blog 中插入图片</title><link>http://jackjin-cn.github.io/2019/2019-02-19_16-30_blog-zhong-cha-ru-tu-pian.html</link><description>&lt;h1&gt;blog 中插入图片&lt;/h1&gt;
+<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Fri, 01 Mar 2019 14:23:41 +0800</lastBuildDate><item><title>rime 输入法的词库配置</title><link>http://jackjin-cn.github.io/2019/2019-03-01_14-08_rime-shu-ru-fa-de-ci-ku-pei-zhi.html</link><description>&lt;h1&gt;Title:rime 输入法的词库配置&lt;/h1&gt;
+&lt;p&gt;在手机上安装了irime输入法，用了五笔还是蛮舒服的，不过词库中没有我需要的词，所以想弄一份自己的词库，网上也看了不少教程，可能是一开始看得不太明白，觉得难，加上也没有仔细看手机自带的说明，搞了半天也没有弄出来，不过也没有灰心。在仔细看了说明之后发现，其实只要在电脑上配置了，然后把相应的文件传到手机里就可以了。&lt;/p&gt;
+&lt;p&gt;在电脑上的~/Library/rime  里，把schema.yaml 与 dict.yaml做好，dict.yaml是原始的码表文件，我为了保持一、二级简码，原来的wibi86词库没有动，用深蓝词库转换好的文件添加到后面（深蓝有设置词频功能，可以联网速度比较慢）。然后在电脑是进行部署，把下图中的文件传到电脑上就可以了。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="im-select" src="../images/20190301rime.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;后来，我有学着网上把皮肤改了一下，也学了一下自动造词，感觉还可以了。不比清歌差，就是没有打时间等特殊编码的功能。&lt;/p&gt;
+&lt;p&gt;感觉这个输入法的好处是，一套编码可以在多个平台复用 ，真得很不错。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Fri, 01 Mar 2019 14:08:01 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2019-03-01:/2019/2019-03-01_14-08_rime-shu-ru-fa-de-ci-ku-pei-zhi.html</guid><category>mac</category><category>ime</category><category>折腾</category></item><item><title>vim 中判断在终端还是在gui运行</title><link>http://jackjin-cn.github.io/2019/2019-02-21_14-09_vim-zhong-pan-duan-zai-zhong-duan-huan-shi-zai-guiyun-xing.html</link><description>&lt;h1&gt;判断vim终端还是在gui运行&lt;/h1&gt;
+&lt;p&gt;遇到这样一个问题，在终端下运行vim，配色不太好看，如果直接在vimrc里改，则gvim也受到影响。
+不过打开我的vimrc文件看了一下，是有现成答案的。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;if has(&amp;#39;gui_running&amp;#39;)
+    if strftime(&amp;quot;%H&amp;quot;)&amp;gt;6    
+        colorscheme  darkblue
+    endif
+    if strftime(&amp;quot;%H&amp;quot;)&amp;gt;22       
+        colorscheme  maroloccio
+    endif
+    if strftime(&amp;quot;%H&amp;quot;)&amp;lt;6
+        colorscheme  maroloccio
+    endif
+else
+  colorscheme darkburn
+endif
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;用这样一个判断就可以了。
+如何简单。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Thu, 21 Feb 2019 14:09:36 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2019-02-21:/2019/2019-02-21_14-09_vim-zhong-pan-duan-zai-zhong-duan-huan-shi-zai-guiyun-xing.html</guid></item><item><title>blog 中插入图片</title><link>http://jackjin-cn.github.io/2019/2019-02-19_16-30_blog-zhong-cha-ru-tu-pian.html</link><description>&lt;h1&gt;blog 中插入图片&lt;/h1&gt;
 &lt;p&gt;前面写blog，一直没有插入图片，前几天，想着插入图片，在pelican的生成目录中建立一个&lt;em&gt;images&lt;/em&gt;的文件夹，把图片放在去，然后再进行相对引用，这样便能显示图片了。但是带来的问题是源文字与图片不在一起了，想了一下，找一个简单办法，就是在源文字的文件夹下建立文件夹，在生成html的脚本加些代码，把图片复制到pelican生成目录里，这样就能解决问题了。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; ![im-select](../images/imselect.png)
 &lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 19 Feb 2019 16:30:14 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2019-02-19:/2019/2019-02-19_16-30_blog-zhong-cha-ru-tu-pian.html</guid><category>pelican</category></item><item><title>mac vim中文输入法的切换</title><link>http://jackjin-cn.github.io/2019/2019-02-12_18-01_mac-vimzhong-wen-shu-ru-fa-de-qie-huan.html</link><description>&lt;h2&gt;关于mac vim中文输入法的切换&lt;/h2&gt;
@@ -261,12 +286,4 @@ call setline(6,&amp;quot;Author:天地一沙鸥 …&lt;/pre&gt;&lt;/div&gt;</des
 便用 modprobe -r rtlwifi 这样的命令删除多余的驱动。
 最后发现管用的好像是下载的 realtek_new 管用，具体驱动名是 8192ee.
 modprobe 8192ee
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sun, 24 Jan 2016 18:41:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-24:/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html</guid><category>debian</category><category>linux</category><category>wifi</category><category>驱动</category><category>realtek</category></item><item><title>vim的verbose命令</title><link>http://jackjin-cn.github.io/2016/2016-01-19_10-00_vimde-verboseming-ling.html</link><description>&lt;p&gt;在鼓捣autocmd的时候，看到vim的audocmd的帮助&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;set verbose=9
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;发现有很多额外的显示，值得一看，也能发现很多非常有意思的东西！&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 19 Jan 2016 10:00:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-19:/2016/2016-01-19_10-00_vimde-verboseming-ling.html</guid><category>vim</category></item><item><title>vim中的autocmd</title><link>http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html</link><description>&lt;p&gt;原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保存后才能高亮，也试过autocmd的其它形式，也是不行，不过，昨天在尝试autocmd的时候，无意中发发现了解决办法。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;autocmd BufReadpre *.mytext set syn=mytext
-mytext是指代自己定义的文件格式和语法文件
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 19 Jan 2016 08:58:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-19:/2016/2016-01-19_08-58_vimzhong-de-autocmd.html</guid><category>autocmd</category><category>vim</category></item></channel></rss>
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sun, 24 Jan 2016 18:41:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2016-01-24:/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html</guid><category>debian</category><category>linux</category><category>wifi</category><category>驱动</category><category>realtek</category></item></channel></rss>
