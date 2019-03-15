@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Jackjin's Home</title><link>https://jackjin-cn.github.io/</link><description></description><lastBuildDate>Fri, 15 Mar 2019 18:45:47 +0800</lastBuildDate><item><title>python3利用docx调整文件的字体大小</title><link>https://jackjin-cn.github.io/2019/2019-03-15_16-42_python3li-yong-docxdiao-zheng-wen-jian-de-zi-ti-da-xiao.html</link><description>&lt;h2&gt;python3利用docx调整文件的字体大小&lt;/h2&gt;
-&lt;p&gt;由于工作要中把多个docx合并成一个文件，原来就已经解决了一部份问题，文字，表格也没有太大的问题。不过，字体问题一直没有解决，我现在用的mac，文档中的字体很难看，大小也一致。网上也看了很多的教程。可能是我不够聪明，也可能教程看得不够仔细。&lt;/p&gt;
+<rss version="2.0"><channel><title>Jackjin's Home</title><link>https://jackjin-cn.github.io/</link><description></description><lastBuildDate>Fri, 15 Mar 2019 18:51:16 +0800</lastBuildDate><item><title>python3利用docx调整文件的字体大小</title><link>https://jackjin-cn.github.io/2019/2019-03-15_16-42_python3li-yong-docxdiao-zheng-wen-jian-de-zi-ti-da-xiao.html</link><description>&lt;h2&gt;python3利用docx调整文件的字体大小&lt;/h2&gt;
+&lt;p&gt;由于工作要中把多个docx合并成一个文件，原来就已经解决了一部份问题，文字，表格也没有太大的问题。不过，字体问题一直没有解决，我现在用的mac，文档中的字体很难看，大小也不一致。网上也看了很多的教程。可能是我不够聪明，也可能教程看得不够仔细。&lt;/p&gt;
 &lt;p&gt;我用的是docx模块&lt;/p&gt;
 &lt;p&gt;有paragraph，还有run，有不少网页上有相关的介绍，我不多说。&lt;/p&gt;
-&lt;p&gt;我的理解，段落是一段文字，用加车来区分。run相地是paragraph的一部分，如果一句话中，不同的文字设置了不同的字体，就属于不同的run，也可用run增加文字，他不增加新段落，是加下原来段落的后面。
+&lt;p&gt;我的理解，段落是一段文字，用加车来区分。run相当于是paragraph的一部分，如果一句话中，不同的文字设置了不同的字体，就属于不同的run，也可用run增加文字，他不增加新段落，是加下原来段落的尾部
 原来我一段以为只能用add_paragrah来添加文字，这个是理解错误。&lt;/p&gt;
 &lt;p&gt;另外，paragraphs是一个paragraph的列表，可以选择其中的一个来添加文字。比如run=paragraphs[0].add_run('text')，然后就可以在这个run里面设置字体。&lt;/p&gt;
 &lt;p&gt;output=Document()

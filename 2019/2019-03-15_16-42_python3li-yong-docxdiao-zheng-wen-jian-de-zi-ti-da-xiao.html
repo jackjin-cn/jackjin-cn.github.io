@@ -14,13 +14,13 @@
 
 <meta property="og:title" content="python3利用docx调整文件的字体大小 "/>
 <meta property="og:url" content="https://jackjin-cn.github.io/2019/2019-03-15_16-42_python3li-yong-docxdiao-zheng-wen-jian-de-zi-ti-da-xiao.html" />
-<meta property="og:description" content="python3利用docx调整文件的字体大小 由于工作要中把多个docx合并成一个文件，原来就已经解决了一部份问题，文字，表格也没有太大的问题。不过，字体问题一直没有解决，我现在用的mac，文档中的字体很难看，大小也一致。网上也看了很多的教程。可能是我不够聪明，也可能教程看得不够仔细。 我用的是docx模块 有paragraph，还有run，有不少网页上有相关的介绍，我不多说。 我的理解，段落是一段文字，用加车来区分。run相地是paragraph的一部分，如果一句话中，不同的文字设置了不同的字体，就属于不同的run，也可用run增加文字，他不增加新段落，是加下原来段落的后面。 原来我一段以为只能用add_paragrah来添加文字，这个是理解错误。 另外，paragraphs是一个paragraph的列表，可以选择其中的一个来添加文字。比如run=paragraphs[0].add_run(&#39;text&#39;)，然后就可以在这个run里面设置字体。 output=Document() bb=output.add_heading(&#39;&#39;) #我的理解，这里的bb也等同于一个paragraph,bb=output.add_paragrah(&#39;text&#39; …" />
+<meta property="og:description" content="python3利用docx调整文件的字体大小 由于工作要中把多个docx合并成一个文件，原来就已经解决了一部份问题，文字，表格也没有太大的问题。不过，字体问题一直没有解决，我现在用的mac，文档中的字体很难看，大小也不一致。网上也看了很多的教程。可能是我不够聪明，也可能教程看得不够仔细。 我用的是docx模块 有paragraph，还有run，有不少网页上有相关的介绍，我不多说。 我的理解，段落是一段文字，用加车来区分。run相当于是paragraph的一部分，如果一句话中，不同的文字设置了不同的字体，就属于不同的run，也可用run增加文字，他不增加新段落，是加下原来段落的尾部 原来我一段以为只能用add_paragrah来添加文字，这个是理解错误。 另外，paragraphs是一个paragraph的列表，可以选择其中的一个来添加文字。比如run=paragraphs[0].add_run(&#39;text&#39;)，然后就可以在这个run里面设置字体。 output=Document() bb=output.add_heading(&#39;&#39;) #我的理解，这里的bb也等同于一个paragraph,bb=output.add_paragrah(&#39;text&#39; …" />
 <meta property="og:site_name" content="Jackjin&#39;s Home" />
 <meta property="og:article:author" content="天地一沙鸥" />
 <meta property="og:article:published_time" content="2019-03-15T16:42:39+08:00" />
-<meta property="" content="2019-03-15T18:45:47+08:00" />
+<meta property="" content="2019-03-15T18:51:16+08:00" />
 <meta name="twitter:title" content="python3利用docx调整文件的字体大小 ">
-<meta name="twitter:description" content="python3利用docx调整文件的字体大小 由于工作要中把多个docx合并成一个文件，原来就已经解决了一部份问题，文字，表格也没有太大的问题。不过，字体问题一直没有解决，我现在用的mac，文档中的字体很难看，大小也一致。网上也看了很多的教程。可能是我不够聪明，也可能教程看得不够仔细。 我用的是docx模块 有paragraph，还有run，有不少网页上有相关的介绍，我不多说。 我的理解，段落是一段文字，用加车来区分。run相地是paragraph的一部分，如果一句话中，不同的文字设置了不同的字体，就属于不同的run，也可用run增加文字，他不增加新段落，是加下原来段落的后面。 原来我一段以为只能用add_paragrah来添加文字，这个是理解错误。 另外，paragraphs是一个paragraph的列表，可以选择其中的一个来添加文字。比如run=paragraphs[0].add_run(&#39;text&#39;)，然后就可以在这个run里面设置字体。 output=Document() bb=output.add_heading(&#39;&#39;) #我的理解，这里的bb也等同于一个paragraph,bb=output.add_paragrah(&#39;text&#39; …">
+<meta name="twitter:description" content="python3利用docx调整文件的字体大小 由于工作要中把多个docx合并成一个文件，原来就已经解决了一部份问题，文字，表格也没有太大的问题。不过，字体问题一直没有解决，我现在用的mac，文档中的字体很难看，大小也不一致。网上也看了很多的教程。可能是我不够聪明，也可能教程看得不够仔细。 我用的是docx模块 有paragraph，还有run，有不少网页上有相关的介绍，我不多说。 我的理解，段落是一段文字，用加车来区分。run相当于是paragraph的一部分，如果一句话中，不同的文字设置了不同的字体，就属于不同的run，也可用run增加文字，他不增加新段落，是加下原来段落的尾部 原来我一段以为只能用add_paragrah来添加文字，这个是理解错误。 另外，paragraphs是一个paragraph的列表，可以选择其中的一个来添加文字。比如run=paragraphs[0].add_run(&#39;text&#39;)，然后就可以在这个run里面设置字体。 output=Document() bb=output.add_heading(&#39;&#39;) #我的理解，这里的bb也等同于一个paragraph,bb=output.add_paragrah(&#39;text&#39; …">
 
         <title>python3利用docx调整文件的字体大小  · Jackjin&#39;s Home
 </title>
@@ -79,24 +79,23 @@
 
             
             <h2>python3利用docx调整文件的字体大小</h2>
-<p>由于工作要中把多个docx合并成一个文件，原来就已经解决了一部份问题，文字，表格也没有太大的问题。不过，字体问题一直没有解决，我现在用的mac，文档中的字体很难看，大小也一致。网上也看了很多的教程。可能是我不够聪明，也可能教程看得不够仔细。</p>
+<p>由于工作要中把多个docx合并成一个文件，原来就已经解决了一部份问题，文字，表格也没有太大的问题。不过，字体问题一直没有解决，我现在用的mac，文档中的字体很难看，大小也不一致。网上也看了很多的教程。可能是我不够聪明，也可能教程看得不够仔细。</p>
 <p>我用的是docx模块</p>
 <p>有paragraph，还有run，有不少网页上有相关的介绍，我不多说。</p>
-<p>我的理解，段落是一段文字，用加车来区分。run相地是paragraph的一部分，如果一句话中，不同的文字设置了不同的字体，就属于不同的run，也可用run增加文字，他不增加新段落，是加下原来段落的后面。
+<p>我的理解，段落是一段文字，用加车来区分。run相当于是paragraph的一部分，如果一句话中，不同的文字设置了不同的字体，就属于不同的run，也可用run增加文字，他不增加新段落，是加下原来段落的尾部
 原来我一段以为只能用add_paragrah来添加文字，这个是理解错误。</p>
 <p>另外，paragraphs是一个paragraph的列表，可以选择其中的一个来添加文字。比如run=paragraphs[0].add_run('text')，然后就可以在这个run里面设置字体。</p>
 <p>output=Document()
 bb=output.add_heading('') #我的理解，这里的bb也等同于一个paragraph,bb=output.add_paragrah('text')类似，不过heading是生成一个标题，自动加上格式而已</p>
-<p>run=bb.add_run(text)
-fontname='仿宋'
-fontsize=30
-font=run.font
-font.name = fontname
-font.size = Pt(fontsize)
-run._element.rPr.rFonts.set(qn('w:eastAsia'), fontname)</p>
+<p>run=bb.add_run(text)</p>
+<p>fontname='仿宋'</p>
+<p>fontsize=30</p>
+<p>font=run.font</p>
+<p>font.name = fontname</p>
+<p>font.size = Pt(fontsize)</p>
+<p>run._element.rPr.rFonts.set(qn('w:eastAsia'), fontname)</p>
 <p>这样就可以了。</p>
 <p>在表格里设置字体，不要直接用add_paragrah，这样容易多一行，可以取他的段落，如果只有一个段落，就在paragraphs[0].add_run('text'),如果不止一个段落，那就直接用add_paragrah(),再add_run()吧。</p>
-<p><img alt="im-select" src="../images/imselect.png"></p>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -140,7 +139,7 @@ run._element.rPr.rFonts.set(qn('w:eastAsia'), fontname)</p>
             <time pubdate="pubdate" datetime="2019-03-15T16:42:39+08:00"> 3 15, 2019</time>
 
 <h4>Last Updated</h4>
-<time datetime="2019-03-15T18:45:47+08:00"> 3 15, 2019</time>
+<time datetime="2019-03-15T18:51:16+08:00"> 3 15, 2019</time>
 
             <h4>Category</h4>
             <a class="category-link" href="https://jackjin-cn.github.io/categories.html#python-ref">python</a>
