@@ -10,18 +10,19 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="vim, time, vim, " />
+<meta name="keywords" content="rime, 软件, " />
 
-<meta property="og:title" content="strftime的一点用法 "/>
-<meta property="og:url" content="https://jackjin-cn.github.io/2016/2016-01-02_19-36_strftimede-yi-dian-yong-fa.html" />
-<meta property="og:description" content="strftime的一点用法 最近想写，用Vim进行编辑，想设置加入时间的快捷方式 map &lt;LEADER&gt;bt A&lt;C-R&gt;=strftime(&#34;%Y-%m-%d %A %H:%M&#34;)&lt;CR&gt; 效果如下: 2016-01-02 星期六 19:39" />
+<meta property="og:title" content="折腾rime "/>
+<meta property="og:url" content="https://jackjin-cn.github.io/2019/2019-04-14_20-31_zhe-teng-rime.html" />
+<meta property="og:description" content="Title: 折腾rime手记 以前就听说过 鼠须管（小狼毫），以前安装过，可是感觉配置很复杂，然后就卸载了。最近又装了一次，看了一下说明，官网的也看了，贴吧的也看了，还是一头雾水，后来不死心，也是一颗折腾的心，想要研究明白。 最近一到两周，一直在进行学习配置，无非是网上搜索，学习别人的例子，根据已有的方案进行修改，一路摸着石头过河。 先是把自己常用的词加进了系统wubi的方案，结果没有词频了，后来用深蓝词库转换工具，有联网设置词频的方式，搞定了。现在想来，这个也不是太好。自己的常用词只有几百个，可以做一个自己词库方案。回到词库里。 折腾配色，改了一个自己喜欢的配色。灰色+白字。后来想试用系统的配色，直接改squirrel.custom.yaml,后来写了一个python脚本，更方便的修改配色。 后来要做一个拼音+五笔的方案，根据wubi_pinyin改了一个wubi_pinyinjjb的方案，弄好了反查，也弄好了用五笔打字-›汉字拼音 …" />
 <meta property="og:site_name" content="Jackjin&#39;s Home" />
 <meta property="og:article:author" content="天地一沙鸥" />
-<meta property="og:article:published_time" content="2016-01-02T19:36:00+08:00" />
-<meta name="twitter:title" content="strftime的一点用法 ">
-<meta name="twitter:description" content="strftime的一点用法 最近想写，用Vim进行编辑，想设置加入时间的快捷方式 map &lt;LEADER&gt;bt A&lt;C-R&gt;=strftime(&#34;%Y-%m-%d %A %H:%M&#34;)&lt;CR&gt; 效果如下: 2016-01-02 星期六 19:39">
+<meta property="og:article:published_time" content="2019-04-14T20:31:39+08:00" />
+<meta property="" content="2019-04-14T20:58:33+08:00" />
+<meta name="twitter:title" content="折腾rime ">
+<meta name="twitter:description" content="Title: 折腾rime手记 以前就听说过 鼠须管（小狼毫），以前安装过，可是感觉配置很复杂，然后就卸载了。最近又装了一次，看了一下说明，官网的也看了，贴吧的也看了，还是一头雾水，后来不死心，也是一颗折腾的心，想要研究明白。 最近一到两周，一直在进行学习配置，无非是网上搜索，学习别人的例子，根据已有的方案进行修改，一路摸着石头过河。 先是把自己常用的词加进了系统wubi的方案，结果没有词频了，后来用深蓝词库转换工具，有联网设置词频的方式，搞定了。现在想来，这个也不是太好。自己的常用词只有几百个，可以做一个自己词库方案。回到词库里。 折腾配色，改了一个自己喜欢的配色。灰色+白字。后来想试用系统的配色，直接改squirrel.custom.yaml,后来写了一个python脚本，更方便的修改配色。 后来要做一个拼音+五笔的方案，根据wubi_pinyin改了一个wubi_pinyinjjb的方案，弄好了反查，也弄好了用五笔打字-›汉字拼音 …">
 
-        <title>strftime的一点用法  · Jackjin&#39;s Home
+        <title>折腾rime  · Jackjin&#39;s Home
 </title>
         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
@@ -69,7 +70,7 @@
 <article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-    <h1><a href="https://jackjin-cn.github.io/2016/2016-01-02_19-36_strftimede-yi-dian-yong-fa.html"> strftime的一点用法  </a></h1>
+    <h1><a href="https://jackjin-cn.github.io/2019/2019-04-14_20-31_zhe-teng-rime.html"> 折腾rime  </a></h1>
     </header>
 </div>
 
@@ -77,22 +78,31 @@
         <div class="span8 offset2 article-content">
 
             
-            <h1>strftime的一点用法</h1>
-<p>最近想写，用<strong>Vim</strong>进行编辑，想设置加入时间的快捷方式</p>
-<div class="highlight"><pre><span></span>map &lt;LEADER&gt;bt A&lt;C-R&gt;=strftime(&quot;%Y-%m-%d %A %H:%M&quot;)&lt;CR&gt;
-</pre></div>
-
-
-<p>效果如下:</p>
-<div class="highlight"><pre><span></span>2016-01-02 星期六 19:39
-</pre></div>
+            <p>Title: 折腾rime手记</p>
+<p>以前就听说过 鼠须管（小狼毫），以前安装过，可是感觉配置很复杂，然后就卸载了。最近又装了一次，看了一下说明，官网的也看了，贴吧的也看了，还是一头雾水，后来不死心，也是一颗折腾的心，想要研究明白。</p>
+<p>最近一到两周，一直在进行学习配置，无非是网上搜索，学习别人的例子，根据已有的方案进行修改，一路摸着石头过河。</p>
+<ol>
+<li>
+<p>先是把自己常用的词加进了系统wubi的方案，结果没有词频了，后来用深蓝词库转换工具，有联网设置词频的方式，搞定了。现在想来，这个也不是太好。自己的常用词只有几百个，可以做一个自己词库方案。回到词库里。</p>
+</li>
+<li>
+<p>折腾配色，改了一个自己喜欢的配色。灰色+白字。后来想试用系统的配色，直接改<strong>squirrel.custom.yaml</strong>,后来写了一个python脚本，更方便的修改配色。</p>
+</li>
+<li>
+<p>后来要做一个拼音+五笔的方案，根据wubi_pinyin改了一个wubi_pinyinjjb的方案，弄好了反查，也弄好了用<strong>五笔打字</strong>-›<strong>汉字拼音</strong>，还有很有成就感的。</p>
+</li>
+<li>
+<p>还学会了折腾滤镜，可以做到在输入法里输入单词显示简单的中文释义，更方便了。</p>
+</li>
+</ol>
+<p><img alt="im-select" src="../images/rime-en.png"></p>
             
             <section>
 <div class="accordion" id="accordion2">
     <div class="accordion-group">
         <div class="accordion-heading">
             <a class="accordion-toggle disqus-comment-count" data-toggle="collapse" data-parent="#accordion2"
-                href="https://jackjin-cn.github.io/2016/2016-01-02_19-36_strftimede-yi-dian-yong-fa.html#disqus_thread">
+                href="https://jackjin-cn.github.io/2019/2019-04-14_20-31_zhe-teng-rime.html#disqus_thread">
                 Comments
             </a>
         </div>
@@ -102,8 +112,8 @@
                     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'jackjin';
-        var disqus_identifier = 'https://jackjin-cn.github.io/2016/2016-01-02_19-36_strftimede-yi-dian-yong-fa.html';
-    var disqus_url = 'https://jackjin-cn.github.io/2016/2016-01-02_19-36_strftimede-yi-dian-yong-fa.html';
+        var disqus_identifier = 'https://jackjin-cn.github.io/2019/2019-04-14_20-31_zhe-teng-rime.html';
+    var disqus_url = 'https://jackjin-cn.github.io/2019/2019-04-14_20-31_zhe-teng-rime.html';
 
     (function() {
          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -126,16 +136,17 @@
         <section>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
-            <time pubdate="pubdate" datetime="2016-01-02T19:36:00+08:00"> 1 2, 2016</time>
+            <time pubdate="pubdate" datetime="2019-04-14T20:31:39+08:00"> 4 14, 2019</time>
+
+<h4>Last Updated</h4>
+<time datetime="2019-04-14T20:58:33+08:00"> 4 14, 2019</time>
+
             <h4>Category</h4>
-            <a class="category-link" href="https://jackjin-cn.github.io/categories.html#vim-ref">vim</a>
+            <a class="category-link" href="https://jackjin-cn.github.io/categories.html#ruan-jian-ref">软件</a>
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
-                <li><a href="https://jackjin-cn.github.io/tags.html#time-ref">time
+                <li><a href="https://jackjin-cn.github.io/tags.html#rime-ref">rime
                     <span>1</span>
-</a></li>
-                <li><a href="https://jackjin-cn.github.io/tags.html#vim-ref">vim
-                    <span>11</span>
 </a></li>
             </ul>
 <h4>Contact</h4>

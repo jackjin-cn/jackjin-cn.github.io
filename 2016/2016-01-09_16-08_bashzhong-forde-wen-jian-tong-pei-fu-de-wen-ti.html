@@ -14,12 +14,12 @@
 
 <meta property="og:title" content="bash中for的文件通配符的问题 "/>
 <meta property="og:url" content="https://jackjin-cn.github.io/2016/2016-01-09_16-08_bashzhong-forde-wen-jian-tong-pei-fu-de-wen-ti.html" />
-<meta property="og:description" content="最近在整理自己的文档，还学了一点awk的操作，awk对文本的处理真是蛮强大的。 我需要经常用脚本来对一批文件处理。比如 aa$&amp;gt; for file in *.txt;do echo $file;done#结果可以正常显示 因为经常要用for命令的这种形式，于是写了一个脚本(allfiles)： 1 2 3 4 5 6#!/bin/bash #$1是一个进行处理文件的命令或者脚本 for files in $2; do $1 $files done; 然后在shell里输入: aa@@@$: allfiles *.txt 结果确不正常，只有第一个文件被匹配，改来改去，发现原因：shell在处理命令行时已经自动把.txt* 替换成符合条件的列表了，所以产生问题 …" />
+<meta property="og:description" content="最近在整理自己的文档，还学了一点awk的操作，awk对文本的处理真是蛮强大的。 我需要经常用脚本来对一批文件处理。比如 aa$&gt; for file in *.txt;do echo $file;done#结果可以正常显示 因为经常要用for命令的这种形式，于是写了一个脚本(allfiles)： 1 2 3 4 5 6#!/bin/bash #$1是一个进行处理文件的命令或者脚本 for files in $2; do $1 $files done; 然后在shell里输入: aa@@@$: allfiles *.txt 结果确不正常，只有第一个文件被匹配，改来改去，发现原因：shell在处理命令行时已经自动把.txt* 替换成符合条件的列表了，所以产生问题。后来发现的办法是在文件上加中 …" />
 <meta property="og:site_name" content="Jackjin&#39;s Home" />
 <meta property="og:article:author" content="天地一沙鸥" />
 <meta property="og:article:published_time" content="2016-01-09T16:08:00+08:00" />
 <meta name="twitter:title" content="bash中for的文件通配符的问题 ">
-<meta name="twitter:description" content="最近在整理自己的文档，还学了一点awk的操作，awk对文本的处理真是蛮强大的。 我需要经常用脚本来对一批文件处理。比如 aa$&amp;gt; for file in *.txt;do echo $file;done#结果可以正常显示 因为经常要用for命令的这种形式，于是写了一个脚本(allfiles)： 1 2 3 4 5 6#!/bin/bash #$1是一个进行处理文件的命令或者脚本 for files in $2; do $1 $files done; 然后在shell里输入: aa@@@$: allfiles *.txt 结果确不正常，只有第一个文件被匹配，改来改去，发现原因：shell在处理命令行时已经自动把.txt* 替换成符合条件的列表了，所以产生问题 …">
+<meta name="twitter:description" content="最近在整理自己的文档，还学了一点awk的操作，awk对文本的处理真是蛮强大的。 我需要经常用脚本来对一批文件处理。比如 aa$&gt; for file in *.txt;do echo $file;done#结果可以正常显示 因为经常要用for命令的这种形式，于是写了一个脚本(allfiles)： 1 2 3 4 5 6#!/bin/bash #$1是一个进行处理文件的命令或者脚本 for files in $2; do $1 $files done; 然后在shell里输入: aa@@@$: allfiles *.txt 结果确不正常，只有第一个文件被匹配，改来改去，发现原因：shell在处理命令行时已经自动把.txt* 替换成符合条件的列表了，所以产生问题。后来发现的办法是在文件上加中 …">
 
         <title>bash中for的文件通配符的问题  · Jackjin&#39;s Home
 </title>
@@ -79,7 +79,7 @@
             
             <p>最近在整理自己的文档，还学了一点awk的操作，awk对文本的处理真是蛮强大的。</p>
 <p>我需要经常用脚本来对一批文件处理。比如</p>
-<div class="highlight"><pre><span></span>aa$&amp;gt; for file in *.txt;do echo $file;done#结果可以正常显示
+<div class="highlight"><pre><span></span>aa$&gt; for file in *.txt;do echo $file;done#结果可以正常显示
 </pre></div>
 
 

@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Jackjin's Home</title><link>https://jackjin-cn.github.io/</link><description></description><lastBuildDate>Fri, 15 Mar 2019 18:51:16 +0800</lastBuildDate><item><title>python3利用docx调整文件的字体大小</title><link>https://jackjin-cn.github.io/2019/2019-03-15_16-42_python3li-yong-docxdiao-zheng-wen-jian-de-zi-ti-da-xiao.html</link><description>&lt;h2&gt;python3利用docx调整文件的字体大小&lt;/h2&gt;
+<rss version="2.0"><channel><title>Jackjin's Home</title><link>https://jackjin-cn.github.io/</link><description></description><lastBuildDate>Sun, 14 Apr 2019 20:58:33 +0800</lastBuildDate><item><title>折腾rime</title><link>https://jackjin-cn.github.io/2019/2019-04-14_20-31_zhe-teng-rime.html</link><description>&lt;p&gt;Title: 折腾rime手记&lt;/p&gt;
+&lt;p&gt;以前就听说过 鼠须管（小狼毫），以前安装过，可是感觉配置很复杂，然后就卸载了。最近又装了一次，看了一下说明，官网的也看了，贴吧的也看了，还是一头雾水，后来不死心，也是一颗折腾的心，想要研究明白。&lt;/p&gt;
+&lt;p&gt;最近一到两周，一直在进行学习配置，无非是网上搜索，学习别人的例子，根据已有的方案进行修改，一路摸着石头过河。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;先是把自己常用的词加进了系统wubi的方案，结果没有词频了，后来用深蓝词库转换工具，有联网设置词频的方式，搞定了。现在想来，这个也不是太好。自己的常用词只有几百个，可以做一个自己词库方案。回到词库里。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;折腾配色，改了一个自己喜欢的配色。灰色+白字。后来想试用系统的配色，直接改&lt;strong&gt;squirrel.custom.yaml&lt;/strong&gt;,后来写了一个python脚本，更方便的修改配色。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;后来要做一个拼音+五笔的方案，根据wubi_pinyin改了一个wubi_pinyinjjb的方案，弄好了反查，也弄好了用&lt;strong&gt;五笔打字&lt;/strong&gt;-›&lt;strong&gt;汉字拼音 …&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sun, 14 Apr 2019 20:31:39 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2019-04-14:/2019/2019-04-14_20-31_zhe-teng-rime.html</guid><category>rime</category></item><item><title>python3利用docx调整文件的字体大小</title><link>https://jackjin-cn.github.io/2019/2019-03-15_16-42_python3li-yong-docxdiao-zheng-wen-jian-de-zi-ti-da-xiao.html</link><description>&lt;h2&gt;python3利用docx调整文件的字体大小&lt;/h2&gt;
 &lt;p&gt;由于工作要中把多个docx合并成一个文件，原来就已经解决了一部份问题，文字，表格也没有太大的问题。不过，字体问题一直没有解决，我现在用的mac，文档中的字体很难看，大小也不一致。网上也看了很多的教程。可能是我不够聪明，也可能教程看得不够仔细。&lt;/p&gt;
 &lt;p&gt;我用的是docx模块&lt;/p&gt;
 &lt;p&gt;有paragraph，还有run，有不少网页上有相关的介绍，我不多说。&lt;/p&gt;
@@ -270,20 +281,4 @@ call setline(6,&amp;quot;Author:天地一沙鸥 …&lt;/pre&gt;&lt;/div&gt;</des
 &lt;li&gt;保存写入&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;另外也学习了  &lt;strong&gt;find&lt;/strong&gt; 的用法&lt;/h3&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;find . -name …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sun, 01 Jul 2018 22:42:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2018-07-01:/2018/2018-07-01_22-42_pi-liang-cp936toutf8.html</guid><category>unicode</category><category>vim</category><category>encoding</category></item><item><title>再次配置pelican写博客</title><link>https://jackjin-cn.github.io/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html</link><description>&lt;h1&gt;今天再次折腾一下，争取在三个机器上可以使用。&lt;/h1&gt;
-&lt;p&gt;在～目前建立下面的目录了&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Pelicanoutput&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;blog #blog的输出网页&lt;/p&gt;
-&lt;p&gt;riji 同上&lt;/p&gt;
-&lt;p&gt;pelican&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;pelican-plugins&lt;/p&gt;
-&lt;p&gt;pelican-theme&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;riji-pelicanconf.py&lt;/p&gt;
-&lt;p&gt;blog-pelicanconf.py&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;另外，还改到了 python 库中的 &lt;em&gt;pelican&lt;/em&gt; 中 &lt;strong&gt;/usr/local/lib/python3.7/site-packages/pelican/reader.py&lt;/strong&gt; 中内容 增加了 'cal' ,'blog' 的文件的扩展名，前面有写过的。&lt;/h2&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sun, 01 Jul 2018 20:13:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2018-07-01:/2018/2018-07-01_20-13_zai-ci-pei-zhi-pelicanxie-bo-ke.html</guid><category>pelican</category><category>折腾</category></item></channel></rss>
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;find . -name …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sun, 01 Jul 2018 22:42:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2018-07-01:/2018/2018-07-01_22-42_pi-liang-cp936toutf8.html</guid><category>unicode</category><category>vim</category><category>encoding</category></item></channel></rss>
