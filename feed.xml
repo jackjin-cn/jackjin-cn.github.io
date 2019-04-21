@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Jackjin's Home</title><link>https://jackjin-cn.github.io/</link><description></description><lastBuildDate>Sun, 21 Apr 2019 16:41:27 +0800</lastBuildDate><item><title>Mkdocs 的使用</title><link>https://jackjin-cn.github.io/2019/2019-04-21_09-35_mkdocs-de-shi-yong.html</link><description>&lt;p&gt;Title: Mkdocs 的使用&lt;/p&gt;
+<rss version="2.0"><channel><title>Jackjin's Home</title><link>https://jackjin-cn.github.io/</link><description></description><lastBuildDate>Sun, 21 Apr 2019 16:46:52 +0800</lastBuildDate><item><title>vim 中打开 markdown即时预览</title><link>https://jackjin-cn.github.io/2019/2019-04-21_16-43_vim-zhong-da-kai-markdownji-shi-yu-lan.html</link><description>&lt;p&gt;Title: vim 中打开 markdown即时预览&lt;/p&gt;
+&lt;p&gt;由于用到mkdocs写简单网站，这个和vim的InstantMarkdownPreview也会同时运行，感觉有点冲突，可以用下面的开关在vim内打开markdown预览。&lt;/p&gt;
+&lt;p&gt;在命令模式下就可以了。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;:InstantMarkdownPreview
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sun, 21 Apr 2019 16:43:40 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2019-04-21:/2019/2019-04-21_16-43_vim-zhong-da-kai-markdownji-shi-yu-lan.html</guid><category>vim</category><category>markdown</category></item><item><title>Mkdocs 的使用</title><link>https://jackjin-cn.github.io/2019/2019-04-21_09-35_mkdocs-de-shi-yong.html</link><description>&lt;p&gt;Title: Mkdocs 的使用&lt;/p&gt;
 &lt;p&gt;最近要给同事做一个简单的网页，发现了mkdocs，试用了一下，感觉还是很方便的。网站和手机端都不错。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip3 install mkdocs  #安装软件 
 
@@ -258,13 +262,4 @@ git push origin master #可以加参数 -f
 6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
 &lt;span class="nb"&gt;cd&lt;/span&gt; ~/pelicanoutput/blog
 makeriji
-git …&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Mon, 02 Jul 2018 22:07:45 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2018-07-02:/2018/2018-07-02_22-07_pelican-shang-chuan-dao-github.html</guid><category>pelican</category><category>github</category><category>vim</category><category>python</category></item><item><title>Vim 中插入日期</title><link>https://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html</link><description>&lt;h1&gt;Vim 中插入日期&lt;/h1&gt;
-&lt;h2&gt;1. 写blog的时候要前几行插入固定的内容，时间找到以下的脚本&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;function! TitleInsert()
-call setline(1,&amp;quot;Title:&amp;quot;)
-call setline(2,&amp;quot;Date: &amp;quot;. strftime(&amp;quot;%Y-%m-%d %H:%M:%S&amp;quot;))
-call setline(3,&amp;quot;Modified: &amp;quot;)
-&amp;quot;call setline(3,&amp;quot;Modified: &amp;quot;. strftime(&amp;quot;%Y-%m-%d %H:%M:%S&amp;quot;))
-call setline(4,&amp;quot;Category:  &amp;quot;)
-call setline(5,&amp;quot;Tags: &amp;quot;)
-call setline(6,&amp;quot;Author:天地一沙鸥 …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Mon, 02 Jul 2018 12:34:37 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2018-07-02:/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html</guid><category>vim</category><category>script</category><category>tips</category></item></channel></rss>
+git …&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Mon, 02 Jul 2018 22:07:45 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2018-07-02:/2018/2018-07-02_22-07_pelican-shang-chuan-dao-github.html</guid><category>pelican</category><category>github</category><category>vim</category><category>python</category></item></channel></rss>
