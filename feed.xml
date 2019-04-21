@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Jackjin's Home</title><link>https://jackjin-cn.github.io/</link><description></description><lastBuildDate>Sun, 21 Apr 2019 16:39:20 +0800</lastBuildDate><item><title>Mkdocs 的使用</title><link>https://jackjin-cn.github.io/2019/2019-04-21_09-35_mkdocs-de-shi-yong.html</link><description>&lt;p&gt;Title: Mkdocs 的使用&lt;/p&gt;
+<rss version="2.0"><channel><title>Jackjin's Home</title><link>https://jackjin-cn.github.io/</link><description></description><lastBuildDate>Sun, 21 Apr 2019 16:41:27 +0800</lastBuildDate><item><title>Mkdocs 的使用</title><link>https://jackjin-cn.github.io/2019/2019-04-21_09-35_mkdocs-de-shi-yong.html</link><description>&lt;p&gt;Title: Mkdocs 的使用&lt;/p&gt;
 &lt;p&gt;最近要给同事做一个简单的网页，发现了mkdocs，试用了一下，感觉还是很方便的。网站和手机端都不错。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip3 install mkdocs  #安装软件 
 
@@ -14,9 +14,8 @@ https://github.com/mkdocs/mkdocs
 
 
 &lt;h3&gt;另外，在网页中拨打电话&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;"&lt;a href="tel:123456"&gt;123456&lt;/a&gt;"&lt;/p&gt;
-&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sun, 21 Apr 2019 09:35:57 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2019-04-21:/2019/2019-04-21_09-35_mkdocs-de-shi-yong.html</guid><category>web</category><category>markdown</category><category>mkdocs</category></item><item><title>折腾rime</title><link>https://jackjin-cn.github.io/2019/2019-04-14_20-31_zhe-teng-rime.html</link><description>&lt;p&gt;Title: 折腾rime手记&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;quot;&lt;span class="nt"&gt;&amp;lt;a&lt;/span&gt; &lt;span class="na"&gt;href=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;tel:123456&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;123456&lt;span class="nt"&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Sun, 21 Apr 2019 09:35:57 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2019-04-21:/2019/2019-04-21_09-35_mkdocs-de-shi-yong.html</guid><category>web</category><category>markdown</category><category>mkdocs</category></item><item><title>折腾rime</title><link>https://jackjin-cn.github.io/2019/2019-04-14_20-31_zhe-teng-rime.html</link><description>&lt;p&gt;Title: 折腾rime手记&lt;/p&gt;
 &lt;p&gt;以前就听说过 鼠须管（小狼毫），以前安装过，可是感觉配置很复杂，然后就卸载了。最近又装了一次，看了一下说明，官网的也看了，贴吧的也看了，还是一头雾水，后来不死心，也是一颗折腾的心，想要研究明白。&lt;/p&gt;
 &lt;p&gt;最近一到两周，一直在进行学习配置，无非是网上搜索，学习别人的例子，根据已有的方案进行修改，一路摸着石头过河。&lt;/p&gt;
 &lt;ol&gt;
