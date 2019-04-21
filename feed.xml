@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Jackjin's Home</title><link>https://jackjin-cn.github.io/</link><description></description><lastBuildDate>Sun, 21 Apr 2019 16:37:11 +0800</lastBuildDate><item><title>Mkdocs 的使用</title><link>https://jackjin-cn.github.io/2019/2019-04-21_09-35_mkdocs-de-shi-yong.html</link><description>&lt;p&gt;Title: Mkdocs 的使用&lt;/p&gt;
+<rss version="2.0"><channel><title>Jackjin's Home</title><link>https://jackjin-cn.github.io/</link><description></description><lastBuildDate>Sun, 21 Apr 2019 16:37:56 +0800</lastBuildDate><item><title>Mkdocs 的使用</title><link>https://jackjin-cn.github.io/2019/2019-04-21_09-35_mkdocs-de-shi-yong.html</link><description>&lt;p&gt;Title: Mkdocs 的使用&lt;/p&gt;
 &lt;p&gt;最近要给同事做一个简单的网页，发现了mkdocs，试用了一下，感觉还是很方便的。网站和手机端都不错。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip3 install mkdocs  #安装软件 
 
