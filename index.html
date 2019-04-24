@@ -109,14 +109,11 @@ fi
 <li>uniq 删除重复</li>
 </ol>
 <div class="highlight"><pre><span></span>gawk -F\| &#39;NR&gt;2 {print $5}&#39; <span class="cp">${</span><span class="nb">file</span><span class="cp">}</span> | sort |uniq |gawk &#39;{print NR&quot;.&quot;$0}&#39;
-
-````
-
-### 读取数据成为数组
 </pre></div>
 
 
-<p>comd_display=(<code>gawk -F\| 'NR&gt;2 …</code></p>
+<h3>读取数据成为数组</h3>
+<div class="highlight"><pre><span></span>comd_display=(`gawk -F\| &#39;NR&gt;2 …</pre></div>
       <br>
       <a class="btn" href="http://jackjin-cn.github.io/2019/2019-04-24_09-52_xie-jian-dan-gong-zuo-ji-lu-de-shou-huo.html#xie-jian-dan-gong-zuo-ji-lu-de-shou-huo">    Continue reading
 </a>
