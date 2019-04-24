@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Wed, 24 Apr 2019 10:11:51 +0800</lastBuildDate><item><title>写简单工作记录的收获</title><link>http://jackjin-cn.github.io/2019/2019-04-24_09-52_xie-jian-dan-gong-zuo-ji-lu-de-shou-huo.html</link><description>&lt;h2&gt;Title: 写简单工作记录的收获&lt;/h2&gt;
+<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Wed, 24 Apr 2019 10:13:39 +0800</lastBuildDate><item><title>写简单工作记录的收获</title><link>http://jackjin-cn.github.io/2019/2019-04-24_09-52_xie-jian-dan-gong-zuo-ji-lu-de-shou-huo.html</link><description>&lt;h2&gt;Title: 写简单工作记录的收获&lt;/h2&gt;
 &lt;h3&gt;从shell读取键盘记录，读取单个字符，如果回车长度为0&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;read -n1 input
 if [ &lt;span class="cp"&gt;${&lt;/span&gt;&lt;span class="c1"&gt;#input&lt;/span&gt;&lt;span class="cp"&gt;}&lt;/span&gt; -eq 0 ]
