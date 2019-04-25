@@ -1,157 +1,118 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh">
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="" />
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>rime 输入法的词库配置Jackjin's Home</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/main.css">
+    <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div><img src="" class="grv-img"/></div>
+        <div class="title"><a href="http://jackjin-cn.github.io/">Jackjin's Home </a></div>
+        <div class="sub-title"></div>
 
-    <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/stylesheet/style.min.css">
+<p>
+  <div class="view"><a href="http://jackjin-cn.github.io/archives.html">Archives</a></div>
+</p>
 
-  <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/pygments/github.min.css">
-  <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/font-awesome/css/font-awesome.min.css">
+<!-- Social links -->
+<div class="social">
+<h4>Follow Me</h4>
+<ul>
+    <li><a href="#">aaa</a></li>
+    <li><a href="#">Another social link</a></li>
+</ul>
+</div>
 
+      </header>
+      <section>
+<section id="content" class="body">
+  <article>
+      <div class="article-title">
+        rime 输入法的词库配置
+      </div>
 
-
-    <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home RSS">
-
-
-<!-- Google Analytics -->
-<script type="text/javascript">
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-72007782-1', 'auto');
-  ga('send', 'pageview');
-</script>
-<!-- End Google Analytics -->
-
-<meta name="author" content="天地一沙鸥" />
-<meta name="description" content="Title:rime 输入法的词库配置 在手机上安装了irime输入法，用了五笔还是蛮舒服的，不过词库中没有我需要的词，所以想弄一份自己的词库，网上也看了不少教程，可能是一开始看得不太明白，觉得难，加上也没有仔细看手机自带的说明，搞了半天也没有弄出来，不过也没有灰心。在仔细看了说明之后发现，其实只要在电脑上配置了，然后把相应的文件传到手机里就可以了。 在电脑上的~/Library/rime 里，把schema.yaml 与 dict.yaml做好，dict.yaml是原始的码表文件，我为了保持一、二级简码，原来的wibi86词库没有动，用深蓝词库转换好的文件添加到后面（深蓝有设置词频功能，可以联网速度比较慢）。然后在电脑是进行部署，把下图中的文件传到电脑上就可以了。 后来，我有学着网上把皮肤改了一下，也学了一下自动造词，感觉还可以了。不比清歌差，就是没有打时间等特殊编码的功能。 感觉这个输入法的好处是，一套编码可以在多个平台复用 ，真得很不错。" />
-<meta name="keywords" content="mac, ime, 折腾">
-
-<meta property="og:site_name" content="Jackjin's Home"/>
-<meta property="og:title" content="rime 输入法的词库配置"/>
-<meta property="og:description" content="Title:rime 输入法的词库配置 在手机上安装了irime输入法，用了五笔还是蛮舒服的，不过词库中没有我需要的词，所以想弄一份自己的词库，网上也看了不少教程，可能是一开始看得不太明白，觉得难，加上也没有仔细看手机自带的说明，搞了半天也没有弄出来，不过也没有灰心。在仔细看了说明之后发现，其实只要在电脑上配置了，然后把相应的文件传到手机里就可以了。 在电脑上的~/Library/rime 里，把schema.yaml 与 dict.yaml做好，dict.yaml是原始的码表文件，我为了保持一、二级简码，原来的wibi86词库没有动，用深蓝词库转换好的文件添加到后面（深蓝有设置词频功能，可以联网速度比较慢）。然后在电脑是进行部署，把下图中的文件传到电脑上就可以了。 后来，我有学着网上把皮肤改了一下，也学了一下自动造词，感觉还可以了。不比清歌差，就是没有打时间等特殊编码的功能。 感觉这个输入法的好处是，一套编码可以在多个平台复用 ，真得很不错。"/>
-<meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="http://jackjin-cn.github.io/2019/2019-03-01_14-08_rime-shu-ru-fa-de-ci-ku-pei-zhi.html"/>
-<meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2019-03-01 14:08:01+08:00"/>
-<meta property="article:modified_time" content="2019-03-01 14:23:41+08:00"/>
-<meta property="article:author" content="http://jackjin-cn.github.io/author/tian-di-yi-sha-ou.html">
-<meta property="article:section" content="mac"/>
-<meta property="article:tag" content="mac"/>
-<meta property="article:tag" content="ime"/>
-<meta property="article:tag" content="折腾"/>
-<meta property="og:image" content="">
-
-  <title>Jackjin's Home &ndash; rime 输入法的词库配置</title>
-
-</head>
-<body>
-  <aside>
-    <div>
-      <a href="http://jackjin-cn.github.io">
-        <img src="http://jackjin-cn.github.io/theme/img/profile.png" alt="" title="">
-      </a>
-      <h1><a href="http://jackjin-cn.github.io"></a></h1>
-
-
-      <nav>
-        <ul class="list">
-
-          <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
-          <li><a href="http://python.org/" target="_blank">Python.org</a></li>
-          <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
-          <li><a href="http://kevinyoung.gitcafe.io" target="_blank">煎挠橙的blog</a></li>
-        </ul>
-      </nav>
-
-      <ul class="social">
-        <li><a class="sc-aaa" href="#" target="_blank"><i class="fa fa-aaa"></i></a></li>
-        <li><a class="sc-Another social link" href="#" target="_blank"><i class="fa fa-Another social link"></i></a></li>
-      </ul>
-    </div>
-
-
-  </aside>
-  <main>
-
-
-<article class="single">
-  <header>
-      
-    <h1 id="rime-shu-ru-fa-de-ci-ku-pei-zhi">rime 输入法的词库配置</h1>
-    <p>
-          Posted on 2019-03-01 星期五 14:08 in <a href="http://jackjin-cn.github.io/category/mac.html">mac</a>
-
-
-    </p>
-  </header>
-
-
-  <div>
-    <h1>Title:rime 输入法的词库配置</h1>
+    <div class="entry-content">
+<p>
+<small>
+<abbr class="published" title="2019-03-01T14:08:01+08:00">
+  2019-03-01 星期五 14:08
+</abbr> | 
+  tags: 
+    <a href="http://jackjin-cn.github.io/tag/mac.html">mac</a>, 
+    <a href="http://jackjin-cn.github.io/tag/ime.html">ime</a>, 
+    <a href="http://jackjin-cn.github.io/tag/zhe-teng.html">折腾</a>, 
+ -- (<a href="http://jackjin-cn.github.io/2019/2019-03-01_14-08_rime-shu-ru-fa-de-ci-ku-pei-zhi.html" rel="bookmark">permalink</a>)
+</small>
+</p>      <h1>Title:rime 输入法的词库配置</h1>
 <p>在手机上安装了irime输入法，用了五笔还是蛮舒服的，不过词库中没有我需要的词，所以想弄一份自己的词库，网上也看了不少教程，可能是一开始看得不太明白，觉得难，加上也没有仔细看手机自带的说明，搞了半天也没有弄出来，不过也没有灰心。在仔细看了说明之后发现，其实只要在电脑上配置了，然后把相应的文件传到手机里就可以了。</p>
 <p>在电脑上的~/Library/rime  里，把schema.yaml 与 dict.yaml做好，dict.yaml是原始的码表文件，我为了保持一、二级简码，原来的wibi86词库没有动，用深蓝词库转换好的文件添加到后面（深蓝有设置词频功能，可以联网速度比较慢）。然后在电脑是进行部署，把下图中的文件传到电脑上就可以了。</p>
 <p><img alt="im-select" src="../images/20190301rime.jpg"></p>
 <p>后来，我有学着网上把皮肤改了一下，也学了一下自动造词，感觉还可以了。不比清歌差，就是没有打时间等特殊编码的功能。</p>
 <p>感觉这个输入法的好处是，一套编码可以在多个平台复用 ，真得很不错。</p>
-  </div>
-  <div class="tag-cloud">
-    <p>
-      <a href="http://jackjin-cn.github.io/tag/mac.html">mac</a>
-      <a href="http://jackjin-cn.github.io/tag/ime.html">ime</a>
-      <a href="http://jackjin-cn.github.io/tag/zhe-teng.html">折腾</a>
-    </p>
-  </div>
-
-
-
-
-
-<!-- Disqus -->
+    </div><!-- /.entry-content -->
 <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'jackjin';
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'jackjin'; // required: replace example with your forum shortname
+        var disqus_identifier = "2019/2019-03-01_14-08_rime-shu-ru-fa-de-ci-ku-pei-zhi.html";
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </article>
+</section>
+      </section>
+      <footer>
+        <p><small>&copy; Jackjin's Home &mdash; Theme based on Sundown by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <!-- Scale fix -->
+    <script>
+      var metas = document.getElementsByTagName('meta');
+      var i;
+      
+      if (navigator.userAgent.match(/iPhone/i)) {
+        for (i=0; i<metas.length; i++) {
+          if (metas[i].name == "viewport") {
+            metas[i].content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
+          }
+        }
+      
+        document.addEventListener("gesturestart", gestureStart, false);
+      }
+
+      function gestureStart() {
+        for (i=0; i<metas.length; i++) {
+          if (metas[i].name == "viewport") {
+            metas[i].content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
+          }
+        }
+      }
+    </script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72007782-1']);
+    _gaq.push(['_trackPageview']);
     (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-</script>
-<noscript>
-        Please enable JavaScript to view comments.
-
-</noscript>
-<!-- End Disqus -->
-</article>
-
-    <footer>
-<p>&copy;  </p>
-<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
-</p>    </footer>
-  </main>
-
-
-
-
-<script type="application/ld+json">
-{
-  "@context" : "http://schema.org",
-  "@type" : "Blog",
-  "name": " Jackjin's Home ",
-  "url" : "http://jackjin-cn.github.io",
-  "image": "",
-  "description": ""
-}
-</script>
-
-</body>
+    </script>
+  </body>
 </html>
