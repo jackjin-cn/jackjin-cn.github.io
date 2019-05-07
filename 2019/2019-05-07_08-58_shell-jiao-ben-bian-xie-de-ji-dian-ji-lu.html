@@ -59,15 +59,15 @@
 <ol>
 <li>
 <p>文件名的处理</p>
-</li>
-<li>
-<p>不带空格的文件名，可以用数组来解决</p>
+<ol>
+<li>不带空格的文件名，可以用数组来解决</li>
+</ol>
 <p><code>bash
   filelist=(`ls`)
   filelist=(`find . -iname "*.jpg"`)</code></p>
-</li>
-<li>
-<p>带空格的文件名的处理</p>
+<ol>
+<li>带空格的文件名的处理</li>
+</ol>
 <p>```bash</p>
 <p>find . -size +$size -iname "*.jpg"|grep -v "._" |gawk -F, '{printf("%s\n",$0)}' | while read line</p>
 <h1>说明 find是用来显示文件名的，这个比 ls 好在是带路径的，比较好处理，可以直接用文件名。</h1>

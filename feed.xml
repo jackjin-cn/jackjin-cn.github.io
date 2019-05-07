@@ -11,15 +11,15 @@
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;文件名的处理&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;不带空格的文件名，可以用数组来解决&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;不带空格的文件名，可以用数组来解决&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;&lt;code&gt;bash
   filelist=(`ls`)
   filelist=(`find . -iname "*.jpg"`)&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;带空格的文件名的处理&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;带空格的文件名的处理&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;```bash&lt;/p&gt;
 &lt;p&gt;find . -size +$size -iname "*.jpg"|grep -v "._" |gawk -F, '{printf("%s\n",$0)}' | while read line&lt;/p&gt;
 &lt;h1&gt;说明 find是用来显示文件名的，这个比 ls 好在是带路径的，比较好处理，可以直接用文件名。&lt;/h1&gt;
