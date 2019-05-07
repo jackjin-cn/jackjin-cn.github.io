@@ -10,16 +10,17 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content=", misc, " />
+<meta name="keywords" content="script, terminal, image, mac, shell, " />
 
 <meta property="og:title" content="Shell 脚本编写的几点记录 "/>
 <meta property="og:url" content="http://jackjin-cn.github.io/2019/2019-05-07_00-00_shell-jiao-ben-bian-xie-de-ji-dian-ji-lu.html" />
-<meta property="og:description" content="Modified: 2019-05-07 08:58:18 Modified: 2019-05-07 08:56:43 Category: shell Tags: script,terminal,image,mac Author: 天地一沙鸥 Title: Shell 脚本编写的几点记录 数值变量 ```bash size=1000 #注意，不要有多余的空格 ``` 文件名的处理 不带空格的文件名，可以用数组来解决 ```bash filelist=(ls) filelist=(find . -iname &#34;*.jpg&#34;) ``` 带空格的文件名的处理 ```bash find . -size +$size -iname &#34;*.jpg&#34;|grep -v &#34;.&#34; |gawk -F, &#39;{printf …" />
+<meta property="og:description" content="Title: Shell 脚本编写的几点记录 数值变量 ```bash size=1000 #注意，不要有多余的空格 ``` 文件名的处理 不带空格的文件名，可以用数组来解决 ```bash filelist=(ls) filelist=(find . -iname &#34;*.jpg&#34;) ``` 带空格的文件名的处理 ```bash find . -size +$size -iname &#34;*.jpg&#34;|grep -v &#34;.&#34; |gawk -F, &#39;{printf(&#34;%s\n&#34;,$0)}&#39; | while read line #说明 find是用来显示文件名的，这个比 ls 好在是带路径的，比较好处理，可以直接用文件名。 #grep 是用来去掉 以 &#34;.&#34;开头的文件，mac里，有很多这样的文件 …" />
 <meta property="og:site_name" content="Jackjin&#39;s Home" />
 <meta property="og:article:author" content="天地一沙鸥" />
 <meta property="og:article:published_time" content="2019-05-07T00:00:00+08:00" />
+<meta property="" content="2019-05-07T08:58:18+08:00" />
 <meta name="twitter:title" content="Shell 脚本编写的几点记录 ">
-<meta name="twitter:description" content="Modified: 2019-05-07 08:58:18 Modified: 2019-05-07 08:56:43 Category: shell Tags: script,terminal,image,mac Author: 天地一沙鸥 Title: Shell 脚本编写的几点记录 数值变量 ```bash size=1000 #注意，不要有多余的空格 ``` 文件名的处理 不带空格的文件名，可以用数组来解决 ```bash filelist=(ls) filelist=(find . -iname &#34;*.jpg&#34;) ``` 带空格的文件名的处理 ```bash find . -size +$size -iname &#34;*.jpg&#34;|grep -v &#34;.&#34; |gawk -F, &#39;{printf …">
+<meta name="twitter:description" content="Title: Shell 脚本编写的几点记录 数值变量 ```bash size=1000 #注意，不要有多余的空格 ``` 文件名的处理 不带空格的文件名，可以用数组来解决 ```bash filelist=(ls) filelist=(find . -iname &#34;*.jpg&#34;) ``` 带空格的文件名的处理 ```bash find . -size +$size -iname &#34;*.jpg&#34;|grep -v &#34;.&#34; |gawk -F, &#39;{printf(&#34;%s\n&#34;,$0)}&#39; | while read line #说明 find是用来显示文件名的，这个比 ls 好在是带路径的，比较好处理，可以直接用文件名。 #grep 是用来去掉 以 &#34;.&#34;开头的文件，mac里，有很多这样的文件 …">
 
         <title>Shell 脚本编写的几点记录  · Jackjin&#39;s Home
 </title>
@@ -77,12 +78,7 @@
         <div class="span8 offset2 article-content">
 
             
-            <p>Modified: 2019-05-07 08:58:18</p>
-<p>Modified: 2019-05-07 08:56:43</p>
-<p>Category: shell </p>
-<p>Tags: script,terminal,image,mac</p>
-<p>Author: 天地一沙鸥</p>
-<h2>Title: Shell 脚本编写的几点记录</h2>
+            <h2>Title: Shell 脚本编写的几点记录</h2>
 <ol>
 <li>数值变量</li>
 </ol>
@@ -211,8 +207,27 @@ else
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2019-05-07T00:00:00+08:00"> 5 7, 2019</time>
+
+<h4>Last Updated</h4>
+<time datetime="2019-05-07T08:58:18+08:00"> 5 7, 2019</time>
+
             <h4>Category</h4>
-            <a class="category-link" href="http://jackjin-cn.github.io/categories.html#misc-ref">misc</a>
+            <a class="category-link" href="http://jackjin-cn.github.io/categories.html#shell-ref">shell</a>
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article">
+                <li><a href="http://jackjin-cn.github.io/tags.html#image-ref">image
+                    <span>1</span>
+</a></li>
+                <li><a href="http://jackjin-cn.github.io/tags.html#mac-ref">mac
+                    <span>7</span>
+</a></li>
+                <li><a href="http://jackjin-cn.github.io/tags.html#script-ref">script
+                    <span>3</span>
+</a></li>
+                <li><a href="http://jackjin-cn.github.io/tags.html#terminal-ref">terminal
+                    <span>1</span>
+</a></li>
+            </ul>
 <h4>Contact</h4>
     <a href="#" title="My aaa Profile" class="sidebar-social-links" target="_blank">
     <i class="fa fa-aaa sidebar-social-links"></i></a>
