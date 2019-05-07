@@ -3,8 +3,8 @@
 &lt;ol&gt;
 &lt;li&gt;数值变量&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="nv"&gt;size&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1000&lt;/span&gt;
-    &lt;span class="c1"&gt;#注意，不要有多余的空格&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;size&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1000&lt;/span&gt;
+&lt;span class="c1"&gt;#注意，不要有多余的空格&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -14,16 +14,22 @@
 &lt;ol&gt;
 &lt;li&gt;不带空格的文件名，可以用数组来解决&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;code&gt;bash
-  filelist=(`ls`)
-  filelist=(`find . -iname "*.jpg"`)&lt;/code&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;带空格的文件名的处理&lt;/li&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;```bash&lt;/p&gt;
-&lt;p&gt;find . -size +$size -iname "*.jpg"|grep -v "._" |gawk -F, '{printf("%s\n",$0)}' | while read line&lt;/p&gt;
-&lt;h1&gt;说明 find是用来显示文件名的，这个比 ls 好在是带路径的，比较好处理，可以直接用文件名。&lt;/h1&gt;
-&lt;h1&gt;grep 是用来去掉 以  "._"开头的文件，mac里 …&lt;/h1&gt;&lt;/li&gt;&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 07 May 2019 08:58:18 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2019-05-07:/2019/2019-05-07_08-58_shell-jiao-ben-bian-xie-de-ji-dian-ji-lu.html</guid><category>script</category><category>terminal</category><category>image</category><category>mac</category></item><item><title>clover 启动项设置和隐藏</title><link>http://jackjin-cn.github.io/2019/2019-04-26_09-58_clover-qi-dong-xiang-she-zhi-he-yin-cang.html</link><description>&lt;h2&gt;Title: clover 启动项设置和隐藏&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;      &lt;span class="nv"&gt;filelist&lt;/span&gt;&lt;span class="o"&gt;=(&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;ls&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+      &lt;span class="nv"&gt;filelist&lt;/span&gt;&lt;span class="o"&gt;=(&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;find . -iname &lt;span class="s2"&gt;&amp;quot;*.jpg&amp;quot;&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;2. 带空格的文件名的处理
+
+```bash
+
+find . -size +$size -iname &amp;quot;*.jpg&amp;quot;|grep -v &amp;quot;\._&amp;quot; |gawk -F, &amp;#39;{printf(&amp;quot;%s\n&amp;quot;,$0)}&amp;#39; | while read line
+
+#说明 find是用来显示文件名的，这个比 ls 好在是带路径的，比较好处理，可以直接用文件名。
+
+#grep 是用来去掉 以  &amp;quot;._&amp;quot;开头的文件，mac里 …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 07 May 2019 08:58:18 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2019-05-07:/2019/2019-05-07_08-58_shell-jiao-ben-bian-xie-de-ji-dian-ji-lu.html</guid><category>script</category><category>terminal</category><category>image</category><category>mac</category></item><item><title>clover 启动项设置和隐藏</title><link>http://jackjin-cn.github.io/2019/2019-04-26_09-58_clover-qi-dong-xiang-she-zhi-he-yin-cang.html</link><description>&lt;h2&gt;Title: clover 启动项设置和隐藏&lt;/h2&gt;
 &lt;h3&gt;来自于网络  &lt;a href="http://blog.sina.com.cn/s/blog_18b34c8750102xi11.html"&gt;EFI引导如何去掉多余的这个clover启动项&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;一、准备工作，获取各硬盘分区的GUID
 1、开机，出现Clover GUI引导选项、选好启动分区后，先按一下F2，再回车，直到进入OS X桌面。&lt;/p&gt;

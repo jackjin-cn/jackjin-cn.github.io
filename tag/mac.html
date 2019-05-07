@@ -46,8 +46,8 @@
 <ol>
 <li>数值变量</li>
 </ol>
-<div class="highlight"><pre><span></span>    <span class="nv">size</span><span class="o">=</span><span class="m">1000</span>
-    <span class="c1">#注意，不要有多余的空格</span>
+<div class="highlight"><pre><span></span><span class="nv">size</span><span class="o">=</span><span class="m">1000</span>
+<span class="c1">#注意，不要有多余的空格</span>
 </pre></div>
 
 
@@ -57,29 +57,39 @@
 <ol>
 <li>不带空格的文件名，可以用数组来解决</li>
 </ol>
-<p><code>bash
-  filelist=(`ls`)
-  filelist=(`find . -iname "*.jpg"`)</code></p>
-<ol>
-<li>带空格的文件名的处理</li>
+</li>
 </ol>
-<p>```bash</p>
-<p>find . -size +$size -iname "*.jpg"|grep -v "._" |gawk -F, '{printf("%s\n",$0)}' | while read line</p>
-<h1>说明 find是用来显示文件名的，这个比 ls 好在是带路径的，比较好处理，可以直接用文件名。</h1>
-<h1>grep 是用来去掉 以  "._"开头的文件，mac里，有很多这样的文件。</h1>
-<h1>gawk 是把文件名加上换行，方便以行为单位读取，解决文件名中带空格的问题。</h1>
-<h1>文件名用有空格，真的会带来很多无聊的问题</h1>
-<p>do
+<div class="highlight"><pre><span></span>      <span class="nv">filelist</span><span class="o">=(</span><span class="sb">`</span>ls<span class="sb">`</span><span class="o">)</span>
+      <span class="nv">filelist</span><span class="o">=(</span><span class="sb">`</span>find . -iname <span class="s2">&quot;*.jpg&quot;</span><span class="sb">`</span><span class="o">)</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span></span>2. 带空格的文件名的处理
+
+```bash
+
+find . -size +$size -iname &quot;*.jpg&quot;|grep -v &quot;\._&quot; |gawk -F, &#39;{printf(&quot;%s\n&quot;,$0)}&#39; | while read line
+
+#说明 find是用来显示文件名的，这个比 ls 好在是带路径的，比较好处理，可以直接用文件名。
+
+#grep 是用来去掉 以  &quot;._&quot;开头的文件，mac里，有很多这样的文件。
+
+#gawk 是把文件名加上换行，方便以行为单位读取，解决文件名中带空格的问题。
+
+#文件名用有空格，真的会带来很多无聊的问题
+
+do
     #echo ---------- $line
-    nospace=<code>echo $line|tr " " "_"</code>
+    nospace=`echo $line|tr &quot; &quot; &quot;_&quot;`
     #下面 对于有空格的，要加双引号
-    mv "$line"  $nospace
+    mv &quot;$line&quot;  $nospace
 done
-```</p>
-</li>
-<li>
-<p>if 中的问题</p>
-</li>
+```
+</pre></div>
+
+
+<ol>
+<li>if 中的问题</li>
 </ol>
 <div class="highlight"><pre><span></span>   <span class="k">if</span> <span class="o">[</span> <span class="nv">$ff_len</span> -eq <span class="m">0</span> <span class="o">]</span>
    <span class="k">then</span>
