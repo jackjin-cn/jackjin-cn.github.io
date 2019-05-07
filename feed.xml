@@ -3,10 +3,9 @@
 &lt;ol&gt;
 &lt;li&gt;数值变量&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;```bash&lt;/p&gt;
-&lt;p&gt;size=1000
-   #注意，不要有多余的空格&lt;/p&gt;
-&lt;p&gt;```&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bash
+   size=1000
+   #注意，不要有多余的空格&lt;/code&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;文件名的处理&lt;/p&gt;
