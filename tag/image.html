@@ -54,9 +54,9 @@
 <ol>
 <li>
 <p>文件名的处理</p>
-</li>
-<li>
-<p>不带空格的文件名，可以用数组来解决</p>
+<ol>
+<li>不带空格的文件名，可以用数组来解决</li>
+</ol>
 </li>
 </ol>
 <div class="highlight"><pre><span></span>      <span class="nv">filelist</span><span class="o">=(</span><span class="sb">`</span>ls<span class="sb">`</span><span class="o">)</span>
@@ -64,9 +64,10 @@
 </pre></div>
 
 
-<ol>
-<li>带空格的文件名的处理</li>
-</ol>
+<div class="highlight"><pre><span></span>2. 带空格的文件名的处理
+</pre></div>
+
+
 <div class="highlight"><pre><span></span>      find . -size +<span class="nv">$size</span> -iname <span class="s2">&quot;*.jpg&quot;</span><span class="p">|</span>grep -v <span class="s2">&quot;\._&quot;</span> <span class="p">|</span>gawk -F, <span class="s1">&#39;{printf(&quot;%s\n&quot;,$0)}&#39;</span> <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> line
 
       <span class="c1">#说明 find是用来显示文件名的，这个比 ls 好在是带路径的，比较好处理，可以直接用文件名。</span>
