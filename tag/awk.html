@@ -1,170 +1,124 @@
 <!DOCTYPE html>
 <html lang="zh">
-<head>
-        <meta charset="utf-8" />
-        <title>Jackjin's Home - awk</title>
-        <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/main.css" />
-        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home RSS Feed" />
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="天地一沙鸥" />
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-</head>
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary">
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="http://jackjin-cn.github.io/">Jackjin's Home </a></h1>
-                <nav><ul>
-                    <li><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
-                    <li><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
-                    <li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/dian-nao.html">电脑</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/ji-zhu.html">技术</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/linux.html">linux</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/mac.html">mac</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/misc.html">misc</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/pdf.html">pdf</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/python.html">python</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/pythonmaclib.html">python,mac,lib</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/shell.html">shell</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/vim.html">vim</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/za-gan.html">杂感</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/za-lei.html">杂类</a></li>
-                </ul>
-                </nav>
-        </header><!-- /#banner -->
-
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="http://jackjin-cn.github.io/2019/2019-04-24_09-52_xie-jian-dan-gong-zuo-ji-lu-de-shou-huo.html">写简单工作记录的收获</a></h1>
-<footer class="post-info">
-        <span>2019-04-24 星期三 09:52</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a><a href="http://jackjin-cn.github.io/tag/script.html">script</a><a href="http://jackjin-cn.github.io/tag/awk.html">awk</a></span>
-</footer><!-- /.post-info --><h2>Title: 写简单工作记录的收获</h2>
-<h3>从shell读取键盘记录，读取单个字符，如果回车长度为0</h3>
-<div class="highlight"><pre><span></span>read -n1 input
-if [ <span class="cp">${</span><span class="c1">#input</span><span class="cp">}</span> -eq 0 ]
-then 
-    category=&#39;工作&#39;
-else
-    input=`expr <span class="nv">$input</span> - 1 `
-    category=<span class="cp">${</span><span class="n">comd</span><span class="p">[</span><span class="err">$</span><span class="nb">input</span><span class="p">]</span><span class="cp">}</span>
-fi 
-</pre></div>
-
-
-<h3>gawk 删除重复文本</h3>
-<ol>
-<li>行用awk进行数据筛选</li>
-<li>sort 进行排序</li>
-<li>uniq 删除重复</li>
-</ol>
-<div class="highlight"><pre><span></span>gawk -F\| &#39;NR&gt;2 {print $5}&#39; <span class="cp">${</span><span class="nb">file</span><span class="cp">}</span> | sort |uniq |gawk &#39;{print NR&quot;.&quot;$0}&#39;
-</pre></div>
-
-
-<h3>读取数据成为数组</h3>
-<div class="highlight"><pre><span></span>comd_display=(`gawk -F\| &#39;NR&gt;2 {print $5}&#39; <span class="cp">${</span><span class="nb">file</span><span class="cp">}</span> | sort |uniq |gawk &#39;{print NR&quot;.&quot;$0}&#39;`)
-
-for cc in <span class="cp">${</span><span class="n">comd_display</span><span class="p">[</span><span class="err">@</span><span class="p">]</span><span class="cp">}</span>
-do
-echo <span class="nv">$cc</span>
-done
-</pre></div>
-
-
-<h3>变量计算</h3>
-<div class="highlight"><pre><span></span>i=0
-for line in <span class="cp">${</span><span class="n">comd</span><span class="p">[</span><span class="err">@</span><span class="p">]</span><span class="cp">}</span>
-do
-    i=`expr <span class="nv">$i</span> + 1` #显示是加上序号 类似 i++
-    echo <span class="nv">$i.$line</span>
-done
-</pre></div>
-
-
-<h3>读取系统时间，保存为变量</h3>
-<div class="highlight"><pre><span></span>datetime=`date &quot;+%Y-%m-%d %H:%M&quot;`
-</pre></div><p><a href="http://jackjin-cn.github.io/2019/2019-04-24_09-52_xie-jian-dan-gong-zuo-ji-lu-de-shou-huo.html#disqus_thread">comments</a></p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <ol id="posts-list" class="hfeed">
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html" rel="bookmark"
-                           title="Permalink to awk文本工具的学习">awk文本工具的学习</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>2016-01-09 星期六 09:59</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/awk.html">awk</a><a href="http://jackjin-cn.github.io/tag/linux.html">linux</a><a href="http://jackjin-cn.github.io/tag/ben-wen.html">本文</a><a href="http://jackjin-cn.github.io/tag/shell.html">shell</a><a href="http://jackjin-cn.github.io/tag/windows.html">windows</a></span>
-</footer><!-- /.post-info -->                <p><a href="http://coolshell.cn/articles/9070.html">转自：酷 壳 AWK 简明教程</a></p>
-<p><a href="http://www.runoob.com/linux/linux-comm-awk.html">转自：Linux awk 命令</a></p>
-<p>自己尝试了一下,感觉很强大。</p>
-<p>特别是模式匹配和过滤功能。</p>
-<p>输出包含：的行，并加上行号。/模式/,NR是等号</p>
-<div class="highlight"><pre><span></span>awk   &#39;/^#/{print NR,$0 }&#39; ~/diary/2015/09/2015-09-08.cal
-</pre></div>
-
-
-<p>后来下载了windows版的awk，是3.1.6版</p>
-<p>用法上和linux版的没有区别，不过，有一点要注意是要把<strong><code>单引号'</code>换成<code>双引号"</code></strong></p>
-                <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html">read more</a>
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
-            </article></li>
-            </ol><!-- /#posts-list -->
-<p class="paginator">
-    Page 1 / 1
-</p>
-            </section><!-- /#content -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="http://kevinyoung.gitcafe.io">煎挠橙的blog</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
-
-                            <li><a href="#">aaa</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
-
-        <footer id="contentinfo" class="body">
-                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
-        </footer><!-- /#contentinfo -->
-
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-72007782-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
-<script type="text/javascript">
-    var disqus_shortname = 'jackjin';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
+<meta property="og:title" content="Jackjin&#39;s Home"/>
+<meta name="twitter:title" content="Jackjin&#39;s Home">
+<meta property="og:url" content="http://jackjin-cn.github.io" />
+<meta property="og:site_name" content="Jackjin&#39;s Home" />
+<meta property="og:article:author" content="天地一沙鸥" />
+        <title>Jackjin's Home - awk tag</title>
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/css/pygments.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/tipuesearch/tipuesearch.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/css/elegant.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/css/admonition.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://jackjin-cn.github.io/theme/css/custom.css" media="screen">
+        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin&#39;s Home - Full RSS Feed" />
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-72007782-1', 'auto');
+    ga('send', 'pageview');
 </script>
-</body>
+
+
+
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="http://jackjin-cn.github.io/"><span class=site-name>Jackjin's Home</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="http://jackjin-cn.github.io">Home</a></li>
+                            <li ><a href="http://jackjin-cn.github.io/categories">Categories</a></li>
+                            <li ><a href="http://jackjin-cn.github.io/tags.html">Tags</a></li>
+                            <li ><a href="http://jackjin-cn.github.io/archives">Archives</a></li>
+                            <li><form class="navbar-search" action="http://jackjin-cn.github.io/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<div class="row-fluid">
+
+    <div class="row-fluid">
+
+    </div>
+
+    <div class="row-fluid">
+        <div class="span8 offset2">
+            <header>
+            <h1 id="recent-posts">Recent Posts <a id="allposts" href="http://jackjin-cn.github.io/archives">all posts</a></h1>
+            </header>
+        <div class="recent-posts">
+            <article itemscope>
+                <a href="http://jackjin-cn.github.io/2019/2019-04-24_09-52_xie-jian-dan-gong-zuo-ji-lu-de-shou-huo.html">写简单工作记录的收获  </a>
+                <section>
+                    posted in
+                <a href="http://jackjin-cn.github.io/categories#shell-ref">shell</a>
+                <div class="recent-posts-time">
+                <time itemprop="dateCreated" datetime="2019-04-24T09:52:22+08:00">2019-04-24 星期三 09:52</time>
+                </div>
+                </section>
+            </article>
+            <article itemscope>
+                <a href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html">awk文本工具的学习  </a>
+                <section>
+                    posted in
+                <a href="http://jackjin-cn.github.io/categories#linux-ref">linux</a>
+                <div class="recent-posts-time">
+                <time itemprop="dateCreated" datetime="2016-01-09T09:59:00+08:00">2016-01-09 星期六 09:59</time>
+                </div>
+                </section>
+            </article>
+        </div>
+        </div>
+    </div>
+</div>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+        <div id="push"></div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="https://github.com/Pelican-Elegant/elegant/" title="Theme Elegant Home Page">Elegant</a></li>
+    </ul>
+</div>
+</footer>        <script src="//code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+    </body>
+    <!-- Theme: Elegant built for Pelican
+    License : MIT -->
 </html>
