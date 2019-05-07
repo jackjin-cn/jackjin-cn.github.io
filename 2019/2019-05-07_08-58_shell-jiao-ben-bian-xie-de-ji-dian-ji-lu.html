@@ -94,23 +94,24 @@
 <ol>
 <li>if 中的问题</li>
 </ol>
-<p>``bash</p>
-<p>if [ $ff_len -eq 0 ]
-   then
-       echo 没有条件的文件可以压缩
-       echo 条件：jpg文件大小>900k
-       exit 
-   # if 中用判断，也可注意空格的问题
-   # 如果变量没有定义或者为空，会出错，建议先初始化一下。</p>
-<div class="highlight"><pre><span></span>4. 数组问题
+<div class="highlight"><pre><span></span>   <span class="k">if</span> <span class="o">[</span> <span class="nv">$ff_len</span> -eq <span class="m">0</span> <span class="o">]</span>
+   <span class="k">then</span>
+       <span class="nb">echo</span> 没有条件的文件可以压缩
+       <span class="nb">echo</span> 条件：jpg文件大小<span class="se">\&gt;</span>900k
+       <span class="nb">exit</span> 
+   <span class="c1"># if 中用判断，也可注意空格的问题</span>
+   <span class="c1"># 如果变量没有定义或者为空，会出错，建议先初始化一下。</span>
+</pre></div>
 
-```bash
 
-    #引用数组全部元素
-    <span class="cp">${</span><span class="n">ff</span><span class="p">[</span><span class="err">@</span><span class="p">]</span><span class="cp">}</span>
+<ol>
+<li>数组问题</li>
+</ol>
+<div class="highlight"><pre><span></span>    <span class="c1">#引用数组全部元素</span>
+    <span class="si">${</span><span class="nv">ff</span><span class="p">[@]</span><span class="si">}</span>
 
-    #获取数组长度
-    <span class="cp">${</span><span class="c1">#ff[@]</span><span class="cp">}</span>
+    <span class="c1">#获取数组长度</span>
+    <span class="si">${#</span><span class="nv">ff</span><span class="p">[@]</span><span class="si">}</span>
 </pre></div>
 
 
