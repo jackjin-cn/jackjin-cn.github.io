@@ -1,61 +1,57 @@
-<!DOCTYPE html>
-<html lang="zh">
+<!doctype html>
+<html class="no-js" lang="en">
 <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/foundation.min.css" media="all">
+        <script type="text/javascript" src="http://jackjin-cn.github.io/theme/js/modernizr.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Exo+2:400,300,700,300italic,400italic,700italic,900,900italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/lamboz.css" media="all">
+        <title>Shell 脚本编写的几点记录 - Jackjin's Home</title>
         <meta charset="utf-8" />
-        <title>Shell 脚本编写的几点记录</title>
-        <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/main.css" />
-        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home RSS Feed" />
-
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home Full RSS Feed" />
+        
 </head>
-
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="http://jackjin-cn.github.io/">Jackjin's Home </a></h1>
-                <nav><ul>
-                    <li><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
-                    <li><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
-                    <li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/dian-nao.html">电脑</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/ji-zhu.html">技术</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/linux.html">linux</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/mac.html">mac</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/misc.html">misc</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/pdf.html">pdf</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/python.html">python</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/pythonmaclib.html">python,mac,lib</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a></li>
-                    <li class="active"><a href="http://jackjin-cn.github.io/category/shell.html">shell</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/vim.html">vim</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/za-gan.html">杂感</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/za-lei.html">杂类</a></li>
-                </ul>
-                </nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="http://jackjin-cn.github.io/2019/2019-05-07_08-58_shell-jiao-ben-bian-xie-de-ji-dian-ji-lu.html" rel="bookmark"
-           title="Permalink to Shell 脚本编写的几点记录">Shell 脚本编写的几点记录</a></h1>
-    </header>
-
-    <div class="entry-content">
-<footer class="post-info">
-        <span>2019-05-07 星期二 08:58</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/script.html">script</a><a href="http://jackjin-cn.github.io/tag/terminal.html">terminal</a><a href="http://jackjin-cn.github.io/tag/image.html">image</a><a href="http://jackjin-cn.github.io/tag/mac.html">mac</a></span>
-</footer><!-- /.post-info -->      <h2>Title: Shell 脚本编写的几点记录</h2>
+<body>
+    <div class="pages">
+        <ul>
+            <li class="home"><a href="http://jackjin-cn.github.io/index.html">Home</a></li>
+        </ul>
+    </div>
+<div class="hp-header-inner">
+    <div class="page-header">
+        <div class="content-header">
+            <div id="title-block">
+            <h1>  <a href="http://jackjin-cn.github.io/2019/2019-05-07_08-58_shell-jiao-ben-bian-xie-de-ji-dian-ji-lu.html" rel="bookmark"
+                    title="Permalink to Shell 脚本编写的几点记录">Shell 脚本编写的几点记录</a></h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="content">
+        <div class="data-holder">
+        <div class="row">
+           <div class="large-10 content-column column">
+<div class="content-article">
+    <header class="header-article">
+        <div class="read-more">Posted on 2019-05-07 星期二 08:58</div>
+ 
+   </header>
+    <section class='article'>
+        
+        <div class="entry-summary">
+            <h2>Title: Shell 脚本编写的几点记录</h2>
 <ol>
-<li>
-<p>数值变量</p>
+<li>数值变量</li>
+</ol>
 <p>```bash</p>
-<p>size=1000</p>
-<h1>注意，不要有多余的空格</h1>
+<div class="highlight"><pre><span></span>size=1000
+#注意，不要有多余的空格
+</pre></div>
+
+
 <p>```</p>
-</li>
+<ol>
 <li>
 <p>文件名的处理</p>
 </li>
@@ -69,12 +65,43 @@
 <li>
 <p>带空格的文件名的处理</p>
 <p>```bash</p>
-<p>find . -size +$size -iname "*.jpg"|grep -v ".<em>" |gawk -F, '{printf("%s\n",$0)}' | while read line
-  #说明 find是用来显示文件名的，这个比 ls 好在是带路径的，比较好处理，可以直接用文件名。
-  #grep 是用来去掉 以  ".</em>"开头的文件，mac里，有很多这样的文件。
-  #gawk 是把文件名加上换行，方便以行为单位读取，解决文件名中带空格的问题。
-  #文件名用有空格，真的会带来很多无聊的问题
-  do
+<p>find . -size +$size -iname "*.jpg"|grep -v "._" |gawk -F, '{printf("%s\n",$0)}' | while read line</p>
+<p>#说明 find是用来显示文件名的，这个比 ls 好在是带路径的，比较好处理，可以直接用文件名。</p>
+<p>#grep 是用来去掉 以  "._"开头的文件 …</p></li></ol>
+        </div>
+    
+        <div class="entry-content">
+            <h2>Title: Shell 脚本编写的几点记录</h2>
+<ol>
+<li>数值变量</li>
+</ol>
+<p>```bash</p>
+<div class="highlight"><pre><span></span>size=1000
+#注意，不要有多余的空格
+</pre></div>
+
+
+<p>```</p>
+<ol>
+<li>
+<p>文件名的处理</p>
+</li>
+<li>
+<p>不带空格的文件名，可以用数组来解决</p>
+<p>```bash</p>
+<p>filelist=(<code>ls</code>)
+  filelist=(<code>find . -iname "*.jpg"</code>)</p>
+<p>```</p>
+</li>
+<li>
+<p>带空格的文件名的处理</p>
+<p>```bash</p>
+<p>find . -size +$size -iname "*.jpg"|grep -v "._" |gawk -F, '{printf("%s\n",$0)}' | while read line</p>
+<p>#说明 find是用来显示文件名的，这个比 ls 好在是带路径的，比较好处理，可以直接用文件名。</p>
+<p>#grep 是用来去掉 以  "._"开头的文件，mac里，有很多这样的文件。</p>
+<p>#gawk 是把文件名加上换行，方便以行为单位读取，解决文件名中带空格的问题。</p>
+<p>#文件名用有空格，真的会带来很多无聊的问题</p>
+<p>do
       #echo ---------- $line
       nospace=<code>echo $line|tr " " "_"</code>
           #下面 对于有空格的，要加双引号
@@ -135,66 +162,160 @@ else
 
 
 <p>```</p>
-    </div><!-- /.entry-content -->
-    <div class="comments">
-      <h2>Comments !</h2>
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-        var disqus_identifier = "2019/2019-05-07_08-58_shell-jiao-ben-bian-xie-de-ji-dian-ji-lu.html";
-        var disqus_url = "http://jackjin-cn.github.io/2019/2019-05-07_08-58_shell-jiao-ben-bian-xie-de-ji-dian-ji-lu.html";
-        (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//jackjin.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
+        </div>
+    </section>
+    <footer class="footer-article">
+        <div class="tags-and-categories">Filed under <a href="http://jackjin-cn.github.io/category/shell.html">shell</a>
+        | Tagged: <a href="http://jackjin-cn.github.io/tag/script.html">script </a><a href="http://jackjin-cn.github.io/tag/terminal.html">terminal </a><a href="http://jackjin-cn.github.io/tag/image.html">image </a><a href="http://jackjin-cn.github.io/tag/mac.html">mac </a>
+        | <a href="http://jackjin-cn.github.io/2019/2019-05-07_08-58_shell-jiao-ben-bian-xie-de-ji-dian-ji-lu.html" rel="bookmark"
+         title="Permalink to Shell 脚本编写的几点记录">Permalink</a>            
+        </div>
+        <!-- metaldata 
+        -->
+    </footer>
+    <!-- disqus jackjin -->
+        <hr>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = "jackjin"; // required: replace example with your forum shortname
+            var disqus_identifier = "shell-脚本编写的几点记录";
+            var disqus_url = "http://jackjin-cn.github.io/2019/2019-05-07_08-58_shell-jiao-ben-bian-xie-de-ji-dian-ji-lu.html";
+            var disqus_title = "Shell 脚本编写的几点记录";
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+            </div>
+            <div class="large-2 aside column">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="http://getpelican.com/">Pelican</a></li>
+                    <li><a href="http://python.org/">Python.org</a></li>
+                    <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                    <li><a href="http://kevinyoung.gitcafe.io">煎挠橙的blog</a></li>
+                </ul>
+            </div>
+         </div>
     </div>
-
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="http://kevinyoung.gitcafe.io">煎挠橙的blog</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
-
-                            <li><a href="#">aaa</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
-
-        <footer id="contentinfo" class="body">
-                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
-        </footer><!-- /#contentinfo -->
-
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-72007782-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
-<script type="text/javascript">
-    var disqus_shortname = 'jackjin';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
+</div>
+    <div class="footer">
+        <div class="data-holder">
+        <div class="row">
+            <div class="large-3 column">
+<div class="credits">
+    <h3>Stuff and credits</h3>
+    <p>
+    Proudly powered by <a href="http://getpelican.com/">Pelican</a>, 
+    which takes great advantage of <a href="http://python.org">Python</a>.
+    </p>
+    <p>
+    This site also makes use of <a href="http://foundation.zurb.com">Zurb Foundation Framework</a>
+    and is typeset using the blocky -- but quite good-looking indeed -- 
+    <a href="https://www.google.com/fonts/specimen/Exo%202">Exo 2</a> fonts,
+    which comes in a lot of weight and styles. 
+    </p>
+    <p>Enjoy!</a>
+</div>           </div>
+           <div class="large-6 tag-cloud column">
+                <h3>Tags</h3>
+                <ul>
+                    <li><a href="http://jackjin-cn.github.io/tag/script.html">script</a>(3)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/terminal.html">terminal</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/image.html">image</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/mac.html">mac</a>(7)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/hackintosh.html">hackintosh</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/bash.html">bash</a>(6)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/awk.html">awk</a>(2)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>(12)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/markdown.html">markdown</a>(3)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/web.html">web</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/mkdocs.html">mkdocs</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/rime.html">rime</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/docx.html">docx</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/jing-yan.html">经验</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/wen-dang-chu-li.html">文档处理</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/ime.html">ime</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/zhe-teng.html">折腾</a>(4)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a>(6)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/dian-nao.html">电脑</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/macos.html">macos</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/python.html">python</a>(7)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/pdf.html">pdf</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/ya-suo.html">压缩</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/os.html">os</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/hei-ping-guo.html">黑苹果</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/find.html">find</a>(2)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/wen-jian-cha-zhao.html">文件查找</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/linux.html">linux</a>(6)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/brew.html">brew</a>(2)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/office.html">office</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/command-line.html">command line</a>(2)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/work.html">work</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/shell.html">shell</a>(2)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/wen-jian-chu-li.html">文件处理</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/github.html">github</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/tips.html">tips</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/unicode.html">unicode</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/encoding.html">encoding</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/debian.html">debian</a>(2)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/wifi.html">wifi</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/qu-dong.html">驱动</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/realtek.html">realtek</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/autocmd.html">autocmd</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/cygwin.html">cygwin</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/for.html">for</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/wen-jian-cao-zuo.html">文件操作</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/ben-wen.html">本文</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/windows.html">windows</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/git.html">git</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/wen-jian.html">文件</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/path.html">path</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/wen-jian-ming.html">文件名</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/code.html">code</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/zhong-wen.html">中文</a>(2)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/ruan-jian.html">软件</a>(3)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/pandoc.html">pandoc</a>(2)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/html.html">html</a>(2)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/css.html">css</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/xue-xi.html">学习</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/gan-xiang.html">感想</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/wine.html">wine</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/qq.html">qq</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/zhuan-zai.html">转载</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/time.html">time</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/xin-qing.html">心情</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/sui-bi.html">随笔</a>(1)</li>
+                </ul>
+            </div>
+            <div class="large-3 category-column column">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="http://jackjin-cn.github.io/category/dian-nao.html">电脑</a> (2)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/ji-zhu.html">技术</a> (1)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/linux.html">linux</a> (4)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/mac.html">mac</a> (4)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/misc.html">misc</a> (1)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/pdf.html">pdf</a> (1)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/python.html">python</a> (3)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/pythonmaclib.html">python,mac,lib</a> (1)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a> (13)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a> (2)</li>
+                    <li class="active"><a href="http://jackjin-cn.github.io/category/shell.html">shell</a> (4)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/vim.html">vim</a> (7)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/za-gan.html">杂感</a> (1)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/za-lei.html">杂类</a> (1)</li>
+                </ul>
+             
+            </div>
+        </row>
+        </div>
+    </div>
 </body>
 </html>

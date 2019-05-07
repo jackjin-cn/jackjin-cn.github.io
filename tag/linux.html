@@ -1,71 +1,64 @@
-<!DOCTYPE html>
-<html lang="zh">
+<!doctype html>
+<html class="no-js" lang="en">
 <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/foundation.min.css" media="all">
+        <script type="text/javascript" src="http://jackjin-cn.github.io/theme/js/modernizr.js"></script>
+        <link href='https://fonts.googleapis.com/css?family=Exo+2:400,300,700,300italic,400italic,700italic,900,900italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/lamboz.css" media="all">
+        <title>Jackjin's Home</title>
         <meta charset="utf-8" />
-        <title>Jackjin's Home - linux</title>
-        <link rel="stylesheet" href="http://jackjin-cn.github.io/theme/css/main.css" />
-        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home RSS Feed" />
-
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+        <link href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate" title="Jackjin's Home Full RSS Feed" />
+        
 </head>
+<body>
+    <div class="pages">
+        <ul>
+            <li class="home"><a href="http://jackjin-cn.github.io/index.html">Home</a></li>
+        </ul>
+    </div>
+<div class="hp-header-inner">
+    <div class="page-header">
+        <div class="content-header">
+            <div id="title-block">
+                <h1>Articles tagged with linux </h1>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="content">
+        <div class="data-holder">
+        <div class="row">
+           <div class="large-10 content-column column">
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="http://jackjin-cn.github.io/">Jackjin's Home </a></h1>
-                <nav><ul>
-                    <li><a href="http://jackjin-cn.github.io/archives.html">archives</a></li>
-                    <li><a href="http://jackjin-cn.github.io/tags.html">tags</a></li>
-                    <li><a href="http://jackjin-cn.github.io/categories.html">categories</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/dian-nao.html">电脑</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/ji-zhu.html">技术</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/linux.html">linux</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/mac.html">mac</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/misc.html">misc</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/pdf.html">pdf</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/python.html">python</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/pythonmaclib.html">python,mac,lib</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/shell.html">shell</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/vim.html">vim</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/za-gan.html">杂感</a></li>
-                    <li><a href="http://jackjin-cn.github.io/category/za-lei.html">杂类</a></li>
-                </ul>
-                </nav>
-        </header><!-- /#banner -->
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="http://jackjin-cn.github.io/2018/2018-07-17_12-38_find-cha-zhao-man-zu-duo-ge-tiao-jian-de-wen-jian.html">find 查找满足多个条件的文件</a></h1>
-<footer class="post-info">
-        <span>2018-07-17 星期二 12:38</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/find.html">find</a><a href="http://jackjin-cn.github.io/tag/wen-jian-cha-zhao.html">文件查找</a><a href="http://jackjin-cn.github.io/tag/linux.html">linux</a></span>
-</footer><!-- /.post-info --><h1>用find 查找满足多个条件的文件</h1>
+
+
+
+<blocks cols="2">
+        <div class="sec-article">
+            <div class="read-more">2018-07-17 星期二 12:38</div>
+
+            <h3><a href="http://jackjin-cn.github.io/2018/2018-07-17_12-38_find-cha-zhao-man-zu-duo-ge-tiao-jian-de-wen-jian.html" rel=Bookmark title="Permalink to find 查找满足多个条件的文件">find 查找满足多个条件的文件</a></h3>
+            <p>
+            <h1>用find 查找满足多个条件的文件</h1>
 <p>网上看了教程，find 可以添加 -o 作为或者条件，我试了一下，-a 表示 and,居然也是可以的</p>
 <h2>更正，昨天看了一个教程，原来find的条件默认是and这样的关系。</h2>
 <h2>下面就是找出文件名同时满足三个条件的用法，其它更高级的用法可以自行搜索</h2>
 <blockquote>
 <p>find . -name '<em>关键词</em>' -a -name '<em>关键词2</em>' -a -name '<em>关键词</em>'</p>
 <p>加*作用是通配符，可以自行尝试。</p>
-</blockquote><p><a href="http://jackjin-cn.github.io/2018/2018-07-17_12-38_find-cha-zhao-man-zu-duo-ge-tiao-jian-de-wen-jian.html#disqus_thread">comments</a></p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <ol id="posts-list" class="hfeed">
+</blockquote>            
+            </p>
+        </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html" rel="bookmark"
-                           title="Permalink to sed的一点用处">sed的一点用处</a></h1>
-                </header>
+        <div class="sec-article">
+            <div class="read-more">2018-07-03 星期二 14:32</div>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <span>2018-07-03 星期二 14:32</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/wen-jian-chu-li.html">文件处理</a><a href="http://jackjin-cn.github.io/tag/linux.html">linux</a><a href="http://jackjin-cn.github.io/tag/mac.html">mac</a></span>
-</footer><!-- /.post-info -->                <h1>sed的一点用处</h1>
+            <h3><a href="http://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html" rel=Bookmark title="Permalink to sed的一点用处">sed的一点用处</a></h3>
+            <p>
+            <h1>sed的一点用处</h1>
 <p>最近在弄pelican 与 github的博客，下载很不要模板，更换很不方便，想能不能用命令修改，google一下，还是真有办法的。</p>
 <h2>提醒不要用mac osx 自带的sed</h2>
 <h2>我用brew 安装了gnu-sed</h2>
@@ -85,22 +78,16 @@
 <p>import os
 cwd=os.getcwd()
 path=(cwd.split('/'))
-cfname …</p>
-                <a class="readmore" href="http://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html">read more</a>
-<p><a href="http://jackjin-cn.github.io/2018/2018-07-03_14-32_sedde-yi-dian-yong-chu.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
-            </article></li>
+cfname …</p>            
+            </p>
+        </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html" rel="bookmark"
-                           title="Permalink to thinkpad L440 的wifi debian 网卡驱动">thinkpad L440 的wifi debian 网卡驱动</a></h1>
-                </header>
+        <div class="sec-article">
+            <div class="read-more">2016-01-24 星期日 18:41</div>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <span>2016-01-24 星期日 18:41</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/debian.html">debian</a><a href="http://jackjin-cn.github.io/tag/linux.html">linux</a><a href="http://jackjin-cn.github.io/tag/wifi.html">wifi</a><a href="http://jackjin-cn.github.io/tag/qu-dong.html">驱动</a><a href="http://jackjin-cn.github.io/tag/realtek.html">realtek</a></span>
-</footer><!-- /.post-info -->                <h2>thinkpad L400 的wifi debian 网卡驱动</h2>
+            <h3><a href="http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html" rel=Bookmark title="Permalink to thinkpad L440 的wifi debian 网卡驱动">thinkpad L440 的wifi debian 网卡驱动</a></h3>
+            <p>
+            <h2>thinkpad L400 的wifi debian 网卡驱动</h2>
 <p>今天又弄起了<strong>thinkpad l440</strong>,无线网卡驱动有问题，连上后马上会断线，网上搜了半天，方案很多，好像不太成功。无线网卡的型号是 realtak 8192ee.</p>
 <p>今天偶然发现，几个命令</p>
 <div class="highlight"><pre><span></span>lsmod |grep rtl
@@ -108,22 +95,16 @@ cfname …</p>
 便用 modprobe -r rtlwifi 这样的命令删除多余的驱动。
 最后发现管用的好像是下载的 realtek_new 管用，具体驱动名是 8192ee.
 modprobe 8192ee
-</pre></div>
-                <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html">read more</a>
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
-            </article></li>
+</pre></div>            
+            </p>
+        </div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html" rel="bookmark"
-                           title="Permalink to awk文本工具的学习">awk文本工具的学习</a></h1>
-                </header>
+        <div class="sec-article">
+            <div class="read-more">2016-01-09 星期六 09:59</div>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <span>2016-01-09 星期六 09:59</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/awk.html">awk</a><a href="http://jackjin-cn.github.io/tag/linux.html">linux</a><a href="http://jackjin-cn.github.io/tag/ben-wen.html">本文</a><a href="http://jackjin-cn.github.io/tag/shell.html">shell</a><a href="http://jackjin-cn.github.io/tag/windows.html">windows</a></span>
-</footer><!-- /.post-info -->                <p><a href="http://coolshell.cn/articles/9070.html">转自：酷 壳 AWK 简明教程</a></p>
+            <h3><a href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html" rel=Bookmark title="Permalink to awk文本工具的学习">awk文本工具的学习</a></h3>
+            <p>
+            <p><a href="http://coolshell.cn/articles/9070.html">转自：酷 壳 AWK 简明教程</a></p>
 <p><a href="http://www.runoob.com/linux/linux-comm-awk.html">转自：Linux awk 命令</a></p>
 <p>自己尝试了一下,感觉很强大。</p>
 <p>特别是模式匹配和过滤功能。</p>
@@ -133,59 +114,142 @@ modprobe 8192ee
 
 
 <p>后来下载了windows版的awk，是3.1.6版</p>
-<p>用法上和linux版的没有区别，不过，有一点要注意是要把<strong><code>单引号'</code>换成<code>双引号"</code></strong></p>
-                <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html">read more</a>
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-09_09-59_awkwen-ben-gong-ju-de-xue-xi.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
-            </article></li>
-            </ol><!-- /#posts-list -->
+<p>用法上和linux版的没有区别，不过，有一点要注意是要把<strong><code>单引号'</code>换成<code>双引号"</code></strong></p>            
+            </p>
+        </div>
+
+</blocks>
+<div class="pagination-block">
 <p class="paginator">
     Page 1 / 2
         <a href="http://jackjin-cn.github.io/tag/linux2.html">&raquo;</a>
 </p>
-            </section><!-- /#content -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="http://kevinyoung.gitcafe.io">煎挠橙的blog</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="http://jackjin-cn.github.io/feed.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
+</div>
 
-                            <li><a href="#">aaa</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
-
-        <footer id="contentinfo" class="body">
-                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
-        </footer><!-- /#contentinfo -->
-
-    <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-72007782-1']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-    </script>
-<script type="text/javascript">
-    var disqus_shortname = 'jackjin';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
+            </div>
+            <div class="large-2 aside column">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="http://getpelican.com/">Pelican</a></li>
+                    <li><a href="http://python.org/">Python.org</a></li>
+                    <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                    <li><a href="http://kevinyoung.gitcafe.io">煎挠橙的blog</a></li>
+                </ul>
+            </div>
+         </div>
+    </div>
+</div>
+    <div class="footer">
+        <div class="data-holder">
+        <div class="row">
+            <div class="large-3 column">
+<div class="credits">
+    <h3>Stuff and credits</h3>
+    <p>
+    Proudly powered by <a href="http://getpelican.com/">Pelican</a>, 
+    which takes great advantage of <a href="http://python.org">Python</a>.
+    </p>
+    <p>
+    This site also makes use of <a href="http://foundation.zurb.com">Zurb Foundation Framework</a>
+    and is typeset using the blocky -- but quite good-looking indeed -- 
+    <a href="https://www.google.com/fonts/specimen/Exo%202">Exo 2</a> fonts,
+    which comes in a lot of weight and styles. 
+    </p>
+    <p>Enjoy!</a>
+</div>           </div>
+           <div class="large-6 tag-cloud column">
+                <h3>Tags</h3>
+                <ul>
+                    <li><a href="http://jackjin-cn.github.io/tag/script.html">script</a>(3)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/terminal.html">terminal</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/image.html">image</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/mac.html">mac</a>(7)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/hackintosh.html">hackintosh</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/bash.html">bash</a>(6)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/awk.html">awk</a>(2)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/vim.html">vim</a>(12)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/markdown.html">markdown</a>(3)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/web.html">web</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/mkdocs.html">mkdocs</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/rime.html">rime</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/docx.html">docx</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/jing-yan.html">经验</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/wen-dang-chu-li.html">文档处理</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/ime.html">ime</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/zhe-teng.html">折腾</a>(4)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a>(6)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/dian-nao.html">电脑</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/macos.html">macos</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/python.html">python</a>(7)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/pdf.html">pdf</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/ya-suo.html">压缩</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/os.html">os</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/hei-ping-guo.html">黑苹果</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/find.html">find</a>(2)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/wen-jian-cha-zhao.html">文件查找</a>(1)</li>
+                    <li class="active"><a href="http://jackjin-cn.github.io/tag/linux.html">linux</a>(6)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/brew.html">brew</a>(2)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/office.html">office</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/command-line.html">command line</a>(2)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/work.html">work</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/shell.html">shell</a>(2)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/wen-jian-chu-li.html">文件处理</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/github.html">github</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/tips.html">tips</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/unicode.html">unicode</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/encoding.html">encoding</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/debian.html">debian</a>(2)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/wifi.html">wifi</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/qu-dong.html">驱动</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/realtek.html">realtek</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/autocmd.html">autocmd</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/cygwin.html">cygwin</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/for.html">for</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/wen-jian-cao-zuo.html">文件操作</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/ben-wen.html">本文</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/windows.html">windows</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/git.html">git</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/wen-jian.html">文件</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/path.html">path</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/wen-jian-ming.html">文件名</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/code.html">code</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/zhong-wen.html">中文</a>(2)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/ruan-jian.html">软件</a>(3)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/pandoc.html">pandoc</a>(2)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/html.html">html</a>(2)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/css.html">css</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/xue-xi.html">学习</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/gan-xiang.html">感想</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/wine.html">wine</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/qq.html">qq</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/zhuan-zai.html">转载</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/time.html">time</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/xin-qing.html">心情</a>(1)</li>
+                    <li><a href="http://jackjin-cn.github.io/tag/sui-bi.html">随笔</a>(1)</li>
+                </ul>
+            </div>
+            <div class="large-3 category-column column">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="http://jackjin-cn.github.io/category/dian-nao.html">电脑</a> (2)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/ji-zhu.html">技术</a> (1)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/linux.html">linux</a> (4)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/mac.html">mac</a> (4)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/misc.html">misc</a> (1)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/pdf.html">pdf</a> (1)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/python.html">python</a> (3)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/pythonmaclib.html">python,mac,lib</a> (1)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian.html">软件</a> (13)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/ruan-jian-shi-yong.html">软件使用</a> (2)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/shell.html">shell</a> (4)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/vim.html">vim</a> (7)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/za-gan.html">杂感</a> (1)</li>
+                    <li><a href="http://jackjin-cn.github.io/category/za-lei.html">杂类</a> (1)</li>
+                </ul>
+             
+            </div>
+        </row>
+        </div>
+    </div>
 </body>
 </html>
