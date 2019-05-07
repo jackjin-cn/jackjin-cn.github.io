@@ -14,12 +14,12 @@
 
 <meta property="og:title" content="Shell 脚本编写的几点记录 "/>
 <meta property="og:url" content="http://jackjin-cn.github.io/2019/2019-05-07_00-00_shell-jiao-ben-bian-xie-de-ji-dian-ji-lu.html" />
-<meta property="og:description" content="Modified: 2019-05-07 08:58:18 Modified: 2019-05-07 08:56:43 Category: shell Tags: script,terminal,image,mac Author: 天地一沙鸥 Title: Shell 脚本编写的几点记录 数值变量 bash size=1000 #注意，不要有多余的空格 文件名的处理 不带空格的文件名，可以用数组来解决 bash filelist=(`ls`) filelist=(`find . -iname &#34;*.jpg&#34;`) 带空格的文件名的处理 bash find . -size +$size -iname &#34;*.jpg&#34;|grep -v &#34;\._&#34; |gawk -F …" />
+<meta property="og:description" content="Modified: 2019-05-07 08:58:18 Modified: 2019-05-07 08:56:43 Category: shell Tags: script,terminal,image,mac Author: 天地一沙鸥 Title: Shell 脚本编写的几点记录 数值变量 ```bash size=1000 #注意，不要有多余的空格 ``` 文件名的处理 不带空格的文件名，可以用数组来解决 ```bash filelist=(ls) filelist=(find . -iname &#34;*.jpg&#34;) ``` 带空格的文件名的处理 ```bash find . -size +$size -iname &#34;*.jpg&#34;|grep -v &#34;.&#34; |gawk -F, &#39;{printf …" />
 <meta property="og:site_name" content="Jackjin&#39;s Home" />
 <meta property="og:article:author" content="天地一沙鸥" />
 <meta property="og:article:published_time" content="2019-05-07T00:00:00+08:00" />
 <meta name="twitter:title" content="Shell 脚本编写的几点记录 ">
-<meta name="twitter:description" content="Modified: 2019-05-07 08:58:18 Modified: 2019-05-07 08:56:43 Category: shell Tags: script,terminal,image,mac Author: 天地一沙鸥 Title: Shell 脚本编写的几点记录 数值变量 bash size=1000 #注意，不要有多余的空格 文件名的处理 不带空格的文件名，可以用数组来解决 bash filelist=(`ls`) filelist=(`find . -iname &#34;*.jpg&#34;`) 带空格的文件名的处理 bash find . -size +$size -iname &#34;*.jpg&#34;|grep -v &#34;\._&#34; |gawk -F …">
+<meta name="twitter:description" content="Modified: 2019-05-07 08:58:18 Modified: 2019-05-07 08:56:43 Category: shell Tags: script,terminal,image,mac Author: 天地一沙鸥 Title: Shell 脚本编写的几点记录 数值变量 ```bash size=1000 #注意，不要有多余的空格 ``` 文件名的处理 不带空格的文件名，可以用数组来解决 ```bash filelist=(ls) filelist=(find . -iname &#34;*.jpg&#34;) ``` 带空格的文件名的处理 ```bash find . -size +$size -iname &#34;*.jpg&#34;|grep -v &#34;.&#34; |gawk -F, &#39;{printf …">
 
         <title>Shell 脚本编写的几点记录  · Jackjin&#39;s Home
 </title>
@@ -86,46 +86,50 @@
 <ol>
 <li>数值变量</li>
 </ol>
-<p><code>bash
-   size=1000
-   #注意，不要有多余的空格</code></p>
+<p>```bash</p>
+<p>size=1000
+   #注意，不要有多余的空格</p>
+<p>```</p>
 <ol>
 <li>
 <p>文件名的处理</p>
 </li>
 <li>
 <p>不带空格的文件名，可以用数组来解决</p>
-<p><code>bash
-  filelist=(`ls`)
-  filelist=(`find . -iname "*.jpg"`)</code></p>
+<p>```bash</p>
+<p>filelist=(<code>ls</code>)
+  filelist=(<code>find . -iname "*.jpg"</code>)</p>
+<p>```</p>
 </li>
 <li>
 <p>带空格的文件名的处理</p>
-<p><code>bash
-  find . -size +$size -iname "*.jpg"|grep -v "\._" |gawk -F, '{printf("%s\n",$0)}' | while read line
+<p>```bash</p>
+<p>find . -size +$size -iname "*.jpg"|grep -v ".<em>" |gawk -F, '{printf("%s\n",$0)}' | while read line
   #说明 find是用来显示文件名的，这个比 ls 好在是带路径的，比较好处理，可以直接用文件名。
-  #grep 是用来去掉 以  "._"开头的文件，mac里，有很多这样的文件。
+  #grep 是用来去掉 以  ".</em>"开头的文件，mac里，有很多这样的文件。
   #gawk 是把文件名加上换行，方便以行为单位读取，解决文件名中带空格的问题。
   #文件名用有空格，真的会带来很多无聊的问题
   do
       #echo ---------- $line
-      nospace=`echo $line|tr " " "_"`
+      nospace=<code>echo $line|tr " " "_"</code>
           #下面 对于有空格的，要加双引号
           mv "$line"  $nospace
-      done</code></p>
+      done
+  ```</p>
 </li>
 <li>
 <p>if 中的问题</p>
 </li>
 </ol>
-<p><code>bash
-   if [ $ff_len -eq 0 ]
+<p>```bash</p>
+<p>if [ $ff_len -eq 0 ]
    then
        echo 没有条件的文件可以压缩
-       echo 条件：jpg文件大小\&gt;900k
+       echo 条件：jpg文件大小>900k
        exit 
    # if 中用判断，也可注意空格的问题
-   # 如果变量没有定义或者为空，会出错，建议先初始化一下。</code></p>
+   # 如果变量没有定义或者为空，会出错，建议先初始化一下。
+   ```</p>
 <ol>
 <li>数组问题</li>
 </ol>
@@ -141,8 +145,8 @@
 <ol>
 <li>
 <p>命令行参数</p>
-<p>```bash
-if [ $# -eq 1 ]
+<p>```bash</p>
+<p>if [ $# -eq 1 ]
 then
     smallsize="$1%x%$1%"
 else
@@ -156,10 +160,11 @@ else
 <p>在脚本中执行系统命令中的引号问题</p>
 </li>
 </ol>
-<p>```bash
-        #下面 对于有空格的，要加双引号 $line中的文件名有空格，所以加了双引号，经测试，不加双引号要出错。
-        mv "$line"  $nospace</p>
-<div class="highlight"><pre><span></span>    len=`ls -l &quot;$i&quot; |gawk &#39;{printf(&quot;%d&quot;, $5/1024/1024)}&#39;`
+<p>```bash</p>
+<div class="highlight"><pre><span></span>    #下面 对于有空格的，要加双引号 $line中的文件名有空格，所以加了双引号，经测试，不加双引号要出错。
+    mv &quot;$line&quot;  $nospace
+
+    len=`ls -l &quot;$i&quot; |gawk &#39;{printf(&quot;%d&quot;, $5/1024/1024)}&#39;`
 </pre></div>
 
 
