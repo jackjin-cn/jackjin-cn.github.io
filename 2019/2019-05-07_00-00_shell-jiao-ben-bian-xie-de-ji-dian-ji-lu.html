@@ -128,15 +128,16 @@
        echo 条件：jpg文件大小>900k
        exit 
    # if 中用判断，也可注意空格的问题
-   # 如果变量没有定义或者为空，会出错，建议先初始化一下。
-   ```</p>
+   # 如果变量没有定义或者为空，会出错，建议先初始化一下。</p>
+<p>```</p>
 <ol>
 <li>数组问题</li>
 </ol>
-<p>```bash
-    #引用数组全部元素
-    ${ff[@]}</p>
-<div class="highlight"><pre><span></span>#获取数组长度
+<p>```bash</p>
+<div class="highlight"><pre><span></span>#引用数组全部元素
+<span class="cp">${</span><span class="n">ff</span><span class="p">[</span><span class="err">@</span><span class="p">]</span><span class="cp">}</span>
+
+#获取数组长度
 <span class="cp">${</span><span class="c1">#ff[@]</span><span class="cp">}</span>
 </pre></div>
 
@@ -169,7 +170,6 @@ else
 
 
 <p>```</p>
-<p><img alt="im-select" src="../images/imselect.png"></p>
             
             <section>
 <div class="accordion" id="accordion2">
