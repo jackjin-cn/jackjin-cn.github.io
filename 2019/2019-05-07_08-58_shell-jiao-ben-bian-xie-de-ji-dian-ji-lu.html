@@ -136,22 +136,24 @@
 
 <p>```</p>
 <ol>
-<li>
-<p>命令行参数</p>
+<li>命令行参数</li>
+</ol>
 <p>```bash</p>
-<p>if [ $# -eq 1 ]
+<div class="highlight"><pre><span></span>if [ $# -eq 1 ]
 then
-    smallsize="$1%x%$1%"
+    smallsize=&quot;$1%x%$1%&quot;
 else
-    smallsize="50%x50%"  #默认按50%调整大小
-    fi</p>
-<h1>$# 这个是指参数个数，不包括文件名</h1>
-<h1>$? 上下个命令的返回值</h1>
+    smallsize=&quot;50%x50%&quot;  #默认按50%调整大小
+    fi
+$# 这个是指参数个数，不包括文件名
+
+$? 上下个命令的返回值
+</pre></div>
+
+
 <p>```</p>
-</li>
-<li>
-<p>在脚本中执行系统命令中的引号问题</p>
-</li>
+<ol>
+<li>在脚本中执行系统命令中的引号问题</li>
 </ol>
 <p>```bash</p>
 <div class="highlight"><pre><span></span>    #下面 对于有空格的，要加双引号 $line中的文件名有空格，所以加了双引号，经测试，不加双引号要出错。
