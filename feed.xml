@@ -3,8 +3,8 @@
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;数值变量&lt;/p&gt;
-&lt;p&gt;```bash
-size=1000&lt;/p&gt;
+&lt;p&gt;```bash&lt;/p&gt;
+&lt;p&gt;size=1000&lt;/p&gt;
 &lt;h1&gt;注意，不要有多余的空格&lt;/h1&gt;
 &lt;p&gt;```&lt;/p&gt;
 &lt;/li&gt;
