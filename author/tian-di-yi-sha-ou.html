@@ -65,26 +65,25 @@
 
 
 <div class="highlight"><pre><span></span>2. 带空格的文件名的处理
+</pre></div>
 
-```bash
 
-find . -size +$size -iname &quot;*.jpg&quot;|grep -v &quot;\._&quot; |gawk -F, &#39;{printf(&quot;%s\n&quot;,$0)}&#39; | while read line
+<div class="highlight"><pre><span></span>    find . -size +<span class="nv">$size</span> -iname <span class="s2">&quot;*.jpg&quot;</span><span class="p">|</span>grep -v <span class="s2">&quot;\._&quot;</span> <span class="p">|</span>gawk -F, <span class="s1">&#39;{printf(&quot;%s\n&quot;,$0)}&#39;</span> <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> line
 
-#说明 find是用来显示文件名的，这个比 ls 好在是带路径的，比较好处理，可以直接用文件名。
+    <span class="c1">#说明 find是用来显示文件名的，这个比 ls 好在是带路径的，比较好处理，可以直接用文件名。</span>
 
-#grep 是用来去掉 以  &quot;._&quot;开头的文件，mac里，有很多这样的文件。
+    <span class="c1">#grep 是用来去掉 以  &quot;._&quot;开头的文件，mac里，有很多这样的文件。</span>
 
-#gawk 是把文件名加上换行，方便以行为单位读取，解决文件名中带空格的问题。
+    <span class="c1">#gawk 是把文件名加上换行，方便以行为单位读取，解决文件名中带空格的问题。</span>
 
-#文件名用有空格，真的会带来很多无聊的问题
+    <span class="c1">#文件名用有空格，真的会带来很多无聊的问题</span>
 
-do
-    #echo ---------- $line
-    nospace=`echo $line|tr &quot; &quot; &quot;_&quot;`
-    #下面 对于有空格的，要加双引号
-    mv &quot;$line&quot;  $nospace
-done
-```
+    <span class="k">do</span>
+        <span class="c1">#echo ---------- $line</span>
+        <span class="nv">nospace</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$line</span><span class="p">|</span>tr <span class="s2">&quot; &quot;</span> <span class="s2">&quot;_&quot;</span><span class="sb">`</span>
+        <span class="c1">#下面 对于有空格的，要加双引号</span>
+        mv <span class="s2">&quot;</span><span class="nv">$line</span><span class="s2">&quot;</span>  <span class="nv">$nospace</span>
+    <span class="k">done</span>
 </pre></div>
 
 
