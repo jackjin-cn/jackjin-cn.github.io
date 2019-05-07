@@ -46,24 +46,25 @@
 <ol>
 <li>数值变量</li>
 </ol>
-<p>```bash</p>
-<div class="highlight"><pre><span></span>size=1000
-#注意，不要有多余的空格
+<div class="highlight"><pre><span></span>    <span class="nv">size</span><span class="o">=</span><span class="m">1000</span>
+    <span class="c1">#注意，不要有多余的空格</span>
 </pre></div>
 
 
-<p>```</p>
 <ol>
 <li>
 <p>文件名的处理</p>
 </li>
 <li>
 <p>不带空格的文件名，可以用数组来解决</p>
-<p>```bash</p>
-<p>filelist=(<code>ls</code>)
-  filelist=(<code>find . -iname "*.jpg"</code>)</p>
-<p>```</p>
 </li>
+</ol>
+<div class="highlight"><pre><span></span>      <span class="nv">filelist</span><span class="o">=(</span><span class="sb">`</span>ls<span class="sb">`</span><span class="o">)</span>
+      <span class="nv">filelist</span><span class="o">=(</span><span class="sb">`</span>find . -iname <span class="s2">&quot;*.jpg&quot;</span><span class="sb">`</span><span class="o">)</span>
+</pre></div>
+
+
+<ol>
 <li>
 <p>带空格的文件名的处理</p>
 <p>```bash</p>
