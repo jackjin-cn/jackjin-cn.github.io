@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Fri, 26 Apr 2019 10:02:41 +0800</lastBuildDate><item><title>clover 启动项设置和隐藏</title><link>http://jackjin-cn.github.io/2019/2019-04-26_09-58_clover-qi-dong-xiang-she-zhi-he-yin-cang.html</link><description>&lt;h2&gt;Title: clover 启动项设置和隐藏&lt;/h2&gt;
+<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Tue, 07 May 2019 00:00:00 +0800</lastBuildDate><item><title>Shell 脚本编写的几点记录</title><link>http://jackjin-cn.github.io/2019/2019-05-07_00-00_shell-jiao-ben-bian-xie-de-ji-dian-ji-lu.html</link><description>&lt;p&gt;Modified: 2019-05-07 08:58:18&lt;/p&gt;
+&lt;p&gt;Modified: 2019-05-07 08:56:43&lt;/p&gt;
+&lt;p&gt;Category: shell &lt;/p&gt;
+&lt;p&gt;Tags: script,terminal,image,mac&lt;/p&gt;
+&lt;p&gt;Author: 天地一沙鸥&lt;/p&gt;
+&lt;h2&gt;Title: Shell 脚本编写的几点记录&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;数值变量&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;bash
+   size=1000
+   #注意，不要有多余的空格&lt;/code&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;文件名的处理&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不带空格的文件名，可以用数组来解决&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bash
+  filelist=(`ls`)
+  filelist=(`find . -iname "*.jpg"`)&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;带空格的文件名的处理&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bash
+  find . -size +$size -iname "*.jpg"|grep -v "\._" |gawk -F …&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 07 May 2019 00:00:00 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2019-05-07:/2019/2019-05-07_00-00_shell-jiao-ben-bian-xie-de-ji-dian-ji-lu.html</guid></item><item><title>clover 启动项设置和隐藏</title><link>http://jackjin-cn.github.io/2019/2019-04-26_09-58_clover-qi-dong-xiang-she-zhi-he-yin-cang.html</link><description>&lt;h2&gt;Title: clover 启动项设置和隐藏&lt;/h2&gt;
 &lt;h3&gt;来自于网络  &lt;a href="http://blog.sina.com.cn/s/blog_18b34c8750102xi11.html"&gt;EFI引导如何去掉多余的这个clover启动项&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;一、准备工作，获取各硬盘分区的GUID
 1、开机，出现Clover GUI引导选项、选好启动分区后，先按一下F2，再回车，直到进入OS X桌面。&lt;/p&gt;
@@ -236,15 +261,4 @@ rm -fr &lt;span class="nv"&gt;$i&lt;/span&gt;
 &lt;p&gt;[jjb@ ~/pelicanoutput/pelican/pelican-themes #8]$for i in &lt;code&gt;find . -name screenshot.png&lt;/code&gt; ;do echo  &lt;code&gt;dirname $i&lt;/code&gt;;done;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;./bricks
-./monospace …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Wed, 04 Jul 2018 19:12:53 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2018-07-04:/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html</guid><category>bash</category><category>shell</category></item><item><title>brew 中切换软件版本</title><link>http://jackjin-cn.github.io/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html</link><description>&lt;h1&gt;brew 中切换软件版本&lt;/h1&gt;
-&lt;p&gt;我有更新软件的习惯，习惯性的每天更新一下。比如brew ,pip3等。&lt;/p&gt;
-&lt;p&gt;这不，前天把brew 就把python 3.6.5 升级到了python 3.7了，这个是大升级，结果python库都没有了，当然可以另行安装，也很方便，反正有写了批量更新的脚本，但没有到还有兼容性的问题。&lt;/p&gt;
-&lt;p&gt;网上找一堆办法，有的命令已经过期了 &lt;em&gt;brew versions&lt;/em&gt;,有的太复杂，看不明白。
-后来还是找到了一个办法，提前是老版本python没有删除。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;brew info python3&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;stable&lt;/span&gt; &lt;span class="mf"&gt;3.7&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;bottled&lt;/span&gt;&lt;span class="o"&gt;),&lt;/span&gt; &lt;span class="n"&gt;HEAD&lt;/span&gt;
-&lt;span class="n"&gt;Interpreted&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;interactive&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;object&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;oriented&lt;/span&gt; &lt;span class="n"&gt;programming&lt;/span&gt; &lt;span class="n"&gt;language&lt;/span&gt;
-&lt;span class="n"&gt;https&lt;/span&gt;&lt;span class="o"&gt;://&lt;/span&gt;&lt;span class="n"&gt;www&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;python&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;org&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;
-&lt;span class="sr"&gt;/usr …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Wed, 04 Jul 2018 12:14:13 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2018-07-04:/2018/2018-07-04_12-14_brew-zhong-qie-huan-ruan-jian-ban-ben.html</guid><category>brew</category><category>python</category></item></channel></rss>
+./monospace …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Wed, 04 Jul 2018 19:12:53 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2018-07-04:/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html</guid><category>bash</category><category>shell</category></item></channel></rss>
