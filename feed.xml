@@ -1,32 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Tue, 07 May 2019 21:45:17 +0800</lastBuildDate><item><title>Shell 脚本编写的几点记录</title><link>http://jackjin-cn.github.io/2019/2019-05-07_08-58_shell-jiao-ben-bian-xie-de-ji-dian-ji-lu.html</link><description>&lt;h1&gt;Title: Shell 脚本编写的几点记录&lt;/h1&gt;
+<rss version="2.0"><channel><title>Jackjin's Home</title><link>http://jackjin-cn.github.io/</link><description></description><lastBuildDate>Wed, 08 May 2019 16:01:09 +0800</lastBuildDate><item><title>Markdown 列表中出现代码块导致乱序</title><link>http://jackjin-cn.github.io/2019/2019-05-08_11-16_markdown-lie-biao-zhong-chu-xian-dai-ma-kuai-dao-zhi-luan-xu.html</link><description>&lt;h2&gt;Title: Markdown 列表中出现代码块导致乱序&lt;/h2&gt;
 &lt;hr&gt;
+&lt;p&gt;在用markdown写日志的时候发现一个问题。&lt;/p&gt;
+&lt;p&gt;2019-05-08 11:21
+在&lt;strong&gt;有序列表&lt;/strong&gt;中，如果加入代码块，会导致后继列表的编号重新开始。
+目前没有什么办法解决。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Wed, 08 May 2019 11:16:39 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2019-05-08:/2019/2019-05-08_11-16_markdown-lie-biao-zhong-chu-xian-dai-ma-kuai-dao-zhi-luan-xu.html</guid><category>markdown</category><category>vim</category></item><item><title>Shell 脚本编写的几点记录</title><link>http://jackjin-cn.github.io/2019/2019-05-07_08-58_shell-jiao-ben-bian-xie-de-ji-dian-ji-lu.html</link><description>&lt;h1&gt;Title: Shell 脚本编写的几点记录&lt;/h1&gt;
 &lt;ol&gt;
-&lt;li&gt;kk&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="n"&gt;aaa&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;```python
-aaa=a+1
-```
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;kkkk&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;kkkk&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;jjjj&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;数值变量&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;数值变量&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="nv"&gt;size&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1000&lt;/span&gt;
     &lt;span class="c1"&gt;#注意，不要有多余的空格&lt;/span&gt;
@@ -52,7 +32,9 @@ aaa=a+1
 
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;    find . -size +&lt;span class="nv"&gt;$size&lt;/span&gt; -iname &lt;span class="s2"&gt;&amp;quot;*.jpg&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt;grep -v &lt;span class="s2"&gt;&amp;quot;\._&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;gawk -F, &lt;span class="s1"&gt;&amp;#39;{printf(&amp;quot;%s\n&amp;quot;,$0)}&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="nb"&gt;read&lt;/span&gt; line
 
-      &lt;span class="c1"&gt;#说明 find是用来显示文件名的，这个比 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 07 May 2019 08:58:18 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2019-05-07:/2019/2019-05-07_08-58_shell-jiao-ben-bian-xie-de-ji-dian-ji-lu.html</guid><category>script</category><category>terminal</category><category>image</category><category>mac</category></item><item><title>clover 启动项设置和隐藏</title><link>http://jackjin-cn.github.io/2019/2019-04-26_09-58_clover-qi-dong-xiang-she-zhi-he-yin-cang.html</link><description>&lt;h2&gt;Title: clover 启动项设置和隐藏&lt;/h2&gt;
+      &lt;span class="c1"&gt;#说明 find是用来显示文件名的，这个比 ls 好在是带路径的，比较好处理，可以直接用文件名。&lt;/span&gt;
+
+      &lt;span class="c1"&gt;#grep 是用来去掉 以  &amp;quot;._&amp;quot;开头的文件，mac里，有很多这样的文件 …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 07 May 2019 08:58:18 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2019-05-07:/2019/2019-05-07_08-58_shell-jiao-ben-bian-xie-de-ji-dian-ji-lu.html</guid><category>script</category><category>terminal</category><category>image</category><category>mac</category></item><item><title>clover 启动项设置和隐藏</title><link>http://jackjin-cn.github.io/2019/2019-04-26_09-58_clover-qi-dong-xiang-she-zhi-he-yin-cang.html</link><description>&lt;h2&gt;Title: clover 启动项设置和隐藏&lt;/h2&gt;
 &lt;h3&gt;来自于网络  &lt;a href="http://blog.sina.com.cn/s/blog_18b34c8750102xi11.html"&gt;EFI引导如何去掉多余的这个clover启动项&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;一、准备工作，获取各硬盘分区的GUID
 1、开机，出现Clover GUI引导选项、选好启动分区后，先按一下F2，再回车，直到进入OS X桌面。&lt;/p&gt;
@@ -272,21 +254,4 @@ rm -fr &lt;span class="nv"&gt;$i&lt;/span&gt;
 &lt;p&gt;结果找到一个叫&lt;em&gt;antiword&lt;/em&gt;的开源软件,以命令行的方式把doc转成纯文本之类的，比用python方便一点，还可以转成pdf之类的 。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;不过，好像还有一个参数，可以转成xml之类的格式 ，docbook，我初步试了一下，找到一个把odcbook 转成 docx的程序，结果行不通，不能把docbook格式转成docx。有点遗憾。&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 10 Jul 2018 22:35:04 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2018-07-10:/2018/2018-07-10_22-35_antiword.html</guid><category>mac</category><category>work</category><category>python</category><category>command line</category></item><item><title>一行代码搞定改名&amp;copy文件</title><link>http://jackjin-cn.github.io/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html</link><description>&lt;h1&gt;一行代码搞定改名&amp;amp;copy文件&lt;/h1&gt;
-&lt;h2&gt;1. 分段探索的过程&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;[jjb@ ~/pelicanoutput/pelican/pelican-themes #6]$for i in &lt;code&gt;find . -name screenshot.png&lt;/code&gt; ;do echo ${i} ;done;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;./bricks/screenshot.png
-./monospace/screenshot.png
-./foundation-default-colours/screenshot.png
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;hr&gt;
-&lt;h2&gt;2. 分段探索的过程&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;[jjb@ ~/pelicanoutput/pelican/pelican-themes #8]$for i in &lt;code&gt;find . -name screenshot.png&lt;/code&gt; ;do echo  &lt;code&gt;dirname $i&lt;/code&gt;;done;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;./bricks
-./monospace …&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Wed, 04 Jul 2018 19:12:53 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2018-07-04:/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html</guid><category>bash</category><category>shell</category></item></channel></rss>
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">天地一沙鸥</dc:creator><pubDate>Tue, 10 Jul 2018 22:35:04 +0800</pubDate><guid isPermaLink="false">tag:jackjin-cn.github.io,2018-07-10:/2018/2018-07-10_22-35_antiword.html</guid><category>mac</category><category>work</category><category>python</category><category>command line</category></item></channel></rss>
