@@ -52,9 +52,9 @@
 </footer><!-- /.post-info -->                <h2>修改pelican所支持的内容文件的扩展名</h2>
 <p>pelican的内容文本文件只支持常见markdown的扩展名<code>markdown,md,mkd</code>等，我比较喜欢用vim制作自己的文件模板，这样就需要自己取文件扩展名，比如*.blog，前几天没想到办法，今天找到办法了。</p>
 <p>用grep 在 <strong>/usr/local/lib/python2.7/dist-packages/pelican</strong> 找了下<strong>md</strong></p>
-<div class="highlight"><pre><span></span>$/usr/local/lib/python2.7/dist-packages/pelican$ grep &#39;md&#39; *.py
-结果如下：
-readers.py:    file_extensions = [&#39;md&#39;, &#39;markdown&#39;, &#39;mkd&#39;, &#39;mdown&#39;]
+<div class="highlight"><pre><span></span><span class="err">$</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python2</span><span class="p">.</span><span class="mi">7</span><span class="o">/</span><span class="n">dist</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pelican$</span> <span class="n">grep</span> <span class="s1">&#39;md&#39;</span> <span class="o">*</span><span class="p">.</span><span class="n">py</span>
+<span class="err">结果如下：</span>
+<span class="n">readers</span><span class="p">.</span><span class="n">py</span><span class="p">:</span>    <span class="n">file_extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;md&#39;</span><span class="p">,</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span> <span class="s1">&#39;mkd&#39;</span><span class="p">,</span> <span class="s1">&#39;mdown&#39;</span><span class="p">]</span>
 </pre></div>
 
 

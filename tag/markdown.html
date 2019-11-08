@@ -67,7 +67,7 @@
 </footer><!-- /.post-info -->                <p>Title: vim 中打开 markdown即时预览</p>
 <p>由于用到mkdocs写简单网站，这个和vim的InstantMarkdownPreview也会同时运行，感觉有点冲突，可以用下面的开关在vim内打开markdown预览。</p>
 <p>在命令模式下就可以了。</p>
-<div class="highlight"><pre><span></span>:InstantMarkdownPreview
+<div class="highlight"><pre><span></span><span class="p">:</span><span class="n">InstantMarkdownPreview</span>
 </pre></div>
                 <a class="readmore" href="http://jackjin-cn.github.io/2019/2019-04-21_16-43_vim-zhong-da-kai-markdownji-shi-yu-lan.html">read more</a>
 <p><a href="http://jackjin-cn.github.io/2019/2019-04-21_16-43_vim-zhong-da-kai-markdownji-shi-yu-lan.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
@@ -85,15 +85,15 @@
 <span>| tags: <a href="http://jackjin-cn.github.io/tag/web.html">web</a><a href="http://jackjin-cn.github.io/tag/markdown.html">markdown</a><a href="http://jackjin-cn.github.io/tag/mkdocs.html">mkdocs</a></span>
 </footer><!-- /.post-info -->                <p>Title: Mkdocs 的使用</p>
 <p>最近要给同事做一个简单的网页，发现了mkdocs，试用了一下，感觉还是很方便的。网站和手机端都不错。</p>
-<div class="highlight"><pre><span></span>pip3 install mkdocs  #安装软件 
+<div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">mkdocs</span>  <span class="o">#</span><span class="err">安装软件</span> 
 
-pip3 install mkdocs-material  #安装皮肤 
+<span class="n">pip3</span> <span class="n">install</span> <span class="n">mkdocs</span><span class="o">-</span><span class="n">material</span>  <span class="o">#</span><span class="err">安装皮肤</span> 
 
-http://mkdocs.github.io/mkdocs-bootswatch/#mkdocs-bootstrap-theme
+<span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mkdocs</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">mkdocs</span><span class="o">-</span><span class="n">bootswatch</span><span class="o">/#</span><span class="n">mkdocs</span><span class="o">-</span><span class="n">bootstrap</span><span class="o">-</span><span class="n">theme</span>
 
-pip3 install mkdocs-bootswatch  #安装皮肤
+<span class="n">pip3</span> <span class="n">install</span> <span class="n">mkdocs</span><span class="o">-</span><span class="n">bootswatch</span>  <span class="o">#</span><span class="err">安装皮肤</span>
 
-https://github.com/mkdocs/mkdocs
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">mkdocs</span><span class="o">/</span><span class="n">mkdocs</span>
 </pre></div>
 
 
@@ -117,9 +117,9 @@ https://github.com/mkdocs/mkdocs
 </footer><!-- /.post-info -->                <h2>修改pelican所支持的内容文件的扩展名</h2>
 <p>pelican的内容文本文件只支持常见markdown的扩展名<code>markdown,md,mkd</code>等，我比较喜欢用vim制作自己的文件模板，这样就需要自己取文件扩展名，比如*.blog，前几天没想到办法，今天找到办法了。</p>
 <p>用grep 在 <strong>/usr/local/lib/python2.7/dist-packages/pelican</strong> 找了下<strong>md</strong></p>
-<div class="highlight"><pre><span></span>$/usr/local/lib/python2.7/dist-packages/pelican$ grep &#39;md&#39; *.py
-结果如下：
-readers.py:    file_extensions = [&#39;md&#39;, &#39;markdown&#39;, &#39;mkd&#39;, &#39;mdown&#39;]
+<div class="highlight"><pre><span></span><span class="err">$</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python2</span><span class="p">.</span><span class="mi">7</span><span class="o">/</span><span class="n">dist</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pelican$</span> <span class="n">grep</span> <span class="s1">&#39;md&#39;</span> <span class="o">*</span><span class="p">.</span><span class="n">py</span>
+<span class="err">结果如下：</span>
+<span class="n">readers</span><span class="p">.</span><span class="n">py</span><span class="p">:</span>    <span class="n">file_extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;md&#39;</span><span class="p">,</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span> <span class="s1">&#39;mkd&#39;</span><span class="p">,</span> <span class="s1">&#39;mdown&#39;</span><span class="p">]</span>
 </pre></div>
 
 

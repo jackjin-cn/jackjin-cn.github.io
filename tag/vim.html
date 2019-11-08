@@ -67,7 +67,7 @@
 </footer><!-- /.post-info -->                <p>Title: vim 中打开 markdown即时预览</p>
 <p>由于用到mkdocs写简单网站，这个和vim的InstantMarkdownPreview也会同时运行，感觉有点冲突，可以用下面的开关在vim内打开markdown预览。</p>
 <p>在命令模式下就可以了。</p>
-<div class="highlight"><pre><span></span>:InstantMarkdownPreview
+<div class="highlight"><pre><span></span><span class="p">:</span><span class="n">InstantMarkdownPreview</span>
 </pre></div>
                 <a class="readmore" href="http://jackjin-cn.github.io/2019/2019-04-21_16-43_vim-zhong-da-kai-markdownji-shi-yu-lan.html">read more</a>
 <p><a href="http://jackjin-cn.github.io/2019/2019-04-21_16-43_vim-zhong-da-kai-markdownji-shi-yu-lan.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
@@ -116,15 +116,15 @@
 </footer><!-- /.post-info -->                <h1>Pelican 上传到github</h1>
 <p>折腾了半天，应该可以在几台电脑上上传博客内容了吧。</p>
 <h3>初始部分</h3>
-<div class="highlight"><pre><span></span>git init
-git add .
-git commit
-git remote add origin https://github.com/jackjin-cn/jackjin-cn.github.io.git
+<div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">init</span>
+<span class="n">git</span> <span class="k">add</span> <span class="p">.</span>
+<span class="n">git</span> <span class="k">commit</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="k">add</span> <span class="n">origin</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">jackjin</span><span class="o">-</span><span class="n">cn</span><span class="o">/</span><span class="n">jackjin</span><span class="o">-</span><span class="n">cn</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">git</span>
 
-#先取回云端内容
-git pull origin master
-git commit
-git push origin master #可以加参数 -f
+<span class="o">#</span><span class="err">先取回云端内容</span>
+<span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">master</span>
+<span class="n">git</span> <span class="k">commit</span>
+<span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">master</span> <span class="o">#</span><span class="err">可以加参数</span> <span class="o">-</span><span class="n">f</span>
 </pre></div>
 
 
@@ -135,9 +135,7 @@ git push origin master #可以加参数 -f
 4
 5
 6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="nb">cd</span> ~/pelicanoutput/blog
-makeriji
-git …</pre></div></td></tr></table>
+<span class="nb">cd</span> ~/pelicanoutput/blog …</pre></div></td></tr></table>
                 <a class="readmore" href="http://jackjin-cn.github.io/2018/2018-07-02_22-07_pelican-shang-chuan-dao-github.html">read more</a>
 <p><a href="http://jackjin-cn.github.io/2018/2018-07-02_22-07_pelican-shang-chuan-dao-github.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
             </article></li>

@@ -41,6 +41,45 @@
                     <ol id="posts-list" class="hfeed" start="3">
             <li><article class="hentry">
                 <header>
+                    <h1><a href="http://jackjin-cn.github.io/2019/2019-04-24_09-52_xie-jian-dan-gong-zuo-ji-lu-de-shou-huo.html" rel="bookmark"
+                           title="Permalink to 写简单工作记录的收获">写简单工作记录的收获</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <span>2019-04-24 星期三 09:52</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a><a href="http://jackjin-cn.github.io/tag/script.html">script</a><a href="http://jackjin-cn.github.io/tag/awk.html">awk</a></span>
+</footer><!-- /.post-info -->                <h2>Title: 写简单工作记录的收获</h2>
+<h3>从shell读取键盘记录，读取单个字符，如果回车长度为0</h3>
+<div class="highlight"><pre><span></span><span class="nv">read</span> <span class="o">-</span><span class="nv">n1</span> <span class="nv">input</span>
+<span class="k">if</span> [ ${#<span class="nv">input</span>} <span class="o">-</span><span class="nv">eq</span> <span class="mi">0</span> ]
+<span class="k">then</span> 
+    <span class="nv">category</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">工作</span><span class="s1">&#39;</span>
+<span class="k">else</span>
+    <span class="nv">input</span><span class="o">=</span>`<span class="nv">expr</span> $<span class="nv">input</span> <span class="o">-</span> <span class="mi">1</span> `
+    <span class="nv">category</span><span class="o">=</span>${<span class="nv">comd</span>[$<span class="nv">input</span>]}
+<span class="nv">fi</span> 
+</pre></div>
+
+
+<h3>gawk 删除重复文本</h3>
+<ol>
+<li>行用awk进行数据筛选</li>
+<li>sort 进行排序</li>
+<li>uniq 删除重复</li>
+</ol>
+<div class="highlight"><pre><span></span>gawk -F\| &#39;NR&gt;2 {print $5}&#39; <span class="cp">${</span><span class="nb">file</span><span class="cp">}</span> | sort |uniq |gawk &#39;{print NR&quot;.&quot;$0}&#39;
+</pre></div>
+
+
+<h3>读取数据成为数组</h3>
+<div class="highlight"><pre><span></span><span class="nv">comd_display</span><span class="o">=</span><span class="ss">(</span>`<span class="nv">gawk</span> <span class="o">-</span><span class="nv">F</span>\<span class="o">|</span> <span class="s1">&#39;</span><span class="s">NR&gt;2 …</span></pre></div>
+                <a class="readmore" href="http://jackjin-cn.github.io/2019/2019-04-24_09-52_xie-jian-dan-gong-zuo-ji-lu-de-shou-huo.html">read more</a>
+<p><a href="http://jackjin-cn.github.io/2019/2019-04-24_09-52_xie-jian-dan-gong-zuo-ji-lu-de-shou-huo.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
                     <h1><a href="http://jackjin-cn.github.io/2019/2019-04-21_16-43_vim-zhong-da-kai-markdownji-shi-yu-lan.html" rel="bookmark"
                            title="Permalink to vim 中打开 markdown即时预览">vim 中打开 markdown即时预览</a></h1>
                 </header>
@@ -52,7 +91,7 @@
 </footer><!-- /.post-info -->                <p>Title: vim 中打开 markdown即时预览</p>
 <p>由于用到mkdocs写简单网站，这个和vim的InstantMarkdownPreview也会同时运行，感觉有点冲突，可以用下面的开关在vim内打开markdown预览。</p>
 <p>在命令模式下就可以了。</p>
-<div class="highlight"><pre><span></span>:InstantMarkdownPreview
+<div class="highlight"><pre><span></span><span class="p">:</span><span class="n">InstantMarkdownPreview</span>
 </pre></div>
                 <a class="readmore" href="http://jackjin-cn.github.io/2019/2019-04-21_16-43_vim-zhong-da-kai-markdownji-shi-yu-lan.html">read more</a>
 <p><a href="http://jackjin-cn.github.io/2019/2019-04-21_16-43_vim-zhong-da-kai-markdownji-shi-yu-lan.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
@@ -70,15 +109,15 @@
 <span>| tags: <a href="http://jackjin-cn.github.io/tag/web.html">web</a><a href="http://jackjin-cn.github.io/tag/markdown.html">markdown</a><a href="http://jackjin-cn.github.io/tag/mkdocs.html">mkdocs</a></span>
 </footer><!-- /.post-info -->                <p>Title: Mkdocs 的使用</p>
 <p>最近要给同事做一个简单的网页，发现了mkdocs，试用了一下，感觉还是很方便的。网站和手机端都不错。</p>
-<div class="highlight"><pre><span></span>pip3 install mkdocs  #安装软件 
+<div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">mkdocs</span>  <span class="o">#</span><span class="err">安装软件</span> 
 
-pip3 install mkdocs-material  #安装皮肤 
+<span class="n">pip3</span> <span class="n">install</span> <span class="n">mkdocs</span><span class="o">-</span><span class="n">material</span>  <span class="o">#</span><span class="err">安装皮肤</span> 
 
-http://mkdocs.github.io/mkdocs-bootswatch/#mkdocs-bootstrap-theme
+<span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mkdocs</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">mkdocs</span><span class="o">-</span><span class="n">bootswatch</span><span class="o">/#</span><span class="n">mkdocs</span><span class="o">-</span><span class="n">bootstrap</span><span class="o">-</span><span class="n">theme</span>
 
-pip3 install mkdocs-bootswatch  #安装皮肤
+<span class="n">pip3</span> <span class="n">install</span> <span class="n">mkdocs</span><span class="o">-</span><span class="n">bootswatch</span>  <span class="o">#</span><span class="err">安装皮肤</span>
 
-https://github.com/mkdocs/mkdocs
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">mkdocs</span><span class="o">/</span><span class="n">mkdocs</span>
 </pre></div>
 
 
@@ -113,29 +152,6 @@ https://github.com/mkdocs/mkdocs
 <p>后来要做一个拼音+五笔的方案，根据wubi_pinyin改了一个wubi_pinyinjjb的方案，弄好了反查，也弄好了用<strong>五笔打字</strong>-›<strong>汉字拼音 …</strong></p></li></ol>
                 <a class="readmore" href="http://jackjin-cn.github.io/2019/2019-04-14_20-31_zhe-teng-rime.html">read more</a>
 <p><a href="http://jackjin-cn.github.io/2019/2019-04-14_20-31_zhe-teng-rime.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://jackjin-cn.github.io/2019/2019-03-15_16-42_python3li-yong-docxdiao-zheng-wen-jian-de-zi-ti-da-xiao.html" rel="bookmark"
-                           title="Permalink to python3利用docx调整文件的字体大小">python3利用docx调整文件的字体大小</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>2019-03-15 星期五 16:42</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/docx.html">docx</a><a href="http://jackjin-cn.github.io/tag/jing-yan.html">经验</a><a href="http://jackjin-cn.github.io/tag/wen-dang-chu-li.html">文档处理</a></span>
-</footer><!-- /.post-info -->                <h2>python3利用docx调整文件的字体大小</h2>
-<p>由于工作要中把多个docx合并成一个文件，原来就已经解决了一部份问题，文字，表格也没有太大的问题。不过，字体问题一直没有解决，我现在用的mac，文档中的字体很难看，大小也不一致。网上也看了很多的教程。可能是我不够聪明，也可能教程看得不够仔细。</p>
-<p>我用的是docx模块</p>
-<p>有paragraph，还有run，有不少网页上有相关的介绍，我不多说。</p>
-<p>我的理解，段落是一段文字，用加车来区分。run相当于是paragraph的一部分，如果一句话中，不同的文字设置了不同的字体，就属于不同的run，也可用run增加文字，他不增加新段落，是加下原来段落的尾部
-原来我一段以为只能用add_paragrah来添加文字，这个是理解错误。</p>
-<p>另外，paragraphs是一个paragraph的列表，可以选择其中的一个来添加文字。比如run=paragraphs[0].add_run('text')，然后就可以在这个run里面设置字体。</p>
-<p>output=Document()
-bb=output.add_heading('') #我的理解，这里的bb也等同于一个paragraph,bb=output.add_paragrah('text' …</p>
-                <a class="readmore" href="http://jackjin-cn.github.io/2019/2019-03-15_16-42_python3li-yong-docxdiao-zheng-wen-jian-de-zi-ti-da-xiao.html">read more</a>
-<p><a href="http://jackjin-cn.github.io/2019/2019-03-15_16-42_python3li-yong-docxdiao-zheng-wen-jian-de-zi-ti-da-xiao.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
             </article></li>
             </ol><!-- /#posts-list -->
 <p class="paginator">

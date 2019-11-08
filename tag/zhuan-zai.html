@@ -48,27 +48,27 @@
 <p>思路</p>
 </blockquote>
 <p>一般而言，搭建一个独立博客需要三样东西：</p>
-<div class="highlight"><pre><span></span>博客软件
-托管服务器
-独立的域名
+<div class="highlight"><pre><span></span><span class="err">博客软件</span>
+<span class="err">托管服务器</span>
+<span class="err">独立的域名</span>
 </pre></div>
 
 
 <p>博客软件用来生成你的博客页面，而生成好的页面则需要放到托管的服务器上才能被别人看到。
 博客软件</p>
 <p>我选择Pleican作为博客软件主要是出于以下的考虑：</p>
-<div class="highlight"><pre><span></span>基于Python，简单易上手
-生成静态页面，不需要数据库，访问速度快，易于维护
-支持markdown标记语言
+<div class="highlight"><pre><span></span><span class="err">基于</span><span class="n">Python</span><span class="err">，简单易上手</span>
+<span class="err">生成静态页面，不需要数据库，访问速度快，易于维护</span>
+<span class="err">支持</span><span class="n">markdown标记语言</span>
 </pre></div>
 
 
 <p>和著名的wordpress相比，pelican搭建起来的博客功能和界面会相对单薄一些，但对于我来说绝对够用，况且写博客的初衷也是想把注意力放在内容上，工具越简单越好。
 托管服务器</p>
 <p>这里选择github的原因也很简单：</p>
-<div class="highlight"><pre><span></span>免费
-省事
-可以直接用git进行版本管理
+<div class="highlight"><pre><span></span><span class="err">免费</span>
+<span class="err">省事</span>
+<span class="err">可以直接用</span><span class="n">git进行版本管理</span>
 </pre></div>
 
 
@@ -183,12 +183,12 @@ blabla....</p>
 <p>用你自己的'shortname'替换进去，剩下的交给pelican。
 自动化</p>
 <p>熟练之后会发觉整个工作流程实际上只有一下几步：</p>
-<div class="highlight"><pre><span></span>进入装了pelican的python虚拟环境
-打开pelican的本地调试功能
-打开博客的本地页面
-cd到存放博客的content目录下面
-用vim编辑文章，调试
-使用git将生成的网站推送到服务器上
+<div class="highlight"><pre><span></span><span class="err">进入装了</span><span class="n">pelican的python虚拟环境</span>
+<span class="err">打开</span><span class="n">pelican的本地调试功能</span>
+<span class="err">打开博客的本地页面</span>
+<span class="n">cd到存放博客的content目录下面</span>
+<span class="err">用</span><span class="n">vim编辑文章</span><span class="err">，调试</span>
+<span class="err">使用</span><span class="n">git将生成的网站推送到服务器上</span>
 </pre></div>
 
 

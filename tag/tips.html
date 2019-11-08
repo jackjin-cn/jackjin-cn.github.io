@@ -45,27 +45,27 @@
 <span>| tags: <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a><a href="http://jackjin-cn.github.io/tag/script.html">script</a><a href="http://jackjin-cn.github.io/tag/tips.html">tips</a></span>
 </footer><!-- /.post-info --><h1>Vim 中插入日期</h1>
 <h2>1. 写blog的时候要前几行插入固定的内容，时间找到以下的脚本</h2>
-<div class="highlight"><pre><span></span>function! TitleInsert()
-call setline(1,&quot;Title:&quot;)
-call setline(2,&quot;Date: &quot;. strftime(&quot;%Y-%m-%d %H:%M:%S&quot;))
-call setline(3,&quot;Modified: &quot;)
-&quot;call setline(3,&quot;Modified: &quot;. strftime(&quot;%Y-%m-%d %H:%M:%S&quot;))
-call setline(4,&quot;Category:  &quot;)
-call setline(5,&quot;Tags: &quot;)
-call setline(6,&quot;Author:天地一沙鸥&quot;)
-endfunction
+<div class="highlight"><pre><span></span><span class="k">function</span><span class="o">!</span> <span class="n">TitleInsert</span><span class="p">()</span>
+<span class="k">call</span> <span class="n">setline</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="ss">&quot;Title:&quot;</span><span class="p">)</span>
+<span class="k">call</span> <span class="n">setline</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="ss">&quot;Date: &quot;</span><span class="p">.</span> <span class="n">strftime</span><span class="p">(</span><span class="ss">&quot;%Y-%m-%d %H:%M:%S&quot;</span><span class="p">))</span>
+<span class="k">call</span> <span class="n">setline</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="ss">&quot;Modified: &quot;</span><span class="p">)</span>
+<span class="ss">&quot;call setline(3,&quot;</span><span class="n">Modified</span><span class="p">:</span> <span class="ss">&quot;. strftime(&quot;</span><span class="o">%</span><span class="n">Y</span><span class="o">-%</span><span class="n">m</span><span class="o">-%</span><span class="n">d</span> <span class="o">%</span><span class="n">H</span><span class="p">:</span><span class="o">%</span><span class="n">M</span><span class="p">:</span><span class="o">%</span><span class="n">S</span><span class="ss">&quot;))</span>
+<span class="ss">call setline(4,&quot;</span><span class="n">Category</span><span class="p">:</span>  <span class="ss">&quot;)</span>
+<span class="ss">call setline(5,&quot;</span><span class="n">Tags</span><span class="p">:</span> <span class="ss">&quot;)</span>
+<span class="ss">call setline(6,&quot;</span><span class="n">Author</span><span class="p">:</span><span class="err">天地一沙鸥</span><span class="ss">&quot;)</span>
+<span class="ss">endfunction</span>
 
-&quot;call append(4,&quot;Category&quot;)
-&quot;setline 是直接设置指定行的内容
-&quot;append 是在插入行
-function! TitleModify()
-&quot;保存时间改变
-call setline(3,&quot;Modified: &quot;. strftime(&quot;%Y-%m-%d %H:%M:%S&quot;))
+<span class="ss">&quot;</span><span class="k">call</span> <span class="n">append</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="ss">&quot;Category&quot;</span><span class="p">)</span>
+<span class="ss">&quot;setline 是直接设置指定行的内容</span>
+<span class="ss">&quot;</span><span class="n">append</span> <span class="err">是在插入行</span>
+<span class="k">function</span><span class="o">!</span> <span class="n">TitleModify</span><span class="p">()</span>
+<span class="ss">&quot;保存时间改变</span>
+<span class="ss">call setline(3,&quot;</span><span class="n">Modified</span><span class="p">:</span> <span class="ss">&quot;. strftime(&quot;</span><span class="o">%</span><span class="n">Y</span><span class="o">-%</span><span class="n">m</span><span class="o">-%</span><span class="n">d</span> <span class="o">%</span><span class="n">H</span><span class="p">:</span><span class="o">%</span><span class="n">M</span><span class="p">:</span><span class="o">%</span><span class="n">S</span><span class="err">&quot;</span><span class="p">))</span>
 
-endfunction
+<span class="n">endfunction</span>
 
-autocmd BufNewFile *.blog,*.cal ks|call TitleInsert()|&#39;s
-autocmd FileWritePost,BufWrite *.blog,*.cal ks|call TitleModify()|&#39;s
+<span class="n">autocmd</span> <span class="n">BufNewFile</span> <span class="o">*</span><span class="p">.</span><span class="n">blog</span><span class="p">,</span><span class="o">*</span><span class="p">.</span><span class="n">cal</span> <span class="n">ks</span><span class="o">|</span><span class="k">call</span> <span class="n">TitleInsert</span><span class="p">()</span><span class="o">|</span><span class="s1">&#39;s</span>
+<span class="s1">autocmd FileWritePost,BufWrite *.blog,*.cal ks|call TitleModify()|&#39;</span><span class="n">s</span>
 </pre></div><p><a href="http://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html#disqus_thread">comments</a></p>                </article>
 <p class="paginator">
     Page 1 / 1

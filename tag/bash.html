@@ -45,14 +45,14 @@
 <span>| tags: <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a><a href="http://jackjin-cn.github.io/tag/script.html">script</a><a href="http://jackjin-cn.github.io/tag/awk.html">awk</a></span>
 </footer><!-- /.post-info --><h2>Title: 写简单工作记录的收获</h2>
 <h3>从shell读取键盘记录，读取单个字符，如果回车长度为0</h3>
-<div class="highlight"><pre><span></span>read -n1 input
-if [ <span class="cp">${</span><span class="c1">#input</span><span class="cp">}</span> -eq 0 ]
-then 
-    category=&#39;工作&#39;
-else
-    input=`expr <span class="nv">$input</span> - 1 `
-    category=<span class="cp">${</span><span class="n">comd</span><span class="p">[</span><span class="err">$</span><span class="nb">input</span><span class="p">]</span><span class="cp">}</span>
-fi 
+<div class="highlight"><pre><span></span><span class="nv">read</span> <span class="o">-</span><span class="nv">n1</span> <span class="nv">input</span>
+<span class="k">if</span> [ ${#<span class="nv">input</span>} <span class="o">-</span><span class="nv">eq</span> <span class="mi">0</span> ]
+<span class="k">then</span> 
+    <span class="nv">category</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">工作</span><span class="s1">&#39;</span>
+<span class="k">else</span>
+    <span class="nv">input</span><span class="o">=</span>`<span class="nv">expr</span> $<span class="nv">input</span> <span class="o">-</span> <span class="mi">1</span> `
+    <span class="nv">category</span><span class="o">=</span>${<span class="nv">comd</span>[$<span class="nv">input</span>]}
+<span class="nv">fi</span> 
 </pre></div>
 
 
@@ -67,27 +67,27 @@ fi
 
 
 <h3>读取数据成为数组</h3>
-<div class="highlight"><pre><span></span>comd_display=(`gawk -F\| &#39;NR&gt;2 {print $5}&#39; <span class="cp">${</span><span class="nb">file</span><span class="cp">}</span> | sort |uniq |gawk &#39;{print NR&quot;.&quot;$0}&#39;`)
+<div class="highlight"><pre><span></span><span class="nv">comd_display</span><span class="o">=</span><span class="ss">(</span>`<span class="nv">gawk</span> <span class="o">-</span><span class="nv">F</span>\<span class="o">|</span> <span class="s1">&#39;</span><span class="s">NR&gt;2 {print $5}</span><span class="s1">&#39;</span> ${<span class="nv">file</span>} <span class="o">|</span> <span class="nv">sort</span> <span class="o">|</span><span class="nv">uniq</span> <span class="o">|</span><span class="nv">gawk</span> <span class="s1">&#39;</span><span class="s">{print NR&quot;.&quot;$0}</span><span class="s1">&#39;</span>`<span class="ss">)</span>
 
-for cc in <span class="cp">${</span><span class="n">comd_display</span><span class="p">[</span><span class="err">@</span><span class="p">]</span><span class="cp">}</span>
-do
-echo <span class="nv">$cc</span>
-done
+<span class="k">for</span> <span class="nv">cc</span> <span class="nv">in</span> ${<span class="nv">comd_display</span>[@]}
+<span class="k">do</span>
+<span class="nv">echo</span> <span class="mh">$cc</span>
+<span class="nv">done</span>
 </pre></div>
 
 
 <h3>变量计算</h3>
-<div class="highlight"><pre><span></span>i=0
-for line in <span class="cp">${</span><span class="n">comd</span><span class="p">[</span><span class="err">@</span><span class="p">]</span><span class="cp">}</span>
-do
-    i=`expr <span class="nv">$i</span> + 1` #显示是加上序号 类似 i++
-    echo <span class="nv">$i.$line</span>
-done
+<div class="highlight"><pre><span></span><span class="nv">i</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">for</span> <span class="nv">line</span> <span class="nv">in</span> ${<span class="nv">comd</span>[@]}
+<span class="k">do</span>
+    <span class="nv">i</span><span class="o">=</span>`<span class="nv">expr</span> $<span class="nv">i</span> <span class="o">+</span> <span class="mi">1</span>` #显示是加上序号 类似 <span class="nv">i</span><span class="o">++</span>
+    <span class="nv">echo</span> $<span class="nv">i</span>.$<span class="nv">line</span>
+<span class="nv">done</span>
 </pre></div>
 
 
 <h3>读取系统时间，保存为变量</h3>
-<div class="highlight"><pre><span></span>datetime=`date &quot;+%Y-%m-%d %H:%M&quot;`
+<div class="highlight"><pre><span></span><span class="n">datetime</span><span class="o">=`</span><span class="nb">date</span> <span class="ss">&quot;+%Y-%m-%d %H:%M&quot;</span><span class="o">`</span>
 </pre></div><p><a href="http://jackjin-cn.github.io/2019/2019-04-24_09-52_xie-jian-dan-gong-zuo-ji-lu-de-shou-huo.html#disqus_thread">comments</a></p>                </article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">
@@ -109,19 +109,16 @@ done
 <blockquote>
 <p>[jjb@ ~/pelicanoutput/pelican/pelican-themes #6]$for i in <code>find . -name screenshot.png</code> ;do echo ${i} ;done;</p>
 </blockquote>
-<div class="highlight"><pre><span></span>./bricks/screenshot.png
-./monospace/screenshot.png
-./foundation-default-colours/screenshot.png
+<div class="highlight"><pre><span></span><span class="p">.</span><span class="o">/</span><span class="n">bricks</span><span class="o">/</span><span class="n">screenshot</span><span class="p">.</span><span class="n">png</span>
+<span class="p">.</span><span class="o">/</span><span class="n">monospace</span><span class="o">/</span><span class="n">screenshot</span><span class="p">.</span><span class="n">png</span>
+<span class="p">.</span><span class="o">/</span><span class="n">foundation</span><span class="o">-</span><span class="k">default</span><span class="o">-</span><span class="n">colours</span><span class="o">/</span><span class="n">screenshot</span><span class="p">.</span><span class="n">png</span>
 </pre></div>
 
 
 <hr>
 <h2>2. 分段探索的过程</h2>
 <blockquote>
-<p>[jjb@ ~/pelicanoutput/pelican/pelican-themes #8]$for i in <code>find . -name screenshot.png</code> ;do echo  <code>dirname $i</code>;done;</p>
-</blockquote>
-<div class="highlight"><pre><span></span>./bricks
-./monospace …</pre></div>
+<p>[jjb@ ~/pelicanoutput/pelican/pelican-themes #8]$for i in <code>find . -name screenshot.png</code> ;do echo  <code>dirname $i</code>;done …</p></blockquote>
                 <a class="readmore" href="http://jackjin-cn.github.io/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html">read more</a>
 <p><a href="http://jackjin-cn.github.io/2018/2018-07-04_19-12_yi-xing-dai-ma-gao-ding-gai-ming-copywen-jian.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
             </article></li>
@@ -156,7 +153,7 @@ done
 <span>| tags: <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a><a href="http://jackjin-cn.github.io/tag/for.html">for</a><a href="http://jackjin-cn.github.io/tag/wen-jian-cao-zuo.html">文件操作</a></span>
 </footer><!-- /.post-info -->                <p>最近在整理自己的文档，还学了一点awk的操作，awk对文本的处理真是蛮强大的。</p>
 <p>我需要经常用脚本来对一批文件处理。比如</p>
-<div class="highlight"><pre><span></span>aa$&gt; for file in *.txt;do echo $file;done#结果可以正常显示
+<div class="highlight"><pre><span></span><span class="nv">aa</span>$<span class="o">&gt;</span> <span class="k">for</span> <span class="nv">file</span> <span class="nv">in</span> <span class="o">*</span>.<span class="nv">txt</span><span class="c1">;do echo $file;done#结果可以正常显示</span>
 </pre></div>
 
 
@@ -176,7 +173,7 @@ done
 </td></tr></table>
 
 <p>然后在shell里输入:</p>
-<div class="highlight"><pre><span></span>aa@@@$: allfiles *.txt
+<div class="highlight"><pre><span></span><span class="n">aa</span><span class="o">@@@</span><span class="err">$</span><span class="p">:</span> <span class="n">allfiles</span> <span class="o">*</span><span class="p">.</span><span class="n">txt</span>
 </pre></div>
 
 

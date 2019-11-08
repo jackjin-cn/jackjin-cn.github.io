@@ -45,7 +45,7 @@
 <span>| tags: <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a></span>
 </footer><!-- /.post-info --><h1>blog 中插入图片</h1>
 <p>前面写blog，一直没有插入图片，前几天，想着插入图片，在pelican的生成目录中建立一个<em>images</em>的文件夹，把图片放在去，然后再进行相对引用，这样便能显示图片了。但是带来的问题是源文字与图片不在一起了，想了一下，找一个简单办法，就是在源文字的文件夹下建立文件夹，在生成html的脚本加些代码，把图片复制到pelican生成目录里，这样就能解决问题了。</p>
-<div class="highlight"><pre><span></span> ![im-select](../images/imselect.png)
+<div class="highlight"><pre><span></span> <span class="o">!</span><span class="p">[</span><span class="n">im</span><span class="o">-</span><span class="k">select</span><span class="p">](..</span><span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">imselect</span><span class="p">.</span><span class="n">png</span><span class="p">)</span>
 </pre></div><p><a href="http://jackjin-cn.github.io/2019/2019-02-19_16-30_blog-zhong-cha-ru-tu-pian.html#disqus_thread">comments</a></p>                </article>
 <p class="paginator">
     Page 1 / 1

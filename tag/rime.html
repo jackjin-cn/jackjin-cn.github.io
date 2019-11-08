@@ -39,11 +39,73 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://jackjin-cn.github.io/2019/2019-04-14_20-31_zhe-teng-rime.html">折腾rime</a></h1>
+                    <h1 class="entry-title"><a href="http://jackjin-cn.github.io/2019/2019-11-08_14-24_librime-bian-yi-ji-jia-ru-luacha-jian-ji-lu.html">librime 编译 及 加入lua插件记录</a></h1>
+<footer class="post-info">
+        <span>2019-11-08 星期五 14:24</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/rime.html">rime</a><a href="http://jackjin-cn.github.io/tag/ime.html">ime</a></span>
+</footer><!-- /.post-info --><h2>目标：编译librime 1.5.3 ，加入两个l插件（<a href="https://github.com/hchunhui/librime-lua">librime-lua</a>,<a href="https://github.com/lotem/librime-octagram">librime-octagram</a>)</h2>
+<h2>过程</h2>
+<ul>
+<li>下载opencc支持</li>
+</ul>
+<div class="highlight"><pre><span></span>git clone https://github.com/BYVoid/OpenCC.git
+<span class="nb">cd</span> OpenCC
+make
+sudo make install
+</pre></div>
+
+
+<ul>
+<li>下载librime  https://github.com/rime/librime</li>
+</ul>
+<div class="highlight"><pre><span></span>git clone https://github.com/rime/librime.git
+<span class="nb">cd</span> librime
+<span class="nb">cd</span> plugins
+git clone https://github.com/lotem/librime-octagram.git
+git clone https://github.com/hchunhui/librime-lua.git
+./travis-install-linux.sh   <span class="c1">#安装支持库</span>
+</pre></div>
+
+
+<ul>
+<li>有个坑注意一下gtest的</li>
+</ul>
+<div class="highlight"><pre><span></span>sudo apt-get install cmake libgtest-dev
+<span class="nb">cd</span> /usr/src/gtest
+sudo cmake CMakeLists.txt
+sudo make
+<span class="c1"># copy or symlink libgtest.a and libgtest_main.a to your /usr/lib folder</span>
+sudo cp *.a /usr/lib
+</pre></div>
+
+
+<ul>
+<li>最后开始编译</li>
+</ul>
+<p><code>shell
+  cd librime
+  make merged-plugins
+  sudo make install</code></p>
+<p>如果还有报错，可能还是缺少支持库，请自行添加吧。另外，librime/plugins 有lua这个空目录，请删除，也会引起报错。</p>
+<p>我是用的deepin 上的fcitx，删除搜狗后装的，估计不删除也能装吧，我就不再试了。自己也摸索了不少时间。</p>
+<p>开始的时候，我是编译出错的信息，一个一个自己加库的，结果发现librime里已经写了用脚本了 <strong>travis-install-linux.sh</strong> ，后来<em>gtest</em> 这个东东也折腾了半天。</p>
+<p>编译好了，还是蛮有成就感的，不过，还是小白一个。</p><p><a href="http://jackjin-cn.github.io/2019/2019-11-08_14-24_librime-bian-yi-ji-jia-ru-luacha-jian-ji-lu.html#disqus_thread">comments</a></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://jackjin-cn.github.io/2019/2019-04-14_20-31_zhe-teng-rime.html" rel="bookmark"
+                           title="Permalink to 折腾rime">折腾rime</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <span>2019-04-14 星期日 20:31</span>
 <span>| tags: <a href="http://jackjin-cn.github.io/tag/rime.html">rime</a></span>
-</footer><!-- /.post-info --><p>Title: 折腾rime手记</p>
+</footer><!-- /.post-info -->                <p>Title: 折腾rime手记</p>
 <p>以前就听说过 鼠须管（小狼毫），以前安装过，可是感觉配置很复杂，然后就卸载了。最近又装了一次，看了一下说明，官网的也看了，贴吧的也看了，还是一头雾水，后来不死心，也是一颗折腾的心，想要研究明白。</p>
 <p>最近一到两周，一直在进行学习配置，无非是网上搜索，学习别人的例子，根据已有的方案进行修改，一路摸着石头过河。</p>
 <ol>
@@ -54,18 +116,14 @@
 <p>折腾配色，改了一个自己喜欢的配色。灰色+白字。后来想试用系统的配色，直接改<strong>squirrel.custom.yaml</strong>,后来写了一个python脚本，更方便的修改配色。</p>
 </li>
 <li>
-<p>后来要做一个拼音+五笔的方案，根据wubi_pinyin改了一个wubi_pinyinjjb的方案，弄好了反查，也弄好了用<strong>五笔打字</strong>-›<strong>汉字拼音</strong>，还有很有成就感的。</p>
-</li>
-<li>
-<p>还学会了折腾滤镜，可以做到在输入法里输入单词显示简单的中文释义，更方便了。</p>
-</li>
-</ol>
-<p><img alt="im-select" src="../images/rime-en.png"></p><p><a href="http://jackjin-cn.github.io/2019/2019-04-14_20-31_zhe-teng-rime.html#disqus_thread">comments</a></p>                </article>
+<p>后来要做一个拼音+五笔的方案，根据wubi_pinyin改了一个wubi_pinyinjjb的方案，弄好了反查，也弄好了用<strong>五笔打字</strong>-›<strong>汉字拼音 …</strong></p></li></ol>
+                <a class="readmore" href="http://jackjin-cn.github.io/2019/2019-04-14_20-31_zhe-teng-rime.html">read more</a>
+<p><a href="http://jackjin-cn.github.io/2019/2019-04-14_20-31_zhe-teng-rime.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
+            </ol><!-- /#posts-list -->
 <p class="paginator">
     Page 1 / 1
 </p>
-            </aside><!-- /#featured -->
-            </ol><!-- /#posts-list -->
             </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="blogroll">

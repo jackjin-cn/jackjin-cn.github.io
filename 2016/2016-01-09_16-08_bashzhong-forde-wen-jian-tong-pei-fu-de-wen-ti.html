@@ -50,7 +50,7 @@
 <span>| tags: <a href="http://jackjin-cn.github.io/tag/bash.html">bash</a><a href="http://jackjin-cn.github.io/tag/for.html">for</a><a href="http://jackjin-cn.github.io/tag/wen-jian-cao-zuo.html">文件操作</a></span>
 </footer><!-- /.post-info -->      <p>最近在整理自己的文档，还学了一点awk的操作，awk对文本的处理真是蛮强大的。</p>
 <p>我需要经常用脚本来对一批文件处理。比如</p>
-<div class="highlight"><pre><span></span>aa$&gt; for file in *.txt;do echo $file;done#结果可以正常显示
+<div class="highlight"><pre><span></span><span class="nv">aa</span>$<span class="o">&gt;</span> <span class="k">for</span> <span class="nv">file</span> <span class="nv">in</span> <span class="o">*</span>.<span class="nv">txt</span><span class="c1">;do echo $file;done#结果可以正常显示</span>
 </pre></div>
 
 
@@ -70,12 +70,12 @@
 </td></tr></table>
 
 <p>然后在shell里输入:</p>
-<div class="highlight"><pre><span></span>aa@@@$: allfiles *.txt
+<div class="highlight"><pre><span></span><span class="n">aa</span><span class="o">@@@</span><span class="err">$</span><span class="p">:</span> <span class="n">allfiles</span> <span class="o">*</span><span class="p">.</span><span class="n">txt</span>
 </pre></div>
 
 
 <p>结果确不正常，只有第一个文件被匹配，改来改去，发现原因：shell在处理命令行时已经自动把<strong><em>.txt</em>* 替换成符合条件的列表了，所以产生问题。后来发现的办法是在文件上加中 </strong> '' <strong> 或者 </strong>""**把文件名包含起来。</p>
-<div class="highlight"><pre><span></span>aa@aa$:allfiles &#39;*.txt&#39;
+<div class="highlight"><pre><span></span><span class="n">aa</span><span class="nv">@aa</span><span class="err">$:</span><span class="n">allfiles</span><span class="w"> </span><span class="s1">&#39;*.txt&#39;</span><span class="w"></span>
 </pre></div>
     </div><!-- /.entry-content -->
     <div class="comments">

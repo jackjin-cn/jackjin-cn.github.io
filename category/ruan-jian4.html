@@ -41,6 +41,31 @@
                     <ol id="posts-list" class="hfeed" start="3">
             <li><article class="hentry">
                 <header>
+                    <h1><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html" rel="bookmark"
+                           title="Permalink to 修改pelican所支持的内容文件的扩展名">修改pelican所支持的内容文件的扩展名</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <span>2016-01-06 星期三 19:58</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/pelican.html">pelican</a><a href="http://jackjin-cn.github.io/tag/wen-jian-ming.html">文件名</a><a href="http://jackjin-cn.github.io/tag/markdown.html">markdown</a><a href="http://jackjin-cn.github.io/tag/bash.html">bash</a></span>
+</footer><!-- /.post-info -->                <h2>修改pelican所支持的内容文件的扩展名</h2>
+<p>pelican的内容文本文件只支持常见markdown的扩展名<code>markdown,md,mkd</code>等，我比较喜欢用vim制作自己的文件模板，这样就需要自己取文件扩展名，比如*.blog，前几天没想到办法，今天找到办法了。</p>
+<p>用grep 在 <strong>/usr/local/lib/python2.7/dist-packages/pelican</strong> 找了下<strong>md</strong></p>
+<div class="highlight"><pre><span></span><span class="err">$</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="k">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python2</span><span class="p">.</span><span class="mi">7</span><span class="o">/</span><span class="n">dist</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pelican$</span> <span class="n">grep</span> <span class="s1">&#39;md&#39;</span> <span class="o">*</span><span class="p">.</span><span class="n">py</span>
+<span class="err">结果如下：</span>
+<span class="n">readers</span><span class="p">.</span><span class="n">py</span><span class="p">:</span>    <span class="n">file_extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;md&#39;</span><span class="p">,</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span> <span class="s1">&#39;mkd&#39;</span><span class="p">,</span> <span class="s1">&#39;mdown&#39;</span><span class="p">]</span>
+</pre></div>
+
+
+<p>于是只是修改<code>readers.py</code>，加入自己想要的扩展名就可以了。</p>
+<p>我没有找到其它办法，不过这个方法还算方便吧。</p>
+                <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html">read more</a>
+<p><a href="http://jackjin-cn.github.io/2016/2016-01-06_19-58_xiu-gai-pelicansuo-zhi-chi-de-nei-rong-wen-jian-de-kuo-zhan-ming.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
                     <h1><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html" rel="bookmark"
                            title="Permalink to pandoc的用法（1）">pandoc的用法（1）</a></h1>
                 </header>
@@ -54,12 +79,12 @@
 <blockquote>
 <p>pandoc在生成html文件的时候，可以支持css，还可以生成单独的文件，包含在图片里面。</p>
 </blockquote>
-<div class="highlight"><pre><span></span>pandoc -c style.css  #包含css样式（可以包括路径,但html和css是分离）
-pandoc -s -with--contained  #生成单一文件（可以把css，图片的包含在一个html文件中,生成docx文件也可以用这个参数，图片被包含在docx文件中）
+<div class="highlight"><pre><span></span><span class="n">pandoc</span> <span class="o">-</span><span class="k">c</span> <span class="n">style</span><span class="p">.</span><span class="n">css</span>  <span class="o">#</span><span class="err">包含</span><span class="n">css样式</span><span class="err">（可以包括路径</span><span class="p">,</span><span class="err">但</span><span class="n">html和css是分离</span><span class="err">）</span>
+<span class="n">pandoc</span> <span class="o">-</span><span class="n">s</span> <span class="o">-</span><span class="k">with</span><span class="c1">--contained  #生成单一文件（可以把css，图片的包含在一个html文件中,生成docx文件也可以用这个参数，图片被包含在docx文件中）</span>
 </pre></div>
 
 
-<p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-37_zai-vimzhong-yong-pandocjin-xing-yu-lan.html">参见我在vim中用pandoc进行预览</a></p>
+<p><a href="{filename}2016-01-05_17-37.mkd">参见我在vim中用pandoc进行预览</a></p>
                 <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html">read more</a>
 <p><a href="http://jackjin-cn.github.io/2016/2016-01-05_17-28_pandocde-yong-fa-1.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
             </article></li>

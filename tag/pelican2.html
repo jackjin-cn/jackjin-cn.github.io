@@ -54,27 +54,27 @@
 <p>思路</p>
 </blockquote>
 <p>一般而言，搭建一个独立博客需要三样东西：</p>
-<div class="highlight"><pre><span></span>博客软件
-托管服务器
-独立的域名
+<div class="highlight"><pre><span></span><span class="err">博客软件</span>
+<span class="err">托管服务器</span>
+<span class="err">独立的域名</span>
 </pre></div>
 
 
 <p>博客软件用来生成你的博客页面，而生成好的页面则需要放到托管的服务器上才能被别人看到。
 博客软件</p>
 <p>我选择Pleican作为博客软件主要是出于以下的考虑：</p>
-<div class="highlight"><pre><span></span>基于Python，简单易上手
-生成静态页面，不需要数据库，访问速度快，易于维护
-支持markdown标记语言
+<div class="highlight"><pre><span></span><span class="err">基于</span><span class="n">Python</span><span class="err">，简单易上手</span>
+<span class="err">生成静态页面，不需要数据库，访问速度快，易于维护</span>
+<span class="err">支持</span><span class="n">markdown标记语言</span>
 </pre></div>
 
 
 <p>和著名的wordpress相比，pelican搭建起来的博客功能和界面会相对单薄一些，但对于我来说绝对够用，况且写博客的初衷也是想把注意力放在内容上，工具越简单越好。
 托管服务器</p>
 <p>这里选择github的原因也很简单：</p>
-<div class="highlight"><pre><span></span>免费
-省事
-可以直接用git进行版本管理
+<div class="highlight"><pre><span></span><span class="err">免费</span>
+<span class="err">省事</span>
+<span class="err">可以直接用</span><span class="n">git进行版本管理</span>
 </pre></div>
 
 
@@ -85,9 +85,7 @@
 2.了解Markdown</p>
 <p>没听说过不要紧，推荐阅读我的文章你为什么应该用markdown写文章。</p>
 <p>另外这里有一份简短的介绍，详细的语法说明则可以在这里找到。
-3.对git/github有所了解</p>
-<p>如果不了解也同样没有关系，这个一站式的教程可以帮到你。</p>
-<p>这里多说一点 …</p>
+3.对git/github有所了解 …</p>
                 <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html">read more</a>
 <p><a href="http://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
             </article></li>
@@ -114,7 +112,7 @@
 
 <p>应该是python2的utf-8中文支持的老问题了</p>
 <p>不过，我发现，想要上面的日期格式，只需要在 <strong>pelicanconf.py</strong>中如下设置:</p>
-<div class="highlight"><pre><span></span>DEFAULT_DATE_FORMAT = u&#39;%Y-%m-%d %A %H:%M&#39;
+<div class="highlight"><pre><span></span><span class="n">DEFAULT_DATE_FORMAT</span> <span class="o">=</span> <span class="n">u</span><span class="s1">&#39;%Y-%m-%d %A %H:%M&#39;</span>
 </pre></div>
 
 

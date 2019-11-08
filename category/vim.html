@@ -46,7 +46,7 @@
 </footer><!-- /.post-info --><p>Title: vim 中打开 markdown即时预览</p>
 <p>由于用到mkdocs写简单网站，这个和vim的InstantMarkdownPreview也会同时运行，感觉有点冲突，可以用下面的开关在vim内打开markdown预览。</p>
 <p>在命令模式下就可以了。</p>
-<div class="highlight"><pre><span></span>:InstantMarkdownPreview
+<div class="highlight"><pre><span></span><span class="p">:</span><span class="n">InstantMarkdownPreview</span>
 </pre></div><p><a href="http://jackjin-cn.github.io/2019/2019-04-21_16-43_vim-zhong-da-kai-markdownji-shi-yu-lan.html#disqus_thread">comments</a></p>                </article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">
@@ -64,7 +64,7 @@
         <span>2016-01-19 星期二 10:00</span>
 <span>| tags: <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a></span>
 </footer><!-- /.post-info -->                <p>在鼓捣autocmd的时候，看到vim的audocmd的帮助</p>
-<div class="highlight"><pre><span></span>set verbose=9
+<div class="highlight"><pre><span></span><span class="k">set</span> <span class="k">verbose</span><span class="o">=</span><span class="mi">9</span>
 </pre></div>
 
 
@@ -84,8 +84,8 @@
         <span>2016-01-19 星期二 08:58</span>
 <span>| tags: <a href="http://jackjin-cn.github.io/tag/autocmd.html">autocmd</a><a href="http://jackjin-cn.github.io/tag/vim.html">vim</a></span>
 </footer><!-- /.post-info -->                <p>原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保存后才能高亮，也试过autocmd的其它形式，也是不行，不过，昨天在尝试autocmd的时候，无意中发发现了解决办法。</p>
-<div class="highlight"><pre><span></span>autocmd BufReadpre *.mytext set syn=mytext
-mytext是指代自己定义的文件格式和语法文件
+<div class="highlight"><pre><span></span><span class="n">autocmd</span> <span class="n">BufReadpre</span> <span class="o">*</span><span class="p">.</span><span class="n">mytext</span> <span class="k">set</span> <span class="n">syn</span><span class="o">=</span><span class="n">mytext</span>
+<span class="n">mytext是指代自己定义的文件格式和语法文件</span>
 </pre></div>
                 <a class="readmore" href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html">read more</a>
 <p><a href="http://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
@@ -103,7 +103,7 @@ mytext是指代自己定义的文件格式和语法文件
 <span>| tags: <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a><a href="http://jackjin-cn.github.io/tag/wen-jian.html">文件</a><a href="http://jackjin-cn.github.io/tag/find.html">find</a><a href="http://jackjin-cn.github.io/tag/path.html">path</a></span>
 </footer><!-- /.post-info -->                <p>这几天看《Vim实用技巧》,其中介绍了 <strong>:find</strong> 命令的使用</p>
 <p>在vim的配件文件<code>.vimrc or _vimrc</code>进行如下设置</p>
-<div class="highlight"><pre><span></span>set path+=yourdir1/**,youdir2/**
+<div class="highlight"><pre><span></span><span class="k">set</span> <span class="n">path</span><span class="o">+=</span><span class="n">yourdir1</span><span class="cm">/**,youdir2/**</span>
 </pre></div>
 
 

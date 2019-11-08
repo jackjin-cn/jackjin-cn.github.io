@@ -39,31 +39,92 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://jackjin-cn.github.io/2019/2019-04-21_09-35_mkdocs-de-shi-yong.html">Mkdocs 的使用</a></h1>
+                    <h1 class="entry-title"><a href="http://jackjin-cn.github.io/2019/2019-11-08_14-24_librime-bian-yi-ji-jia-ru-luacha-jian-ji-lu.html">librime 编译 及 加入lua插件记录</a></h1>
+<footer class="post-info">
+        <span>2019-11-08 星期五 14:24</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/rime.html">rime</a><a href="http://jackjin-cn.github.io/tag/ime.html">ime</a></span>
+</footer><!-- /.post-info --><h2>目标：编译librime 1.5.3 ，加入两个l插件（<a href="https://github.com/hchunhui/librime-lua">librime-lua</a>,<a href="https://github.com/lotem/librime-octagram">librime-octagram</a>)</h2>
+<h2>过程</h2>
+<ul>
+<li>下载opencc支持</li>
+</ul>
+<div class="highlight"><pre><span></span>git clone https://github.com/BYVoid/OpenCC.git
+<span class="nb">cd</span> OpenCC
+make
+sudo make install
+</pre></div>
+
+
+<ul>
+<li>下载librime  https://github.com/rime/librime</li>
+</ul>
+<div class="highlight"><pre><span></span>git clone https://github.com/rime/librime.git
+<span class="nb">cd</span> librime
+<span class="nb">cd</span> plugins
+git clone https://github.com/lotem/librime-octagram.git
+git clone https://github.com/hchunhui/librime-lua.git
+./travis-install-linux.sh   <span class="c1">#安装支持库</span>
+</pre></div>
+
+
+<ul>
+<li>有个坑注意一下gtest的</li>
+</ul>
+<div class="highlight"><pre><span></span>sudo apt-get install cmake libgtest-dev
+<span class="nb">cd</span> /usr/src/gtest
+sudo cmake CMakeLists.txt
+sudo make
+<span class="c1"># copy or symlink libgtest.a and libgtest_main.a to your /usr/lib folder</span>
+sudo cp *.a /usr/lib
+</pre></div>
+
+
+<ul>
+<li>最后开始编译</li>
+</ul>
+<p><code>shell
+  cd librime
+  make merged-plugins
+  sudo make install</code></p>
+<p>如果还有报错，可能还是缺少支持库，请自行添加吧。另外，librime/plugins 有lua这个空目录，请删除，也会引起报错。</p>
+<p>我是用的deepin 上的fcitx，删除搜狗后装的，估计不删除也能装吧，我就不再试了。自己也摸索了不少时间。</p>
+<p>开始的时候，我是编译出错的信息，一个一个自己加库的，结果发现librime里已经写了用脚本了 <strong>travis-install-linux.sh</strong> ，后来<em>gtest</em> 这个东东也折腾了半天。</p>
+<p>编译好了，还是蛮有成就感的，不过，还是小白一个。</p><p><a href="http://jackjin-cn.github.io/2019/2019-11-08_14-24_librime-bian-yi-ji-jia-ru-luacha-jian-ji-lu.html#disqus_thread">comments</a></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://jackjin-cn.github.io/2019/2019-04-21_09-35_mkdocs-de-shi-yong.html" rel="bookmark"
+                           title="Permalink to Mkdocs 的使用">Mkdocs 的使用</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <span>2019-04-21 星期日 09:35</span>
 <span>| tags: <a href="http://jackjin-cn.github.io/tag/web.html">web</a><a href="http://jackjin-cn.github.io/tag/markdown.html">markdown</a><a href="http://jackjin-cn.github.io/tag/mkdocs.html">mkdocs</a></span>
-</footer><!-- /.post-info --><p>Title: Mkdocs 的使用</p>
+</footer><!-- /.post-info -->                <p>Title: Mkdocs 的使用</p>
 <p>最近要给同事做一个简单的网页，发现了mkdocs，试用了一下，感觉还是很方便的。网站和手机端都不错。</p>
-<div class="highlight"><pre><span></span>pip3 install mkdocs  #安装软件 
+<div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">mkdocs</span>  <span class="o">#</span><span class="err">安装软件</span> 
 
-pip3 install mkdocs-material  #安装皮肤 
+<span class="n">pip3</span> <span class="n">install</span> <span class="n">mkdocs</span><span class="o">-</span><span class="n">material</span>  <span class="o">#</span><span class="err">安装皮肤</span> 
 
-http://mkdocs.github.io/mkdocs-bootswatch/#mkdocs-bootstrap-theme
+<span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">mkdocs</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">mkdocs</span><span class="o">-</span><span class="n">bootswatch</span><span class="o">/#</span><span class="n">mkdocs</span><span class="o">-</span><span class="n">bootstrap</span><span class="o">-</span><span class="n">theme</span>
 
-pip3 install mkdocs-bootswatch  #安装皮肤
+<span class="n">pip3</span> <span class="n">install</span> <span class="n">mkdocs</span><span class="o">-</span><span class="n">bootswatch</span>  <span class="o">#</span><span class="err">安装皮肤</span>
 
-https://github.com/mkdocs/mkdocs
+<span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">mkdocs</span><span class="o">/</span><span class="n">mkdocs</span>
 </pre></div>
 
 
 <h3>另外，在网页中拨打电话</h3>
 <div class="highlight"><pre><span></span>&quot;<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;tel:123456&quot;</span><span class="nt">&gt;</span>123456<span class="nt">&lt;/a&gt;</span>&quot;
-</pre></div><p><a href="http://jackjin-cn.github.io/2019/2019-04-21_09-35_mkdocs-de-shi-yong.html#disqus_thread">comments</a></p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <ol id="posts-list" class="hfeed">
+</pre></div>
+                <a class="readmore" href="http://jackjin-cn.github.io/2019/2019-04-21_09-35_mkdocs-de-shi-yong.html">read more</a>
+<p><a href="http://jackjin-cn.github.io/2019/2019-04-21_09-35_mkdocs-de-shi-yong.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -116,26 +177,6 @@ https://github.com/mkdocs/mkdocs
 </blockquote>
                 <a class="readmore" href="http://jackjin-cn.github.io/2018/2018-07-11_09-40_doczhuan-docx.html">read more</a>
 <p><a href="http://jackjin-cn.github.io/2018/2018-07-11_09-40_doczhuan-docx.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://jackjin-cn.github.io/2018/2018-07-10_22-35_antiword.html" rel="bookmark"
-                           title="Permalink to antiword">antiword</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>2018-07-10 星期二 22:35</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/mac.html">mac</a><a href="http://jackjin-cn.github.io/tag/work.html">work</a><a href="http://jackjin-cn.github.io/tag/python.html">python</a><a href="http://jackjin-cn.github.io/tag/command-line.html">command line</a></span>
-</footer><!-- /.post-info -->                <h1>Title:antiword</h1>
-<h2>一直想找一个 在mac下能用的doc to docx的方法</h2>
-<p>结果找到一个叫<em>antiword</em>的开源软件,以命令行的方式把doc转成纯文本之类的，比用python方便一点，还可以转成pdf之类的 。</p>
-<ul>
-<li>不过，好像还有一个参数，可以转成xml之类的格式 ，docbook，我初步试了一下，找到一个把odcbook 转成 docx的程序，结果行不通，不能把docbook格式转成docx。有点遗憾。</li>
-</ul>
-                <a class="readmore" href="http://jackjin-cn.github.io/2018/2018-07-10_22-35_antiword.html">read more</a>
-<p><a href="http://jackjin-cn.github.io/2018/2018-07-10_22-35_antiword.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
             </article></li>
             </ol><!-- /#posts-list -->
 <p class="paginator">

@@ -41,6 +41,36 @@
                     <ol id="posts-list" class="hfeed" start="3">
             <li><article class="hentry">
                 <header>
+                    <h1><a href="http://jackjin-cn.github.io/2019/2019-02-12_18-01_mac-vimzhong-wen-shu-ru-fa-de-qie-huan.html" rel="bookmark"
+                           title="Permalink to mac vim中文输入法的切换">mac vim中文输入法的切换</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <span>2019-02-12 星期二 18:01</span>
+<span>| tags: <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a><a href="http://jackjin-cn.github.io/tag/mac.html">mac</a></span>
+</footer><!-- /.post-info -->                <h2>关于mac vim中文输入法的切换</h2>
+<p>在用vim写中文的时候，总是在vim模式切换的问题上比较头疼。在中文状态下，按《ESC》进入normal模式的时候，中文输入还是打开的，影响vim的操作，要手动切换成英文输入。编辑完成再次进入插入模式的时候，又要打开中文输入，很是不方便。</p>
+<p>在网上找了很多帖子，尝试了好几个办法，感觉找到一个比较好用的。
+方法如下。</p>
+<ol>
+<li>在.vimrc配置文件中 ，加入插件管理内容 </li>
+</ol>
+<blockquote>
+<p>Bundle 'ybian/smartim'</p>
+<p>let g:smartim_default = 'com.apple.keylayout.ABC'
+"我mac上的英文输入法是这个，如果是其它英语的话是应该是com.apple.keylayout.US,可以用im_select来查看当前输入法的代码。
+</p>
+</blockquote>
+<p>如果不使用插件管理的话，可以搜索直接下载相关文件。
+然后在vim里安装插件，在命令模式下运行BundleInstall安装好插件，重启vim就可以了，效果完美，而且不影响速度。</p>
+<p><img alt="im-select" src="../images/imselect.png"></p>
+                <a class="readmore" href="http://jackjin-cn.github.io/2019/2019-02-12_18-01_mac-vimzhong-wen-shu-ru-fa-de-qie-huan.html">read more</a>
+<p><a href="http://jackjin-cn.github.io/2019/2019-02-12_18-01_mac-vimzhong-wen-shu-ru-fa-de-qie-huan.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
                     <h1><a href="http://jackjin-cn.github.io/2019/2019-02-03_17-36_hei-ping-guo-qian-yi-xi-tong.html" rel="bookmark"
                            title="Permalink to 黑苹果迁移系统">黑苹果迁移系统</a></h1>
                 </header>
@@ -157,26 +187,6 @@ rm -fr <span class="nv">$i</span>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1 …</pre></div></td></tr></table>
                 <a class="readmore" href="http://jackjin-cn.github.io/2018/2018-10-02_19-55_pdfzhuan-tu-pian-tu-pian-zhuan-pdftu-pian-ya-suo.html">read more</a>
 <p><a href="http://jackjin-cn.github.io/2018/2018-10-02_19-55_pdfzhuan-tu-pian-tu-pian-zhuan-pdftu-pian-ya-suo.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="http://jackjin-cn.github.io/2018/2018-08-24_21-51_maczhong-pi-liang-da-yin-wen-jian.html" rel="bookmark"
-                           title="Permalink to mac中批量打印文件">mac中批量打印文件</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>2018-08-24 星期五 21:51</span>
-<span>| tags: <a href="http://jackjin-cn.github.io/tag/os.html">os</a><a href="http://jackjin-cn.github.io/tag/mac.html">mac</a></span>
-</footer><!-- /.post-info -->                <h2>mac中批量打印文件</h2>
-<p>由于工作关系，要批量打印word文档，在mac下，没有找到特别的办法，用libreoffice打印，文档格式有问题。</p>
-<p>网上搜索了很多次，无果。结果，看到了一个办法，很简单，也实用。</p>
-<h2>就是打开打印机，直接把word文档施放进去，也就是生成一个队列，好像就可以了。</h2>
-<p>用命令行，没有找到好的办法。</p>
-<p><strong>lp</strong> 命令只能打印pdf和ps文件。</p>
-                <a class="readmore" href="http://jackjin-cn.github.io/2018/2018-08-24_21-51_maczhong-pi-liang-da-yin-wen-jian.html">read more</a>
-<p><a href="http://jackjin-cn.github.io/2018/2018-08-24_21-51_maczhong-pi-liang-da-yin-wen-jian.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
             </article></li>
             </ol><!-- /#posts-list -->
 <p class="paginator">

@@ -46,19 +46,19 @@
 </footer><!-- /.post-info --><h1>判断vim终端还是在gui运行</h1>
 <p>遇到这样一个问题，在终端下运行vim，配色不太好看，如果直接在vimrc里改，则gvim也受到影响。
 不过打开我的vimrc文件看了一下，是有现成答案的。</p>
-<div class="highlight"><pre><span></span>if has(&#39;gui_running&#39;)
-    if strftime(&quot;%H&quot;)&gt;6    
-        colorscheme  darkblue
-    endif
-    if strftime(&quot;%H&quot;)&gt;22       
-        colorscheme  maroloccio
-    endif
-    if strftime(&quot;%H&quot;)&lt;6
-        colorscheme  maroloccio
-    endif
-else
-  colorscheme darkburn
-endif
+<div class="highlight"><pre><span></span><span class="k">if</span> <span class="nv">has</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">gui_running</span><span class="s1">&#39;</span><span class="ss">)</span>
+    <span class="k">if</span> <span class="nv">strftime</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">%H</span><span class="s2">&quot;</span><span class="ss">)</span><span class="o">&gt;</span><span class="mi">6</span>    
+        <span class="nv">colorscheme</span>  <span class="nv">darkblue</span>
+    <span class="k">endif</span>
+    <span class="k">if</span> <span class="nv">strftime</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">%H</span><span class="s2">&quot;</span><span class="ss">)</span><span class="o">&gt;</span><span class="mi">22</span>       
+        <span class="nv">colorscheme</span>  <span class="nv">maroloccio</span>
+    <span class="k">endif</span>
+    <span class="k">if</span> <span class="nv">strftime</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">%H</span><span class="s2">&quot;</span><span class="ss">)</span><span class="o">&lt;</span><span class="mi">6</span>
+        <span class="nv">colorscheme</span>  <span class="nv">maroloccio</span>
+    <span class="k">endif</span>
+<span class="k">else</span>
+  <span class="nv">colorscheme</span> <span class="nv">darkburn</span>
+<span class="k">endif</span>
 </pre></div>
 
 

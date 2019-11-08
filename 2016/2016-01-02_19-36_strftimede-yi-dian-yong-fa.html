@@ -50,12 +50,12 @@
 <span>| tags: <a href="http://jackjin-cn.github.io/tag/vim.html">vim</a><a href="http://jackjin-cn.github.io/tag/time.html">time</a></span>
 </footer><!-- /.post-info -->      <h1>strftime的一点用法</h1>
 <p>最近想写，用<strong>Vim</strong>进行编辑，想设置加入时间的快捷方式</p>
-<div class="highlight"><pre><span></span>map &lt;LEADER&gt;bt A&lt;C-R&gt;=strftime(&quot;%Y-%m-%d %A %H:%M&quot;)&lt;CR&gt;
+<div class="highlight"><pre><span></span><span class="k">map</span> <span class="o">&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="n">bt</span> <span class="n">A</span><span class="o">&lt;</span><span class="k">C</span><span class="o">-</span><span class="n">R</span><span class="o">&gt;=</span><span class="n">strftime</span><span class="p">(</span><span class="ss">&quot;%Y-%m-%d %A %H:%M&quot;</span><span class="p">)</span><span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span>
 </pre></div>
 
 
 <p>效果如下:</p>
-<div class="highlight"><pre><span></span>2016-01-02 星期六 19:39
+<div class="highlight"><pre><span></span><span class="mi">2016</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">02</span> <span class="err">星期六</span> <span class="mi">19</span><span class="p">:</span><span class="mi">39</span>
 </pre></div>
     </div><!-- /.entry-content -->
     <div class="comments">
