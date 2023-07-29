@@ -14,12 +14,13 @@
 
 <meta property="og:title" content="vim中的autocmd "/>
 <meta property="og:url" content="https://jackjin-cn.github.io/2016/2016-01-19_08-58_vimzhong-de-autocmd.html" />
-<meta property="og:description" content="原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保存后才能高亮，也试过autocmd的其它形式，也是不行，不过，昨天在尝试autocmd的时候，无意中发发现了解决办法。 autocmd BufReadpre *.mytext set syn=mytext mytext是指代自己定义的文件格式和语法文件" />
+<meta property="og:description" content="原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保 …" />
 <meta property="og:site_name" content="Jackjin&#39;s Home" />
 <meta property="og:article:author" content="天地一沙鸥" />
 <meta property="og:article:published_time" content="2016-01-19T08:58:00+08:00" />
+<meta property="" content="2016-01-19T09:07:25+08:00" />
 <meta name="twitter:title" content="vim中的autocmd ">
-<meta name="twitter:description" content="原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保存后才能高亮，也试过autocmd的其它形式，也是不行，不过，昨天在尝试autocmd的时候，无意中发发现了解决办法。 autocmd BufReadpre *.mytext set syn=mytext mytext是指代自己定义的文件格式和语法文件">
+<meta name="twitter:description" content="原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保 …">
 
         <title>vim中的autocmd  · Jackjin&#39;s Home
 </title>
@@ -78,9 +79,9 @@
 
             
             <p>原来做了个vim的写日记的模板，并且为它写了语法高亮文件。效果还是可以的，不过有个问题，就是，写新的日记的时候，不能语法高亮，只能保存后才能高亮，也试过autocmd的其它形式，也是不行，不过，昨天在尝试autocmd的时候，无意中发发现了解决办法。</p>
-<div class="highlight"><pre><span></span>autocmd BufReadpre *.mytext set syn=mytext
+<div class="highlight"><pre><span></span><code>autocmd BufReadpre *.mytext set syn=mytext
 mytext是指代自己定义的文件格式和语法文件
-</pre></div>
+</code></pre></div>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -122,6 +123,10 @@ mytext是指代自己定义的文件格式和语法文件
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2016-01-19T08:58:00+08:00"> 1 19, 2016</time>
+
+<h4>Last Updated</h4>
+<time datetime="2016-01-19T09:07:25+08:00"> 1 19, 2016</time>
+
             <h4>Category</h4>
             <a class="category-link" href="https://jackjin-cn.github.io/categories.html#vim-ref">vim</a>
             <h4>Tags</h4>
@@ -130,7 +135,7 @@ mytext是指代自己定义的文件格式和语法文件
                     <span>1</span>
 </a></li>
                 <li><a href="https://jackjin-cn.github.io/tags.html#vim-ref">vim
-                    <span>12</span>
+                    <span>13</span>
 </a></li>
             </ul>
 <h4>Contact</h4>

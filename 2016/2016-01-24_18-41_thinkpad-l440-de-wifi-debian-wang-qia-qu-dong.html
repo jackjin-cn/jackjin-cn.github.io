@@ -14,12 +14,13 @@
 
 <meta property="og:title" content="thinkpad L440 的wifi debian 网卡驱动 "/>
 <meta property="og:url" content="https://jackjin-cn.github.io/2016/2016-01-24_18-41_thinkpad-l440-de-wifi-debian-wang-qia-qu-dong.html" />
-<meta property="og:description" content="thinkpad L400 的wifi debian 网卡驱动 今天又弄起了thinkpad l440,无线网卡驱动有问题，连上后马上会断线，网上搜了半天，方案很多，好像不太成功。无线网卡的型号是 realtak 8192ee. 今天偶然发现，几个命令 lsmod |grep rtl 发现胡乱加载好几个网卡驱动 便用 modprobe -r rtlwifi 这样的命令删除多余的驱动。 最后发现管用的好像是下载的 realtek_new 管用，具体驱动名是 8192ee. modprobe 8192ee" />
+<meta property="og:description" content="thinkpad L400 的wifi debian 网卡驱动 今天又弄起了thinkpad l440,无线网卡驱动有问题，连上后马上会断线，网上搜了半天，方案很多，好像不太成功 …" />
 <meta property="og:site_name" content="Jackjin&#39;s Home" />
 <meta property="og:article:author" content="天地一沙鸥" />
 <meta property="og:article:published_time" content="2016-01-24T18:41:00+08:00" />
+<meta property="" content="2016-01-24T18:50:39+08:00" />
 <meta name="twitter:title" content="thinkpad L440 的wifi debian 网卡驱动 ">
-<meta name="twitter:description" content="thinkpad L400 的wifi debian 网卡驱动 今天又弄起了thinkpad l440,无线网卡驱动有问题，连上后马上会断线，网上搜了半天，方案很多，好像不太成功。无线网卡的型号是 realtak 8192ee. 今天偶然发现，几个命令 lsmod |grep rtl 发现胡乱加载好几个网卡驱动 便用 modprobe -r rtlwifi 这样的命令删除多余的驱动。 最后发现管用的好像是下载的 realtek_new 管用，具体驱动名是 8192ee. modprobe 8192ee">
+<meta name="twitter:description" content="thinkpad L400 的wifi debian 网卡驱动 今天又弄起了thinkpad l440,无线网卡驱动有问题，连上后马上会断线，网上搜了半天，方案很多，好像不太成功 …">
 
         <title>thinkpad L440 的wifi debian 网卡驱动  · Jackjin&#39;s Home
 </title>
@@ -80,12 +81,12 @@
             <h2>thinkpad L400 的wifi debian 网卡驱动</h2>
 <p>今天又弄起了<strong>thinkpad l440</strong>,无线网卡驱动有问题，连上后马上会断线，网上搜了半天，方案很多，好像不太成功。无线网卡的型号是 realtak 8192ee.</p>
 <p>今天偶然发现，几个命令</p>
-<div class="highlight"><pre><span></span>lsmod |grep rtl
+<div class="highlight"><pre><span></span><code>lsmod |grep rtl
 发现胡乱加载好几个网卡驱动
 便用 modprobe -r rtlwifi 这样的命令删除多余的驱动。
 最后发现管用的好像是下载的 realtek_new 管用，具体驱动名是 8192ee.
 modprobe 8192ee
-</pre></div>
+</code></pre></div>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -127,6 +128,10 @@ modprobe 8192ee
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2016-01-24T18:41:00+08:00"> 1 24, 2016</time>
+
+<h4>Last Updated</h4>
+<time datetime="2016-01-24T18:50:39+08:00"> 1 24, 2016</time>
+
             <h4>Category</h4>
             <a class="category-link" href="https://jackjin-cn.github.io/categories.html#linux-ref">linux</a>
             <h4>Tags</h4>

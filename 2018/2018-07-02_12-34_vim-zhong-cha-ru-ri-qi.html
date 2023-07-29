@@ -14,13 +14,13 @@
 
 <meta property="og:title" content="Vim 中插入日期 "/>
 <meta property="og:url" content="https://jackjin-cn.github.io/2018/2018-07-02_12-34_vim-zhong-cha-ru-ri-qi.html" />
-<meta property="og:description" content="Vim 中插入日期 1. 写blog的时候要前几行插入固定的内容，时间找到以下的脚本 function! TitleInsert() call setline(1,&#34;Title:&#34;) call setline(2,&#34;Date: &#34;. strftime(&#34;%Y-%m-%d %H:%M:%S&#34;)) call setline(3,&#34;Modified: &#34;) &#34;call setline(3,&#34;Modified: &#34;. strftime(&#34;%Y-%m-%d %H:%M:%S&#34;)) call setline(4,&#34;Category: &#34;) call setline(5,&#34;Tags: &#34;) call setline(6,&#34;Author:天地一沙鸥 …" />
+<meta property="og:description" content="Vim 中插入日期 1. 写blog的时候要前几行插入固定的内容，时间找到以下的脚本 function! TitleInsert() call setline(1,&#34;Title:&#34;) call setline(2,&#34;Date: &#34;. strftime(&#34;%Y-%m-%d %H:%M:%S&#34;)) call setline(3,&#34;Modified: &#34;) &#34;call setline(3,&#34;Modified: &#34;. strftime(&#34;%Y-%m-%d %H:%M:%S …" />
 <meta property="og:site_name" content="Jackjin&#39;s Home" />
 <meta property="og:article:author" content="天地一沙鸥" />
 <meta property="og:article:published_time" content="2018-07-02T12:34:37+08:00" />
 <meta property="" content="2018-07-02T12:42:00+08:00" />
 <meta name="twitter:title" content="Vim 中插入日期 ">
-<meta name="twitter:description" content="Vim 中插入日期 1. 写blog的时候要前几行插入固定的内容，时间找到以下的脚本 function! TitleInsert() call setline(1,&#34;Title:&#34;) call setline(2,&#34;Date: &#34;. strftime(&#34;%Y-%m-%d %H:%M:%S&#34;)) call setline(3,&#34;Modified: &#34;) &#34;call setline(3,&#34;Modified: &#34;. strftime(&#34;%Y-%m-%d %H:%M:%S&#34;)) call setline(4,&#34;Category: &#34;) call setline(5,&#34;Tags: &#34;) call setline(6,&#34;Author:天地一沙鸥 …">
+<meta name="twitter:description" content="Vim 中插入日期 1. 写blog的时候要前几行插入固定的内容，时间找到以下的脚本 function! TitleInsert() call setline(1,&#34;Title:&#34;) call setline(2,&#34;Date: &#34;. strftime(&#34;%Y-%m-%d %H:%M:%S&#34;)) call setline(3,&#34;Modified: &#34;) &#34;call setline(3,&#34;Modified: &#34;. strftime(&#34;%Y-%m-%d %H:%M:%S …">
 
         <title>Vim 中插入日期  · Jackjin&#39;s Home
 </title>
@@ -80,28 +80,28 @@
             
             <h1>Vim 中插入日期</h1>
 <h2>1. 写blog的时候要前几行插入固定的内容，时间找到以下的脚本</h2>
-<div class="highlight"><pre><span></span>function! TitleInsert()
-call setline(1,&quot;Title:&quot;)
-call setline(2,&quot;Date: &quot;. strftime(&quot;%Y-%m-%d %H:%M:%S&quot;))
-call setline(3,&quot;Modified: &quot;)
-&quot;call setline(3,&quot;Modified: &quot;. strftime(&quot;%Y-%m-%d %H:%M:%S&quot;))
-call setline(4,&quot;Category:  &quot;)
-call setline(5,&quot;Tags: &quot;)
-call setline(6,&quot;Author:天地一沙鸥&quot;)
-endfunction
+<div class="highlight"><pre><span></span><code><span class="k">function</span><span class="nf">! TitleInsert</span><span class="p">()</span>
+<span class="n">call</span><span class="w"> </span><span class="s">setline(1,&quot;Title:&quot;)</span>
+<span class="n">call</span><span class="w"> </span><span class="s">setline(2,&quot;Date:</span><span class="w"> </span><span class="s">&quot;.</span><span class="w"> </span><span class="s">strftime(&quot;%Y-%m-%d</span><span class="w"> </span><span class="s">%H:%M:%S&quot;))</span>
+<span class="n">call</span><span class="w"> </span><span class="s">setline(3,&quot;Modified:</span><span class="w"> </span><span class="s">&quot;)</span>
+<span class="s">&quot;call setline(3,&quot;</span><span class="n">Modified</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;. strftime(&quot;</span><span class="c">%Y-%m-%d %H:%M:%S&quot;))</span>
+<span class="n">call</span><span class="w"> </span><span class="s">setline(4,&quot;Category:</span><span class="w">  </span><span class="s">&quot;)</span>
+<span class="n">call</span><span class="w"> </span><span class="s">setline(5,&quot;Tags:</span><span class="w"> </span><span class="s">&quot;)</span>
+<span class="n">call</span><span class="w"> </span><span class="s">setline(6,&quot;Author:天地一沙鸥&quot;)</span>
+<span class="n">endfunction</span>
 
-&quot;call append(4,&quot;Category&quot;)
-&quot;setline 是直接设置指定行的内容
-&quot;append 是在插入行
-function! TitleModify()
-&quot;保存时间改变
-call setline(3,&quot;Modified: &quot;. strftime(&quot;%Y-%m-%d %H:%M:%S&quot;))
+<span class="s">&quot;call</span><span class="w"> </span><span class="s">append(4,&quot;Category&quot;)</span>
+<span class="s">&quot;setline 是直接设置指定行的内容</span>
+<span class="s">&quot;</span><span class="nb">append</span><span class="w"> </span>是在插入行
+<span class="k">function</span><span class="nf">! TitleModify</span><span class="p">()</span>
+<span class="s">&quot;保存时间改变</span>
+<span class="s">call setline(3,&quot;</span><span class="n">Modified</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;. strftime(&quot;</span><span class="c">%Y-%m-%d %H:%M:%S&quot;))</span>
 
-endfunction
+<span class="n">endfunction</span>
 
-autocmd BufNewFile *.blog,*.cal ks|call TitleInsert()|&#39;s
-autocmd FileWritePost,BufWrite *.blog,*.cal ks|call TitleModify()|&#39;s
-</pre></div>
+<span class="s">autocmd</span><span class="w"> </span><span class="s">BufNewFile</span><span class="w"> </span><span class="o">*</span><span class="p">.</span><span class="n">blog</span><span class="p">,</span><span class="o">*</span><span class="p">.</span><span class="n">cal</span><span class="w"> </span><span class="n">ks</span><span class="o">|</span><span class="n">call</span><span class="w"> </span><span class="n">TitleInsert</span><span class="p">()</span><span class="o">|</span><span class="s">&#39;s</span>
+<span class="s">autocmd FileWritePost,BufWrite *.blog,*.cal ks|call TitleModify()|&#39;</span><span class="n">s</span>
+</code></pre></div>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -152,13 +152,13 @@ autocmd FileWritePost,BufWrite *.blog,*.cal ks|call TitleModify()|&#39;s
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article">
                 <li><a href="https://jackjin-cn.github.io/tags.html#script-ref">script
-                    <span>1</span>
+                    <span>3</span>
 </a></li>
                 <li><a href="https://jackjin-cn.github.io/tags.html#tips-ref">tips
                     <span>1</span>
 </a></li>
                 <li><a href="https://jackjin-cn.github.io/tags.html#vim-ref">vim
-                    <span>12</span>
+                    <span>13</span>
 </a></li>
             </ul>
 <h4>Contact</h4>

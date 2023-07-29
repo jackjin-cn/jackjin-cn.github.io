@@ -14,13 +14,13 @@
 
 <meta property="og:title" content="Pelican 上传到github "/>
 <meta property="og:url" content="https://jackjin-cn.github.io/2018/2018-07-02_22-07_pelican-shang-chuan-dao-github.html" />
-<meta property="og:description" content="Pelican 上传到github 折腾了半天，应该可以在几台电脑上上传博客内容了吧。 初始部分 git init git add . git commit git remote add origin https://github.com/jackjin-cn/jackjin-cn.github.io.git #先取回云端内容 git pull origin master git commit git push origin master #可以加参数 -f 我的上传博客到githubio的脚本 1 2 3 4 5 6#!/bin/bash cd ~/pelicanoutput/blog makeriji git …" />
+<meta property="og:description" content="Pelican 上传到github 折腾了半天，应该可以在几台电脑上上传博客内容了吧。 初始部分 git init git add . git commit git remote add origin https://github.com/jackjin-cn/jackjin-cn.github.io.git …" />
 <meta property="og:site_name" content="Jackjin&#39;s Home" />
 <meta property="og:article:author" content="天地一沙鸥" />
 <meta property="og:article:published_time" content="2018-07-02T22:07:45+08:00" />
 <meta property="" content="2018-07-02T22:18:57+08:00" />
 <meta name="twitter:title" content="Pelican 上传到github ">
-<meta name="twitter:description" content="Pelican 上传到github 折腾了半天，应该可以在几台电脑上上传博客内容了吧。 初始部分 git init git add . git commit git remote add origin https://github.com/jackjin-cn/jackjin-cn.github.io.git #先取回云端内容 git pull origin master git commit git push origin master #可以加参数 -f 我的上传博客到githubio的脚本 1 2 3 4 5 6#!/bin/bash cd ~/pelicanoutput/blog makeriji git …">
+<meta name="twitter:description" content="Pelican 上传到github 折腾了半天，应该可以在几台电脑上上传博客内容了吧。 初始部分 git init git add . git commit git remote add origin https://github.com/jackjin-cn/jackjin-cn.github.io.git …">
 
         <title>Pelican 上传到github  · Jackjin&#39;s Home
 </title>
@@ -81,7 +81,7 @@
             <h1>Pelican 上传到github</h1>
 <p>折腾了半天，应该可以在几台电脑上上传博客内容了吧。</p>
 <h3>初始部分</h3>
-<div class="highlight"><pre><span></span>git init
+<div class="highlight"><pre><span></span><code>git init
 git add .
 git commit
 git remote add origin https://github.com/jackjin-cn/jackjin-cn.github.io.git
@@ -90,23 +90,16 @@ git remote add origin https://github.com/jackjin-cn/jackjin-cn.github.io.git
 git pull origin master
 git commit
 git push origin master #可以加参数 -f
-</pre></div>
-
+</code></pre></div>
 
 <h2>我的上传博客到githubio的脚本</h2>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="nb">cd</span> ~/pelicanoutput/blog
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="nb">cd</span><span class="w"> </span>~/pelicanoutput/blog
 makeriji
-git add .
-git commit -m <span class="s1">&#39;update&#39;</span>
-git push origin master  <span class="c1">#可以加参数 -f</span>
-</pre></div>
-</td></tr></table>
+git<span class="w"> </span>add<span class="w"> </span>.
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;update&#39;</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>master<span class="w">  </span><span class="c1">#可以加参数 -f</span>
+</code></pre></div>
             
             <section>
 <div class="accordion" id="accordion2">
@@ -166,7 +159,7 @@ git push origin master  <span class="c1">#可以加参数 -f</span>
                     <span>7</span>
 </a></li>
                 <li><a href="https://jackjin-cn.github.io/tags.html#vim-ref">vim
-                    <span>12</span>
+                    <span>13</span>
 </a></li>
             </ul>
 <h4>Contact</h4>

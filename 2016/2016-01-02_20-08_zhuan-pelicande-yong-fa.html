@@ -14,12 +14,13 @@
 
 <meta property="og:title" content="转pelican的用法 "/>
 <meta property="og:url" content="https://jackjin-cn.github.io/2016/2016-01-02_20-08_zhuan-pelicande-yong-fa.html" />
-<meta property="og:description" content="转自煎挠橙的博客 思路 一般而言，搭建一个独立博客需要三样东西： 博客软件 托管服务器 独立的域名 博客软件用来生成你的博客页面，而生成好的页面则需要放到托管的服务器上才能被别人看到。 博客软件 我选择Pleican作为博客软件主要是出于以下的考虑： 基于Python，简单易上手 生成静态页面，不需要数据库，访问速度快，易于维护 支持markdown标记语言 和著名的wordpress相比，pelican搭建起来的博客功能和界面会相对单薄一些，但对于我来说绝对够用，况且写博客的初衷也是想把注意力放在内容上，工具越简单越好。 托管服务器 这里选择github的原因也很简单： 免费 省事 可以直接用git进行版本管理 磨刀 这份教程中提到的方法虽然简单，但仍旧需要你有一些基础，主要有 1.python基础 你至少应该能够配置python的环境，能够顺利的安装python的插件,了解一些简单的python语法。 2.了解Markdown 没听说过不要紧，推荐阅读我的文章你为什么应该用markdown写文章。 另外这里有一份简短的介绍，详细的语法说明则可以在这里找到。 3.对git/github有所了解 如果不了解也同样没有关系，这个一站式的教程可以帮到你。 这里多说一点 …" />
+<meta property="og:description" content="转自煎挠橙的博客 思路 一般而言，搭建一个独立博客需要三样东西： 博客软件 托管服务器 独立的域名 博客软件用来生成 …" />
 <meta property="og:site_name" content="Jackjin&#39;s Home" />
 <meta property="og:article:author" content="天地一沙鸥" />
 <meta property="og:article:published_time" content="2016-01-02T20:08:00+08:00" />
+<meta property="" content="2016-01-02T20:15:33+08:00" />
 <meta name="twitter:title" content="转pelican的用法 ">
-<meta name="twitter:description" content="转自煎挠橙的博客 思路 一般而言，搭建一个独立博客需要三样东西： 博客软件 托管服务器 独立的域名 博客软件用来生成你的博客页面，而生成好的页面则需要放到托管的服务器上才能被别人看到。 博客软件 我选择Pleican作为博客软件主要是出于以下的考虑： 基于Python，简单易上手 生成静态页面，不需要数据库，访问速度快，易于维护 支持markdown标记语言 和著名的wordpress相比，pelican搭建起来的博客功能和界面会相对单薄一些，但对于我来说绝对够用，况且写博客的初衷也是想把注意力放在内容上，工具越简单越好。 托管服务器 这里选择github的原因也很简单： 免费 省事 可以直接用git进行版本管理 磨刀 这份教程中提到的方法虽然简单，但仍旧需要你有一些基础，主要有 1.python基础 你至少应该能够配置python的环境，能够顺利的安装python的插件,了解一些简单的python语法。 2.了解Markdown 没听说过不要紧，推荐阅读我的文章你为什么应该用markdown写文章。 另外这里有一份简短的介绍，详细的语法说明则可以在这里找到。 3.对git/github有所了解 如果不了解也同样没有关系，这个一站式的教程可以帮到你。 这里多说一点 …">
+<meta name="twitter:description" content="转自煎挠橙的博客 思路 一般而言，搭建一个独立博客需要三样东西： 博客软件 托管服务器 独立的域名 博客软件用来生成 …">
 
         <title>转pelican的用法  · Jackjin&#39;s Home
 </title>
@@ -82,29 +83,26 @@
 <p>思路</p>
 </blockquote>
 <p>一般而言，搭建一个独立博客需要三样东西：</p>
-<div class="highlight"><pre><span></span>博客软件
+<div class="highlight"><pre><span></span><code>博客软件
 托管服务器
 独立的域名
-</pre></div>
-
+</code></pre></div>
 
 <p>博客软件用来生成你的博客页面，而生成好的页面则需要放到托管的服务器上才能被别人看到。
 博客软件</p>
 <p>我选择Pleican作为博客软件主要是出于以下的考虑：</p>
-<div class="highlight"><pre><span></span>基于Python，简单易上手
+<div class="highlight"><pre><span></span><code>基于Python，简单易上手
 生成静态页面，不需要数据库，访问速度快，易于维护
 支持markdown标记语言
-</pre></div>
-
+</code></pre></div>
 
 <p>和著名的wordpress相比，pelican搭建起来的博客功能和界面会相对单薄一些，但对于我来说绝对够用，况且写博客的初衷也是想把注意力放在内容上，工具越简单越好。
 托管服务器</p>
 <p>这里选择github的原因也很简单：</p>
-<div class="highlight"><pre><span></span>免费
+<div class="highlight"><pre><span></span><code>免费
 省事
 可以直接用git进行版本管理
-</pre></div>
-
+</code></pre></div>
 
 <p>磨刀</p>
 <p>这份教程中提到的方法虽然简单，但仍旧需要你有一些基础，主要有
@@ -217,14 +215,13 @@ blabla....</p>
 <p>用你自己的'shortname'替换进去，剩下的交给pelican。
 自动化</p>
 <p>熟练之后会发觉整个工作流程实际上只有一下几步：</p>
-<div class="highlight"><pre><span></span>进入装了pelican的python虚拟环境
+<div class="highlight"><pre><span></span><code>进入装了pelican的python虚拟环境
 打开pelican的本地调试功能
 打开博客的本地页面
 cd到存放博客的content目录下面
 用vim编辑文章，调试
 使用git将生成的网站推送到服务器上
-</pre></div>
-
+</code></pre></div>
 
 <p>虽然不多，但是用过一段时间后还是觉得繁琐，恰巧我是在ubuntu下面维护这个博客的，不搞搞自动化怎么过瘾，折腾了一下差不多可以了，下面是步骤。
 期望</p>
@@ -298,6 +295,10 @@ read answer #防止新打开的窗口被关闭</p>
         <div class="span2" style="float:right;font-size:0.9em;">
             <h4>Published</h4>
             <time pubdate="pubdate" datetime="2016-01-02T20:08:00+08:00"> 1 2, 2016</time>
+
+<h4>Last Updated</h4>
+<time datetime="2016-01-02T20:15:33+08:00"> 1 2, 2016</time>
+
             <h4>Category</h4>
             <a class="category-link" href="https://jackjin-cn.github.io/categories.html#ruan-jian-shi-yong-ref">软件使用</a>
             <h4>Tags</h4>
